@@ -3,6 +3,7 @@
 namespace app\modules\cms\models;
 
 use alexBond\thumbler\Thumbler;
+use app\modules\cms\components\CmsBehavior;
 use app\modules\cms\components\ImageBehavior;
 use app\modules\cms\components\Shortext;
 use Yii;
@@ -106,8 +107,8 @@ class Article extends \yii\db\ActiveRecord
             'translit'=>[
                 'class'=>TranslitBehavior::className(),
             ],
-            'image'=>[
-                'class'=>ImageBehavior::className(),
+            'CmsBehavior'=>[
+                'class'=>CmsBehavior::className(),
             ],
             'shortext'=>[
                 'class'=>Shortext::className(),
@@ -151,12 +152,6 @@ class Article extends \yii\db\ActiveRecord
     public static function getOneByCategory($type)
     {
         return self::find()->type($type)->orderBy(['dateCreate' => SORT_DESC])->one();
-    }
-
-    public function imageSrc($size,$method=Thumbler::METHOD_BOXED)
-    {
-        $image = $this->image;
-        return $image ? $image->resize($size,$method) : 'http://placehold.it/'.$size;
     }
 
     /**
