@@ -3,7 +3,7 @@
 namespace app\modules\cms\models;
 
 use app\modules\cms\components\CmsBehavior;
-use app\modules\exchange\models\Image;
+use app\modules\exchange\models\Image as ExchangeImage;
 use Yii;
 
 /**
@@ -94,7 +94,7 @@ class Profile extends \yii\db\ActiveRecord
 
     public function getImage()
     {
-        return $this->hasOne(Image::className(),['primaryKey'=>'userId'])
+        return $this->hasOne(ExchangeImage::className(),['primaryKey'=>'userId'])
             ->andWhere(['model'=>self::className()]);
     }
 
