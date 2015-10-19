@@ -42,4 +42,5 @@ phpunit.phar
 /config/params.php
 /config/db.php
 web/log.txt
+.htaccess
 
