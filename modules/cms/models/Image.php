@@ -18,6 +18,7 @@ use yii\helpers\Url;
  */
 class Image extends \yii\db\ActiveRecord
 {
+    private $imageThumb = 'http://placehold.it/';
     const FILE_DIROOT = '@webroot/images/';
     const FILE_DIR = '@web/images/';
     public $file;
@@ -74,6 +75,15 @@ class Image extends \yii\db\ActiveRecord
             return Url::base().Yii::getAlias('@web/' . Yii::$app->thumbler->thumbsPath) . $file;
         }
         return 'http://placehold.it/'.$size;
+    }
+
+    public function imageSrc($size = '100x100', $method = Thumbler::METHOD_NOT_BOXED)
+    {
+        $image = $this;
+        if ($image && !is_file(\Yii::$app->thumbler->sourcePath . '/' . $image->src)) {
+            return $this->imageThumb . $size;
+        }
+        return $image ? $image->resize($size, $method) : $this->imageThumb . $size;
     }
 
     public function beforeDelete()

@@ -42,8 +42,8 @@ $this->title = 'Подрядчики';
                             <div class="portfolio-album__count">Фото<span><?=$contactor->photoCount?></span></div>
                             <div class="contractor-block-images">
                                 <?php foreach(\app\modules\exchange\models\Album::getAllImagesByUser($contactor->id,6) as $image):?>
-                                <a href="<?= $image->resize('1024x768', \alexBond\thumbler\Thumbler::METHOD_CROP_CENTER) ?>" title="">
-                                    <img src="<?=$image->resize('95x76',\alexBond\thumbler\Thumbler::METHOD_CROP_CENTER)?>" alt="">
+                                <a href="<?= $image->imageSrc('1024x768', \alexBond\thumbler\Thumbler::METHOD_CROP_CENTER) ?>" title="">
+                                    <img src="<?=$image->imageSrc('95x76',\alexBond\thumbler\Thumbler::METHOD_CROP_CENTER)?>" alt="">
                                 </a>
                                 <?php endforeach?>
                             </div>
