@@ -37,7 +37,7 @@ $this->title = 'Личный кабинет:';
 
         <div class="announce-tender">
             <div class="announce-tender__baner"><img
-                    src="<?= $this->theme->getUrl('static/images/content/announce-tender-baner.jpg') ?>" alt="">
+                    src="<?= $this->theme->getUrl('static/images/general/stepspodryad.gif') ?>" alt="">
             </div>
             <?= Html::beginForm(['/exchange/tender/create'], 'post', [
                 'class' => 'announce-tender-form',

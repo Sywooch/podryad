@@ -13,7 +13,7 @@ $this->title = 'Тендеры';
         <div class="search-contractor-results">
             <?php if(\Yii::$app->user->can(\app\modules\cms\models\User::ROLE_CUSTOMER)):?>
             <div class="announce-tender">
-                <div class="announce-tender__baner"><img src="<?=$this->theme->getUrl('static/images/content/announce-tender-baner.jpg')?>" alt="">
+                <div class="announce-tender__baner"><img src="<?=$this->theme->getUrl('static/images/general/stepspodryad.gif')?>" alt="">
                 </div>
                 <?=Html::beginForm(['create'],'post',[
                     'class'=>'announce-tender-form',
