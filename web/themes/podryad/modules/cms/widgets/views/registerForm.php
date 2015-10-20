@@ -7,6 +7,9 @@
  * @var $model \app\modules\cms\models\form\RegisterForm
  */
 use yii\widgets\ActiveForm;
+
+$cityList = \app\modules\cms\models\Reference::findOne(['alias' => 'cityList'])->children();
+$cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
 ?>
 <div id="registration-customer" class="modal registration-customer">
     <div class="modal__close">x</div>
@@ -23,7 +26,7 @@ use yii\widgets\ActiveForm;
         <?=$form->field($model,'fio')?>
         <?=$form->field($model,'company')?>
         <?=$form->field($model,'username')?>
-        <?=$form->field($model,'cityId')->dropDownList(\app\modules\cms\models\Reference::findOne(['alias'=>'cityList'])->dropDown())?>
+        <?=$form->field($model,'cityId')->dropDownList($cityDropdown)?>
         <?=$form->field($model,'phone')?>
         <?=$form->field($model,'password')->passwordInput()?>
         <?=$form->field($model,'password2')->passwordInput()?>

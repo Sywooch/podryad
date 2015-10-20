@@ -10,6 +10,8 @@
  */
 use yii\helpers\Html;
 $this->title = 'Обновление профиля:';
+$cityList = \app\modules\cms\models\Reference::findOne(['alias' => 'cityList'])->children();
+$cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
 ?>
     <main class="main">
         <section class="registration-contractor-content">
@@ -85,7 +87,7 @@ $this->title = 'Обновление профиля:';
             <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Где вы готовы работать?</span>
 
                 <div class="registration-contractor-form__row">
-                    <?= Html::activeDropDownList($model, 'cityId', \app\modules\cms\models\Reference::findOne(['alias' => 'cityList'])->dropDown(), ['class' => 'registration-contractor-form__input']) ?>
+                    <?= Html::activeDropDownList($model, 'cityId', $cityDropdown, ['class' => 'registration-contractor-form__input']) ?>
                     <em>Укажите только те города в которых вы готовы работать.</em>
                 </div>
             </label>
