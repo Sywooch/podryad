@@ -228,20 +228,17 @@
 }
 .tender_item__cotainer {
     margin-top: 15px;
-    width: 867px;
+    /* width: 857px; */
     float: left;
     clear: both;
-    overflow: hidden;
-}
-.tender_item__cotainer {
-    margin-top: 15px;
-    float: left;
+    /* overflow: hidden; */
 }
 .tender_item_des {
     width: 843px;
     padding: 10px;
     border: 1px solid #acacac;
     overflow: hidden;
+    float: left;
 }
 .tender_item_des_title {
     width: 100%;
@@ -351,10 +348,10 @@
     width: 70%;
 }
 .tender_zakazchik {
-    width: 296px;
+    width: 265px;
     padding: 10px;
     overflow: hidden;
-    margin-top: 15px;
+    /* margin-top: 15px; */
     border: 1px solid #acacac;
     float: left;
     margin-left: 15px;
@@ -375,10 +372,10 @@
 }
 
 .tender_zakazchik .contractor-block-info__contact {
-    width: 100px;
-    float: left;
+    width: 95px;
+    float: right;
     margin-bottom: 5px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 .tender_zakazchik_name {
     color: #000000;
