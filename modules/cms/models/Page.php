@@ -160,4 +160,9 @@ class Page extends ActiveRecord
     {
         return $this->hasMany(PageDoctor::className(),['pageId'=>'id']);
     }
+
+    public function getParent()
+    {
+        return $this->hasOne(Page::className(),['id'=>'parentId']);
+    }
 }
