@@ -5,6 +5,7 @@ namespace app\modules\cms\models;
 use alexBond\thumbler\Thumbler;
 use app\modules\cms\components\CategoryBehavior;
 use app\modules\cms\components\ItemBehavior;
+use app\modules\cms\components\Shortext;
 use app\modules\cms\components\TranslitBehavior;
 use app\modules\directorBoard\models\Board;
 use Yii;
@@ -97,6 +98,9 @@ class Page extends ActiveRecord
             'category'=>[
                 'class'=>CategoryBehavior::className(),
                 'route'=>'/cms/default/page',
+            ],
+            'shortext' => [
+                'class' => Shortext::className(),
             ],
         ];
     }

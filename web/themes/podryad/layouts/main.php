@@ -119,7 +119,12 @@ $this->beginPage();
                                     Обратная связь
                                 </a>
                                 <span>Ваши предложения и отзывы</span></div>
-
+                            <div class="top-menu__item">
+                                <a href="<?= Url::to(['/cms/default/page', 'path' => 'faq']) ?>" title="" class="top-menu__link">
+                                    FAQ
+                                </a>
+                                <span>Вопросы/ответы</span>
+                            </div>
                         </nav>
                         <?=\app\modules\cms\widgets\City::widget()?>
                     </div>
