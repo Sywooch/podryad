@@ -34,7 +34,7 @@ $this->title = 'Главная';
             <div class="search-contractor-block">
                 <div class="search-contractor__title">СТРОИТЕЛЬСТВО</div>
                 <div class="search-contractor__img search-contractor__img--build"></div>
-                <a href="<?= Url::to(['/exchange/contractor', 'specialization' => 'stroitelstvo']) ?>" title="" class="search-contractor__btn">НАЙТИ подрядчика для СТРОИТельстВа<span>от забора до жилого дома</span>
+                <a href="<?= Url::to(['/exchange/contractor', 'specialization' => 'stroitelstvo']) ?>" title="" class="search-contractor__btn button_search">НАЙТИ подрядчика для СТРОИТельстВа<span>от забора до жилого дома</span>
                 </a>
             </div>
         </div>

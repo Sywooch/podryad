@@ -17,6 +17,9 @@
 .form_vxod {
     width: 300px;
 }
+.search-contractor__btn.button_search {
+    top: -20px;
+}
 .register a {
     display: inline-block;
     text-decoration: none;
