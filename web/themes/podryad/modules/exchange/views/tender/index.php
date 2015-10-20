@@ -28,6 +28,11 @@ $this->title = 'Тендеры';
                 <?=Html::endForm()?>
             </div>
             <?php endif?>
+
+            <?php if(!$list):?>
+                <p>Нет информации</p>
+            <?php endif?>
+
             <?php foreach($list as $row):?>
             <div class="search-contractor-results-list">
                 <div class="search-contractor-results-list-item">
