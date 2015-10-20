@@ -3,6 +3,7 @@
 namespace app\modules\exchange\models;
 
 use app\modules\cms\components\CmsBehavior;
+use app\modules\cms\components\Shortext;
 use app\modules\cms\models\Image;
 use app\modules\cms\models\Reference;
 use app\modules\cms\models\User;
@@ -154,7 +155,10 @@ class Tender extends \yii\db\ActiveRecord
         return [
           'cms'=>[
               'class'=>CmsBehavior::className(),
-          ]
+          ],
+            'short'=>[
+                'class'=>Shortext::className(),
+            ]
         ];
     }
 

@@ -8,14 +8,20 @@
  * @var $model \app\modules\exchange\models\Tender
  */
 use yii\helpers\Html;
-$this->title = 'Просмотр тендера';
+
+$title = $model->title;
+$city = 'г.'.$model->user->profile->city->title;
+
+$this->title = $title.' - '.$city;
+$this->registerMetaTag(['description'=>$model->shortext(255,true)]);
+$this->registerMetaTag(['keywords'=>$title.' '.$city]);
 ?>
 <main class="main">
     <div class="tender_cotainer">
         <a href="#" title="" class="contractor-back">Вернуться к списку тендеров</a>
         <div class="tender_item__cotainer">
             <div class="tender_item_des">
-                <div class="tender_item_des_title"><?=$model->title?></div>
+                <h1 class="tender_item_des_title"><?=$model->title?></h1>
                 <div class="contractor-block-info__service"><?=$model->user->profile->city->title?></div>
                 <div class="contractor-block-info__service"><?=$model->specialization->title?></div>
                 <p><?=$model->description?>
@@ -28,7 +34,7 @@ $this->title = 'Просмотр тендера';
                         Бюджет: <span><b><?=$model->priceString?></b></span>
                     </div>
                     <?php if($model->image):?>
-                    <a href="<?=$model->imageSrc('800x600')?>" title="" class="swipebox">
+                    <a href="<?=$model->imageSrc('800x600')?>" title="<?= $this->title ?>" class="swipebox">
                         <div class="tender_item_des_info_photo">
                             Изоброжение
                         </div>
