@@ -10,7 +10,7 @@
 use yii\helpers\Html;
 
 $title = $model->title;
-$city = 'г.'.$model->user->profile->city->title;
+$city = 'г. '.$model->user->profile->city->title;
 
 $this->title = $title.' - '.$city;
 $this->registerMetaTag(['description'=>$model->shortext(255,true)]);
