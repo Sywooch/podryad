@@ -21,7 +21,9 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'title',
+            ['attribute'=>'title','value'=>function($model){
+                return Html::a($model->title,['/exchange/tender/view','id'=>$model->id],['target'=>'_blank']);
+            },'format'=>'html'],
 //            'description:ntext',
             ['attribute'=>'userId','value'=>'user.username'],
             ['header'=>'Предложений','value'=>'offersCount'],

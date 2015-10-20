@@ -22,6 +22,12 @@
         ['header'=>'','value'=>'selectedText'],
 
         ['class' => 'yii\grid\ActionColumn',
-            'template' => '{delete}'],
+            'template' => '{delete}',
+            'buttons'=>[
+                'delete'=>function($url,$model)
+                {
+                    return \yii\helpers\Html::a('удалить',['/exchange/admin/offers/delete','id'=>$model->id],['data-method'=>'post']);
+                }
+            ]],
     ],
 ]); ?>
