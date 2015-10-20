@@ -61,6 +61,9 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
                        class="btn registration-contractor-form__btn">Выбрать специализацию
                     </a>
                     <em>Максимум 10 специализаций</em>
+                    <?php foreach($model->specialization as $specialization):?>
+                        <?=Html::activeHiddenInput($model,'specialization[]',['value'=>$specialization])?>
+                    <?php endforeach?>
                     <div class="specialization-list-selected"></div>
                     <input type="hidden" value="" class="specialization-input-send">
                     <?= Html::error($model, 'specialization') ?>
