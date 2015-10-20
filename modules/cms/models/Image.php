@@ -69,6 +69,9 @@ class Image extends \yii\db\ActiveRecord
     public function resize($size = '100x100',$method=Thumbler::METHOD_NOT_BOXED)
     {
         list($width, $height) = explode('x', $size);
+        if ($this && !is_file(\Yii::$app->thumbler->sourcePath . '/' . $this->src)) {
+            return $this->imageThumb . $size;
+        }
         if($this->src)
         {
             $file = Yii::$app->thumbler->resize($this->src, $width, $height,$method);
@@ -121,10 +124,18 @@ class Image extends \yii\db\ActiveRecord
         $webroot = Yii::getAlias(self::FILE_DIROOT);
 
         foreach ($items as $item) {
-            $webImage = $web . $item->src;
-            $webrootImage = $webroot . $item->src;
-            $thumb = $item->resize();
-            $size = filesize($webrootImage);
+            if (!is_file(\Yii::$app->thumbler->sourcePath . '/' . $item->src)) {
+                $size = 0;
+                $thumb = $this->imageThumb.'100x100';
+                $webImage = $thumb;
+            }
+            else
+            {
+                $thumb = $item->resize();
+                $webImage = $web . $item->src;
+                $webrootImage = $webroot . $item->src;
+                $size = filesize($webrootImage);
+            }
             $result = [
                 'name' => $item->src,
                 'size' => $size,

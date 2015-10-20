@@ -7,6 +7,8 @@ use yii\widgets\ActiveForm;
 /* @var $model app\modules\cms\models\User */
 /* @var $profile app\modules\cms\models\Profile */
     /* @var $form yii\widgets\ActiveForm */
+$cityModel = \app\modules\cms\models\Reference::findOne(['alias'=>'cityList']);
+$cityList = \yii\helpers\ArrayHelper::map($cityModel->children(),'id','title');
 ?>
 
 <div class="user-form">
@@ -29,14 +31,12 @@ use yii\widgets\ActiveForm;
                 Персональные данные пользователя
             </div>
             <div class="panel-body">
-                <?= $form->field($profile, 'name')->textInput(['maxlength' => 255]) ?>
+                <?= $form->field($profile, 'fio')->textInput(['maxlength' => 255]) ?>
+                <?= $form->field($profile, 'company')->textInput(['maxlength' => 255]) ?>
 
                 <?= $form->field($profile, 'phone')->textInput(['maxlength' => 255]) ?>
-                <?= $form->field($profile, 'specialization')->textInput(['maxlength' => 255]) ?>
-                <?= $form->field($profile, 'post')->textInput(['maxlength' => 255]) ?>
-                <?= $form->field($profile, 'work')->textInput(['maxlength' => 255]) ?>
 
-                <?= $form->field($profile, 'cityId')->dropDownList(\app\modules\cms\models\City::dropDown()) ?>
+                <?= $form->field($profile, 'cityId')->dropDownList($cityList) ?>
             </div>
         </div>
     </div>

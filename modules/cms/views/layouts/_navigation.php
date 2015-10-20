@@ -36,11 +36,14 @@ use yii\helpers\Url;
                         <a href="<?= Url::to(['/cms/admin/reference']) ?>">Справочники</a>
                     </li>
                     <li>
-                        <a href="<?= Url::to(['/cms/admin/file']) ?>">Библиотека</a>
+                        <a href="<?= Url::to(['/exchange/admin/tender']) ?>">Тендера</a>
                     </li>
-                    <li>
-                        <a href="<?= Url::to(['/cms/admin/rate']) ?>">Рейтинг</a>
-                    </li>
+                    <!--<li>
+                        <a href="<?/*= Url::to(['/cms/admin/file']) */?>">Библиотека</a>
+                    </li>-->
+                    <!--<li>
+                        <a href="<?/*= Url::to(['/cms/admin/rate']) */?>">Рейтинг</a>
+                    </li>-->
                     <!--                    <li>-->
                     <!--                        <a href="--><? //=Url::to(['/cms/admin/config'])?><!--">Настройки</a>-->
                     <!--                    </li>-->
@@ -77,14 +80,14 @@ use yii\helpers\Url;
                     </li>
                 </ul>
             </li-->
-            <li>
+            <!--<li>
                 <a href="#"><i class="fa fa-android fa-fw"></i>Форум<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="<?= Url::to(['/forum/admin/item']) ?>">Список</a>
+                        <a href="<?/*= Url::to(['/forum/admin/item']) */?>">Список</a>
                     </li>
                 </ul>
-            </li>
+            </li>-->
         </ul>
     </div>
     <!-- /.sidebar-collapse -->

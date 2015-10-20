@@ -26,9 +26,6 @@ $this->beginPage();
             <title><?=$this->title?></title>
             <?=$this->head()?>
             <?=Html::csrfMetaTags()?>
-            <meta content="" name="author">
-            <meta content="" name="description">
-            <meta content="" name="keywords">
             <meta content="telephone=no" name="format-detection">
             <meta name="robots" content="noodp, noydir">
             <meta name="viewport" content="initial-scale=1, minimum-scale=1, width=device-width">
