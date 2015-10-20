@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             ['attribute'=>'title','value'=>function($model){
                 return Html::a($model->title,['/exchange/tender/view','id'=>$model->id],['target'=>'_blank']);
-            },'format'=>'html'],
+            },'format'=>'raw'],
 //            'description:ntext',
             ['attribute'=>'userId','value'=>'user.username'],
             ['header'=>'Предложений','value'=>'offersCount'],
