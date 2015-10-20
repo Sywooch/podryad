@@ -51,14 +51,14 @@ $this->title = 'Личный кабинет:';
             <?= Html::endForm() ?>
         </div>
 
-        <div class="contractor-block-info__service">Все 1</div>
+        <div class="contractor-block-info__service">Все <?=\app\modules\exchange\models\Tender::find()->where(['userId'=>$model->id])->count()?></div>
 
         <?php foreach(\app\modules\exchange\models\Tender::getTenderByUser($model->id) as $tender):?>
         <div class="accaunt_tender_item">
             <div class="accaunt_tender_item_head">
-                <div class="accaunt_tender_item title">
+                <a class="accaunt_tender_item title" href="<?=\yii\helpers\Url::to(['/exchange/tender/view','id'=>$tender->id])?>">
                     <?=$tender->title?>
-                </div>
+                </a>
                 <a href="<?=\yii\helpers\Url::to(['/exchange/tender/view','id'=>$tender->id])?>" title="" class="accaunt_tender_item_btn">Тендер <?=$tender->statusTitle?></a>
             </div>
             <div class="accaunt_tender_item_city_date">
@@ -66,7 +66,7 @@ $this->title = 'Личный кабинет:';
                     <?=$tender->user->profile->city->title?>
                 </div>
                 <div class="accaunt_tender_item_date">
-                    10 сентября 10:25
+                    <?=\Yii::$app->formatter->asDatetime(strtotime($tender->dateCreate))?>
                 </div>
             </div>
             <div class="accaunt_tender_item_biudzhet_predlozheni">

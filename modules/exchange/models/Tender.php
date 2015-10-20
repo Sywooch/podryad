@@ -208,6 +208,7 @@ class Tender extends \yii\db\ActiveRecord
     {
         return self::find()
             ->where(['userId'=>$id])
+            ->orderBy(['dateCreate'=>SORT_DESC])
             ->all();
     }
 
