@@ -15,7 +15,7 @@
         'enableAjaxValidation'=>true,
         'fieldConfig'=>[
             'labelOptions'=>['class'=>'form__label form__label--required'],
-            'inputOptions'=>['class'=>'form__label form__label--required'],
+            'inputOptions'=>['class'=>'form__label form__label--required form-control'],
         ]
     ])?>
         <?=$form->field($model,'name')?>
