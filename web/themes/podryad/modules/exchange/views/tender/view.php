@@ -36,7 +36,7 @@ $this->registerMetaTag(['keywords'=>$title.' '.$city]);
                     <?php if($model->image):?>
                     <a href="<?=$model->imageSrc('800x600')?>" title="<?= $this->title ?>" class="swipebox">
                         <div class="tender_item_des_info_photo">
-                            Изоброжение
+                            Изображение
                         </div>
                     </a>
                     <?php endif?>
