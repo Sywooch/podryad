@@ -12,6 +12,7 @@ $this->title = 'Тендеры';
         <h1 class="search-contractor-content__title"><?=$this->title?></h1>
             <?=\app\modules\exchange\widgets\SpecializationFilter::widget(['checked'=>$model->specializationIds,'priceUse'=>true,'filterModel' => 'Tender'])?>
         <div class="search-contractor-results">
+            <?php if( \Yii::$app->user->isGuest || \Yii::$app->user->can(\app\modules\cms\models\User::ROLE_CUSTOMER)):?>
             <div class="announce-tender">
                 <div class="announce-tender__baner"><img src="<?=$this->theme->getUrl('static/images/general/stepspodryad.gif')?>" alt="">
                 </div>
@@ -27,6 +28,7 @@ $this->title = 'Тендеры';
                     </div>
                 <?=Html::endForm()?>
             </div>
+            <?php endif?>
 
             <?php if(!$list):?>
                 <p>Нет информации</p>
