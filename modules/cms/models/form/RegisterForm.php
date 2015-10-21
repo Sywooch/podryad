@@ -31,6 +31,8 @@ class RegisterForm extends Model{
     public $agree;
     public $company;
     public $file;
+    public $site;
+    public $adres;
 
     public function rules()
     {
@@ -49,7 +51,8 @@ class RegisterForm extends Model{
             }],
             ['file','file','skipOnEmpty'=>true],
             [['role', 'fio', 'phone','specialization', 'cityId'], 'required', 'on' => 'update'],
-            [['password','password2'],'safe'],
+            [['password','password2','site','adres'],'safe'],
+            ['site','url']
         ];
     }
 
@@ -69,6 +72,8 @@ class RegisterForm extends Model{
             'fio' => Yii::t('app', 'Ф.И.О'),
             'specialization' => Yii::t('app', 'Специализации'),
             'company' => Yii::t('app', 'Компания'),
+            'site' => Yii::t('app', 'Сайт'),
+            'adres' => Yii::t('app', 'Адрес'),
         ];
     }
 
