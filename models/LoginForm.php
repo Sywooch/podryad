@@ -83,7 +83,7 @@ class LoginForm extends Model
         return [
             'username'=>'Email',
             'password'=>'Пароль',
-            'rememberMe'=>'Запомнить меня',
+            'rememberMe'=>'запомнить',
         ];
     }
 }
