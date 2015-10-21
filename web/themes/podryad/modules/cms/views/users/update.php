@@ -30,7 +30,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
                     <?= Html::error($model, 'fio') ?>
                 </div>
             </label>
-            <label class="registration-contractor-form__label registration-contractor-form__label--required">
+            <label class="registration-contractor-form__label">
                 <span>Компания:</span>
 
                 <div class="registration-contractor-form__row">
@@ -39,7 +39,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
                 </div>
             </label>
             <?php if(\Yii::$app->user->can(\app\modules\cms\models\User::ROLE_CONTRACTOR)):?>
-            <label class="registration-contractor-form__label registration-contractor-form__label--required">
+            <label class="registration-contractor-form__label">
                 <span>Сайт:</span>
 
                 <div class="registration-contractor-form__row">
@@ -47,7 +47,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
                     <?= Html::error($model, 'site') ?>
                 </div>
             </label>
-            <label class="registration-contractor-form__label registration-contractor-form__label--required">
+            <label class="registration-contractor-form__label">
                 <span>Адрес:</span>
 
                 <div class="registration-contractor-form__row">
