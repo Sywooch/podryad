@@ -8,8 +8,8 @@
 
 namespace app\assets;
 
+use app\modules\cms\components\KCFinder;
 use dosamigos\ckeditor\CKEditor;
-use iutbay\yii2kcfinder\KCFinder;
 use iutbay\yii2kcfinder\KCFinderAsset;
 use yii\helpers\ArrayHelper;
 

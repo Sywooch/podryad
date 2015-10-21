@@ -109,7 +109,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
                     <em>Укажите только те города в которых вы готовы работать.</em>
                 </div>
             </label>
-            <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Пароль</span>
+            <label class="registration-contractor-form__label"> <span>Пароль</span>
 
                 <div class="registration-contractor-form__row">
                     <?= Html::activePasswordInput($model, 'password', ['class' => 'registration-contractor-form__input','value'=>'']) ?>
@@ -118,7 +118,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
                         Ваш адрес другим пользователям. Адрес необходим для размещения метки на карте</em>
                 </div>
             </label>
-            <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Повторите пароль</span>
+            <label class="registration-contractor-form__label"> <span>Повторите пароль</span>
 
                 <div class="registration-contractor-form__row">
                     <?= Html::activePasswordInput($model, 'password2', ['class' => 'registration-contractor-form__input']) ?>
