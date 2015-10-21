@@ -12,5 +12,5 @@ use yii\helpers\Html;
 <?php $form = ActiveForm::begin()?>
 <?=$form->field($model,'title')?>
 <?=$form->field($model,'alias')?>
-<?=Html::submitButton($model->isNewRecord ? 'Добавить' : 'Обновить')?>
+<?=Html::submitButton($model->isNewRecord ? 'Добавить' : 'Обновить',['class'=>'create-album'])?>
 <?php ActiveForm::end()?>
