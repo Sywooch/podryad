@@ -57,13 +57,13 @@
         <div class="filter-cost-value">
             <input name="min" type="hidden" value="<?= $minMaxPrice['max'] ?>" id="cost-line-max" disabled="disabled"/>
             <input name="max" type="hidden" value="<?= $minMaxPrice['min'] ?>" id="cost-line-min" disabled="disabled"/>
-            <input type="text" value="<?=$tender->priceMax?>" id="cost-line-value-max" class="filter-cost-value__input" name="<?= $filterModel ?>[priceMin]"><span>—</span>
-            <input type="text" value="<?= $tender->priceMin ?>" id="cost-line-value-min" class="filter-cost-value__input"
+            <input type="text" value="<?=$tender->priceMin?>" id="cost-line-value-max" class="filter-cost-value__input" name="<?= $filterModel ?>[priceMin]"><span>—</span>
+            <input type="text" value="<?= $tender->priceMax ?>" id="cost-line-value-min" class="filter-cost-value__input"
                    name="<?= $filterModel ?>[priceMax]">
     </div>
-        <div id="cost-line" class="filter-cost__line noUi-target noUi-ltr noUi-horizontal noUi-background">
+        <!--<div id="cost-line" class="filter-cost__line noUi-target noUi-ltr noUi-horizontal noUi-background">
             
-        </div>
+        </div>-->
     </div>
     <?php endif?>
 
