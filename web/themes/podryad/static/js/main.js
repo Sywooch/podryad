@@ -294,4 +294,10 @@ $(document).ready(function () {
 
         return false;
     });
+
+    $('.steps-part li').on('click', function () {
+        $('.steps-part li').removeClass('active');
+        $(this).addClass('active');
+
+    })
 });

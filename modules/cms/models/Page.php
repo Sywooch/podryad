@@ -5,6 +5,7 @@ namespace app\modules\cms\models;
 use alexBond\thumbler\Thumbler;
 use app\modules\cms\components\CategoryBehavior;
 use app\modules\cms\components\ItemBehavior;
+use app\modules\cms\components\Shortext;
 use app\modules\cms\components\TranslitBehavior;
 use app\modules\directorBoard\models\Board;
 use Yii;
@@ -98,6 +99,9 @@ class Page extends ActiveRecord
                 'class'=>CategoryBehavior::className(),
                 'route'=>'/cms/default/page',
             ],
+            'shortext' => [
+                'class' => Shortext::className(),
+            ],
         ];
     }
 
@@ -155,5 +159,10 @@ class Page extends ActiveRecord
     public function getDoctorList()
     {
         return $this->hasMany(PageDoctor::className(),['pageId'=>'id']);
+    }
+
+    public function getParent()
+    {
+        return $this->hasOne(Page::className(),['id'=>'parentId']);
     }
 }

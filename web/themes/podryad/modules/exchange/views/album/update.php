@@ -3,12 +3,6 @@
 /* @var $model \app\modules\exchange\models\Album */
 use yii\bootstrap\Tabs;
 ?>
-<h1>album/update</h1>
-
-<p>
-    You may change the content of this page by modifying
-    the file <code><?= __FILE__; ?></code>.
-</p>
 
 <?php
 echo Tabs::widget([

@@ -26,9 +26,6 @@ $this->beginPage();
             <title><?=$this->title?></title>
             <?=$this->head()?>
             <?=Html::csrfMetaTags()?>
-            <meta content="" name="author">
-            <meta content="" name="description">
-            <meta content="" name="keywords">
             <meta content="telephone=no" name="format-detection">
             <meta name="robots" content="noodp, noydir">
             <meta name="viewport" content="initial-scale=1, minimum-scale=1, width=device-width">
@@ -122,7 +119,12 @@ $this->beginPage();
                                     Обратная связь
                                 </a>
                                 <span>Ваши предложения и отзывы</span></div>
-
+                            <div class="top-menu__item">
+                                <a href="<?= Url::to(['/cms/default/page', 'path' => 'faq']) ?>" title="" class="top-menu__link">
+                                    FAQ
+                                </a>
+                                <span>Вопросы/ответы</span>
+                            </div>
                         </nav>
                         <?=\app\modules\cms\widgets\City::widget()?>
                     </div>

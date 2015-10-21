@@ -56,9 +56,15 @@ class CategoryBehavior extends Behavior{
             }
         }else
         {
-            foreach($data[$this->owner->id] as $item)
+            if($this->owner->parent)
             {
-                $results[$item->id] = $item->title;
+                $results[$this->owner->parent->id] = $this->owner->parent->title;
+            }
+            if(!empty($data[$this->owner->parentId]))
+            {
+                foreach ($data[$this->owner->parentId] as $item) {
+                    $results[$item->id] = str_repeat('-', $item->level - 1) . ' ' .$item->title;
+                }
             }
         }
 

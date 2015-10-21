@@ -7,9 +7,8 @@ $this->title = $item->title;
 ?>
 <main class="main">
     <section class="news-full-content">
-        <h1>Новости</h1>
+        <h1><?= $item->title ?></h1>
         <img src="<?=$item->imageSrc('275x214')?>" alt="" align="left">
-        <strong><?=$item->title?></strong>
         <span><?=$item->date?></span>
 
         <?=$item->description?>

@@ -51,7 +51,7 @@ class RestoreUser extends Model{
     {
         return [
           'password'=>'Пароль',
-          'password2'=>'Повтороить пароль',
+          'password2'=>'Повторить пароль',
         ];
     }
 }

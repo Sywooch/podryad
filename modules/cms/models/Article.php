@@ -82,14 +82,14 @@ class Article extends \yii\db\ActiveRecord
         return [
           self::TYPE_NEWS=>'Новости',
           self::TYPE_STOCK=>'События',
-          self::TYPE_ARTICLE=>'ПОЛЕЗНАЯ ИНФОРМАЦИЯ',
+//          self::TYPE_ARTICLE=>'ПОЛЕЗНАЯ ИНФОРМАЦИЯ',
         ];
     }
 
     public static function typealiasList()
     {
         return [
-            self::TYPE_ARTICLE_ALIAS=>self::TYPE_ARTICLE,
+//            self::TYPE_ARTICLE_ALIAS=>self::TYPE_ARTICLE,
             self::TYPE_NEWS_ALIAS=>self::TYPE_NEWS,
             self::TYPE_STOCK_ALIAS=>self::TYPE_STOCK,
         ];

@@ -118,6 +118,6 @@ $kcfOptions = array_merge(KCFinder::$kcfDefaultOptions, [
         ],
     ],
 ]);
-\file_put_contents('log.txt',print_r($kcfOptions,1));
+//\file_put_contents('log.txt',print_r($kcfOptions,1));
 // Set kcfinder session options
 \Yii::$app->session->set('KCFINDER', $kcfOptions);

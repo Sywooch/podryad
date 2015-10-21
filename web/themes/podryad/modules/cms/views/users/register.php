@@ -12,6 +12,8 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 
 $this->title = 'Регистрация подрядчика';
+$cityList = \app\modules\cms\models\Reference::findOne(['alias' => 'cityList'])->children();
+$cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
 ?>
 
 <main class="main">
@@ -59,6 +61,9 @@ $this->title = 'Регистрация подрядчика';
                        class="btn registration-contractor-form__btn">Выбрать специализацию
                     </a>
                     <em>Максимум 10 специализаций</em>
+                    <?php foreach($model->specialization as $specialization):?>
+                        <?=Html::activeHiddenInput($model,'specialization[]',['value'=>$specialization])?>
+                    <?php endforeach?>
                     <div class="specialization-list-selected"></div>
                     <input type="hidden" value="" class="specialization-input-send">
                     <?= Html::error($model, 'specialization') ?>
@@ -67,7 +72,7 @@ $this->title = 'Регистрация подрядчика';
             <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Где вы готовы работать?</span>
 
                 <div class="registration-contractor-form__row">
-                    <?=Html::activeDropDownList($model,'cityId',\app\modules\cms\models\Reference::findOne(['alias'=>'cityList'])->dropDown(),['class'=>'registration-contractor-form__input'])?>
+                    <?=Html::activeDropDownList($model,'cityId',$cityDropdown,['class'=>'registration-contractor-form__input'])?>
                     <em>Укажите только те города в которых вы готовы работать.</em>
                 </div>
             </label>

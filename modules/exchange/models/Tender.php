@@ -3,6 +3,7 @@
 namespace app\modules\exchange\models;
 
 use app\modules\cms\components\CmsBehavior;
+use app\modules\cms\components\Shortext;
 use app\modules\cms\models\Image;
 use app\modules\cms\models\Reference;
 use app\modules\cms\models\User;
@@ -100,7 +101,7 @@ class Tender extends \yii\db\ActiveRecord
 
     public function getPriceString()
     {
-        return $this->price == 0 ? 'Договорный' : $this->price . 'тг';
+        return $this->price == 0 ? 'Договорный' : $this->price . ' тг';
     }
 
     /**
@@ -114,11 +115,12 @@ class Tender extends \yii\db\ActiveRecord
             'description' => Yii::t('app', 'Описание работы'),
             'phone' => Yii::t('app', 'Телефон'),
             'price' => Yii::t('app', 'Бюджет проекта'),
-            'active' => Yii::t('app', 'Active'),
+            'active' => Yii::t('app', ''),
             'specializationId' => Yii::t('app', 'Специализация'),
             'file' => Yii::t('app', 'Файл'),
             'userId' => Yii::t('app', 'Айди пользователя'),
             'negotiable' => Yii::t('app', 'Бюджет договорный'),
+            'dateCreate' => Yii::t('app', 'Дата'),
         ];
     }
 
@@ -153,7 +155,10 @@ class Tender extends \yii\db\ActiveRecord
         return [
           'cms'=>[
               'class'=>CmsBehavior::className(),
-          ]
+          ],
+            'short'=>[
+                'class'=>Shortext::className(),
+            ]
         ];
     }
 
@@ -203,6 +208,7 @@ class Tender extends \yii\db\ActiveRecord
     {
         return self::find()
             ->where(['userId'=>$id])
+            ->orderBy(['dateCreate'=>SORT_DESC])
             ->all();
     }
 
@@ -232,20 +238,20 @@ class Tender extends \yii\db\ActiveRecord
         return $this->offersId == $offersId ? 'selected' : '';
     }
 
+    static $_statusList = [
+        self::IS_NEW=> 'Новый',
+        self::IS_OPEN=> 'Открыт',
+        self::IS_ACTIVE=> 'Закрыт',
+    ];
+
     public function getStatusTitle()
     {
-        $status = '';
-        if($this->active == self::IS_NEW)
-        {
-            $status = 'Новый';
-        }
-        elseif($this->active == self::IS_OPEN)
-        {
-            $status = 'Открыт';
-        } elseif ($this->active == self::IS_ACTIVE) {
-            $status = 'Закрыт';
-        }
-        return $status;
+        return !empty(self::$_statusList[$this->active]) ? self::$_statusList[$this->active] : 'не известно';
+    }
+
+    public static function statusDropdown()
+    {
+        return self::$_statusList;
     }
 }
 

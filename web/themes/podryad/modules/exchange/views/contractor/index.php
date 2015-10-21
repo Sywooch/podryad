@@ -17,6 +17,11 @@ $this->title = 'Подрядчики';
         <div class="search-contractor-results">
             <div class="search-contractor-results-list">
                 <div class="search-contractor-results-list-item">
+
+                    <?php if (!$contactorList): ?>
+                        <p>Нет информации</p>
+                    <?php endif ?>
+
                     <?php foreach($contactorList as $contactor):?>
                     <div class="contractor-block">
                         <div class="contractor-block-avatar">

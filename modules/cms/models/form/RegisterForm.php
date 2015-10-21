@@ -24,7 +24,7 @@ class RegisterForm extends Model{
     public $fio;
     public $phone;
     public $username;
-    public $specialization;
+    public $specialization=[];
     public $cityId;
     public $password;
     public $password2;
