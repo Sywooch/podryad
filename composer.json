@@ -22,7 +22,8 @@
         "alex-bond/yii2-thumbler": "^1.0",
         "yiisoft/yii2-jui": "^2.0",
         "iutbay/yii2-kcfinder": "*",
-        "2amigos/yii2-ckeditor-widget": "~1.0"
+        "2amigos/yii2-ckeditor-widget": "~1.0",
+        "kartik-v/yii2-widget-growl": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

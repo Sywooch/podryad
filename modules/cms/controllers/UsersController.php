@@ -85,7 +85,8 @@ class UsersController extends Controller
         {
             if($model->update($user,$profile))
             {
-                $this->redirect(['update']);
+                \Yii::$app->session->setFlash('success','Ваши данные успешно обновленны!');
+                return $this->redirect(['update']);
             }
         }
 

@@ -50,8 +50,8 @@ class RegisterForm extends Model{
                 return $value==0;
             }],
             ['file','file','skipOnEmpty'=>true],
-            [['role', 'fio', 'phone','specialization', 'cityId'], 'required', 'on' => 'update'],
-            [['password','password2','site','adres'],'safe'],
+            [['role', 'fio', 'phone', 'cityId'], 'required', 'on' => 'update'],
+            [['password','password2','site','adres', 'specialization'],'safe'],
             ['site','url']
         ];
     }

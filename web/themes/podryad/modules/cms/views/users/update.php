@@ -15,7 +15,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
 ?>
     <main class="main">
         <section class="registration-contractor-content">
-            <div class="registration-contractor-content__title">Регистрация подрядчика</div>
+            <div class="registration-contractor-content__title">Редактирование профиля</div>
             <div class="registration-contractor-content__text">Пожалуйста, укажите свои реальные данные, это облегчит
                 взаимодействие между вами и заказчиками
             </div>

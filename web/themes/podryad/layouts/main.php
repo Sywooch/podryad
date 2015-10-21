@@ -60,6 +60,7 @@ $this->beginPage();
         </head>
         <body>
             <?php $this->beginBody()?>
+            <?=\app\modules\cms\widgets\Notice::widget()?>
             <header class="header mainpage">
                 <div class="header__wrapper">
                     <a href="<?=Url::home()?>" title="" class="header__logo"></a>
@@ -181,3 +182,4 @@ $this->beginPage();
             <script src="<?=$this->theme->getUrl('static/js/main.js')?>"></script>
         </body>
 <?php $this->endPage()?>
+    </html>
