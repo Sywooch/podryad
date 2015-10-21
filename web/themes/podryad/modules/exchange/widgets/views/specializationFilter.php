@@ -15,7 +15,6 @@
  */
 ?>
 
-<div class="search-contractor-content__title">Фильтр</div>
 <form method="get" action="" class="filter">
     <?php if($specialization == 'specializacii'):?>
     <?php foreach($model->children() as $part1):?>
