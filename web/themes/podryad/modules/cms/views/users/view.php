@@ -23,6 +23,7 @@ $this->title = 'Личный кабинет:';
         <div class="contractor-block-info__contact contractor-block-info__contact--email">
             <a href="#" title="" data-show="<?=$model->username?>" class="contractor-block-info-show">показать e-mail</a>
         </div>
+
         <?php if(!\Yii::$app->user->isGuest && $model->id == \Yii::$app->user->id):?>
         <div class="contractor-block-info__contact contractor-block-info__contact--edit">
             <a href="<?=\yii\helpers\Url::to(['/cms/users/update'])?>" title="" class="contractor-block-info-show-edit">Редактировать</a>

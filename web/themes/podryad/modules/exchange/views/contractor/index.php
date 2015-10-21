@@ -13,7 +13,8 @@ $this->title = 'Подрядчики';
 ?>
 <main class="main">
     <section class="search-contractor-content">
-        <?= \app\modules\exchange\widgets\SpecializationFilter::widget(['checked'=>$model->specializationIds,'specialization'=>$specialization,'filterModel'=>'Contactor']) ?>
+        <h1 class="search-contractor-content__title"><?=$this->title?></h1>
+            <?= \app\modules\exchange\widgets\SpecializationFilter::widget(['checked'=>$model->specializationIds,'specialization'=>$specialization,'filterModel'=>'Contactor']) ?>
         <div class="search-contractor-results">
             <div class="search-contractor-results-list">
                 <div class="search-contractor-results-list-item">

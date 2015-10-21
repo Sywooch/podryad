@@ -17,6 +17,8 @@ use Yii;
  * @property string $otchestvo
  * @property string $fio
  * @property string $company
+ * @property string $site
+ * @property string $adres
  * @property string $specializationsString
  * @property Reference $city
  * @property Reference[] $specializations
@@ -46,6 +48,7 @@ class Profile extends \yii\db\ActiveRecord
             [['fio','company'], 'string', 'max' => 64],
             [['specialization','memo'],'safe'],
             ['file','file','skipOnEmpty'=>true],
+            [['site','adres'],'safe'],
         ];
     }
 
@@ -103,7 +106,7 @@ class Profile extends \yii\db\ActiveRecord
         return [
           'cms'=>[
               'class'=>CmsBehavior::className(),
-          ]
+          ],
         ];
     }
 }

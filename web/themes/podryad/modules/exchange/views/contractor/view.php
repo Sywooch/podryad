@@ -41,6 +41,22 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                         e-mail
                     </a>
                 </div>
+
+                <?php if (($site = $model->profile->site)): ?>
+                    <div class="contractor-block-info__contact contractor-block-info__contact--site">
+                        <a href="#" title="" data-show="<?= $site ?>" class="contractor-block-info-show">показать сайт
+                        </a>
+                    </div>
+                <?php endif ?>
+
+                <?php if (($address = $model->profile->adres)): ?>
+                    <div class="contractor-block-info__contact contractor-block-info__contact--address">
+                        <a href="#" title="" data-show="<?= $address ?>" class="contractor-block-info-show">показать
+                            адрес
+                        </a>
+                    </div>
+                <?php endif ?>
+
                 <?php if ($model->isMine()): ?>
                     <div class="contractor-block-info__contact contractor-block-info__contact--edit">
                         <a href="<?= \yii\helpers\Url::to(['/cms/users/update']) ?>" title=""
