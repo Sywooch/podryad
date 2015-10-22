@@ -147,7 +147,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
 									<?php if($model->isMine()):?>
                                     <a href="<?=Url::to(['/exchange/album/update','id'=>$album->id])?>" class="album-update">Редактировать альбом</a>
                                     <?php endif?>
-									<a href="<?= Url::to(['/exchange/album/delete', 'id' => $album->id]) ?>"class="album-update">Удалть альбом</a>
+									<a href="<?= Url::to(['/exchange/album/delete', 'id' => $album->id]) ?>"class="album-update">Удалить альбом</a>
                                 </div>
                                 <?php endforeach?>
                             </div>
