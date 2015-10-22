@@ -873,7 +873,6 @@ span.btn.btn-success.fileinput-button:hover {
     display: block;
     box-sizing: border-box;
     width: 180px;
-    float: left;
     height: 40px;
     text-decoration: none;
     margin: 15px 0px;
@@ -903,7 +902,6 @@ span.btn.btn-success.fileinput-button:hover {
     box-sizing: border-box;
     width: 180px;
     height: 40px;
-    float: left;
     text-decoration: none;
     text-transform: uppercase;
     color: #ffd200;
@@ -925,7 +923,6 @@ span.btn.btn-success.fileinput-button:hover {
     line-height: 40px;
     color: #6a6a6a;
     font-size: 1.375em;
-	text-align:right;
 }
 .not_phote {
     width: 100%;
@@ -943,7 +940,6 @@ span.btn.btn-success.fileinput-button:hover {
     line-height: 40px;
     color: #6a6a6a;
     font-size: 1.375em;
-	text-align:right;
 }
 .cena{
     color: #6a6a6a;
