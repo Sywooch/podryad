@@ -427,6 +427,8 @@
     box-sizing: border-box;
     width: 169px;
     float: right;
+    overflow: hidden;
+    margin-top: 13px;
     height: 37px;
     text-decoration: none;
     text-align: center;
@@ -691,4 +693,8 @@ span.step-icon i{
 }
 .has-error {
     margin-bottom: 5px;
+}
+.header-login a:hover {
+    color: #00acff;
+    text-decoration: underline;
 }

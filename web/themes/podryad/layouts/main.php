@@ -26,9 +26,9 @@ $this->beginPage();
             <title><?=$this->title?></title>
             <?=$this->head()?>
             <?=Html::csrfMetaTags()?>
-            <meta content="telephone=no" name="format-detection">
+			
             <meta name="robots" content="noodp, noydir">
-            <meta name="viewport" content="initial-scale=1, minimum-scale=1, width=device-width">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="HandheldFriendly" content="true">
             <meta content="IE=edge" http-equiv="X-UA-Compatible">
             <!--[if lt IE 9 ]>
