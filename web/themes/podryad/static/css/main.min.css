@@ -870,10 +870,10 @@ span.btn.btn-success.fileinput-button:hover {
     color: #ffd200;
 }
 .portfolio-album-add {
-    /* position: relative; */
     display: block;
     box-sizing: border-box;
     width: 180px;
+    float: left;
     height: 40px;
     text-decoration: none;
     margin: 15px 0px;
@@ -888,7 +888,6 @@ span.btn.btn-success.fileinput-button:hover {
     text-align: center;
     font-family: "ReformaGroteskDemiC";
     line-height: 40px;
-    /* font-size: 0.85em; */
     font-weight: normal;
     margin-right: 0px;
 }
@@ -919,6 +918,20 @@ span.btn.btn-success.fileinput-button:hover {
     line-height: 40px;
     font-weight: normal;
     margin: 15px 0px;
+}
+.not_phote p {
+    margin: 0px;
+    padding: 0px;
+    line-height: 40px;
+    color: #6a6a6a;
+    font-size: 1.375em;
+}
+.not_price p {
+    margin: 0px;
+    padding: 0px;
+    line-height: 40px;
+    color: #6a6a6a;
+    font-size: 1.375em;
 }
 .cena{
     color: #6a6a6a;
