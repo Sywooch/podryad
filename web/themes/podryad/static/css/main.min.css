@@ -924,16 +924,8 @@ span.btn.btn-success.fileinput-button:hover {
     color: #6a6a6a;
     font-size: 1.375em;
 }
-.not_phote {
-    width: 100%;
-}
-.not_price {
-    /* height: 40px; */
-    margin-top: 15px;
-    margin-left: 40px;
-    overflow: hidden;
-    /* width: 320px; */
-}
+
+
 .not_price p {
     margin: 0px;
     padding: 0px;

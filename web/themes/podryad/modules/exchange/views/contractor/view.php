@@ -138,7 +138,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
 
                                     <div class="portfolio-album__title">
                                         <?=$album->title?>
-                                        <?php if($model->isMine()){?>/ <a href="<?= Url::to(['/exchange/album/delete', 'id' => $album->id]) ?>">X</a><?php }?>
+                                        <?php if($model->isMine()){?><?php }?>
                                     </div>
                                     <div class="portfolio-album__count">
                                         Фото
@@ -147,6 +147,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
 									<?php if($model->isMine()):?>
                                     <a href="<?=Url::to(['/exchange/album/update','id'=>$album->id])?>" class="album-update">Редактировать альбом</a>
                                     <?php endif?>
+									<a href="<?= Url::to(['/exchange/album/delete', 'id' => $album->id]) ?>"class="album-update">Удалть альбом</a>
                                 </div>
                                 <?php endforeach?>
                             </div>
