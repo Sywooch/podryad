@@ -316,8 +316,6 @@
 }
 .tender_item__cotainer {
     margin-top: 15px;
-    width: 807px;
-    float: left;
     clear: both;
     /* overflow: hidden; */
 }
@@ -335,9 +333,7 @@
     font-size: 0.95em;
     font-weight: 700;
 }
-.tender_cotainer .tender_zakazchik {
-    margin-top: 15px;
-}
+
 .tender_item_des p {
     color: #6a6a6a;
     font-size: .875em;
