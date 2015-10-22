@@ -170,7 +170,6 @@ $this->beginPage();
 
                 </div>
             </div>
-            <??>
             <?=\app\modules\cms\widgets\RegisterForm::widget()?>
             <?=\app\modules\cms\widgets\Feedback::widget()?>
             <div class="mask"></div>
