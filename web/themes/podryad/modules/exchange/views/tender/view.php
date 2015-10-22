@@ -110,7 +110,6 @@ $this->registerMetaTag(['keywords'=>$title.' '.$city]);
             </div>
         </div>
         <?php endforeach?>
-		</div>
         <div class="tender_zakazchik">
             <div class="tender_zakaz_titile">
                 Заказчик
