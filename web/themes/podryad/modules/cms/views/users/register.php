@@ -95,7 +95,8 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
 
                 <div class="registration-contractor-form__row">
                     <?=Html::activeCheckbox($model,'agree',['label'=>''])?>
-                    Я согласен с условиями пользования сервисом
+                    <?=\yii\helpers\Html::a('Я согласен с условиями пользования
+                    сервисом',['/cms/default/page','path'=>'usloviya'],['target'=>'_blank'])?>
                     <?=Html::error($model,'agree')?>
                 </div>
             </label>

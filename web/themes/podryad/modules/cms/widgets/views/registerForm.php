@@ -30,7 +30,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
         <?=$form->field($model,'phone')?>
         <?=$form->field($model,'password')->passwordInput()?>
         <?=$form->field($model,'password2')->passwordInput()?>
-        <?=$form->field($model,'agree')->checkbox(['label'=>'Я согласен с условиями пользования сервисом'])?>
+        <?=$form->field($model,'agree')->checkbox(['label'=>\yii\helpers\Html::a('Я согласен с условиями пользования сервисом',['/cms/default/page','path'=>'usloviya'],['target'=>'_blank'])])?>
         <input type="submit" value="Зарегистрироваться" class="form__submit">
     <?php ActiveForm::end()?>
 </div>
