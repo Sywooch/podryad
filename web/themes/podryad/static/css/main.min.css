@@ -118,6 +118,15 @@
     /* -webkit-justify-content: space-between; */
     -ms-flex-pack: justify;
     /* justify-content: space-between; */
+}
+
+.search-contractor__btn:hover {
+    background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
+} 
+.filter__submit:hover {
+    background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
 }.sidebar-news-block:hover .sidebar-news-block__img img{-webkit-filter:grayscale(0);filter:grayscale(0)}.sidebar-news-block__img{margin-top:4px;margin-right:5px}.sidebar-news-block__img img{-webkit-filter:grayscale(100%);filter:grayscale(100%)}.sidebar-news-block__link{display:block;text-decoration:none;color:#6a6a6a;border-bottom:1px solid #6a6a6a}.sidebar-news-block__link:hover{color:#00acff}.sidebar-news-block__text{margin-top:3px;margin-bottom:0;color:#6a6a6a;font-size:.75em;line-height:1em}.sidebar-vk{margin-top:15px}
 .news-content-item a {
     display: block;
