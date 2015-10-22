@@ -11,23 +11,26 @@ $breadcrumbs = [];
 <main class="main">
     <section class="news-content">
         <div class="news-content__title">НОВОСТИ</div>
-
+<ul >
         <?php if (($row = Article::getOneByCategory(Article::TYPE_STOCK_ALIAS))): ?>
-            <div class="news-content-item">
+            
+			<li class="news-content-item">
                 <img src="<?= $row->imageSrc('275x214') ?>" alt="<?= $item->title ?>">
 
                 <a href="<?= $row->path ?>"><?= $row->title ?></a>
                 <span><?= $row->date ?></span>
-            </div>
+            </li>
+			
         <?php endif?>
 
         <?php foreach ($items as $row): ?>
-        <div class="news-content-item">
+        <li class="news-content-item">
             <img src="<?= $row->imageSrc('275x214')?>" alt="<?=$item->title?>">
             <a href="<?=$row->path?>"><?= $row->title?></a>
             <span><?= $row->date?></span>
-        </div>
+        </li>
         <?php endforeach ?>
+		</ul>
     </section>
     <?=$this->render('//layouts/_sidebar')?>
 </main>
