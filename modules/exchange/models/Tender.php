@@ -37,7 +37,7 @@ use yii\helpers\Url;
  * @usedBy app\modules\cms\components\CmsBehavior
  * @method string imageSrc(string $size = '100x100', string $method = Thumbler::METHOD_NOT_BOXED)
  */
-class Tender extends \yii\db\ActiveRecord
+class   Tender extends \yii\db\ActiveRecord
 {
 
     public $agree;
