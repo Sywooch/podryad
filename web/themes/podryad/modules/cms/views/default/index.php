@@ -69,7 +69,15 @@ $this->title = 'Главная';
                 </div>
             </div>
             <div class="service__bottom">
-                <a href="<?= Url::to(['/exchange/tender']) ?>" title="" class="btn btn--tender">ОБЪЯВИТЬ ТЕНДеР</a>
+                <?php if (\Yii::$app->user->isGuest) { ?>
+                    <a href="#" title="" class="btn btn--tender _tender" data-click="modal" data-item="#enter">Объявить
+                        тендер
+                    </a>
+                <?php } else if (\Yii::$app->user->identity->role != \app\modules\cms\models\User::ROLE_CONTRACTOR) { ?>
+                    <a href="<?= Url::to(['/exchange/tender/create']) ?>" title="" class="btn btn--tender">Объявить
+                        тендер
+                    </a>
+                <?php } ?>
             </div>
         </div>
         <div class="seo-text">
