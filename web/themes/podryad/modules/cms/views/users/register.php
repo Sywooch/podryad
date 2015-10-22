@@ -81,16 +81,13 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
                 <div class="registration-contractor-form__row">
                     <?= Html::activePasswordInput($model, 'password', ['class' => 'registration-contractor-form__input']) ?>
                     <?= Html::error($model, 'password') ?>
-                    <em>Мы не будем показывать
-                        Ваш адрес другим пользователям. Адрес необходим для размещения метки на карте</em>
                 </div>
             </label>
             <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Повторите пароль</span>
 
                 <div class="registration-contractor-form__row">
                     <?= Html::activePasswordInput($model, 'password2', ['class' => 'registration-contractor-form__input']) ?>
-                    <?= Html::error($model, 'password2') ?><em>Мы не будем показывать
-                        Ваш адрес другим пользователям. Адрес необходим для размещения метки на карте</em>
+                    <?= Html::error($model, 'password2') ?>
                 </div>
             </label>
             <label
