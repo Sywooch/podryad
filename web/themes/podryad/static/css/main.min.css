@@ -228,6 +228,7 @@
     display: block;
     color: #444;
     font-size: .875em;
+    font-weight: normal;
 }
 .control-label:after {
     padding-left: 3px;
@@ -858,6 +859,16 @@ span.btn.btn-success.fileinput-button:hover {
     background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
     color: #ffd200;
 }
+.portfolio-album-add:hover {
+    background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
+    color: #ffd200;
+}
+.add_price:hover {
+    background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
+    color: #ffd200;
+}
 .portfolio-album-add {
     /* position: relative; */
     display: block;
@@ -865,6 +876,7 @@ span.btn.btn-success.fileinput-button:hover {
     width: 180px;
     height: 40px;
     text-decoration: none;
+    margin: 15px 0px;
     text-transform: uppercase;
     color: #ffd200;
     border-radius: 3px;
@@ -887,11 +899,12 @@ span.btn.btn-success.fileinput-button:hover {
 .album-update:hover {
     text-decoration:none;
 }
-.add_price{
+.add_price {
     display: block;
     box-sizing: border-box;
     width: 180px;
     height: 40px;
+    float: left;
     text-decoration: none;
     text-transform: uppercase;
     color: #ffd200;
@@ -904,10 +917,8 @@ span.btn.btn-success.fileinput-button:hover {
     text-align: center;
     font-family: "ReformaGroteskDemiC";
     line-height: 40px;
-    /* font-size: 0.85em; */
     font-weight: normal;
-    /* margin-right: 0px; */
-    margin-left: 18px;
+    margin: 15px 0px;
 }
 .cena{
     color: #6a6a6a;
