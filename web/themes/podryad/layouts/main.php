@@ -50,7 +50,7 @@ $this->beginPage();
             <meta property="og:image:height" content="300"/>
             <meta property="twitter:description" content=""/>
             <link rel="image_src" href=""/>
-			<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
+			<link href="<?=$this->theme->getUrl('static/css/slick.css')?>" rel="stylesheet" type="text/css">
             <link rel="icon" type="image/png" href="<?=$this->theme->getUrl('favicon.ico')?>">
             <script>(function (H) {
                     H.className = H.className.replace(/\bno-js\b/, 'js')
