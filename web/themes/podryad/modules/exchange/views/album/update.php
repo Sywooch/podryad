@@ -3,8 +3,12 @@
 /* @var $model \app\modules\exchange\models\Album */
 use yii\bootstrap\Tabs;
 ?>
-
+<main class="main">
+<div class="create_album_container">
+<div class="create_album__title">Добавить цены</div>
+<div class="create_album__form">
 <?php
+
 echo Tabs::widget([
     'items' => [
         [
@@ -19,3 +23,6 @@ echo Tabs::widget([
         ],
     ],
 ]);?>
+</div>
+</div>
+</main>

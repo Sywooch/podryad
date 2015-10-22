@@ -149,7 +149,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                                 <?php endforeach?>
                             </div>
                             <?php else:?>
-                                <p>Подрядчик еще не добавил фото</p>
+                               <div class="not_phote"> <p>Подрядчик еще не добавил фото</p></div>
                             <?php endif?>
                         </div>
                     </div>
@@ -157,7 +157,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                     <div class="contractor-tabs-box__item">
 
                         <?php if($model->isMine()):?>
-                        <a href="<?= Url::to(['/exchange/contractor-price/create']) ?>">Добавить</a>
+                        <a class="add_price" href="<?= Url::to(['/exchange/contractor-price/create']) ?>">Добавить</a>
                         <?php endif?>
 
 
@@ -176,15 +176,15 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                                 <td><?=$price->price?> тг.</td>
                                 <?php if($model->isMine()):?>
                                 <td>
-                                    <a href="<?=Url::to(['/exchange/contractor-price/update','id'=>$price->id])?>">ред</a> |
-                                    <a href="<?=Url::to(['/exchange/contractor-price/delete','id'=>$price->id])?>">удал</a>
+                                    <a class="redak  cena"href="<?=Url::to(['/exchange/contractor-price/update','id'=>$price->id])?>">ред</a> |
+                                    <a class="udalit cena"href="<?=Url::to(['/exchange/contractor-price/delete','id'=>$price->id])?>">удал</a>
                                 </td>
                                 <?php endif?>
                             </tr>
                             <?php endforeach?>
                         </table>
                         <?php else: ?>
-                            <p>Подрядчик еще не добавил цены.</p>
+                            <div class="not_price"><p>Подрядчик еще не добавил цены.</p></div>
                         <?php endif ?>
                     </div>
 
