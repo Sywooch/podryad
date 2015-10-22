@@ -817,6 +817,15 @@ span.btn.btn-success.fileinput-button {
     border: none;
     float: left;
 }
+.btn.btn-danger.delete {
+    border: none;
+    padding: 0px;
+}
+.btn.btn-danger.delete:hover {
+      background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
+    color: #ffd200;
+}
 .create-album.btn:hover {
     background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
     background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
@@ -824,6 +833,20 @@ span.btn.btn-success.fileinput-button {
 }
 .template-upload.fade.in button {
     margin: 11px 18px 0px 0px;
+}
+.template-upload.fade.in button:hover {
+    background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
+    color: #ffd200;
+}
+.btn.btn-warning.cancel {
+    border: none;
+    padding: 0;
+}
+.btn.btn-warning.cancel:hover {
+    background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
+    color: #ffd200;
 }
 .row.fileupload-buttonbar button:hover {
     background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
