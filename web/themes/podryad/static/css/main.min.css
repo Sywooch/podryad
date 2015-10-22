@@ -311,8 +311,9 @@
     font-size: .875em;
 }
 /*tender vnutr*/
-.tender_cotainer .contractor-back{
-	float:left;
+.tender_cotainer .contractor-back {
+    float: left;
+    margin-bottom: 15px;
 }
 .tender_item__cotainer {
     margin-top: 15px;
