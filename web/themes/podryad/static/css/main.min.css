@@ -793,6 +793,10 @@ span.btn.btn-success.fileinput-button {
     border-bottom: 1px solid #ddd;
     margin-bottom: 15px;
 }
+@media (min-width: 1200px){
+.col-lg-7 {
+    width:100%;
+}}
 .row.fileupload-buttonbar button {
     padding: 0px;
     margin-bottom: 15px;
