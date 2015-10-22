@@ -707,7 +707,7 @@ span.step-icon i{
     top: 0px;
     font-size: 1.125em;
 }
-.create_album__form {
+.create_album__form input {
     width: 30%;
 }
 .create-album.btn {
@@ -786,11 +786,26 @@ span.btn.btn-success.fileinput-button {
     outline: none;
     border: none;
     margin-bottom: 15px;
+    float: left;
+    margin-right: 15px;
+}
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
 }
 .row.fileupload-buttonbar button {
     padding: 0px;
     margin-bottom: 15px;
     border: none;
+    float: left;
+    margin-right: 15px;
+}
+.form-group.field-album-title.required.has-success label {
+    color: #444;
+    font-weight: normal;
+}
+.toggle {
+    width: auto;
 }
 .create-album.btn:hover {
     background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);

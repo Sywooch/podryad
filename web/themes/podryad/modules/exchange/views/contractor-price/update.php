@@ -5,7 +5,7 @@
 <main class="main">
 <div class="create_album_container">
 <div class="create_album__title">Добавить цены</div>
-<div class="create_album__form">
+<div class="create_album__form ">
 <?= $this->render('_form', ['model' => $model]) ?>
 </div>
 </div>
