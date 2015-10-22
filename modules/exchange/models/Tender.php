@@ -101,7 +101,7 @@ class Tender extends \yii\db\ActiveRecord
 
     public function getPriceString()
     {
-        return $this->price == 0 ? 'Договорный' : $this->price . ' тг';
+        return $this->price == 0 ? 'Договорный' : (int)($this->price) . ' тг';
     }
 
     /**

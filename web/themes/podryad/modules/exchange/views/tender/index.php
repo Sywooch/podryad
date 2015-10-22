@@ -53,7 +53,7 @@ $this->title = 'Тендеры';
                             <div class="tenders-info">
                             <div class="tenders-info__time"><span>Тендер открыт:	     </span><?=$row->date?>
                                 </div>
-                                <div class="tenders-info__budget">Бюджет: <span><?=$row->price?> тг.</span></div>
+                                <div class="tenders-info__budget">Бюджет: <span><?=$row->priceString?></span></div>
                             </div>
                         </div>
                     </div>
