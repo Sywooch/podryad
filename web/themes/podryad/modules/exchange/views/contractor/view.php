@@ -114,9 +114,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                                 <?php foreach($albumList as $k=>$album):?>
                                 <div class="portfolio-slider <?=$k == 0 ?'active':''?>">
 
-                                    <?php if($model->isMine()):?>
-                                    <a href="<?=Url::to(['/exchange/album/update','id'=>$album->id])?>" class="album-update">Редактировать альбом</a>
-                                    <?php endif?>
+                                    
 
                                     <div class="portfolio-slider-big slider-big">
                                         <?php foreach($album->images as $image):?>
@@ -146,6 +144,9 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                                         Фото
                                         <span><?=$album->imagesCount?></span>
                                     </div>
+									<?php if($model->isMine()):?>
+                                    <a href="<?=Url::to(['/exchange/album/update','id'=>$album->id])?>" class="album-update">Редактировать альбом</a>
+                                    <?php endif?>
                                 </div>
                                 <?php endforeach?>
                             </div>
