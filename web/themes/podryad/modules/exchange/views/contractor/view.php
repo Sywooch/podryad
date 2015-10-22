@@ -102,22 +102,20 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                         <?=\app\modules\exchange\widgets\Reviews::widget(['contractorId'=>$model->id])?>
                     </div>
                     <div class="contractor-tabs-box__item active">
-					<?php if ($model->isMine()): ?>
-                            <a class="portfolio-album-add" href="<?=Url::to(['/exchange/album/create'])?>">Создать альбом</a>
-                            <?php endif ?>
-							<?php if($model->isMine()):?>
-                                    <a href="<?=Url::to(['/exchange/album/update','id'=>$album->id])?>" class="album-update">Редактировать альбом</a>
-                                    <?php endif?>
                         <div class="portfolio">
 
-                            
+                            <?php if ($model->isMine()): ?>
+                            <a class="portfolio-album-add" href="<?=Url::to(['/exchange/album/create'])?>">Создать альбом</a>
+                            <?php endif ?>
 
                             <?php if($albumList):?>
                             <div class="portfolio-sliders">
                                 <?php foreach($albumList as $k=>$album):?>
                                 <div class="portfolio-slider <?=$k == 0 ?'active':''?>">
 
-                                    
+                                    <?php if($model->isMine()):?>
+                                    <a href="<?=Url::to(['/exchange/album/update','id'=>$album->id])?>" class="album-update">Редактировать альбом</a>
+                                    <?php endif?>
 
                                     <div class="portfolio-slider-big slider-big">
                                         <?php foreach($album->images as $image):?>
