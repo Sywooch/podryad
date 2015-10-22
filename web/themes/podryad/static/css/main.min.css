@@ -808,7 +808,8 @@ span.btn.btn-success.fileinput-button {
     color: #444;
     font-weight: normal;
 }
-.toggle {
+
+.create-album input.toggle {
     width: auto;
 }
 .create-album.btn:hover {
