@@ -32,7 +32,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
                     <?=Html::error($model,'fio')?>
                 </div>
             </label>
-            <label class="registration-contractor-form__label registration-contractor-form__label--required">
+            <label class="registration-contractor-form__label">
                 <span>Компания:</span>
 
                 <div class="registration-contractor-form__row">
