@@ -20,11 +20,11 @@ class CmsBehavior extends Behavior{
 
     public function imageSrc($size='100x100',$method = Thumbler::METHOD_NOT_BOXED)
     {
-        /*if(!method_exists($this->owner,'getImage'))
-            return $this->imageThumb.$size;*/
+        if(!method_exists($this->owner,'getImage'))
+            return $this->imageThumb.$size;
 
         $image = $this->owner->image;
-        if($image && !is_file(\Yii::$app->thumbler->sourcePath.'/'.$image->src))
+        if($image && !is_file(\Yii::$app->thumbler->sourcePath.$image->src))
         {
             return $this->imageThumb . $size;
         }
