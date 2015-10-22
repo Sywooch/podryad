@@ -18,7 +18,7 @@ $this->registerMetaTag(['keywords'=>$title.' '.$city]);
 ?>
 <main class="main">
     <div class="tender_cotainer">
-        <a href="#" title="" class="contractor-back">Вернуться к списку тендеров</a>
+        <a href="<?=\Yii::$app->request->referrer?>" title="" class="contractor-back">Вернуться к списку тендеров</a>
         <div class="tender_item__cotainer">
             <div class="tender_item_des">
                 <h1 class="tender_item_des_title"><?=$model->title?></h1>

@@ -83,7 +83,8 @@ $this->title = 'Объявить тендер';
 
                 <div class="registration-contractor-form__row">
                     <?= Html::activeCheckbox($model, 'agree', ['label' => '']) ?>
-                    Я согласен с условиями пользования сервисом
+                    <?= \yii\helpers\Html::a('Я согласен с условиями пользования
+                    сервисом', ['/cms/default/page', 'path' => 'usloviya'], ['target' => '_blank']) ?>
                     <?= Html::error($model, 'agree') ?>
                 </div>
             </label>

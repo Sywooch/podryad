@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 ?>
 <div id="zakaz_tender" class="modal zakaz_tender">
     <div class="modal__close">x</div>
-    <div class="modal__title">УЧАствовать в ТЕНДЕРе</div>
+    <div class="modal__title">Участвовать в тендере</div>
         <?php $form = ActiveForm::begin([
             'id'=>'offers-form',
             'options'=>['class'=>'form'],
@@ -24,6 +24,6 @@ use yii\widgets\ActiveForm;
         ])?>
         <?= $form->field($model, 'price')->textInput(['class'=>'form__input']) ?>
         <?= $form->field($model, 'description')->textarea(['class' => 'form_textarea']) ?>
-        <input type="submit" value="Отправить" class="form__submit">
+        <input type="submit" value="Участвовать" class="form__submit">
     <?php ActiveForm::end()?>
 </div>
