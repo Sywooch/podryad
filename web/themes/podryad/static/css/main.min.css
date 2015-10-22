@@ -893,6 +893,8 @@ span.btn.btn-success.fileinput-button:hover {
 .album-update {
     color: #6a6a6a;
     font-size: .875em;
+    display: block;
+    margin: 3px 0px;
 }
 .album-update:hover {
     text-decoration:none;
