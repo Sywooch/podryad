@@ -24,7 +24,8 @@ class CmsBehavior extends Behavior{
             return $this->imageThumb.$size;
 
         $image = $this->owner->image;
-        if($image && !is_readable(\Yii::$app->thumbler->sourcePath.$image->src))
+        $webroot = \Yii::getAlias('@webroot');
+        if($image && !is_readable($webroot.'/'.\Yii::$app->thumbler->sourcePath.$image->src))
         {
             return $this->imageThumb . $size;
         }
