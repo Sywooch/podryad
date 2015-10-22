@@ -698,3 +698,25 @@ span.step-icon i{
     color: #00acff;
     text-decoration: underline;
 }
+.contractor-block-info__rating a var {
+    font-style: normal;
+}
+
+.announce-tender {
+    display: -webkit-box;
+    display: -webkit-flex;
+    margin-bottom: 15px;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 16px 28px 16px 18px;
+    background: -webkit-linear-gradient(top,#1c96c9,#1883bf);
+    background: linear-gradient(to bottom,#1c96c9,#1883bf);
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
