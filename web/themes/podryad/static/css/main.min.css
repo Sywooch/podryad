@@ -707,7 +707,7 @@ span.step-icon i{
     top: 0px;
     font-size: 1.125em;
 }
-.create_album__form input {
+.create_album__form .form-control {
     width: 30%;
 }
 .create-album.btn {
@@ -809,9 +809,7 @@ span.btn.btn-success.fileinput-button {
     font-weight: normal;
 }
 
-.create-album input.toggle {
-    width: auto;
-}
+
 .create-album.btn:hover {
     background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
     background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
