@@ -5,7 +5,7 @@ use yii\bootstrap\Tabs;
 ?>
 <main class="main">
 <div class="create_album_container">
-<div class="create_album__title">Добавить цены</div>
+<div class="create_album__title">Редактирование альбома</div>
 <div class="create_album__form">
 <?php
 
