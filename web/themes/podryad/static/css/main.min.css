@@ -525,6 +525,7 @@ html.active,body.active {
     font-size: .875em;
     font-weight: 700;
     width: 100%;
+    margin-top: 15px;
 }
 
 .contractor-block-info__service {
@@ -831,8 +832,8 @@ html.active,body.active {
     color: #999;
     display: flex;
     display: -ms-flexbox;
-    display: -webkit-box;
-    display: -webkit-flex;
+    /* display: -webkit-box; */
+    /* display: -webkit-flex; */
     flex-wrap: wrap;
     font-size: .875em;
     justify-content: flex-start;
@@ -843,8 +844,19 @@ html.active,body.active {
     webkit-align-items: flex-start;
     webkit-box-align: start;
     webkit-box-pack: start;
+    position: absolute;
     webkit-flex-wrap: wrap;
     webkit-justify-content: flex-start;
+}
+.contractor-tabs-reviews-item__img {
+    margin-right: 16px;
+    width: 172px;
+    height: 172px;
+    overflow: hidden;
+    float: left;
+}
+.contractor-tabs-reviews-item__img img {
+    width: 100%;
 }
 
 .contractor-tabs-reviews-item__name {
@@ -3884,10 +3896,10 @@ span.btn.btn-success.fileinput-button:hover {
     display: block;
     box-sizing: border-box;
     width: 129px;
-    /* float: right; */
+    float: right;
     overflow: hidden;
     /* margin-top: 30px; */
-    margin-bottom: 14px;
+    /* margin-bottom: 14px; */
     height: 37px;
     text-decoration: none;
     text-align: center;
