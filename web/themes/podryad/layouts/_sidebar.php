@@ -35,5 +35,20 @@ use app\modules\cms\models\Article;
         </div>
         <?php endforeach?>
     </div>
-    <div class="sidebar-vk"><img src="<?=$this->theme->getUrl('static/images/content/vk.jpg')?>" alt=""></div>
+    <div class="sidebar-vk">
+        <script type="text/javascript" src="//vk.com/js/api/openapi.js?117"></script>
+
+        <!-- VK Widget -->
+        <div id="vk_groups"></div>
+        <script type="text/javascript">
+            VK.Widgets.Group("vk_groups", {
+                mode: 0,
+                width: "318",
+                height: "400",
+                color1: 'FFFFFF',
+                color2: '2B587A',
+                color3: '5B7FA6'
+            }, 105009611);
+        </script>
+    </div>
 </aside>
