@@ -93,7 +93,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                                 <?php if($model->profile->memo):?>
                                     <?=$model->profile->memo?>
                                 <?php else:?>
-                                    <p>Подрядчик еще не добавил описание.</p>
+                                    <p class="not_des"">Подрядчик еще не добавил описание.</p>
                                 <?php endif?>
                             <?php endif?>
                         </div>
