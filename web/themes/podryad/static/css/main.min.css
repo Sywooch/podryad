@@ -827,7 +827,7 @@ html.active,body.active {
     margin-right: 16px;
     width: 172px;
 }
-.not_des {
+.contractor-tabs-description p.not_des {
     color: #6a6a6a;
     font-size: 1.375em;
     line-height: 40px;
