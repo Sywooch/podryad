@@ -56,6 +56,13 @@ $this->title = 'Личный кабинет:';
 
         <div class="contractor-block-info__service">Все <?=\app\modules\exchange\models\Tender::find()->where(['userId'=>$model->id])->count()?></div>
 
+        <?php if(empty($tenderList)):?>
+            <div class="contractor-block-info__service">В данный момент у Вас нет активных объявлений.
+                <a href="<?=\yii\helpers\Url::to(['/exchange/tender/create'])?>">Объявите тендер</a>
+                и получайте продложения от подрядчиков.
+            </div>
+        <?php endif?>
+
         <?php foreach($tenderList as $tender):?>
         <div class="accaunt_tender_item">
             <div class="accaunt_tender_item_head">
