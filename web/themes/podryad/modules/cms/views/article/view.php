@@ -12,8 +12,12 @@ $this->title = $item->title;
         <span><?=$item->date?></span>
 
         <?=$item->description?>
-        <div class="news-full-content__social">Поделиться в социальных сетях<img src="<?= $this->theme->getUrl('static/images/content/social.jpg') ?>"
-                                                                                 alt=""></div>
+        <div class="news-full-content__social">Поделиться в социальных сетях
+            <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
+            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="small"
+                 data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir"
+                 data-yashareTheme="counter"></div>
+        </div>
         <div class="news-full-content__comments">
             <div id="hypercomments_widget"></div>
             <script type="text/javascript">
