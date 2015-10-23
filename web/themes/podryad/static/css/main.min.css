@@ -16,7 +16,10 @@ body {
 article,aside,details,figcaption,figure,footer,header,main,nav,section,summary {
     display: block;
 }
-
+a:hover, a:focus{
+	text-decoration:none;
+	color:auto;
+}
 audio,canvas,progress,video {
     display: inline-block;
     vertical-align: baseline;
