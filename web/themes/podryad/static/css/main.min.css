@@ -653,7 +653,13 @@ html.active,body.active {
     color: #1883bf;
 }
 
-
+.contractor-block-images {
+    height: 172px;
+    width: 501px;
+}
+.contractor-block-images img {
+    margin-right: 10px;
+}
 
 .contractor-block-images img:hover {
     cursor: pointer;
@@ -2829,12 +2835,7 @@ html.swipebox-html.swipebox-touch {
     margin-top: 10px;
     width: 100%;
 }
-.contractor-block-images img {
-    margin-right: 10px;
-}
-.contractor-block-images a {
-    text-decoration: none;
-}
+
 .sidebar {
     margin-top: 15px;
     width: 320px;
