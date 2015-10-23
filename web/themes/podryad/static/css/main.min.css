@@ -653,25 +653,7 @@ html.active,body.active {
     color: #1883bf;
 }
 
-.contractor-block-images {
-    align-items: center;
-    display: flex;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: -webkit-flex;
-    flex-wrap: wrap;
-    height: 172px;
-    justify-content: space-between;
-    ms-flex-align: center;
-    ms-flex-pack: justify;
-    ms-flex-wrap: wrap;
-    webkit-align-items: center;
-    webkit-box-align: center;
-    webkit-box-pack: justify;
-    webkit-flex-wrap: wrap;
-    webkit-justify-content: space-between;
-    width: 501px;
-}
+
 
 .contractor-block-images img:hover {
     cursor: pointer;
@@ -2847,7 +2829,12 @@ html.swipebox-html.swipebox-touch {
     margin-top: 10px;
     width: 100%;
 }
-
+.contractor-block-images img {
+    margin-right: 10px;
+}
+.contractor-block-images a {
+    text-decoration: none;
+}
 .sidebar {
     margin-top: 15px;
     width: 320px;
