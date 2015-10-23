@@ -27,14 +27,16 @@ class ContractorController extends Controller{
         $model = new Contactor();
         $model->load($_GET);
         $specializationCategoryList = $model->getCategorySpecializationList();
-        $contactorList = $model->getList($specialization);
+        $itemPages = $model->getList($specialization);
+        $contactorList = $itemPages['items'];
+        $pages = $itemPages['pages'];
 
         if(sizeof($specializationCategoryList)>1)
         {
             $specialization = 'specializacii';
         }
 
-        return $this->render('index',['specialization'=>$specialization,'contactorList'=>$contactorList,'model'=>$model]);
+        return $this->render('index',['specialization'=>$specialization,'contactorList'=>$contactorList,'model'=>$model,'pages'=>$pages]);
     }
 
     public function actionView($id)

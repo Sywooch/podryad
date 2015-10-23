@@ -3,6 +3,7 @@
  * @var $this \yii\web\View
  * @var $model \app\modules\exchange\models\Tender
  * @var $list \app\modules\exchange\models\Tender[]
+ * @var $pages \yii\data\Pagination
  */
 use yii\helpers\Html;
 $this->title = 'Тендеры';
@@ -60,6 +61,12 @@ $this->title = 'Тендеры';
                 </div>
             </div>
             <?php endforeach?>
+
+            <?php
+            echo \yii\widgets\LinkPager::widget([
+                'pagination' => $pages,
+            ]);
+            ?>
         </div>
     </section>
 </main>

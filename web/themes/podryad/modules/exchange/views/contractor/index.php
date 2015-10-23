@@ -8,6 +8,7 @@
  * @var $model \app\modules\exchange\models\Contactor
  * @var $specialization string
  * @var $contactorList \app\modules\exchange\models\Contactor[]
+ * @var $pages \yii\data\Pagination
  */
 $this->title = 'Подрядчики';
 ?>
@@ -56,6 +57,12 @@ $this->title = 'Подрядчики';
                         </div>
                     </div>
                     <?php endforeach?>
+
+                    <?php
+                    echo \yii\widgets\LinkPager::widget([
+                        'pagination' => $pages,
+                    ]);
+                    ?>
                 </div>
             </div>
         </div>

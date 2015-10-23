@@ -271,7 +271,7 @@ class TenderQuery extends ActiveQuery
 
     public function orderNew()
     {
-        $this->orderBy(['dateCreate'=>SORT_DESC]);
+        $this->orderBy(['iv_tender.dateCreate'=>SORT_DESC]);
         return $this;
     }
 }
