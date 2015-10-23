@@ -28,7 +28,7 @@ $this->title = 'Личный кабинет:';
 
         <?php if(!\Yii::$app->user->isGuest && $model->id == \Yii::$app->user->id):?>
         <div class="contractor-block-info__contact contractor-block-info__contact--edit">
-            <a href="<?=\yii\helpers\Url::to(['/cms/users/update'])?>" title="" class="contractor-block-info-show-edit">Редактировать</a>
+            <a href="<?=\yii\helpers\Url::to(['/cms/users/update'])?>" title="" class="contractor-block-info-show-edit">Редактировать профиль</a>
         </div>
         <?php endif?>
     </div>

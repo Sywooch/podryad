@@ -60,7 +60,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                 <?php if ($model->isMine()): ?>
                     <div class="contractor-block-info__contact contractor-block-info__contact--edit">
                         <a href="<?= \yii\helpers\Url::to(['/cms/users/update']) ?>" title=""
-                           class="contractor-block-info-show-edit">Редактировать
+                           class="contractor-block-info-show-edit">Редактировать профиль
                         </a>
                     </div>
                 <?php endif ?>
