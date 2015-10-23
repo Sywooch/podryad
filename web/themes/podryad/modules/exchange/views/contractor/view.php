@@ -102,20 +102,19 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                         <?=\app\modules\exchange\widgets\Reviews::widget(['contractorId'=>$model->id])?>
                     </div>
                     <div class="contractor-tabs-box__item active">
-                        <div class="portfolio">
-
-                            <?php if ($model->isMine()): ?>
+						<?php if ($model->isMine()): ?>
                             <a class="portfolio-album-add" href="<?=Url::to(['/exchange/album/create'])?>">Создать альбом</a>
                             <?php endif ?>
+                        <div class="portfolio">
+
+                            
 
                             <?php if($albumList):?>
                             <div class="portfolio-sliders">
                                 <?php foreach($albumList as $k=>$album):?>
                                 <div class="portfolio-slider <?=$k == 0 ?'active':''?>">
 
-                                    <?php if($model->isMine()):?>
-                                    <a href="<?=Url::to(['/exchange/album/update','id'=>$album->id])?>" class="album-update">Редактировать альбом</a>
-                                    <?php endif?>
+                                    
 
                                     <div class="portfolio-slider-big slider-big">
                                         <?php foreach($album->images as $image):?>
@@ -139,17 +138,21 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
 
                                     <div class="portfolio-album__title">
                                         <?=$album->title?>
-                                        <?php if($model->isMine()){?>/ <a href="<?= Url::to(['/exchange/album/delete', 'id' => $album->id]) ?>">X</a><?php }?>
+                                        <?php if($model->isMine()){?><?php }?>
                                     </div>
                                     <div class="portfolio-album__count">
                                         Фото
                                         <span><?=$album->imagesCount?></span>
                                     </div>
+									<?php if($model->isMine()):?>
+                                    <a href="<?=Url::to(['/exchange/album/update','id'=>$album->id])?>" class="album-update">Редактировать альбом</a>
+                                    <?php endif?>
+									<a href="<?= Url::to(['/exchange/album/delete', 'id' => $album->id]) ?>"class="album-update">Удалить альбом</a>
                                 </div>
                                 <?php endforeach?>
                             </div>
                             <?php else:?>
-                                <p>Подрядчик еще не добавил фото</p>
+                               <div class="not_phote"> <p>Подрядчик еще не добавил фото</p></div>
                             <?php endif?>
                         </div>
                     </div>
@@ -157,7 +160,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                     <div class="contractor-tabs-box__item">
 
                         <?php if($model->isMine()):?>
-                        <a href="<?= Url::to(['/exchange/contractor-price/create']) ?>">Добавить</a>
+                        <a class="add_price" href="<?= Url::to(['/exchange/contractor-price/create']) ?>">Добавить</a>
                         <?php endif?>
 
 
@@ -176,15 +179,15 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                                 <td><?=$price->price?> тг.</td>
                                 <?php if($model->isMine()):?>
                                 <td>
-                                    <a href="<?=Url::to(['/exchange/contractor-price/update','id'=>$price->id])?>">ред</a> |
-                                    <a href="<?=Url::to(['/exchange/contractor-price/delete','id'=>$price->id])?>">удал</a>
+                                    <a class="redak  cena"href="<?=Url::to(['/exchange/contractor-price/update','id'=>$price->id])?>">ред</a> |
+                                    <a class="udalit cena"href="<?=Url::to(['/exchange/contractor-price/delete','id'=>$price->id])?>">удал</a>
                                 </td>
                                 <?php endif?>
                             </tr>
                             <?php endforeach?>
                         </table>
                         <?php else: ?>
-                            <p>Подрядчик еще не добавил цены.</p>
+                            <div class="not_price"><p>Подрядчик еще не добавил цены.</p></div>
                         <?php endif ?>
                     </div>
 

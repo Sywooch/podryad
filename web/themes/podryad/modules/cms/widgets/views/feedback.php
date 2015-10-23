@@ -21,7 +21,7 @@
         <?=$form->field($model,'name')?>
         <?=$form->field($model,'email')?>
         <?=$form->field($model,'phone')?>
-        <?=$form->field($model,'message')->textarea(['class'=>'form_textarea_tender','placeholder'=>'Напишите свои предложение или интересующие вопросы'])?>
+        <?=$form->field($model,'message')->textarea(['class'=>'form_textarea_tender','placeholder'=>'Напишите свое предложение или интересующий вопрос '])?>
         <input type="submit" value="Отправить" class="form__submit">
     <?php \yii\widgets\ActiveForm::end()?>
 </div>
