@@ -7,6 +7,8 @@
  * @var $this \yii\web\View
  * @var $model \app\modules\cms\models\User
  * @var $tender \app\modules\exchange\models\Tender
+ * @var $tenderList \app\modules\exchange\models\Tender[]
+ * @var $pages \yii\data\Pagination
  */
 use yii\helpers\Html;
 $this->title = 'Личный кабинет:';
@@ -54,7 +56,7 @@ $this->title = 'Личный кабинет:';
 
         <div class="contractor-block-info__service">Все <?=\app\modules\exchange\models\Tender::find()->where(['userId'=>$model->id])->count()?></div>
 
-        <?php foreach(\app\modules\exchange\models\Tender::getTenderByUser($model->id) as $tender):?>
+        <?php foreach($tenderList as $tender):?>
         <div class="accaunt_tender_item">
             <div class="accaunt_tender_item_head">
                 <a class="accaunt_tender_item title" href="<?=\yii\helpers\Url::to(['/exchange/tender/view','id'=>$tender->id])?>">
@@ -83,5 +85,11 @@ $this->title = 'Личный кабинет:';
             </div>
         </div>
         <?php endforeach?>
+
+        <?php
+        echo \yii\widgets\LinkPager::widget([
+            'pagination' => $pages,
+        ]);
+        ?>
     </div>
 </main>
