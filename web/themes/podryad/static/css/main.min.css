@@ -804,9 +804,17 @@ html.active,body.active {
 }
 
 .contractor-tabs-reviews {
-    padding-top: 10px;
+    /* padding-top: 10px; */
 }
-
+.contractor-tabs-reviews p {
+    margin: 0px;
+    padding: 0px;
+    color: #6a6a6a;
+    font-size: 1.375em;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+}
 .contractor-tabs-reviews-item {
     align-items: flex-start;
     display: flex;
@@ -821,7 +829,9 @@ html.active,body.active {
     webkit-box-pack: justify;
     webkit-justify-content: space-between;
 }
-
+.contractor-tabs-description {
+    margin-top: 10px;
+}
 .contractor-tabs-reviews-item__img {
     margin-right: 16px;
     width: 172px;
@@ -927,7 +937,7 @@ html.active,body.active {
     justify-content: space-between;
     ms-flex-align: start;
     ms-flex-pack: justify;
-    padding-top: 15px;
+    /* padding-top: 15px; */
     webkit-align-items: flex-start;
     webkit-box-align: start;
     webkit-box-pack: justify;
@@ -3366,7 +3376,7 @@ html.swipebox-html.swipebox-touch {
 }
 
 #back_hunter {
-    height: 476px;
+    height: 430px;
 }
 
 .type_file {
@@ -3916,6 +3926,15 @@ span.btn.btn-success.fileinput-button:hover {
     text-align: center;
 }
 .contractor-block-info-use:hover {
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
+    background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    color: #ffd200;
+}
+.create-revie.btn {
+    padding: 0;
+    border: none;
+}
+.create-revie.btn:hover {
     background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
     background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
     color: #ffd200;
