@@ -7,6 +7,8 @@
  * @var $this \yii\web\View
  * @var $model \app\modules\cms\models\User
  * @var $tender \app\modules\exchange\models\Tender
+ * @var $tenderList \app\modules\exchange\models\Tender[]
+ * @var $pages \yii\data\Pagination
  */
 use yii\helpers\Html;
 $this->title = 'Личный кабинет:';
@@ -26,7 +28,7 @@ $this->title = 'Личный кабинет:';
 
         <?php if(!\Yii::$app->user->isGuest && $model->id == \Yii::$app->user->id):?>
         <div class="contractor-block-info__contact contractor-block-info__contact--edit">
-            <a href="<?=\yii\helpers\Url::to(['/cms/users/update'])?>" title="" class="contractor-block-info-show-edit">Редактировать</a>
+            <a href="<?=\yii\helpers\Url::to(['/cms/users/update'])?>" title="" class="contractor-block-info-show-edit">Редактировать профиль</a>
         </div>
         <?php endif?>
     </div>
@@ -54,7 +56,14 @@ $this->title = 'Личный кабинет:';
 
         <div class="contractor-block-info__service">Все <?=\app\modules\exchange\models\Tender::find()->where(['userId'=>$model->id])->count()?></div>
 
-        <?php foreach(\app\modules\exchange\models\Tender::getTenderByUser($model->id) as $tender):?>
+        <?php if(empty($tenderList)):?>
+            <div class="contractor-block-info__service">В данный момент у Вас нет активных объявлений.
+                <a href="<?=\yii\helpers\Url::to(['/exchange/tender/create'])?>">Объявите тендер</a>
+                и получайте продложения от подрядчиков.
+            </div>
+        <?php endif?>
+
+        <?php foreach($tenderList as $tender):?>
         <div class="accaunt_tender_item">
             <div class="accaunt_tender_item_head">
                 <a class="accaunt_tender_item title" href="<?=\yii\helpers\Url::to(['/exchange/tender/view','id'=>$tender->id])?>">
@@ -83,5 +92,11 @@ $this->title = 'Личный кабинет:';
             </div>
         </div>
         <?php endforeach?>
+
+        <?php
+        echo \yii\widgets\LinkPager::widget([
+            'pagination' => $pages,
+        ]);
+        ?>
     </div>
 </main>

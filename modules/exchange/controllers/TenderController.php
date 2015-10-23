@@ -12,6 +12,7 @@ namespace app\modules\exchange\controllers;
 use app\modules\cms\models\Image;
 use app\modules\cms\models\User;
 use app\modules\exchange\models\Tender;
+use yii\data\Pagination;
 use yii\filters\AccessControl;
 use yii\helpers\Url;
 use yii\web\Controller;
@@ -52,8 +53,11 @@ class TenderController extends Controller
             if ($model->specializationIds)
                 $search->andWhere(['specializationId' => $model->specializationIds]);
 
-            $search->andWhere(['>=', 'price', (int)$model->priceMin]);
-            $search->andWhere(['<=', 'price', (int)$model->priceMax]);
+            if($model->priceMin && $model->priceMax)
+            {
+                $search->andWhere(['>=', 'price', (int)$model->priceMin]);
+                $search->andWhere(['<=', 'price', (int)$model->priceMax]);
+            }
         }
 
         if (!empty(\Yii::$app->request->cookies['city'])) {
@@ -63,9 +67,14 @@ class TenderController extends Controller
             }]);
         }
 
-        $list = $search->all();
+        $countQuery = clone $search;
+        $pages = new Pagination(['totalCount' => $countQuery->count(),'pageSize'=>\Yii::$app->params['pageSize']]);
 
-        return $this->render('index', ['model' => $model, 'list' => $list]);
+        $list = $search->offset($pages->offset)
+            ->limit($pages->limit)
+            ->all();
+
+        return $this->render('index', ['model' => $model, 'list' => $list,'pages'=>$pages]);
     }
 
     public function actionCreate()

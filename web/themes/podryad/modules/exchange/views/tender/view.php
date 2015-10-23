@@ -120,15 +120,6 @@ $this->registerMetaTag(['keywords'=>$title.' '.$city]);
                     <p><?=Html::encode($offer->description)?>
                     </p>
                     <?= \app\modules\cms\widgets\Rate::widget(['model' => $offer, 'primaryKey' => $offer->id]) ?>
-                    <div class="contractor-block-info__rating">
-                        <?php if (\Yii::$app->user->can(\app\modules\cms\models\User::ROLE_CUSTOMER) && $model->userId == \Yii::$app->user->id && empty($offer->rate)): ?>
-                            <?php foreach($offer->rateList as $id=>$title):?>
-                                    <a href="<?= $offer->rateUrl($id) ?>" title=""><?=$title?></a>
-                            <?php endforeach?>
-                        <?php elseif($offer->rate):?>
-                            <a href=""><?=$offer->rateStatus?></a>
-                        <?php endif; ?>
-                    </div>
                 </div>
             </div>
         </div>

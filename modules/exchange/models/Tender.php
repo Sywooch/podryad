@@ -8,6 +8,7 @@ use app\modules\cms\models\Image;
 use app\modules\cms\models\Reference;
 use app\modules\cms\models\User;
 use Yii;
+use yii\data\Pagination;
 use yii\db\ActiveQuery;
 use yii\helpers\Url;
 
@@ -206,10 +207,13 @@ class   Tender extends \yii\db\ActiveRecord
      */
     public static function getTenderByUser($id)
     {
-        return self::find()
+        $query = self::find()
             ->where(['userId'=>$id])
-            ->orderBy(['dateCreate'=>SORT_DESC])
-            ->all();
+            ->orderBy(['dateCreate'=>SORT_DESC]);
+        $countQuery = clone $query;
+        $pages = new Pagination(['totalCount'=>$countQuery->count(),'pageSize'=>\Yii::$app->params['pageSize']]);
+
+        return ['items'=>$query->offset($pages->offset)->limit($pages->limit)->all(),'pages'=>$pages];
     }
 
     /**
@@ -271,7 +275,7 @@ class TenderQuery extends ActiveQuery
 
     public function orderNew()
     {
-        $this->orderBy(['dateCreate'=>SORT_DESC]);
+        $this->orderBy(['iv_tender.dateCreate'=>SORT_DESC]);
         return $this;
     }
 }

@@ -129,7 +129,10 @@ class UsersController extends Controller
             }
         }
         $tender = new Tender();
-        return $this->render('view',['model'=>$model,'tender'=>$tender]);
+        $tenderPages = \app\modules\exchange\models\Tender::getTenderByUser($id);
+        $tenderList = $tenderPages['items'];
+        $pages = $tenderPages['pages'];
+        return $this->render('view',['model'=>$model,'tender'=>$tender,'tenderList'=>$tenderList,'pages'=>$pages]);
     }
 
     /**

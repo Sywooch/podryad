@@ -7,6 +7,7 @@ use app\modules\cms\models\Image;
 use app\modules\cms\models\Profile;
 use app\modules\cms\models\Reference;
 use app\modules\cms\models\User;
+use yii\data\Pagination;
 
 /**
  * Created by PhpStorm.
@@ -78,7 +79,11 @@ class Contactor extends User
             }]);
         }
 
-        return $query->all();
+        $pageCount = clone $query;
+        $pages = new Pagination(['totalCount'=> $pageCount->count(),'pageSize'=>\Yii::$app->params['pageSize']]);
+
+        $items = $query->offset($pages->offset)->limit($pages->limit)->all();
+        return ['items'=>$items,'pages'=>$pages];
     }
 
     public function getAlbums()
