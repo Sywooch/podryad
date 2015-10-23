@@ -6,6 +6,7 @@ html {
 
 body {
     margin: 0;
+	font-size: 16px;
 }
 
 article,aside,details,figcaption,figure,footer,header,main,nav,section,summary {
@@ -811,20 +812,24 @@ html.active,body.active {
     display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
-    justify-content: space-between;
     ms-flex-align: start;
     ms-flex-pack: justify;
     webkit-align-items: flex-start;
     webkit-box-align: start;
     webkit-box-pack: justify;
-    webkit-justify-content: space-between;
 }
-.contractor-tabs-description {
-    margin-top: 10px;
-}
+
+
 .contractor-tabs-reviews-item__img {
     margin-right: 16px;
     width: 172px;
+}
+.not_des {
+    color: #6a6a6a;
+    font-size: 1.375em;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
 }
 
 .contractor-tabs-reviews-item__content {
@@ -956,10 +961,8 @@ html.active,body.active {
 }
 
 .portfolio-slider-small img {
-    filter: brightness(50%);
     height: 60px;
     margin: 0 5px;
-    webkit-filter: brightness(50%);
 }
 
 .portfolio-slider-small img.slick-center {
@@ -1055,6 +1058,7 @@ html.active,body.active {
 .portfolio-album__preview {
     float: left;
     margin-right: 20px;
+    width: 150px;
 }
 
 .portfolio-album__title {
@@ -3854,7 +3858,7 @@ span.btn.btn-success.fileinput-button:hover {
 
 .pagination li a {
     color: #999;
-    font-size: .875em;
+    font-size: 1.075em;
     text-decoration: none;
 }
 
