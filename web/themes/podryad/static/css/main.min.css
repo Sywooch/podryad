@@ -710,12 +710,12 @@ html.active,body.active {
     display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
+    margin-bottom: 10px;
     justify-content: flex-start;
     ms-flex-pack: start;
     webkit-box-pack: start;
     webkit-justify-content: flex-start;
 }
-
 .contractor-tabs-control__item {
     color: #6a6a6a;
     display: block;
