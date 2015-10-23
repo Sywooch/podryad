@@ -3022,8 +3022,8 @@ html.swipebox-html.swipebox-touch {
 }
 
 .accaunt_tender_container {
-    border: 1px solid #acacac;
-    padding: 10px;
+    /* border: 1px solid #acacac; */
+    /* padding: 10px; */
     width: 938px;
 }
 
@@ -3037,8 +3037,14 @@ html.swipebox-html.swipebox-touch {
     color: #1883bf;
     font-size: .875em;
     font-size: 1.225em;
-    font-weight: 700;
+    /* font-weight: 700; */
     padding: 0;
+}
+.accaunt_tender_item.title a {
+   text-decoration:none;
+}
+.accaunt_tender_item.title a:hover {
+   text-decoration:underline;
 }
 
 .accaunt_tender_item_btn {
@@ -3901,4 +3907,7 @@ span.btn.btn-success.fileinput-button:hover {
     background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
     background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
     color: #ffd200;
+}
+.tender-list-item {
+    list-style: none;
 }
