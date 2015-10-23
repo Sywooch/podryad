@@ -660,7 +660,9 @@ html.active,body.active {
 .contractor-block-images img {
     margin-right: 10px;
 }
-
+.contractor-block-images a {
+    text-decoration:none;
+}
 .contractor-block-images img:hover {
     cursor: pointer;
     filter: brightness(150%);

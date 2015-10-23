@@ -14,6 +14,7 @@ use yii\helpers\Html;
 $this->title = 'Личный кабинет:';
 ?>
 <main class="main">
+	<h1 class="search-contractor-content__title">Профиль</h1>
     <div class="accaunt_block">
         <div class="contractor-block-avatar"><img src="<?=$model->profile->imageSrc('197x125')?>" alt=""></div>
         <div class="accaunt_name">
@@ -34,9 +35,7 @@ $this->title = 'Личный кабинет:';
     </div>
 
     <div class="accaunt_tender_container">
-        <div class="accaunt_tender title">
-            Мои тендеры
-        </div>
+       
 
         <div class="announce-tender">
             <div class="announce-tender__baner"><img
