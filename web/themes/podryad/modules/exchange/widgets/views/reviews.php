@@ -43,7 +43,7 @@
             'enableAjaxValidation'=>true,
         ])?>
         <?=\yii\helpers\Html::activeHiddenInput($model,'contractorId')?>
-        <?=$form->field($model,'rate')->radioList(['Дислайк','Лайк'],['class'=>'create-album btn'])?>
+        <?=$form->field($model,'rate')->radioList(['Дислайк','Лайк'],['class'=>'like_rev dislike_rev'])?>
         <?=$form->field($model,'content')->textarea()?>
         <?=\yii\helpers\Html::submitButton('Добавить')?>
         <?php \yii\widgets\ActiveForm::end()?>
