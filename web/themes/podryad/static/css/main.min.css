@@ -3984,3 +3984,8 @@ a.btn.btn--tender:hover {
     background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
     color: #ffd200;
 }
+a.btn.btn--search:hover {
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
+    background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    color: #ffd200;
+}
