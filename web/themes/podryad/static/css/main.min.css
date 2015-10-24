@@ -2643,7 +2643,7 @@ html.swipebox-html.swipebox-touch {
     height: 35px;
     line-height: 1;
     margin: 10px auto;
-    padding-left: 0;
+    padding: 0;
     width: 90px;
 }
 
@@ -3985,6 +3985,11 @@ a.btn.btn--tender:hover {
     color: #ffd200;
 }
 a.btn.btn--search:hover {
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
+    background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    color: #ffd200;
+}
+a.btn.registration-contractor-form__btn:hover {
     background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
     background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
     color: #ffd200;
