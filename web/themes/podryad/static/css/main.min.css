@@ -1692,16 +1692,16 @@ html.swipebox-html.swipebox-touch {
 }
 
 .enter {
-    height: 295px;
+    height: 270px;
 }
-
 #enter label {
     color: #444;
     font-size: .875em;
+    font-weight: normal;
 }
 
 .registration {
-    height: 260px;
+    height: 270px;
 }
 
 .registration__item {
@@ -1715,6 +1715,7 @@ html.swipebox-html.swipebox-touch {
 
 .registration__item:hover {
     background: #eee;
+    color: #00acff;
 }
 
 .registration__item span {
@@ -2964,7 +2965,7 @@ html.swipebox-html.swipebox-touch {
     border-bottom: 1px solid #6a6a6a;
     color: #6a6a6a;
     display: inline-block;
-    margin: 21px 30px;
+    margin: 10px 30px;
     margin-bottom: 9px;
     margin-right: 0 auto;
     text-decoration: none;
