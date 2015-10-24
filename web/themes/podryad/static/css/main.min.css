@@ -3954,6 +3954,11 @@ span.btn.btn-success.fileinput-button:hover {
 .tender-list-item {
     list-style: none;
 }
+a.btn.btn--tender:hover {
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
+    background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    color: #ffd200;
+}
 .form__submit:hover {
     background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
     background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
