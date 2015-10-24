@@ -2910,6 +2910,8 @@ html.swipebox-html.swipebox-touch {
     color: #6a6a6a;
     display: block;
     text-decoration: none;
+    line-height: 14px;
+    margin-bottom: 5px;
 }
 
 .sidebar-news-block__link:hover {
@@ -3005,6 +3007,7 @@ html.swipebox-html.swipebox-touch {
 
 .registration-contractor-form__row input {
     margin-bottom: 11px;
+    font-weight: normal;
 }
 
 .beseda {
@@ -3854,10 +3857,11 @@ span.btn.btn-success.fileinput-button:hover {
 
 .pagination {
     display: block;
-    margin: auto;
+    /* margin: auto; */
     overflow: hidden;
     padding: 0;
     text-align: center;
+    /* margin-top: 5px; */
 }
 
 .pagination li {
