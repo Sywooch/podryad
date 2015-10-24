@@ -21,6 +21,9 @@ a:hover, a:focus{
 	text-decoration:none;
 	color:auto;
 }
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
+        color: #737373;
+}
 audio,canvas,progress,video {
     display: inline-block;
     vertical-align: baseline;
@@ -305,12 +308,17 @@ blockquote {
     margin-top: 15px;
 }
 
-.form__label,.registration-contractor-form__label {
+.form__label, .registration-contractor-form__label {
     color: #444;
     display: block;
     font-size: .875em;
+    font-weight: normal;
 }
-
+.has-success .form-control {
+    border-color: #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
 .form__label--required:after,.registration-contractor-form__label--required span:after {
     color: #00acff;
     content: "*";
