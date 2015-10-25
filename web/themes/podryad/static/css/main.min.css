@@ -3170,7 +3170,7 @@ html.swipebox-html.swipebox-touch {
 .tender_item_des {
     border: 1px solid #acacac;
     float: left;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     overflow: hidden;
     padding: 10px;
     width: 785px;
@@ -3700,6 +3700,7 @@ span.btn.btn-success.fileinput-button {
     margin-right: 15px;
     outline: none;
     padding: 0;
+    text-align: center;
 }
 
 .nav-tabs {
@@ -3717,6 +3718,7 @@ span.btn.btn-success.fileinput-button {
     border: none;
     float: left;
     margin-bottom: 15px;
+    text-align: center;
     margin-right: 15px;
     padding: 0;
 }
