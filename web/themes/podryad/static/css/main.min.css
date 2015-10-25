@@ -4003,3 +4003,14 @@ a.zakaz__btn:hover {
     color: #ffd200;
 	text-decoration:none;
 }
+.create-price.btn.obnovit {
+    padding: 0px;
+    text-align: center;
+    margin-top: 10px;
+}
+.create-price.btn.obnovit:hover {
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
+    background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    color: #ffd200;
+	text-decoration:none;
+}
