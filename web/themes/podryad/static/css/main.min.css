@@ -573,12 +573,11 @@ html.active,body.active {
 
 .contractor-block-info__contact {
     font-size: .875em;
-    margin-bottom: 22px;
+    margin-bottom: 10px;
     min-width: 30%;
     padding-left: 25px;
     position: relative;
 }
-
 .contractor-block-info__contact span {
     color: #6a6a6a;
     display: block;
@@ -648,12 +647,12 @@ html.active,body.active {
     ms-flex-align: center;
     ms-flex-pack: justify;
     webkit-align-items: center;
+    margin-top: 15px;
     webkit-box-align: center;
     webkit-box-pack: justify;
     webkit-justify-content: space-between;
     width: 100%;
 }
-
 .contractor-block-info__rating a {
     border: 1px solid #acacac;
     border-radius: 5px;
@@ -836,8 +835,8 @@ html.active,body.active {
     webkit-align-items: flex-start;
     webkit-box-align: start;
     webkit-box-pack: justify;
+    margin-bottom: 15px;
 }
-
 
 .contractor-tabs-reviews-item__img {
     margin-right: 16px;
