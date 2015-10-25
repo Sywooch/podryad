@@ -31,6 +31,23 @@ $this->beginPage();
 			<meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="HandheldFriendly" content="true">
             <meta content="IE=edge" http-equiv="X-UA-Compatible">
+			<link rel="apple-touch-icon" sizes="57x57" href="static/images/favicon/apple-icon-57x57.png">
+				<link rel="apple-touch-icon" sizes="60x60" href="static/images/favicon/apple-icon-60x60.png">
+				<link rel="apple-touch-icon" sizes="72x72" href="static/images/favicon/apple-icon-72x72.png">
+				<link rel="apple-touch-icon" sizes="76x76" href="static/images/favicon/apple-icon-76x76.png">
+				<link rel="apple-touch-icon" sizes="114x114" href="static/images/favicon/apple-icon-114x114.png">
+				<link rel="apple-touch-icon" sizes="120x120" href="static/images/favicon/apple-icon-120x120.png">
+				<link rel="apple-touch-icon" sizes="144x144" href="static/images/favicon/apple-icon-144x144.png">
+				<link rel="apple-touch-icon" sizes="152x152" href="static/images/favicon/apple-icon-152x152.png">
+				<link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon/apple-icon-180x180.png">
+				<link rel="icon" type="image/png" sizes="192x192"  href="static/images/favicon/android-icon-192x192.png">
+				<link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png">
+				<link rel="icon" type="image/png" sizes="96x96" href="static/images/favicon/favicon-96x96.png">
+				<link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png">
+				<link rel="manifest" href="static/images/favicon/manifest.json">
+				<meta name="msapplication-TileColor" content="#ffffff">
+				<meta name="msapplication-TileImage" content="static/images/favicon/ms-icon-144x144.png">
+				<meta name="theme-color" content="#ffffff">
             <!--[if lt IE 9 ]>
             <meta content="no" http-equiv="imagetoolbar"><![endif]-->
             <!--[if IE 8 ]>
@@ -49,6 +66,7 @@ $this->beginPage();
             <meta property="og:image:width" content="500"/>
             <meta property="og:image:height" content="300"/>
             <meta property="twitter:description" content=""/>
+			
             <link rel="image_src" href=""/>
 			<link href="<?=$this->theme->getUrl('static/css/slick.css')?>" rel="stylesheet" type="text/css">
             <link rel="icon" type="image/png" href="<?=$this->theme->getUrl('favicon.ico')?>">
@@ -181,6 +199,55 @@ $this->beginPage();
             <script src="<?=$this->theme->getUrl('static/js/separate-js/nouislider.min.js')?>"></script>
             <script src="<?=$this->theme->getUrl('static/js/separate-js/jquery.cookie.js')?>"></script>
             <script src="<?=$this->theme->getUrl('static/js/main.js')?>"></script>
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript"> (function (d, w, c) {
+                    (w[c] = w[c] || []).push(function () {
+                        try {
+                            w.yaCounter33215163 = new Ya.Metrika({
+                                id: 33215163,
+                                clickmap: true,
+                                trackLinks: true,
+                                accurateTrackBounce: true,
+                                webvisor: true,
+                                trackHash: true
+                            });
+                        } catch (e) {
+                        }
+                    });
+                    var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
+                        n.parentNode.insertBefore(s, n);
+                    };
+                    s.type = "text/javascript";
+                    s.async = true;
+                    s.src = "https://mc.yandex.ru/metrika/watch.js";
+                    if (w.opera == "[object Opera]") {
+                        d.addEventListener("DOMContentLoaded", f, false);
+                    } else {
+                        f();
+                    }
+                })(document, window, "yandex_metrika_callbacks");</script>
+            <noscript>
+                <div><img src="https://mc.yandex.ru/watch/33215163" style="position:absolute; left:-9999px;" alt=""/>
+                </div>
+            </noscript>
+            <!-- /Yandex.Metrika counter -->
+            <script>
+                (function (i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+                ga('create', 'UA-55869135-17', 'auto');
+                ga('send', 'pageview');
+
+            </script>
         </body>
 <?php $this->endPage()?>
     </html>

@@ -22,5 +22,5 @@ use yii\helpers\Html;
         'shiftEnterMode' => 0,
     ]
 ])?>
-<?=Html::submitButton('Обновить')?>
+<?=Html::submitButton('Обновить',['class'=>'create-price btn obnovit'])?>
 <?php ActiveForm::end()?>
