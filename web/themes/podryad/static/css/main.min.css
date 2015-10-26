@@ -937,19 +937,6 @@ html.active,body.active {
 }
 
 .portfolio {
-    align-items: flex-start;
-    display: flex;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: -webkit-flex;
-    justify-content: space-between;
-    ms-flex-align: start;
-    ms-flex-pack: justify;
-    /* padding-top: 15px; */
-    webkit-align-items: flex-start;
-    webkit-box-align: start;
-    webkit-box-pack: justify;
-    webkit-justify-content: space-between;
 }
 
 .portfolio-sliders {
