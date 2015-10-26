@@ -30,7 +30,10 @@ class ContractorPriceController extends \yii\web\Controller
     public function actionDelete($id)
     {
         $model = $this->loadModel($id);
-        $model->delete();
+
+        if($model->user->isMine())
+            $model->delete();
+
         $this->redirect(['/exchange/contractor/view', 'id' => $model->userId]);
     }
 

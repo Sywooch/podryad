@@ -67,7 +67,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                 <?= \app\modules\cms\widgets\Rate::widget(['model' => $model, 'primaryKey' => $model->id]) ?>
             </div>
             <div class="contractor-block-images">
-                <?php foreach(\app\modules\exchange\models\Album::getAllImagesByUser($model->id,10) as $image):?>
+                <?php foreach(\app\modules\exchange\models\Album::getAllImagesByUser($model->id,8) as $image):?>
                 <a href="<?=$image->resize('1024x768')?>" title="" class="swipebox">
                     <img src="<?=$image->resize('95x76',\alexBond\thumbler\Thumbler::METHOD_CROP_CENTER)?>" alt="">
                 </a>
@@ -88,12 +88,15 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                     <div class="contractor-tabs-box__item">
                         <div class="contractor-tabs-description">
                             <?php if($model->isMine()):?>
+                                <?php if(empty($model->profile->memo)):?>
+                                    <p class="not_des"">Добавьте пожалуйста описание про свою компанию или про себя.</p>
+                                <?php endif?>
                             <?=$this->render('_description',['model'=>$model])?>
                             <?php else:?>
                                 <?php if($model->profile->memo):?>
                                     <?=$model->profile->memo?>
                                 <?php else:?>
-                                    <p class="not_des"">Подрядчик еще не добавил описание.</p>
+                                        <p class="not_des"">Подрядчик еще не добавил описание.</p>
                                 <?php endif?>
                             <?php endif?>
                         </div>
@@ -146,13 +149,25 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                                     </div>
 									<?php if($model->isMine()):?>
                                     <a href="<?=Url::to(['/exchange/album/update','id'=>$album->id])?>" class="album-update">Редактировать альбом</a>
+                                    <a href="<?= Url::to(['/exchange/album/delete', 'id' => $album->id]) ?>"
+                                       class="album-update">Удалить альбом
+                                    </a>
                                     <?php endif?>
-									<a href="<?= Url::to(['/exchange/album/delete', 'id' => $album->id]) ?>"class="album-update">Удалить альбом</a>
                                 </div>
                                 <?php endforeach?>
                             </div>
                             <?php else:?>
-                               <div class="not_phote"> <p>Подрядчик еще не добавил фото</p></div>
+
+                                <?php if ($model->isMine()): ?>
+                                    <div class="not_phote">
+                                        <p>Создайте пожалуйста альбом и добавьте туда фотографии Ваших работ</p>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="not_phote">
+                                        <p>Подрядчик еще не добавил фото</p>
+                                    </div>
+                                <?php endif ?>
+
                             <?php endif?>
                         </div>
                     </div>
@@ -187,7 +202,15 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                             <?php endforeach?>
                         </table>
                         <?php else: ?>
-                            <div class="not_price"><p>Подрядчик еще не добавил цены.</p></div>
+                            <?php if($model->isMine()):?>
+                                <div class="not_price">
+                                    <p>Добавьте пожалуйста цены на Ваши услуги</p>
+                                </div>
+                            <?php else:?>
+                                <div class="not_price">
+                                    <p>Подрядчик еще не добавил цены.</p>
+                                </div>
+                            <?php endif?>
                         <?php endif ?>
                     </div>
 
