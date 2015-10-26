@@ -23,7 +23,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
             </div>
             <div class="contractor-block-info">
                 <div class="contractor-block-info__name">
-                    <?=($model->profile->company ? $model->profile->company : $model->profile->fio)?>
+                    <?= $model->title ?>
                 </div>
                 <div class="contractor-block-info__service">
                     Предлагаемые услуги

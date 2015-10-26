@@ -38,7 +38,7 @@ $this->title = 'Подрядчики';
                         </div>
                         <div class="contractor-block-info">
                             <div class="contractor-block-info__name">
-                                <a href="<?=\yii\helpers\Url::to(['/exchange/contractor/view','id'=>$contactor->id])?>"> <?= ($contactor->profile->company ? $contactor->profile->company : $contactor->profile->fio) ?>
+                                <a href="<?=\yii\helpers\Url::to(['/exchange/contractor/view','id'=>$contactor->id])?>"> <?= $contactor->title ?>
                                 </a>
                             </div>
                             <div class="contractor-block-info__service">Предлагаемые услуги

@@ -16,7 +16,9 @@ use yii\data\Pagination;
  * Time: 11:40
  *
  * @property \app\modules\exchange\models\Tender[] $workTenderList
+ * @property $title string
  * @property $photoCount integer
+ *
  */
 class Contactor extends User
 {
@@ -122,5 +124,10 @@ class Contactor extends User
             ->setFrom($params['email']->from)
             ->setTo($this->username)
             ->send();
+    }
+
+    public function getTitle()
+    {
+        return $this->profile->company ? $this->profile->company.', '. $this->profile->fio    : $this->profile->fio;
     }
 }
