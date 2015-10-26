@@ -166,7 +166,7 @@ $this->beginPage();
                     <label class="form__label">Пароль:</label>
                     <input type="password" value="" class="form__input" name="LoginForm[password]">
                     <input type="hidden" name="LoginForm[rememberMe]" value="0"/>
-                    <input type="checkbox" name="LoginForm[rememberMe]" id="rememberMe"/> <label for="rememberMe">запомнить</label>
+                    <input type="checkbox" name="LoginForm[rememberMe]" id="rememberMe" value="1"/> <label for="rememberMe">запомнить</label>
                     <input type="submit" value="Войти" class="form__submit">
 
                     <a href="#" title="" data-click="modal" data-item="#registration">Регистрация</a>
