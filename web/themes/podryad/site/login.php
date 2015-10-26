@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ]); ?>
                 <?= $form->field($model, 'username')->textInput() ?>
                 <?= $form->field($model, 'password')->passwordInput() ?>
-                <?= $form->field($model, 'rememberMe')->checkbox() ?>
+                <?= $form->field($model, 'rememberMe')->checkbox(['checked'=>'checked']) ?>
 
                 <div class="form_button_vxod">
                     <button> Войти</button>
