@@ -15,6 +15,8 @@ $city = 'г. '.$model->user->profile->city->title;
 $this->title = $title.' - '.$city;
 $this->registerMetaTag(['description'=>$model->shortext(255,true)]);
 $this->registerMetaTag(['keywords'=>$title.' '.$city]);
+$offers = $model->offers;
+$offersCount = sizeof($offers);
 ?>
 <main class="main">
     <div class="tender_cotainer">
@@ -81,7 +83,10 @@ $this->registerMetaTag(['keywords'=>$title.' '.$city]);
                 </div>
             </div>
         </div>
-            <?php foreach($model->offers as $offer):?>
+            <div class="tender tender_item_count">
+                Предложений: <?=$offersCount?>
+            </div>
+            <?php foreach($offers as $offer):?>
             <div class="tender_item <?=$model->cssSelected($offer->id)  ?>">
                 <div class="tender_item-avatar">
                     <img src="<?=$offer->user->profile->imageSrc('197x125')?>" alt="">
