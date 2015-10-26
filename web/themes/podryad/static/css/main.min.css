@@ -638,12 +638,12 @@ html.active,body.active {
 }
 
 .contractor-block-info__rating {
-    align-items: center;
-    display: flex;
+    /* align-items: center; */
+    /* display: flex; */
     display: -ms-flexbox;
-    display: -webkit-box;
-    display: -webkit-flex;
-    justify-content: space-between;
+    /* display: -webkit-box; */
+    /* display: -webkit-flex; */
+    /* justify-content: space-between; */
     ms-flex-align: center;
     ms-flex-pack: justify;
     webkit-align-items: center;
@@ -651,7 +651,7 @@ html.active,body.active {
     webkit-box-align: center;
     webkit-box-pack: justify;
     webkit-justify-content: space-between;
-    width: 100%;
+    /* width: 100%; */
 }
 .contractor-block-info__rating a {
     border: 1px solid #acacac;
@@ -659,6 +659,8 @@ html.active,body.active {
     box-sizing: border-box;
     color: #acacac;
     display: block;
+    float: left;
+    margin-right: 10px;
     font-size: .875em;
     height: 26px;
     line-height: 26px;
