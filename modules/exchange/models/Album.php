@@ -122,12 +122,12 @@ class Album extends \yii\db\ActiveRecord
             foreach($album->images as $image)
             {
                 $images[] = $image;
-                if($limit <= sizeof($images))
+                if($limit == sizeof($images))
                 {
                     break;
                 }
             }
-            if ($limit <= sizeof($images)) {
+            if ($limit == sizeof($images)) {
                 break;
             }
         }

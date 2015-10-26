@@ -67,7 +67,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                 <?= \app\modules\cms\widgets\Rate::widget(['model' => $model, 'primaryKey' => $model->id]) ?>
             </div>
             <div class="contractor-block-images">
-                <?php foreach(\app\modules\exchange\models\Album::getAllImagesByUser($model->id,10) as $image):?>
+                <?php foreach(\app\modules\exchange\models\Album::getAllImagesByUser($model->id,8) as $image):?>
                 <a href="<?=$image->resize('1024x768')?>" title="" class="swipebox">
                     <img src="<?=$image->resize('95x76',\alexBond\thumbler\Thumbler::METHOD_CROP_CENTER)?>" alt="">
                 </a>
