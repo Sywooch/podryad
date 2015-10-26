@@ -148,7 +148,7 @@ class   Tender extends \yii\db\ActiveRecord
 
     public function getDate()
     {
-        return \Yii::$app->formatter->asDatetime(strtotime($this->dateCreate));
+        return date('d.m.Y H:i');
     }
 
     public function behaviors()

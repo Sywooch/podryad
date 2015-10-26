@@ -165,7 +165,7 @@ class Article extends \yii\db\ActiveRecord
 
     public function getDate()
     {
-        return \Yii::$app->formatter->asDate(strtotime($this->dateCreate));
+        return date('d.m.Y H:i');
     }
 }
 
