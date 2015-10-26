@@ -938,10 +938,10 @@ html.active,body.active {
 
 .portfolio {
 }
-
 .portfolio-sliders {
     position: relative;
     width: 600px;
+    float: left;
 }
 
 .portfolio-slider {
