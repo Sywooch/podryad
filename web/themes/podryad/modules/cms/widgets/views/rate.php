@@ -16,7 +16,7 @@ $this->registerJsFile(\yii\helpers\Url::base().'/site/js/rate.js',[
 $className = $inModel::className();
 ?>
 <div class="contractor-block-info__rating">
-
+<div class="ocenki_rat">
     <?php if(!\Yii::$app->user->isGuest):?>
     <input type="hidden" name="<?=\Yii::$app->request->csrfParam?>" value="<?=\Yii::$app->request->csrfToken?>" class="__item-rating_csrf"/>
     <input type="hidden" class="__item-rating_classname" value="<?=$inModel::className()?>"/>
@@ -26,7 +26,8 @@ $className = $inModel::className();
     <?php foreach ($modelList as $item): ?>
         <a href="#" title="" class="__item-rating" data-id="<?=$item->id?>"><?=$item->title?> <var class=" _count"><?= $item->getTotalRate($className,$primaryKey) ?></var></a>
     <?php endforeach ?>
-
-    <div class="contractor-block-info__rating--message" style="display: none"></div>
+</div>
+   <div class="contractor-block-info__rating--message" style="display: none"></div>
     <div class="contractor-block-info__rating--error" style="display: none"></div>
 </div>
+ 
