@@ -670,7 +670,11 @@ html.active,body.active {
     width: 501px;
 }
 .contractor-block-images img {
-    margin-right: 10px;
+    margin-right: 5px;
+}
+.contractor-block-info__rating--message {
+    color: #6a6a6a;
+    font-size: .875em;
 }
 .contractor-block-images a {
     text-decoration:none;
@@ -1804,27 +1808,23 @@ html.swipebox-html.swipebox-touch {
     font-size: .875em;
     padding-left: 15px;
     position: relative;
+    margin-bottom: 4px;
 }
 
 .specialization-item a:hover {
     text-decoration: none;
 }
 
-.specialization-item a:before {
-    color: #444;
-    content: "—";
-    left: 0;
-    position: absolute;
-}
+
 
 .specialization-item a.active {
-    color: #00acff !important;
+    background: #00acff;
+    color: #fff;
+    text-decoration: none;
+    padding-top: 2px;
 }
 
-.specialization-item a.active:before {
-    content: "+";
-    left: 3px;
-}
+
 
 .specialization-item a.foo {
     color: #cecece;
