@@ -121,6 +121,28 @@ $offersCount = sizeof($offers);
                             e-mail
                         </a>
                     </div>
+
+                    <?php if (($city = $offer->user->profile->city->title)): ?>
+                        <div class="contractor-block-info__contact contractor-block-info__contact--city">
+                            <?=$city?>
+                        </div>
+                    <?php endif ?>
+
+                    <?php if (($site = $offer->user->profile->site)): ?>
+                        <div class="contractor-block-info__contact contractor-block-info__contact--site">
+                            <a href="#" title="" data-show="<?= $site ?>" class="contractor-block-info-show">показать
+                                сайт
+                            </a>
+                        </div>
+                    <?php endif ?>
+
+                    <?php if (($address = $offer->user->profile->adres)): ?>
+                        <div class="contractor-block-info__contact contractor-block-info__contact--address">
+                            <a href="#" title="" data-show="<?= $address ?>" class="contractor-block-info-show">показать
+                                адрес
+                            </a>
+                        </div>
+                    <?php endif ?>
                     <div class="tender_item_content_cena">Стоимость работ: <span><?=$offer->price?> тг.</span></div>
                     <p><?=Html::encode($offer->description)?>
                     </p>
