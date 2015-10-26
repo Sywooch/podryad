@@ -27,6 +27,7 @@ $className = $inModel::className();
         <a href="#" title="" class="__item-rating" data-id="<?=$item->id?>"><?=$item->title?> <var class=" _count"><?= $item->getTotalRate($className,$primaryKey) ?></var></a>
     <?php endforeach ?>
 
-    <div class="contractor-block-info__rating--message" style="display: none"></div>
-    <div class="contractor-block-info__rating--error" style="display: none"></div>
+   
 </div>
+ <div class="contractor-block-info__rating--message" style="display: none"></div>
+    <div class="contractor-block-info__rating--error" style="display: none"></div>
