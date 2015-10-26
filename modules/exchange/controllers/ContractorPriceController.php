@@ -13,7 +13,8 @@ class ContractorPriceController extends \yii\web\Controller
         $model->userId = \Yii::$app->user->id;
         if($model->load($_POST) && $model->save())
         {
-            $this->redirect(['/exchange/contractor/view','id'=>$model->userId]);
+            \Yii::$app->session->setFlash('success','Услуга успешно добавлена!');
+            return $this->redirect(['update','id'=>$model->id]);
         }
         return $this->render('create',['model'=>$model]);
     }
@@ -22,7 +23,7 @@ class ContractorPriceController extends \yii\web\Controller
     {
         $model = $this->loadModel($id);
         if ($model->load($_POST) && $model->save()) {
-            $this->redirect(['/exchange/contractor/view', 'id' => $model->userId]);
+            return $this->redirect(['update', 'id' => $model->id]);
         }
         return $this->render('update',['model'=>$model]);
     }
