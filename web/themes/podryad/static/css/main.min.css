@@ -9,11 +9,7 @@ body {
 	font-size: 16px;
 	    line-height: 17px;
 }
-* {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content;
- box-sizing: content; 
-}
+
 article,aside,details,figcaption,figure,footer,header,main,nav,section,summary {
     display: block;
 }
@@ -941,24 +937,11 @@ html.active,body.active {
 }
 
 .portfolio {
-    align-items: flex-start;
-    display: flex;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: -webkit-flex;
-    justify-content: space-between;
-    ms-flex-align: start;
-    ms-flex-pack: justify;
-    /* padding-top: 15px; */
-    webkit-align-items: flex-start;
-    webkit-box-align: start;
-    webkit-box-pack: justify;
-    webkit-justify-content: space-between;
 }
-
 .portfolio-sliders {
     position: relative;
     width: 600px;
+    float: left;
 }
 
 .portfolio-slider {
@@ -3746,6 +3729,7 @@ span.btn.btn-success.fileinput-button {
 
 .template-upload.fade.in button {
     margin: 11px 18px 0 0;
+    text-align: center;
 }
 
 .template-upload.fade.in button:hover {
