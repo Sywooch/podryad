@@ -49,6 +49,9 @@ $this->title = 'Тендеры';
                             </div>
                             <div class="tenders__text">Город: <?=$row->user->profile->city->title?></div>
                             <div class="tenders__text"><?=$row->specializationTitle?></div>
+                            <div class="tenders__text">
+                                Предложений: <?=$row->offersCount?>
+                            </div>
                             <div class="tenders__text"><?=Html::encode($row->description)?>
                             </div>
                             <div class="tenders-info">
