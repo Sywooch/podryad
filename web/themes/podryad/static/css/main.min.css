@@ -3729,6 +3729,7 @@ span.btn.btn-success.fileinput-button {
 
 .template-upload.fade.in button {
     margin: 11px 18px 0 0;
+    text-align: center;
 }
 
 .template-upload.fade.in button:hover {
