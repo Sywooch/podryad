@@ -58,11 +58,15 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             if(isset(\Yii::$app->request->cookies['customer']))
             {
-                $cookies = \Yii::$app->response->cookies;
+                $cookies = \Yii::$app->resp->cookies;
                 $cookies->remove('customer');
                 return $this->redirect(['/exchange/tender/create']);
             }
-            return $this->goBack();
+
+            if(substr_count(\Yii::$app->request->referrer,'site/login'))
+                return $this->goBack();
+
+            return $this->redirect(\Yii::$app->request->referrer);
         } else {
             return $this->render('login', [
                 'model' => $model,

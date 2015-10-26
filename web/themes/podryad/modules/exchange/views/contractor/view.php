@@ -19,7 +19,15 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
         <div class="contractor-block">
             <div class="contractor-block-avatar">
                 <img src="<?=$model->profile->imageSrc('197x125')?>" alt="">
-
+                <?php if (\Yii::$app->user->isGuest){ ?>
+                    <a href="#" title="" class="contractor-block-avatar__btn _contractor" data-click="modal" data-item="#enter">ПРИГЛАСИТЬ НА ТЕНДЕР</a>
+                <?php }elseif(\Yii::$app->user->can(\app\modules\cms\models\User::ROLE_CUSTOMER)){?>
+                    <a href="<?= \yii\helpers\Url::to(['/exchange/tender/my', 'contractorId' => $model->id]) ?>"
+                       title="" class="contractor-block-avatar__btn _inviteToTender"
+                       data-click="modal" data-item="#inviteToTenderWindow">ПРИГЛАСИТЬ НА
+                        ТЕНДЕР
+                    </a>
+                <?php }?>
             </div>
             <div class="contractor-block-info">
                 <div class="contractor-block-info__name">

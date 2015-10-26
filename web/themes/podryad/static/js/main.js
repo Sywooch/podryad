@@ -260,6 +260,10 @@ $(document).ready(function () {
         $.get("/site/cookie",{"name":"customer"});
     });
 
+    $("._contractor").click(function () {
+        $.get("/site/cookie", {"name": "contractor"});
+    });
+
     $("#tender-negotiable").click(function () {
         var element = $(this),
             parent = element.parents('.registration-contractor-form__row'),

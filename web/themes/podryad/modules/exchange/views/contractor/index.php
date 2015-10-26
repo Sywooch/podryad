@@ -29,7 +29,7 @@ $this->title = 'Подрядчики';
                         <div class="contractor-block-avatar">
                             <a href="<?= \yii\helpers\Url::to(['/exchange/contractor/view', 'id' => $contactor->id]) ?>"><img src="<?=$contactor->profile->imageSrc('199x159')?>" alt="">
                             </a>
-                            <?php if(!\Yii::$app->user->isGuest && \Yii::$app->user->identity->role == \app\modules\cms\models\User::ROLE_CUSTOMER):?>
+                            <?php if(!\Yii::$app->user->isGuest && \Yii::$app->user->can(\app\modules\cms\models\User::ROLE_CUSTOMER)):?>
                             <a href="<?=\yii\helpers\Url::to(['/exchange/tender/my','contractorId'=>$contactor->id] )?>" title="" class="contractor-block-avatar__btn _inviteToTender"
                                data-click="modal" data-item="#inviteToTenderWindow">ПРИГЛАСИТЬ НА
                                 ТЕНДЕР
