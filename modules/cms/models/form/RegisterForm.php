@@ -52,7 +52,6 @@ class RegisterForm extends Model{
             ['file','file','skipOnEmpty'=>true],
             [['role', 'fio', 'phone', 'cityId'], 'required', 'on' => 'update'],
             [['password','password2','site','adres', 'specialization'],'safe'],
-            ['site','url']
         ];
     }
 
