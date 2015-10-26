@@ -14,7 +14,7 @@ class ContractorPriceController extends \yii\web\Controller
         if($model->load($_POST) && $model->save())
         {
             \Yii::$app->session->setFlash('success','Услуга успешно добавлена!');
-            return $this->redirect(['update','id'=>$model->id]);
+            return $this->redirect(['create']);
         }
         return $this->render('create',['model'=>$model]);
     }
