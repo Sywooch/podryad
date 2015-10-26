@@ -131,6 +131,7 @@ class Album extends \yii\db\ActiveRecord
                 break;
             }
         }
+        shuffle($images);
         return array_splice($images,0,$limit);
     }
 
