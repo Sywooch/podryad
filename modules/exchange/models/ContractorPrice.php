@@ -12,6 +12,7 @@ use yii\db\ActiveQuery;
  * @property integer $userId
  * @property string $title
  * @property string $price
+ * @property Contactor $user
  */
 class ContractorPrice extends \yii\db\ActiveRecord
 {
@@ -53,6 +54,11 @@ class ContractorPrice extends \yii\db\ActiveRecord
     public static function find()
     {
         return new ContractorPriceQuery(get_called_class());
+    }
+
+    public function getUser()
+    {
+        return $this->hasOne(Contactor::className(), ['id' => 'userId']);
     }
 }
 

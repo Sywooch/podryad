@@ -21,7 +21,7 @@ class Rate extends Widget{
     {
         if(\Yii::$app->user->can(User::ROLE_CONTRACTOR))
             return false;
-        
+
         $inModel = $this->model;
         $modelList = \app\modules\cms\models\Rate::find()->ordered()->all();
 

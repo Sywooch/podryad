@@ -16,6 +16,7 @@ use Yii;
  * @property integer $userId
  * @property Image[] $images
  * @property Image $image
+ * @property Contactor $user
  * @property integer $imagesCount
  */
 class Album extends \yii\db\ActiveRecord
@@ -65,6 +66,11 @@ class Album extends \yii\db\ActiveRecord
                 'class'=>CmsBehavior::className(),
             ]
         ];
+    }
+
+    public function getUser()
+    {
+        return $this->hasOne(Contactor::className(),['id'=>'userId']);
     }
 
     public function getImages()
