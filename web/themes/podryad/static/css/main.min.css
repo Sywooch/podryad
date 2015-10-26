@@ -636,22 +636,13 @@ html.active,body.active {
     height: 15px;
     width: 17px;
 }
-
+.ocenki_rat {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
 .contractor-block-info__rating {
-    /* align-items: center; */
-    /* display: flex; */
     display: -ms-flexbox;
-    /* display: -webkit-box; */
-    /* display: -webkit-flex; */
-    /* justify-content: space-between; */
-    ms-flex-align: center;
-    ms-flex-pack: justify;
-    webkit-align-items: center;
     margin-top: 15px;
-    webkit-box-align: center;
-    webkit-box-pack: justify;
-    webkit-justify-content: space-between;
-    /* width: 100%; */
 }
 .contractor-block-info__rating a {
     border: 1px solid #acacac;
