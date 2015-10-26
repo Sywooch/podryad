@@ -3,8 +3,7 @@
 namespace app\modules\exchange\models;
 
 
-use app\modules\cms\models\Image;
-use app\modules\cms\models\Profile;
+use app\modules\cms\models\Image as ContractorImage;
 use app\modules\cms\models\Reference;
 use app\modules\cms\models\User;
 use yii\data\Pagination;
@@ -112,7 +111,7 @@ class Contactor extends User
         foreach ($albumList as $album)
             $albumIds[] = $album->id;
 
-        return Image::find()->where(['primaryKey' => $albumIds, 'model' => Album::className()])->count();
+        return ContractorImage::find()->where(['primaryKey' => $albumIds, 'model' => Album::className()])->count();
     }
 
     public function notify($tender)
