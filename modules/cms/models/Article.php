@@ -144,9 +144,12 @@ class Article extends \yii\db\ActiveRecord
      * @param $type
      * @return Article[]
      */
-    public static function getAllByCategory($type)
+    public static function getAllByCategory($type,$limit=null)
     {
-        return self::find()->type($type)->orderBy(['dateCreate'=>SORT_DESC])->all();
+        $query = self::find()->type($type)->orderBy(['dateCreate'=>SORT_DESC]);
+        if($limit)
+            $query->limit($limit);
+        return $query->all();
     }
 
     public static function getOneByCategory($type)
