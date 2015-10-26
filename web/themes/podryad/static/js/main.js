@@ -257,7 +257,7 @@ $(document).ready(function () {
     });
 
     $("._tender").click(function(){
-        $.cookie('auth_tender','true');
+        $.get("/site/cookie",{"name":"customer"});
     });
 
     $("#tender-negotiable").click(function () {

@@ -10,6 +10,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\web\Cookie;
 
 class SiteController extends Controller
 {
@@ -46,32 +47,6 @@ class SiteController extends Controller
         ];
     }
 
-    public function actionTest()
-    {
-        $steps = 2;
-        $lvl = 1;
-        $maxLevel = 3;
-        $currentSteps = pow($steps,$lvl);
-
-        $data = [];
-        for($i=1;$i<=$currentSteps;$i++)
-        {
-            $data[$lvl][$i]=$i;
-
-            if($i == $currentSteps)
-            {
-                $i=0;
-                $lvl++;
-                $currentSteps = pow($steps,$lvl);
-            }
-
-            if($lvl-1==$maxLevel)
-                break;
-        }
-        echo '<pre>';
-        print_r($data);
-    }
-
     public function actionIndex()
     {
         return $this->render('index');
@@ -81,9 +56,10 @@ class SiteController extends Controller
     {
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            if(isset($_COOKIE['auth_tender']))
+            if(isset(\Yii::$app->request->cookies['customer']))
             {
-                setcookie('auth_tender','',0);
+                $cookies = \Yii::$app->response->cookies;
+                $cookies->remove('customer');
                 return $this->redirect(['/exchange/tender/create']);
             }
             return $this->goBack();
@@ -92,6 +68,14 @@ class SiteController extends Controller
                 'model' => $model,
             ]);
         }
+    }
+
+    public function actionCookie($name)
+    {
+        \Yii::$app->response->cookies->add(new Cookie([
+            'name'=>$name,
+            'value'=>true,
+        ]));
     }
 
     public function actionLogout()
