@@ -4,6 +4,7 @@ namespace app\modules\exchange\controllers;
 
 use app\modules\cms\models\User;
 use app\modules\exchange\models\Album;
+use app\modules\exchange\models\Image;
 use yii\filters\AccessControl;
 use yii\web\HttpException;
 
@@ -38,8 +39,10 @@ class AlbumController extends \yii\web\Controller
 
     public function actionDelete($id)
     {
+        /** @var Album $model */
         $model = $this->loadModel($id);
-        $model->delete();
+        if($model->user->isMine())
+            $model->delete();
         return $this->redirect(['/exchange/contractor/view','id'=>$model->userId]);
     }
 
