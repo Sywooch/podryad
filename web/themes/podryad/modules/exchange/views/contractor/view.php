@@ -150,7 +150,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
 									<?php if($model->isMine()):?>
                                     <a href="<?=Url::to(['/exchange/album/update','id'=>$album->id])?>" class="album-update">Редактировать альбом</a>
                                     <a href="<?= Url::to(['/exchange/album/delete', 'id' => $album->id]) ?>"
-                                       class="album-update">Удалить альбом
+                                       class="album-update" onclick="return confirm('Вы действительно хотите удалить?')">Удалить альбом
                                     </a>
                                     <?php endif?>
                                 </div>
@@ -195,7 +195,8 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                                 <?php if($model->isMine()):?>
                                 <td>
                                     <a class="redak  cena"href="<?=Url::to(['/exchange/contractor-price/update','id'=>$price->id])?>">ред</a> |
-                                    <a class="udalit cena"href="<?=Url::to(['/exchange/contractor-price/delete','id'=>$price->id])?>">удал</a>
+                                    <a class="udalit cena"href="<?=Url::to(['/exchange/contractor-price/delete','id'=>$price->id])?>"
+                                       onclick="return confirm('Вы действительно хотите удалить?')">удал</a>
                                 </td>
                                 <?php endif?>
                             </tr>
