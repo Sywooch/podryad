@@ -2,7 +2,6 @@
 
 namespace app\modules\exchange\models;
 
-use app\modules\cms\models\User;
 use Yii;
 use yii\helpers\Url;
 
@@ -72,7 +71,7 @@ class Offers extends \yii\db\ActiveRecord
 
     public function getUser()
     {
-        return $this->hasOne(User::className(), ['id' => 'userId']);
+        return $this->hasOne(Contactor::className(), ['id' => 'userId']);
     }
 
     public function rateUrl($rate)

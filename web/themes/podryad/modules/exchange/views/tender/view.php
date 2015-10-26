@@ -108,7 +108,7 @@ $offersCount = sizeof($offers);
 
                     <div class="contractor-block-info__name">
                         <a href="<?=\yii\helpers\Url::to(['/exchange/contractor/view','id'=>$offer->user->id])?>">
-                        <?=$offer->user->profile->fio ?>
+                        <?=$offer->user->title ?>
                         </a>
                     </div>
                     <div class="contractor-block-info__contact contractor-block-info__contact--phone">
