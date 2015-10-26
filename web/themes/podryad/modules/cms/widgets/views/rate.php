@@ -24,10 +24,10 @@ $className = $inModel::className();
     <?php endif?>
 
     <?php foreach ($modelList as $item): ?>
-        <a href="#" title="" class="__item-rating" data-id="<?=$item->id?>"><?=$item->title?> <var class=" _count"><?= $item->getTotalRate($className,$primaryKey) ?></var></a>
+       <div class="ocenki_rat"> <a href="#" title="" class="__item-rating" data-id="<?=$item->id?>"><?=$item->title?> <var class=" _count"><?= $item->getTotalRate($className,$primaryKey) ?></var></a></div>
     <?php endforeach ?>
 
-   
-</div>
- <div class="contractor-block-info__rating--message" style="display: none"></div>
+   <div class="contractor-block-info__rating--message" style="display: none"></div>
     <div class="contractor-block-info__rating--error" style="display: none"></div>
+</div>
+ 
