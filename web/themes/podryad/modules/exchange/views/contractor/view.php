@@ -15,9 +15,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
 ?>
 <main class="main">
     <section class="contractor-content">
-        <?php if( ($backLink = \Yii::$app->request->referrer) ):?>
-        <a href="<?=$backLink?>" title="" class="contractor-back">Вернуться к списку подрядчиков</a>
-        <?php endif;?>
+        <a href="<?=Url::to(['/exchange/contractor'])?>" title="" class="contractor-back">Вернуться к списку подрядчиков</a>
         <div class="contractor-block">
             <div class="contractor-block-avatar">
                 <img src="<?=$model->profile->imageSrc('197x125')?>" alt="">
