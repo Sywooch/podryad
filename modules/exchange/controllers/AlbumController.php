@@ -40,7 +40,7 @@ class AlbumController extends \yii\web\Controller
     {
         $model = $this->loadModel($id);
         $model->delete();
-        return $this->redirect(['/exchange/contractor/view','id'=>$model->id]);
+        return $this->redirect(['/exchange/contractor/view','id'=>$model->userId]);
     }
 
     public function actionUpdate($id)
