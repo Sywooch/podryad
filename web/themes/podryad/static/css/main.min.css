@@ -961,7 +961,9 @@ html.active,body.active {
     overflow: hidden;
     visibility: hidden;
 }
-
+img.slick-slide.slick-active {
+    width: 600px!important;
+}
 .portfolio-slider.active {
     height: auto;
     overflow: auto;
