@@ -102,7 +102,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                                 <?php if($model->profile->memo):?>
                                     <?=$model->profile->memo?>
                                 <?php else:?>
-                                        <p class="not_des"">Подрядчик еще не добавил описание.</p>
+                                        <p class="not_des"">Подрядчик еще не добавил описание</p>
                                 <?php endif?>
                             <?php endif?>
                         </div>
@@ -215,7 +215,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                                 </div>
                             <?php else:?>
                                 <div class="not_price">
-                                    <p>Подрядчик еще не добавил цены.</p>
+                                    <p>Подрядчик еще не добавил цены</p>
                                 </div>
                             <?php endif?>
                         <?php endif ?>
