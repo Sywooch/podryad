@@ -57,7 +57,7 @@ $(document).ready(function () {
             slidesToScroll: 1,
             asNavFor: '.slider-big',
             dots: false,
-            centerMode: true,
+            centerMode: false,
             focusOnSelect: true,
             lazyLoad: 'ondemand'
         });
