@@ -569,7 +569,7 @@ html.active,body.active {
 
 .contractor-block-info__contact {
     font-size: .875em;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     min-width: 30%;
     padding-left: 25px;
     position: relative;
@@ -3249,14 +3249,13 @@ html.swipebox-html.swipebox-touch {
 
 .tender_item_content .contractor-block-info__contact {
     float: left;
-    margin-bottom: 10px;
     margin-right: 20px;
     margin-top: 15px;
     width: auto;
 }
 .contractor-block-info__contact.contractor-block-info__contact--city {
     padding-left: 0px;
-    margin: 0px 0px 5px;
+    margin: 10px 0px 5px;
     color: #6a6a6a;
 }
 .tender_item_content_cena {
