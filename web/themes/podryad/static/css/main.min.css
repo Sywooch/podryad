@@ -365,7 +365,9 @@ blockquote {
 }
 
 #registerform-agree {
-    margin-bottom: 15px;
+    margin-top: 3px;
+    float: left;
+    margin-right: 5px;
 }
 
 .form a:hover {
@@ -569,7 +571,7 @@ html.active,body.active {
 
 .contractor-block-info__contact {
     font-size: .875em;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     min-width: 30%;
     padding-left: 25px;
     position: relative;
@@ -780,9 +782,16 @@ html.active,body.active {
 
 .contractor-tabs-description p {
     color: #6a6a6a;
-    font-size: .875em;
+    font-size: 1.1em;
+    margin: 5px 0;
 }
-
+.form-group.field-registerform-company label:after {
+    content: "";
+}
+.form-group.field-registerform-agree.required {
+    height: 40px;
+    /* margin-bottom: 10px; */
+}
 .contractor-tabs-license {
     align-items: flex-start;
     display: flex;
@@ -812,8 +821,8 @@ html.active,body.active {
     margin: 0px;
     padding: 0px;
     color: #6a6a6a;
-    font-size: 1.375em;
-    line-height: 40px;
+    font-size: 1em;
+    /* line-height: 40px; */
     margin: 0;
     padding: 0;
 }
@@ -837,8 +846,8 @@ html.active,body.active {
 }
 .contractor-tabs-description p.not_des {
     color: #6a6a6a;
-    font-size: 1.375em;
-    line-height: 40px;
+    font-size: 1em;
+    /* line-height: 40px; */
     margin: 0;
     padding: 0;
 }
@@ -1716,8 +1725,8 @@ html.swipebox-html.swipebox-touch {
 }
 
 .registration-customer {
-    height: 95%;
-    position: absolute;
+    height: 92%;
+    /* position: absolute; */
 }
 
 .specialization {
@@ -2090,7 +2099,8 @@ html.swipebox-html.swipebox-touch {
 .service-block {
     padding-top: 35px;
     text-align: center;
-    width: 190px;
+    width: 25%;
+    overflow: hidden;
 }
 
 .service-block:before {
@@ -2150,7 +2160,8 @@ html.swipebox-html.swipebox-touch {
     color: #b5b5b5;
     font-size: .875em;
     line-height: .875em;
-    padding-top: 5px;
+    padding: 5px 15px;
+    text-align: center;
 }
 
 .seo-text h1 {
@@ -2799,8 +2810,13 @@ html.swipebox-html.swipebox-touch {
     background: 0 0;
     border: 0;
     text-transform: uppercase;
+    padding: 15px 10px 10px 65px;
+    left: 0px;
+    position: absolute;
 }
-
+.btn.btn--tender {
+    position: relative;
+}
 .search-contractor-results-list-item .portfolio-album__count {
     color: #00acff;
     margin-bottom: 10px;
@@ -3156,12 +3172,13 @@ html.swipebox-html.swipebox-touch {
     font-size: 1.225em;
     font-weight: 700;
     width: 100%;
-    margin: 0px;
+    margin: 0px 0px 4px;
 }
 
 .tender_item_des p {
     color: #6a6a6a;
     font-size: .875em;
+    margin: 5px 0px;
 }
 
 .tender_item_des_info_status {
@@ -3248,16 +3265,20 @@ html.swipebox-html.swipebox-touch {
 
 .tender_item_content .contractor-block-info__contact {
     float: left;
-    margin-bottom: 15px;
     margin-right: 20px;
     margin-top: 15px;
     width: auto;
 }
-
+.contractor-block-info__contact.contractor-block-info__contact--city {
+    padding-left: 0px;
+    margin: 10px 0px 5px;
+    color: #6a6a6a;
+}
 .tender_item_content_cena {
     clear: both;
     color: #6a6a6a;
     font-size: .875em;
+    margin: 5px 0;
 }
 
 .tender_item_content_cena span {
@@ -3268,8 +3289,8 @@ html.swipebox-html.swipebox-touch {
 .tender_item_content p {
     color: #6a6a6a;
     font-size: .875em;
+    margin: 5px 0;
 }
-
 .tender_item .contractor-block-info__rating {
     width: 80%;
 }
@@ -3830,16 +3851,16 @@ span.btn.btn-success.fileinput-button:hover {
 
 .not_phote p {
     color: #6a6a6a;
-    font-size: 1.375em;
-    line-height: 40px;
+    font-size: 1em;
+    /* line-height: 40px; */
     margin: 0;
     padding: 0;
 }
 
 .not_price p {
     color: #6a6a6a;
-    font-size: 1.375em;
-    line-height: 40px;
+    font-size: 1em;
+    /* line-height: 40px; */
     margin: 0;
     padding: 0;
 }
@@ -3849,7 +3870,15 @@ span.btn.btn-success.fileinput-button:hover {
     font-size: .875em;
     line-height: 32px;
 }
-
+.tender.tender_item_count {
+    clear: both;
+    margin-bottom: 15px;
+    color: #6a6a6a;
+    font-size: 1em;
+}
+.tender_item_des_info_biudzhet span {
+    color: #1883BF;
+}
 .pagination {
     display: block;
     /* margin: auto; */
