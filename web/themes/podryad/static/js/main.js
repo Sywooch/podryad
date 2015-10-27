@@ -23,6 +23,7 @@ $(document).ready(function () {
         arrows: false,
         fade: false,
         asNavFor: '.slider-small',
+        lazyLoad: 'ondemand'
     });
     $('.slider-small').slick({
         slidesToShow: 6,
@@ -31,6 +32,7 @@ $(document).ready(function () {
         dots: false,
         centerMode: true,
         focusOnSelect: true,
+        lazyLoad: 'ondemand'
     });
     $('.portfolio-album').click(function () {
         $('.slider-big').slick('unslick');
@@ -48,6 +50,7 @@ $(document).ready(function () {
             arrows: false,
             fade: false,
             asNavFor: '.slider-small',
+            lazyLoad: 'ondemand'
         });
         $('.slider-small').slick({
             slidesToShow: 6,
@@ -56,6 +59,7 @@ $(document).ready(function () {
             dots: false,
             centerMode: true,
             focusOnSelect: true,
+            lazyLoad: 'ondemand'
         });
     });
 });
