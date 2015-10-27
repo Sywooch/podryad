@@ -108,7 +108,7 @@ $this->beginPage();
                             <?php else:?>
                                 <a href="<?= Url::to(
                                     \Yii::$app->user->identity->role == \app\modules\cms\models\User::ROLE_CONTRACTOR ?
-                                        ['/exchange/contractor/view','id'=>\Yii::$app->user->id] : ['/cms/users/view']) ?>" title="" >Профиль</a>
+                                        ['/exchange/contractor/view','id'=>\Yii::$app->user->id] : ['/cms/users/view']) ?>" title="" >Мой профиль</a>
                                 <span>/ </span>
                                 <a href="<?=Url::to(['/site/logout'])?>" title="">Выход</a>
                             <?php endif ?>
