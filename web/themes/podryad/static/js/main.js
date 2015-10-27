@@ -201,10 +201,10 @@ if(slider)
     //     slider.noUiSlider.set([null, this.value]);
     //});
 $(document).ready(function () {
-    $('.filter__title').click(function () {
+    $('.filter-item').click(function () {
         if ($(this).parent().hasClass('active')) {
             $(this).parent().removeClass('active');
-            $(this).parent().children('.filter__title').removeClass('active').slideUp();
+            $(this).parent().children('.filter__list').removeClass('active').slideUp();
             $(this).parent().children('.filter__select-all').hide();
         } else {
             $(this).parent().addClass('active');
