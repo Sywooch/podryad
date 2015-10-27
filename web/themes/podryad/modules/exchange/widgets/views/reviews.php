@@ -12,7 +12,7 @@
 <div class="contractor-tabs-reviews">
     <?php if($reviewsList):?>
     <?php foreach($reviewsList as $reviews):
-    list($date,$time) = explode(' ',\Yii::$app->formatter->asDatetime(strtotime($reviews->dateCreate)));
+    list($date,$time) = explode(' ',$reviews->date);
     ?>
     <div class="contractor-tabs-reviews-item">
         <div class="contractor-tabs-reviews-item__img">
