@@ -16,20 +16,21 @@ use yii\base\Behavior;
 
 class CmsBehavior extends Behavior{
 
-    private $imageThumb = 'http://placehold.it/';
 
     public function imageSrc($size='100x100',$method = Thumbler::METHOD_NOT_BOXED)
     {
         if(!method_exists($this->owner,'getImage'))
             return $this->imageThumb.$size;
 
+        $thumb = \Yii::$app->view->theme->getUrl('static/images/content/default.jpg');
+
         $image = $this->owner->image;
         $webroot = \Yii::getAlias('@webroot');
         if($image && !is_readable($webroot.'/'.\Yii::$app->thumbler->sourcePath.$image->src))
         {
-            return $this->imageThumb . $size;
+            return $thumb;
         }
-        return $image ? $image->resize($size,$method) : $this->imageThumb.$size;
+        return $image ? $image->resize($size,$method) : $thumb;
     }
 
 }
