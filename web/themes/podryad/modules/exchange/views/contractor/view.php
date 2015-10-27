@@ -142,7 +142,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                             <div class="portfolio-albums">
                                 <?php foreach($albumList as $k=>$album):?>
                                 <div class="portfolio-album <?=$k == 0 ? 'active' : ''?>">
-                                    <img src="<?=$album->getImageOne('161x116')?>" alt=""
+                                    <img src="<?=$album->imageSrc('161x116')?>" alt=""
                                          class="portfolio-album__preview">
 
                                     <div class="portfolio-album__title">
