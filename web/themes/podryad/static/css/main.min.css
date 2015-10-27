@@ -365,7 +365,9 @@ blockquote {
 }
 
 #registerform-agree {
-    margin-bottom: 15px;
+    margin-top: 3px;
+    float: left;
+    margin-right: 5px;
 }
 
 .form a:hover {
@@ -785,6 +787,10 @@ html.active,body.active {
 }
 .form-group.field-registerform-company label:after {
     content: "";
+}
+.form-group.field-registerform-agree.required {
+    height: 40px;
+    /* margin-bottom: 10px; */
 }
 .contractor-tabs-license {
     align-items: flex-start;
@@ -2093,7 +2099,8 @@ html.swipebox-html.swipebox-touch {
 .service-block {
     padding-top: 35px;
     text-align: center;
-    width: 190px;
+    width: 25%;
+    overflow: hidden;
 }
 
 .service-block:before {
@@ -2153,7 +2160,8 @@ html.swipebox-html.swipebox-touch {
     color: #b5b5b5;
     font-size: .875em;
     line-height: .875em;
-    padding-top: 5px;
+    padding: 5px 15px;
+    text-align: center;
 }
 
 .seo-text h1 {
@@ -2802,8 +2810,13 @@ html.swipebox-html.swipebox-touch {
     background: 0 0;
     border: 0;
     text-transform: uppercase;
+    padding: 15px 10px 10px 65px;
+    left: 0px;
+    position: absolute;
 }
-
+.btn.btn--tender {
+    position: relative;
+}
 .search-contractor-results-list-item .portfolio-album__count {
     color: #00acff;
     margin-bottom: 10px;
