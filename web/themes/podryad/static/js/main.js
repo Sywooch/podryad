@@ -82,8 +82,11 @@ $(document).ready(function () {
         $('.header-city-select__input').val(optionValue).change();
         $('.header-city-select__current').html(titleValue);
         // destroy
-        $(this).remove();
+       // $(this).remove();
+       // $('.header-city-select__list, body').append('<div class="header-city-select__option">' + thisValue + '</div>');
+		$('.header-city-select__list, body').click(function () {
         $('.header-city-select__list, body').append('<div class="header-city-select__option">' + thisValue + '</div>');
+    });
     });
 });
 
