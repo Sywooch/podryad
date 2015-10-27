@@ -8,6 +8,7 @@
  * @var $model \app\modules\exchange\models\Reviews
  * @var $contractorId integer
  */
+
 ?>
 <div class="contractor-tabs-reviews">
     <?php if($reviewsList):?>

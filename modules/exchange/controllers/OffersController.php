@@ -51,6 +51,13 @@ class OffersController extends Controller{
         if($model->load($_POST))
         {
             $model->save();
+            $subject = 'Поступило новое предложение с сайта '.APP_NAME;
+            \Yii::$app->mailer->compose('offers/create',['model'=>$model,'subject'=>$subject])
+                ->setSubject($subject)
+                ->setFrom(\Yii::$app->params['email']->from)
+                ->setTo($model->tender->user->username)
+                ->send();
+            \Yii::$app->session->setFlash('success','Ваше предложение успешно добавленно!');
         }
         return $this->redirect(['/exchange/tender/view', 'id' => $tenderId]);
     }
