@@ -2701,7 +2701,7 @@ html.swipebox-html.swipebox-touch {
     position: absolute;
 }
 
-.filter__title:before,.filter__title.active:before {
+.filter__item:before,.filter__item.active:before {
     background-image: url(../images/png-sprite/96dpi/sprite.png);
     background-repeat: no-repeat;
     background-size: 344px,303px;
@@ -2709,7 +2709,7 @@ html.swipebox-html.swipebox-touch {
     width: 14px;
 }
 
-.filter__item.active:before {
+.filter__item.active .filter__title:before {
     background-position: -275px -168px;
 }
 
