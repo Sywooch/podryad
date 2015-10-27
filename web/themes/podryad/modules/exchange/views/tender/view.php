@@ -109,7 +109,7 @@ $offersCount = sizeof($offers);
 
                     <div class="status_date">
                         <span>Предложение добавлено:</span>
-                        <?=$offer->dateAdd?>
+                        <?=$offer->date?>
                     </div>
                 </div>
                 <div class="tender_item_content">
