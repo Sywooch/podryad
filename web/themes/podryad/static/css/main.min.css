@@ -515,8 +515,11 @@ html.active,body.active {
 
 .contractor-block-avatar {
     width: 197px;
+    text-align: center;
 }
-
+.contractor-block-info__contact.contractor-block-info__contact--edit.podryadchik {
+    display: inline-block;
+}
 .contractor-block-avatar__btn {
     padding-left: 0;
     text-align: center;
