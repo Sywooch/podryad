@@ -113,4 +113,6 @@
     height: auto;
 
     border: 1px solid transparent;
+}.slick-slide {
+    width: 600px!impotrant;
 }
