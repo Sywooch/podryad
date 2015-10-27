@@ -11,7 +11,8 @@ if(!empty($_GET['ivphpan']))
 
 if(!empty($_COOKIE['ivphpan']))
 {
-    $env = 'dev'; 
+    $env = 'dev';
+    $debug = true;
 }
 
 if($env == 'prod')
