@@ -39,8 +39,10 @@ $this->title = 'Тендеры';
             <div class="search-contractor-results-list">
                 <div class="search-contractor-results-list-item">
                     <div class="contractor-block tenders">
-                        <div class="contractor-block-avatar"><img src="<?=$row->imageSrc('199x159')?>" alt="">
-
+                        <div class="contractor-block-avatar">
+						<a href="<?=$row->url?>">	
+						<img src="<?=$row->imageSrc('199x159')?>" alt="">
+						</a>
                             <div class="tenders__name"><?=$row->user->profile->fio?></div>
                         </div>
                         <div class="contractor-block-info">

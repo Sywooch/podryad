@@ -90,9 +90,9 @@ $this->beginPage();
                                 <a href="#" title="" class="btn btn--tender _tender" data-click="modal" data-item="#enter">Объявить
                                     тендер
                                 </a>
-                                <div class="header-tender__text">
+                               <!-- <div class="header-tender__text">
                                     <span>20 городов</span><span>354 подрядчика</span><span>231 тендер</span>
-                                </div>
+                                </div>-->
                             <?php }else if(\Yii::$app->user->identity->role != \app\modules\cms\models\User::ROLE_CONTRACTOR){?>
                                 <a href="<?=Url::to(['/exchange/tender/create'])?>" title="" class="btn btn--tender">Объявить тендер</a>
                                 <div class="header-tender__text"><span>20 городов</span><span>354 подрядчика</span><span>231 тендер</span>
@@ -122,7 +122,7 @@ $this->beginPage();
                                 <span>Заявки на ремонт и строительство</span></div>
                             <div class="top-menu__item">
                                 <a title="" class="top-menu__link">Подрядчики</a>
-                                <span>Заявки на ремонт и строительство</span>
+                                <span>Страница подрядчиков </span>
 
                                 <div class="top-menu-inside">
                                     <a href="<?= Url::to(['/exchange/contractor','specialization'=>'remont-i-otdelka']) ?>" title="" class="top-menu-inside__link">Ремонт и
