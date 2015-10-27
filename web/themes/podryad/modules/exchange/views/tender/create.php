@@ -29,12 +29,15 @@ $this->title = 'Объявить тендер';
             <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Специализации</span>
 
                 <div class="registration-contractor-form__row">
-                    <a href="#" title="" data-click="modal" data-item="#specialization" data-type="one-spec"
+                    <a href="#" title="" data-click="modal" data-item="#specialization" data-type="five-spec"
                        class="btn registration-contractor-form__btn" data-model="Tender">Выбрать специализацию
                     </a>
-                    <em>Максимум 1 специализация</em>
+                    <em>Максимум 5 специализаций</em>
 
                     <div class="specialization-list-selected">
+                        <?php foreach ($model->specializationIds as $specialization): ?>
+                            <?= Html::activeHiddenInput($model, 'specializationIds[]', ['value' => $specialization]) ?>
+                        <?php endforeach ?>
                         <?=Html::activeHiddenInput($model,'specializationId',['class'=>'Tender-specialization'])?>
                     </div>
                 </div>
@@ -93,4 +96,4 @@ $this->title = 'Объявить тендер';
     </section>
     <?=$this->render('//layouts/_sidebar')?>
 </main>
-<?= \app\modules\cms\widgets\Specialization::widget(['type'=>'one-spec','modelName'=>'Tender']) ?>
+<?= \app\modules\cms\widgets\Specialization::widget(['type'=>'five-spec','modelName'=>'Tender']) ?>

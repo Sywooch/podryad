@@ -34,6 +34,7 @@ use yii\helpers\Url;
  * @property $contractorId integer
  * @property $offersId integer
  * @property User $user
+ * @property $specializationsString string
  * @property Offers[] $offers
  * @usedBy app\modules\cms\components\CmsBehavior
  * @method string imageSrc(string $size = '100x100', string $method = Thumbler::METHOD_NOT_BOXED)
@@ -72,7 +73,7 @@ class   Tender extends \yii\db\ActiveRecord
             [['priceMin','priceMax'],'number'],
             [['title','description'],'required','on'=>'new'],
 
-            [['title','description','specializationId','phone','agree'],'required','on'=>'create'],
+            [['title','description','phone','agree'],'required','on'=>'create'],
             ['file','file','on'=>'create','skipOnEmpty'=>true],
             ['agree', 'required', 'message' => 'Вы должны принять условия!', 'isEmpty' => function ($value) {
                 return $value == 0;
@@ -86,6 +87,7 @@ class   Tender extends \yii\db\ActiveRecord
             [['priceMin','priceMax','specializationIds'],'safe','on'=>'filter'],
             ['price','number','on'=>'filter'],
             ['negotiable','checkNegotiable'],
+            ['specializationIds','safe'],
         ];
     }
 
@@ -256,6 +258,63 @@ class   Tender extends \yii\db\ActiveRecord
     public static function statusDropdown()
     {
         return self::$_statusList;
+    }
+
+    public function getSpecializations()
+    {
+        return $this->hasMany(Reference::className(), ['id' => 'specializationId'])
+            ->viaTable('{{%tender_specialization}}', ['tenderId' => 'id']);
+    }
+
+    public function getSpecializationsString()
+    {
+        $data = [];
+        foreach ($this->specializations as $v) {
+            $data[] = $v->title;
+        }
+        return implode(', ', $data);
+    }
+
+    public function getList()
+    {
+        $query = self::find()->joinWith(['user']);
+        $query->open()->orderNew();
+
+        foreach ($this->specializationIds as $specializationId) {
+            $subQuery = TenderSpecialization::find()->select('tenderId')->where(['specializationId' => $specializationId]);
+            $query->andWhere(['in', '{{%tender}}.id', $subQuery]);
+        }
+
+        if (!empty(\Yii::$app->request->cookies['city'])) {
+            $params['cityId'] = \Yii::$app->request->cookies['city'];
+            $query->joinWith(['user' => function ($query) use ($params) {
+                return $query->join(['iv_user_profile.cityId' => $params['cityId']]);
+            }]);
+        }
+
+        if ($this->priceMin && $this->priceMax) {
+            $query->andWhere(['>=', 'price', (int)$this->priceMin]);
+            $query->andWhere(['<=', 'price', (int)$this->priceMax]);
+        }
+
+        $pageCount = clone $query;
+        $pages = new Pagination(['totalCount' => $pageCount->count(), 'pageSize' => \Yii::$app->params['pageSize']]);
+
+        $items = $query->offset($pages->offset)->limit($pages->limit)->all();
+        return ['items' => $items, 'pages' => $pages];
+    }
+
+    public function afterSave($insert, $changedAttribute)
+    {
+        if($this->specializationIds)
+        {
+            TenderSpecialization::deleteAll(['tenderId'=>$this->id]);
+            foreach ($this->specializationIds as $specialiationId) {
+                $model = Reference::findOne($specialiationId);
+                $this->link('specializations', $model);
+            }
+        }
+        return parent::afterSave($insert,$changedAttribute);
     }
 }
 
