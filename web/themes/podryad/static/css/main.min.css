@@ -3210,11 +3210,13 @@ html.swipebox-html.swipebox-touch {
     display: block;
     height: 21px;
     left: 0;
-    margin-top: -2px;
+    margin-top: -3px;
     position: absolute;
     width: 21px;
 }
-
+.zaponit {
+    margin-bottom: 10px;
+}
 .tender_item_des_info_photo {
     color: #6a6a6a;
     float: left;
@@ -3685,7 +3687,9 @@ span.step-icon i {
 }
 
 #rememberMe {
-    margin-bottom: 15px;
+    float: left;
+    margin-top: 4px;
+    margin-right: 5px;
 }
 
 .news-content ul {
