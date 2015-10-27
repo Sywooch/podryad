@@ -15,6 +15,7 @@ use yii\db\ActiveQuery;
  * @property string $company
  * @property string $content
  * @property string $dateCreate
+ * @property string $date
  * @property integer $visible
  * @property \app\modules\cms\models\Image $image
  * @method string imageSrc(string $size = '100x100', string $method = Thumbler::METHOD_NOT_BOXED)
@@ -105,6 +106,11 @@ class Reviews extends \yii\db\ActiveRecord
               'class'=>CmsBehavior::className(),
           ]
         ];
+    }
+
+    public function getDate()
+    {
+        return date('d.m.Y H:i', strtotime($this->dateCreate));
     }
 }
 
