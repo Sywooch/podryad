@@ -81,6 +81,22 @@ $offersCount = sizeof($offers);
 							e-mail
 						</a>
 					</div>
+                    <?php if (($adres = $model->user->profile->adres)): ?>
+                        <div class="contractor-block-info__contact contractor-block-info__contact--address">
+                            <a href="#" title="" data-show="<?= $adres?>"
+                               class="contractor-block-info-show">показать
+                                адрес
+                            </a>
+                        </div>
+                    <?php endif ?>
+                    <?php if (($site = $model->user->profile->site)): ?>
+                        <div class="contractor-block-info__contact contractor-block-info__contact--site">
+                            <a href="#" title="" data-show="<?= $site ?>"
+                               class="contractor-block-info-show">показать
+                                сайт
+                            </a>
+                        </div>
+                    <?php endif ?>
 				</div>
 			</div>
             <div class="tender tender_item_count">
