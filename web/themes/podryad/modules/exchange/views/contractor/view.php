@@ -28,6 +28,14 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                         ТЕНДЕР
                     </a>
                 <?php }?>
+				<?php if ($model->isMine()): ?>
+                    <div class="contractor-block-info__contact contractor-block-info__contact--edit">
+                        <a href="<?= \yii\helpers\Url::to(['/cms/users/update']) ?>" title=""
+                           class="contractor-block-info-show-edit">Редактировать профиль
+                        </a>
+                    </div>
+                <?php endif ?>
+                <?= \app\modules\cms\widgets\Rate::widget(['model' => $model, 'primaryKey' => $model->id]) ?>
             </div>
             <div class="contractor-block-info">
                 <div class="contractor-block-info__name">
@@ -63,14 +71,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                     </div>
                 <?php endif ?>
 
-                <?php if ($model->isMine()): ?>
-                    <div class="contractor-block-info__contact contractor-block-info__contact--edit">
-                        <a href="<?= \yii\helpers\Url::to(['/cms/users/update']) ?>" title=""
-                           class="contractor-block-info-show-edit">Редактировать профиль
-                        </a>
-                    </div>
-                <?php endif ?>
-                <?= \app\modules\cms\widgets\Rate::widget(['model' => $model, 'primaryKey' => $model->id]) ?>
+                
             </div>
             <div class="contractor-block-images">
                 <?php foreach(\app\modules\exchange\models\Album::getAllImagesByUser($model->id,8) as $image):?>
