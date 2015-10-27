@@ -122,7 +122,7 @@ $this->beginPage();
                                 <span>Заявки на ремонт и строительство</span></div>
                             <div class="top-menu__item">
                                 <a title="" class="top-menu__link">Подрядчики</a>
-                                <span>Заявки на ремонт и строительство</span>
+                                <span>Страница подрядчиков </span>
 
                                 <div class="top-menu-inside">
                                     <a href="<?= Url::to(['/exchange/contractor','specialization'=>'remont-i-otdelka']) ?>" title="" class="top-menu-inside__link">Ремонт и
