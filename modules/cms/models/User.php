@@ -342,4 +342,9 @@ class User extends ActiveRecord  implements IdentityInterface
     {
         return $this->hasOne(AuthAssignment::className(),['user_id'=>'id']);
     }
+
+    public function getTitle()
+    {
+        return $this->profile->company ? $this->profile->company . ', ' . $this->profile->fio : $this->profile->fio;
+    }
 }
