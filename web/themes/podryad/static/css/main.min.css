@@ -812,8 +812,8 @@ html.active,body.active {
     margin: 0px;
     padding: 0px;
     color: #6a6a6a;
-    font-size: 1.375em;
-    line-height: 40px;
+    font-size: 1em;
+    /* line-height: 40px; */
     margin: 0;
     padding: 0;
 }
@@ -837,8 +837,8 @@ html.active,body.active {
 }
 .contractor-tabs-description p.not_des {
     color: #6a6a6a;
-    font-size: 1.375em;
-    line-height: 40px;
+    font-size: 1em;
+    /* line-height: 40px; */
     margin: 0;
     padding: 0;
 }
@@ -3830,16 +3830,16 @@ span.btn.btn-success.fileinput-button:hover {
 
 .not_phote p {
     color: #6a6a6a;
-    font-size: 1.375em;
-    line-height: 40px;
+    font-size: 1em;
+    /* line-height: 40px; */
     margin: 0;
     padding: 0;
 }
 
 .not_price p {
     color: #6a6a6a;
-    font-size: 1.375em;
-    line-height: 40px;
+    font-size: 1em;
+    /* line-height: 40px; */
     margin: 0;
     padding: 0;
 }

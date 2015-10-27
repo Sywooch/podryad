@@ -61,28 +61,28 @@ $offersCount = sizeof($offers);
                 </div>
             </div>
 			 <div class="tender_zakazchik">
-            <div class="tender_zakaz_titile">
-                Заказчик
-            </div>
-            <div class="zakaz_info">
-                <div class="tender_zakaz-avatar">
-                    <img src="<?=$model->user->profile->imageSrc('197x125')?>" alt="">
-                </div>
-                <div class="tender_zakazchik_name">
-                    <?=$model->user->profile->fio?>
-                </div>
-                <div class="contractor-block-info__contact contractor-block-info__contact--phone">
-                    <a href="#" title="" data-show="<?= $model->user->profile->phone ?>" class="contractor-block-info-show">показать
-                        номер
-                    </a>
-                </div>
-                <div class="contractor-block-info__contact contractor-block-info__contact--email">
-                    <a href="#" title="" data-show="<?= $model->user->username ?>" class="contractor-block-info-show">показать
-                        e-mail
-                    </a>
-                </div>
-            </div>
-        </div>
+				<div class="tender_zakaz_titile">
+					Заказчик
+				</div>
+				<div class="zakaz_info">
+					<div class="tender_zakaz-avatar">
+						<img src="<?=$model->user->profile->imageSrc('197x125')?>" alt="">
+					</div>
+					<div class="tender_zakazchik_name">
+						<?=$model->user->profile->fio?>
+					</div>
+					<div class="contractor-block-info__contact contractor-block-info__contact--phone">
+						<a href="#" title="" data-show="<?= $model->user->profile->phone ?>" class="contractor-block-info-show">показать
+							номер
+						</a>
+					</div>
+					<div class="contractor-block-info__contact contractor-block-info__contact--email">
+						<a href="#" title="" data-show="<?= $model->user->username ?>" class="contractor-block-info-show">показать
+							e-mail
+						</a>
+					</div>
+				</div>
+			</div>
             <div class="tender tender_item_count">
                 Предложений: <?=$offersCount?>
             </div>
@@ -149,7 +149,8 @@ $offersCount = sizeof($offers);
                     <?= \app\modules\cms\widgets\Rate::widget(['model' => $offer, 'primaryKey' => $offer->id]) ?>
                 </div>
             </div>
+			<?php endforeach?>
         </div>
-        <?php endforeach?>
+        
        
 </main>
