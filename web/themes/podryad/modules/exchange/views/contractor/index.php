@@ -31,12 +31,17 @@ $this->title .= $specializationModel->parentId > 0 ? ' - ' . $specializationMode
                         <div class="contractor-block-avatar">
                             <a href="<?= \yii\helpers\Url::to(['/exchange/contractor/view', 'id' => $contactor->id]) ?>"><img src="<?=$contactor->profile->imageSrc('199x159')?>" alt="">
                             </a>
-                            <?php if(!\Yii::$app->user->isGuest && \Yii::$app->user->can(\app\modules\cms\models\User::ROLE_CUSTOMER)):?>
-                            <a href="<?=\yii\helpers\Url::to(['/exchange/tender/my','contractorId'=>$contactor->id] )?>" title="" class="contractor-block-avatar__btn _inviteToTender"
-                               data-click="modal" data-item="#inviteToTenderWindow">ПРИГЛАСИТЬ НА
-                                ТЕНДЕР
-                            </a>
-                            <?php endif?>
+                            <?php if (\Yii::$app->user->isGuest) { ?>
+                                <a href="#" title="" class="contractor-block-avatar__btn _contractor" data-click="modal"
+                                   data-item="#enter">ПРИГЛАСИТЬ НА ТЕНДЕР
+                                </a>
+                            <?php } elseif (\Yii::$app->user->can(\app\modules\cms\models\User::ROLE_CUSTOMER)) { ?>
+                                <a href="<?= \yii\helpers\Url::to(['/exchange/tender/my', 'contractorId' => $contactor->id]) ?>"
+                                   title="" class="contractor-block-avatar__btn _inviteToTender"
+                                   data-click="modal" data-item="#inviteToTenderWindow">ПРИГЛАСИТЬ НА
+                                    ТЕНДЕР
+                                </a>
+                            <?php } ?>
                         </div>
                         <div class="contractor-block-info">
                             <div class="contractor-block-info__name">
