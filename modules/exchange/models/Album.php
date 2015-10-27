@@ -140,10 +140,4 @@ class Album extends \yii\db\ActiveRecord
         shuffle($images);
         return array_splice($images,0,$limit);
     }
-
-    public function getImageOne($size,$method=Thumbler::METHOD_NOT_BOXED)
-    {
-        $image = $this->image;
-        return $image ? $image->resize($size,$method) : 'http://placehold.it/'.$size;
-    }
 }
