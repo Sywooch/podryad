@@ -56,12 +56,19 @@ class SiteController extends Controller
     {
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+
+            if (\Yii::$app->user->can(User::ROLE_CONTRACTOR))
+            {
+                return $this->redirect(['/exchange/contractor/view','id'=>\Yii::$app->user->id]);
+            }
+
             if(isset(\Yii::$app->request->cookies['customer']))
             {
-                $cookies = \Yii::$app->resp->cookies;
+                $cookies = \Yii::$app->response->cookies;
                 $cookies->remove('customer');
                 return $this->redirect(['/exchange/tender/create']);
             }
+
 
             if(substr_count(\Yii::$app->request->referrer,'site/login'))
                 return $this->goBack();
