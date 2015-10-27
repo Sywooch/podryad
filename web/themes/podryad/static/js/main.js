@@ -83,7 +83,7 @@ $(document).ready(function () {
         $('.header-city-select__current').html(titleValue);
         // destroy
         $(this).remove();
-        $('.header-city-select__list').append('<div class="header-city-select__option">' + thisValue + '</div>');
+        $('.header-city-select__list, body').append('<div class="header-city-select__option">' + thisValue + '</div>');
     });
 });
 
