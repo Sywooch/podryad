@@ -7,10 +7,12 @@
  * @var $this \yii\web\View
  * @var $model \app\modules\exchange\models\Contactor
  * @var $specialization string
+ * @var $specializationModel \app\modules\cms\models\Reference
  * @var $contactorList \app\modules\exchange\models\Contactor[]
  * @var $pages \yii\data\Pagination
  */
-$this->title = 'Подрядчики';
+$this->title = 'Подрядчики ';
+$this->title .= $specializationModel->parentId > 0 ? ' - ' . $specializationModel->title : '';
 ?>
 <main class="main">
     <section class="search-contractor-content">
