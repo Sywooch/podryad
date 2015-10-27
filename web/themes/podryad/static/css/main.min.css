@@ -2709,7 +2709,7 @@ html.swipebox-html.swipebox-touch {
     width: 14px;
 }
 
-.filter__title.active:before {
+.filter__item.active:before {
     background-position: -275px -168px;
 }
 
