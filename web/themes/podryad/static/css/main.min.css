@@ -783,7 +783,9 @@ html.active,body.active {
     font-size: 1.1em;
     margin: 5px 0;
 }
-
+.form-group.field-registerform-company label:after {
+    content: "";
+}
 .contractor-tabs-license {
     align-items: flex-start;
     display: flex;
