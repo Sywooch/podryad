@@ -17,14 +17,24 @@ $this->title = 'Личный кабинет:';
     <div class="accaunt_block">
         <div class="contractor-block-avatar"><img src="<?=$model->profile->imageSrc('197x125')?>" alt=""></div>
         <div class="accaunt_name">
-            <?=$model->profile->fio?>
+            <?=$model->title?>
         </div>
         <div class="contractor-block-info__contact contractor-block-info__contact--phone">
-            <a href="#" title="" data-show="<?=$model->profile->phone?>" class="contractor-block-info-show">показать номер</a>
+            <?= $model->profile->phone ?>
         </div>
         <div class="contractor-block-info__contact contractor-block-info__contact--email">
-            <a href="#" title="" data-show="<?=$model->username?>" class="contractor-block-info-show">показать e-mail</a>
+            <?= $model->username ?>
         </div>
+        <?php if (($adres = $model->profile->adres)): ?>
+            <div class="contractor-block-info__contact contractor-block-info__contact--address">
+                <?=$adres?>
+            </div>
+        <?php endif ?>
+        <?php if( ($site = $model->profile->site) ):?>
+        <div class="contractor-block-info__contact contractor-block-info__contact--site">
+            <a href="<?= $site ?>" target="_blank"><?= $site ?></a>
+        </div>
+        <?php endif?>
 
         <?php if(!\Yii::$app->user->isGuest && $model->id == \Yii::$app->user->id):?>
         <div class="contractor-block-info__contact contractor-block-info__contact--edit">
