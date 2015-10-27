@@ -13,6 +13,7 @@ namespace app\modules\cms\components;
 use alexBond\thumbler\Thumbler;
 use app\modules\cms\models\Image;
 use yii\base\Behavior;
+use yii\helpers\Url;
 
 class CmsBehavior extends Behavior{
 
@@ -20,17 +21,31 @@ class CmsBehavior extends Behavior{
     public function imageSrc($size='100x100',$method = Thumbler::METHOD_NOT_BOXED)
     {
         if(!method_exists($this->owner,'getImage'))
-            return $this->imageThumb.$size;
+            $src = 'default.jpg';
+        else{
+            $image = $this->owner->image;
 
-        $thumb = \Yii::$app->view->theme->getUrl('static/images/content/default.jpg');
+            $webroot = \Yii::getAlias('@webroot');
 
-        $image = $this->owner->image;
-        $webroot = \Yii::getAlias('@webroot');
-        if($image && !is_readable($webroot.'/'.\Yii::$app->thumbler->sourcePath.$image->src))
-        {
-            return $thumb;
+            if ($image && !is_readable($webroot . '/' . \Yii::$app->thumbler->sourcePath . $image->src)) {
+                $src = 'default.jpg';
+            } else {
+                $src = $image ? $image->src : 'default.jpg';
+            }
         }
-        return $image ? $image->resize($size,$method) : $thumb;
+        return $this->resize($src, $size, $method);
+    }
+
+    public function resize($src,$size = '100x100', $method = Thumbler::METHOD_NOT_BOXED)
+    {
+        list($width, $height) = explode('x', $size);
+        if ($this && !is_file(\Yii::$app->thumbler->sourcePath . '/' . $src)) {
+            $src = 'default.jpg';
+        }
+        if ($src) {
+            $file = \Yii::$app->thumbler->resize($src, $width, $height, $method);
+            return Url::base() . \Yii::getAlias('@web/' . \Yii::$app->thumbler->thumbsPath) . $file;
+        }
     }
 
 }
