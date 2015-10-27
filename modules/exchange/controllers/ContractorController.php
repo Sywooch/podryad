@@ -9,6 +9,7 @@
 namespace app\modules\exchange\controllers;
 
 
+use app\modules\cms\models\Reference;
 use app\modules\exchange\models\Contactor;
 use app\modules\exchange\models\ContractorPrice;
 use app\modules\exchange\models\Tender;
@@ -35,8 +36,8 @@ class ContractorController extends Controller{
         {
             $specialization = 'specializacii';
         }
-
-        return $this->render('index',['specialization'=>$specialization,'contactorList'=>$contactorList,'model'=>$model,'pages'=>$pages]);
+        $specializationModel = Reference::findOne(['alias'=>$specialization]);
+        return $this->render('index',['specializationModel'=>$specializationModel,'specialization'=>$specialization,'contactorList'=>$contactorList,'model'=>$model,'pages'=>$pages]);
     }
 
     public function actionView($id)
