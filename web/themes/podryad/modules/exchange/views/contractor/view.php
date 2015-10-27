@@ -35,7 +35,6 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                         </a>
                     </div>
                 <?php endif ?>
-                <?= \app\modules\cms\widgets\Rate::widget(['model' => $model, 'primaryKey' => $model->id]) ?>
             </div>
             <div class="contractor-block-info">
                 <div class="contractor-block-info__name">
@@ -72,6 +71,7 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
                 <?php endif ?>
 
                 
+                <?= \app\modules\cms\widgets\Rate::widget(['model' => $model, 'primaryKey' => $model->id]) ?>
             </div>
             <div class="contractor-block-images">
                 <?php foreach(\app\modules\exchange\models\Album::getAllImagesByUser($model->id,8) as $image):?>
