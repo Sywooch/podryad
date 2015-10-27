@@ -8,6 +8,7 @@
  * @var $subject string
  *
  */
+$link = \yii\helpers\Url::to(['/exchange/tender/view', 'id' => $model->tender->id], true);
 ?>
 <h1><?=$subject?></h1>
 <div>
@@ -16,7 +17,7 @@
         <li>Телефон: <?=$model->tender->user->profile->phone?></li>
         <li>
             Тендер:
-            <a href="<?=\yii\helpers\Url::to(['/exchange/tender/view','id'=>$model->tender->id])?>"><?=$model->tender->title?></a>
+            <a href="<?=$link?>"><?=$model->tender->title?></a>
         </li>
         <li>Цена: <?=$model->price?></li>
         <li>Описание: <?=$model->description?></li>
@@ -24,7 +25,7 @@
 </div>
 <p>
     Для подробного проссмотра предложения, вам нужно перейти по
-    <a href="<?=\yii\helpers\Url::to(['/exchange/tender/view','id'=>$model->tender->id],true)?>">
+    <a href="<?=$link?>">
     ссылке.
     </a>
 </p>
