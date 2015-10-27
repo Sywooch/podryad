@@ -150,7 +150,7 @@ class   Tender extends \yii\db\ActiveRecord
 
     public function getDate()
     {
-        return date('d.m.Y H:i');
+        return date('d.m.Y H:i',strtotime($this->dateCreate));
     }
 
     public function behaviors()

@@ -15,6 +15,7 @@ use yii\helpers\Url;
  * @property string $description
  * @property string $rateStatus
  * @property string $selectedText
+ * @property string $date
  * @property integer $tenderId
  * @property integer $rate
  * @property User $user
@@ -99,6 +100,11 @@ class Offers extends \yii\db\ActiveRecord
     public function getSelectedText()
     {
         return $this->tender->contractorId == $this->userId  ? 'Подрядчик выбран в качестве исполнителя' : '';
+    }
+
+    public function getDate()
+    {
+        return date('d.m.Y H:i', strtotime($this->dateAdd));
     }
 }
 
