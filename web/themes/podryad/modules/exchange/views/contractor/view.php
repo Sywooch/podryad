@@ -15,17 +15,23 @@ $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
 ?>
 <main class="main">
     <section class="contractor-content">
-        <?php if( ($backLink = \Yii::$app->request->referrer) ):?>
-        <a href="<?=$backLink?>" title="" class="contractor-back">Вернуться к списку подрядчиков</a>
-        <?php endif;?>
+        <a href="<?=Url::to(['/exchange/contractor'])?>" title="" class="contractor-back">Вернуться к списку подрядчиков</a>
         <div class="contractor-block">
             <div class="contractor-block-avatar">
                 <img src="<?=$model->profile->imageSrc('197x125')?>" alt="">
-
+                <?php if (\Yii::$app->user->isGuest){ ?>
+                    <a href="#" title="" class="contractor-block-avatar__btn _contractor" data-click="modal" data-item="#enter">ПРИГЛАСИТЬ НА ТЕНДЕР</a>
+                <?php }elseif(\Yii::$app->user->can(\app\modules\cms\models\User::ROLE_CUSTOMER)){?>
+                    <a href="<?= \yii\helpers\Url::to(['/exchange/tender/my', 'contractorId' => $model->id]) ?>"
+                       title="" class="contractor-block-avatar__btn _inviteToTender"
+                       data-click="modal" data-item="#inviteToTenderWindow">ПРИГЛАСИТЬ НА
+                        ТЕНДЕР
+                    </a>
+                <?php }?>
             </div>
             <div class="contractor-block-info">
                 <div class="contractor-block-info__name">
-                    <?=($model->profile->company ? $model->profile->company : $model->profile->fio)?>
+                    <?= $model->title ?>
                 </div>
                 <div class="contractor-block-info__service">
                     Предлагаемые услуги

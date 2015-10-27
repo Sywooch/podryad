@@ -44,35 +44,14 @@ class TenderController extends Controller
             return $this->redirect(['create', 'id' => $model->id]);
         }
 
-        $search = \app\modules\exchange\models\Tender::find()->joinWith(['user', 'specialization'])->open()->orderNew();
-
-        if (\Yii::$app->request->isGet && !empty($_GET)) {
-            $model->scenario = 'filter';
+        if(\Yii::$app->request->isGet)
+        {
             $model->load($_GET);
-
-            if ($model->specializationIds)
-                $search->andWhere(['specializationId' => $model->specializationIds]);
-
-            if($model->priceMin && $model->priceMax)
-            {
-                $search->andWhere(['>=', 'price', (int)$model->priceMin]);
-                $search->andWhere(['<=', 'price', (int)$model->priceMax]);
-            }
         }
 
-        if (!empty(\Yii::$app->request->cookies['city'])) {
-            $params['cityId'] = \Yii::$app->request->cookies['city'];
-            $search->joinWith(['user.profile' => function ($query) use ($params){
-                return $query->where(['iv_user_profile.cityId' => $params['cityId']]);
-            }]);
-        }
-
-        $countQuery = clone $search;
-        $pages = new Pagination(['totalCount' => $countQuery->count(),'pageSize'=>\Yii::$app->params['pageSize']]);
-
-        $list = $search->offset($pages->offset)
-            ->limit($pages->limit)
-            ->all();
+        $listPages = $model->getList();
+        $list = $listPages['items'];
+        $pages = $listPages['pages'];
 
         return $this->render('index', ['model' => $model, 'list' => $list,'pages'=>$pages]);
     }

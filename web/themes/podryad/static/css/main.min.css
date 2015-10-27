@@ -3713,6 +3713,7 @@ span.btn.btn-success.fileinput-button {
 .btn.btn-danger.delete {
     border: none;
     padding: 0;
+    text-align: center;
 }
 
 .btn.btn-danger.delete:hover {

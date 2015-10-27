@@ -23,7 +23,7 @@ use app\modules\cms\models\Article;
         </div>
         <?php endif?>
 
-        <?php foreach(Article::getAllByCategory(Article::TYPE_NEWS_ALIAS,2) as $item):?>
+        <?php foreach(Article::getAllByCategory(Article::TYPE_NEWS_ALIAS,4) as $item):?>
         <div class="sidebar-news-block">
             <div class="sidebar-news-block__img">
                 <img src="<?=$item->imageSrc('86x86')?>" alt="<?=$item->title?>">

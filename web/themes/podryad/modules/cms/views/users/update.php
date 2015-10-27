@@ -9,6 +9,7 @@
  * @var $profile \app\modules\cms\models\Profile
  */
 use yii\helpers\Html;
+use yii\helpers\Url;
 $this->title = 'Обновление профиля:';
 $cityList = \app\modules\cms\models\Reference::findOne(['alias' => 'cityList'])->children();
 $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
@@ -16,9 +17,20 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
     <main class="main">
         <section class="registration-contractor-content">
             <div class="registration-contractor-content__title">Редактирование профиля</div>
+
+            <br/>
+
+            <a href="<?= Url::to(
+                \Yii::$app->user->identity->role == \app\modules\cms\models\User::ROLE_CONTRACTOR ?
+                    ['/exchange/contractor/view', 'id' => \Yii::$app->user->id] : ['/cms/users/view']) ?>" title=""
+               class="contractor-back">Вернуться в профиль
+            </a>
+            <br/>
+
             <div class="registration-contractor-content__text">Пожалуйста, укажите свои реальные данные, это облегчит
                 взаимодействие между вами и заказчиками
             </div>
+
             <?= Html::errorSummary([$model], ['class' => 'registration-contractor-content__text']) ?>
 
             <?= Html::beginForm('','post',['enctype'=>'multipart/form-data']) ?>
@@ -38,7 +50,6 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
                     <?= Html::error($model, 'company') ?>
                 </div>
             </label>
-            <?php if(\Yii::$app->user->can(\app\modules\cms\models\User::ROLE_CONTRACTOR)):?>
             <label class="registration-contractor-form__label">
                 <span>Сайт:</span>
 
@@ -55,7 +66,6 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
                     <?= Html::error($model, 'adres') ?>
                 </div>
             </label>
-            <?php endif?>
             <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Контактный телефон</span>
 
                 <div class="registration-contractor-form__row">

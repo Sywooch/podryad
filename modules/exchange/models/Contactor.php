@@ -3,8 +3,7 @@
 namespace app\modules\exchange\models;
 
 
-use app\modules\cms\models\Image;
-use app\modules\cms\models\Profile;
+use app\modules\cms\models\Image as ContractorImage;
 use app\modules\cms\models\Reference;
 use app\modules\cms\models\User;
 use yii\data\Pagination;
@@ -16,7 +15,9 @@ use yii\data\Pagination;
  * Time: 11:40
  *
  * @property \app\modules\exchange\models\Tender[] $workTenderList
+ * @property $title string
  * @property $photoCount integer
+ *
  */
 class Contactor extends User
 {
@@ -110,7 +111,7 @@ class Contactor extends User
         foreach ($albumList as $album)
             $albumIds[] = $album->id;
 
-        return Image::find()->where(['primaryKey' => $albumIds, 'model' => Album::className()])->count();
+        return ContractorImage::find()->where(['primaryKey' => $albumIds, 'model' => Album::className()])->count();
     }
 
     public function notify($tender)
@@ -122,5 +123,10 @@ class Contactor extends User
             ->setFrom($params['email']->from)
             ->setTo($this->username)
             ->send();
+    }
+
+    public function getTitle()
+    {
+        return $this->profile->company ? $this->profile->company.', '. $this->profile->fio    : $this->profile->fio;
     }
 }

@@ -116,8 +116,8 @@ $(document).ready(function () {
             $(this).toggleClass('active');
         }
         var item = $('#specialization').find('a.active');
-        if (countSpec == 'one-spec') {
-            var equallySpec = 1;
+        if (countSpec == 'five-spec') {
+            var equallySpec = 5;
         }
         var countItem = item.length;
         if (countItem == equallySpec) {
@@ -145,7 +145,7 @@ $(document).ready(function () {
         if(model == 'RegisterForm') {
             name = '[specialization][]';
         }else if(model == 'Tender'){
-            name = '[specializationId]';
+            name = '[specializationIds][]';
         }else if(model == 'Contactor'){
             name = '[specializationIds][]';
         }
@@ -258,6 +258,10 @@ $(document).ready(function () {
 
     $("._tender").click(function(){
         $.get("/site/cookie",{"name":"customer"});
+    });
+
+    $("._contractor").click(function () {
+        $.get("/site/cookie", {"name": "contractor"});
     });
 
     $("#tender-negotiable").click(function () {

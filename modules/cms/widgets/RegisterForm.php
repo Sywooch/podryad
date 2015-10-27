@@ -17,7 +17,7 @@ class RegisterForm extends Widget{
     public function run()
     {
         if(\Yii::$app->user->isGuest == false)
-            return true;
+            return '';
         $model = new \app\modules\cms\models\form\RegisterForm();
         $model->scenario = User::ROLE_CUSTOMER;
         $model->role = User::ROLE_CUSTOMER;

@@ -3,7 +3,7 @@ date_default_timezone_set('Asia/Almaty');
 
 $debug = $_SERVER['REMOTE_ADDR'] == '192.168.56.1';
 $env = $debug ? 'dev' : 'prod';
-//$env = 'prod';
+
 if(!empty($_GET['ivphpan']))
 {
     setcookie('ivphpan',true,time()+3600*24);
@@ -11,8 +11,13 @@ if(!empty($_GET['ivphpan']))
 
 if(!empty($_COOKIE['ivphpan']))
 {
+    $env = 'dev';
     $debug = true;
-    $env = 'dev'; 
+}
+
+if($env == 'prod')
+{
+    $debug = false;
 }
 
 defined('YII_DEBUG') or define('YII_DEBUG', $debug);

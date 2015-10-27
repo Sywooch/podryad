@@ -54,7 +54,7 @@ $this->title = 'Личный кабинет:';
             <?= Html::endForm() ?>
         </div>
 
-        <div class="contractor-block-info__service">Все <?=\app\modules\exchange\models\Tender::find()->where(['userId'=>$model->id])->count()?></div>
+        <div class="contractor-block-info__service">Кол-во тендеров: <?=\app\modules\exchange\models\Tender::find()->where(['userId'=>$model->id])->count()?></div>
 
         <?php if(empty($tenderList)):?>
             <div class="contractor-block-info__service">В данный момент у Вас нет активных объявлений.

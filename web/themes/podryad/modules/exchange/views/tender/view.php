@@ -15,6 +15,8 @@ $city = 'г. '.$model->user->profile->city->title;
 $this->title = $title.' - '.$city;
 $this->registerMetaTag(['description'=>$model->shortext(255,true)]);
 $this->registerMetaTag(['keywords'=>$title.' '.$city]);
+$offers = $model->offers;
+$offersCount = sizeof($offers);
 ?>
 <main class="main">
     <div class="tender_cotainer">
@@ -23,7 +25,7 @@ $this->registerMetaTag(['keywords'=>$title.' '.$city]);
             <div class="tender_item_des">
                 <h1 class="tender_item_des_title"><?=$model->title?></h1>
                 <div class="contractor-block-info__service"><?=$model->user->profile->city->title?></div>
-                <div class="contractor-block-info__service"><?=$model->specialization->title?></div>
+                <div class="contractor-block-info__service"><?=$model->specializationsString?></div>
                 <p><?=$model->description?>
                 </p>
                 <div class="tender_item_des_info">
@@ -81,7 +83,10 @@ $this->registerMetaTag(['keywords'=>$title.' '.$city]);
                 </div>
             </div>
         </div>
-            <?php foreach($model->offers as $offer):?>
+            <div class="tender tender_item_count">
+                Предложений: <?=$offersCount?>
+            </div>
+            <?php foreach($offers as $offer):?>
             <div class="tender_item <?=$model->cssSelected($offer->id)  ?>">
                 <div class="tender_item-avatar">
                     <img src="<?=$offer->user->profile->imageSrc('197x125')?>" alt="">
@@ -103,7 +108,7 @@ $this->registerMetaTag(['keywords'=>$title.' '.$city]);
 
                     <div class="contractor-block-info__name">
                         <a href="<?=\yii\helpers\Url::to(['/exchange/contractor/view','id'=>$offer->user->id])?>">
-                        <?=$offer->user->profile->fio ?>
+                        <?=$offer->user->title ?>
                         </a>
                     </div>
                     <div class="contractor-block-info__contact contractor-block-info__contact--phone">
@@ -116,6 +121,28 @@ $this->registerMetaTag(['keywords'=>$title.' '.$city]);
                             e-mail
                         </a>
                     </div>
+
+                    <?php if (($city = $offer->user->profile->city->title)): ?>
+                        <div class="contractor-block-info__contact contractor-block-info__contact--city">
+                            <?=$city?>
+                        </div>
+                    <?php endif ?>
+
+                    <?php if (($site = $offer->user->profile->site)): ?>
+                        <div class="contractor-block-info__contact contractor-block-info__contact--site">
+                            <a href="#" title="" data-show="<?= $site ?>" class="contractor-block-info-show">показать
+                                сайт
+                            </a>
+                        </div>
+                    <?php endif ?>
+
+                    <?php if (($address = $offer->user->profile->adres)): ?>
+                        <div class="contractor-block-info__contact contractor-block-info__contact--address">
+                            <a href="#" title="" data-show="<?= $address ?>" class="contractor-block-info-show">показать
+                                адрес
+                            </a>
+                        </div>
+                    <?php endif ?>
                     <div class="tender_item_content_cena">Стоимость работ: <span><?=$offer->price?> тг.</span></div>
                     <p><?=Html::encode($offer->description)?>
                     </p>
