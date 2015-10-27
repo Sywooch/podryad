@@ -43,7 +43,7 @@ $this->title = 'Тендеры';
 						<a href="<?=$row->url?>">	
 						<img src="<?=$row->imageSrc('199x159')?>" alt="">
 						</a>
-                            <div class="tenders__name"><?=$row->user->profile->fio?></div>
+                            <div class="tenders__name"><?=$row->user->title?></div>
                         </div>
                         <div class="contractor-block-info">
                             <div class="contractor-block-info__name">

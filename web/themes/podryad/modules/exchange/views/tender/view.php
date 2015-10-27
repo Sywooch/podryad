@@ -69,7 +69,7 @@ $offersCount = sizeof($offers);
 						<img src="<?=$model->user->profile->imageSrc('197x125')?>" alt="">
 					</div>
 					<div class="tender_zakazchik_name">
-						<?=$model->user->profile->fio?>
+						<?=$model->user->title?>
 					</div>
 					<div class="contractor-block-info__contact contractor-block-info__contact--phone">
 						<a href="#" title="" data-show="<?= $model->user->profile->phone ?>" class="contractor-block-info-show">показать
