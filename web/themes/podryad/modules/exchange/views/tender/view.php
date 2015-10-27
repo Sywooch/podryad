@@ -141,7 +141,7 @@ $offersCount = sizeof($offers);
                     <?php endif ?>
 					<?php if (($city = $offer->user->profile->city->title)): ?>
                         <div class="contractor-block-info__contact contractor-block-info__contact--city">
-                            <?=$city?>
+                           Город: <?=$city?>
                         </div>
                     <?php endif ?>
                     <div class="tender_item_content_cena">Стоимость работ: <span><?=$offer->price?> тг.</span></div>

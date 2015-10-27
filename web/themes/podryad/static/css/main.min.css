@@ -547,7 +547,7 @@ html.active,body.active {
 .contractor-block-info__service {
     color: #6a6a6a;
     font-size: .875em;
-    margin: 5px 0;
+    margin: 8px 0;
     width: 100%;
 }
 
@@ -780,7 +780,8 @@ html.active,body.active {
 
 .contractor-tabs-description p {
     color: #6a6a6a;
-    font-size: .875em;
+    font-size: 1.1em;
+    margin: 5px 0;
 }
 
 .contractor-tabs-license {
@@ -1716,8 +1717,8 @@ html.swipebox-html.swipebox-touch {
 }
 
 .registration-customer {
-    height: 95%;
-    position: absolute;
+    height: 92%;
+    /* position: absolute; */
 }
 
 .specialization {
@@ -3856,9 +3857,12 @@ span.btn.btn-success.fileinput-button:hover {
 }
 .tender.tender_item_count {
     clear: both;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #6a6a6a;
     font-size: 1em;
+}
+.tender_item_des_info_biudzhet span {
+    color: #1883BF;
 }
 .pagination {
     display: block;
