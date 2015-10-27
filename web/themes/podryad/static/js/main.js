@@ -204,11 +204,11 @@ $(document).ready(function () {
     $('.filter__title').click(function () {
         if ($(this).parent().hasClass('active')) {
             $(this).parent().removeClass('active');
-            $(this).parent().children('.filter__list').removeClass('active').slideUp();
+            $(this).parent().children('.filter__list:before').removeClass('active').slideUp();
             $(this).parent().children('.filter__select-all').hide();
         } else {
             $(this).parent().addClass('active');
-            $(this).parent().children('.filter__list').addClass('active').slideDown();
+            $(this).parent().children('.filter__list:before').addClass('active').slideDown();
             $(this).parent().children('.filter__select-all').show();
         }
     });
