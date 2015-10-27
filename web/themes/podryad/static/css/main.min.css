@@ -547,7 +547,7 @@ html.active,body.active {
 .contractor-block-info__service {
     color: #6a6a6a;
     font-size: .875em;
-    margin: 8px 0;
+    margin: 5px 0;
     width: 100%;
 }
 
@@ -3156,12 +3156,13 @@ html.swipebox-html.swipebox-touch {
     font-size: 1.225em;
     font-weight: 700;
     width: 100%;
-    margin: 0px;
+    margin: 0px 0px 4px;
 }
 
 .tender_item_des p {
     color: #6a6a6a;
     font-size: .875em;
+    margin: 5px 0px;
 }
 
 .tender_item_des_info_status {
@@ -3248,16 +3249,21 @@ html.swipebox-html.swipebox-touch {
 
 .tender_item_content .contractor-block-info__contact {
     float: left;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     margin-right: 20px;
     margin-top: 15px;
     width: auto;
 }
-
+.contractor-block-info__contact.contractor-block-info__contact--city {
+    padding-left: 0px;
+    margin: 0px 0px 5px;
+    color: #6a6a6a;
+}
 .tender_item_content_cena {
     clear: both;
     color: #6a6a6a;
     font-size: .875em;
+    margin: 5px 0;
 }
 
 .tender_item_content_cena span {
@@ -3268,8 +3274,8 @@ html.swipebox-html.swipebox-touch {
 .tender_item_content p {
     color: #6a6a6a;
     font-size: .875em;
+    margin: 5px 0;
 }
-
 .tender_item .contractor-block-info__rating {
     width: 80%;
 }
@@ -3849,7 +3855,12 @@ span.btn.btn-success.fileinput-button:hover {
     font-size: .875em;
     line-height: 32px;
 }
-
+.tender.tender_item_count {
+    clear: both;
+    margin-bottom: 10px;
+    color: #6a6a6a;
+    font-size: 1em;
+}
 .pagination {
     display: block;
     /* margin: auto; */

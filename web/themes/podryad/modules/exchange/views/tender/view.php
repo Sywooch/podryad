@@ -122,11 +122,7 @@ $offersCount = sizeof($offers);
                         </a>
                     </div>
 
-                    <?php if (($city = $offer->user->profile->city->title)): ?>
-                        <div class="contractor-block-info__contact contractor-block-info__contact--city">
-                            <?=$city?>
-                        </div>
-                    <?php endif ?>
+                    
 
                     <?php if (($site = $offer->user->profile->site)): ?>
                         <div class="contractor-block-info__contact contractor-block-info__contact--site">
@@ -141,6 +137,11 @@ $offersCount = sizeof($offers);
                             <a href="#" title="" data-show="<?= $address ?>" class="contractor-block-info-show">показать
                                 адрес
                             </a>
+                        </div>
+                    <?php endif ?>
+					<?php if (($city = $offer->user->profile->city->title)): ?>
+                        <div class="contractor-block-info__contact contractor-block-info__contact--city">
+                            <?=$city?>
                         </div>
                     <?php endif ?>
                     <div class="tender_item_content_cena">Стоимость работ: <span><?=$offer->price?> тг.</span></div>
