@@ -72,4 +72,9 @@ class Reviews extends \yii\db\ActiveRecord
     {
         return $this->rate == 0 ? 'dislike' : 'like';
     }
+
+    public function getDate()
+    {
+        return date('d.m.Y H:i', strtotime($this->dateCreate));
+    }
 }
