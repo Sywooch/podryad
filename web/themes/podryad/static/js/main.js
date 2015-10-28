@@ -84,7 +84,12 @@ $(document).ready(function () {
         // destroy
         $(this).remove();
         $('.header-city-select__list').append('<div class="header-city-select__option">' + thisValue + '</div>');
-    });
+		var clickSelect = 0;
+		$(document).click(function ()){
+			if clickSelect = 1 .append ('.header-city-select__current');
+		}		
+   });
+
 });
 
 $(".header-city-select__input").change(function(){
