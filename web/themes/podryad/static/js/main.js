@@ -88,10 +88,6 @@ $(document).ready(function () {
    });
 
 });
-$(document).click(function ()){
-var clickSelect = 0;
-			if clickSelect = 1 .closest('.header-city-select__list') ;
-		}	
 
 $(".header-city-select__input").change(function(){
     console.log('test');
