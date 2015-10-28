@@ -1419,13 +1419,53 @@ html.swipebox-html.swipebox-touch {
 .footer {
     border-top: 1px solid #d2d3d5;
     color: #6a6a6a;
-    font-size: .75em;
+    /* font-size: .75em; */
     margin-top: 10px;
     padding-bottom: 15px;
     padding-top: 15px;
-    text-align: center;
+    overflow: hidden;
+}
+.footer_logo {
+    float: left;
+}
+.footer_logo img {
+    width: 75px;
+}
+.footer_menu .top-menu {
+    margin-top: 0px;
+    padding-top: 47px;
+    margin-left: 115px;
+    overflow: hidden;
+    float: left;
+    width: 63%;
+}
+.razrabotano {
+    /* float: left; */
+    overflow: hidden;
+    padding-top: 43px;
+    text-align: right;
+}
+.razrabotano a {
+    color: #6a6a6a;
+}
+.top-menu__item.footer_m:before {
+    display: none;
+}
+.top-menu.footer-menu-container {
+    justify-content: initial;
+}
+.top-menu__item.footer_m {
+    width: auto;
+    margin-right: 12px;
 }
 
+.razrabotano a:hover {
+      color: #00acff;
+	  text-decoration:none;
+}
+.top-menu__link.footer_link {
+    margin-bottom: 9px;
+}
 .header {
     margin-bottom: 15px;
     padding-top: 38px;
