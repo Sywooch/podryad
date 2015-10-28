@@ -4076,9 +4076,25 @@ a.zakaz__btn:hover {
 .uslovie_title {
     color: #6a6a6a;
     font-family: "ReformaGroteskDemiC";
-    font-size: 1.275em;
+    font-size: 1.575em;
     border-bottom: 1px solid #d2d3d5;
     margin-top: 15px;
     padding-bottom: 5px;
     text-transform: uppercase;
+}
+.uslovie_content p {
+    margin: 0 0px 5px 0px;
+    line-height: 17px;
+    font-size: 15px;
+}
+.uslov_title {
+    font-size: 1.1em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+.uslovie_content {
+    width: 863px;
 }
