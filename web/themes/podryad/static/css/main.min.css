@@ -46,8 +46,9 @@ abbr[title] {
     border-bottom: 1px dotted;
 }
 
-b,strong {
+b, strong {
     font-weight: 700;
+    font-family: "PTSansBold";
 }
 
 dfn {
@@ -4071,4 +4072,13 @@ a.zakaz__btn:hover {
     background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
     color: #ffd200;
 	text-decoration:none;
+}
+.uslovie_title {
+    color: #6a6a6a;
+    font-family: "ReformaGroteskDemiC";
+    font-size: 1.275em;
+    border-bottom: 1px solid #d2d3d5;
+    margin-top: 15px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
 }
