@@ -961,8 +961,8 @@ html.active,body.active {
     overflow: hidden;
     visibility: hidden;
 }
-.portfolio-slider-big.slider-big.slick-initialized.slick-slider img.slick-active {
-    width: 600px!important;
+.portfolio-slider-big {
+    height: 428px;
 }
 .portfolio-slider.active {
     height: auto;
