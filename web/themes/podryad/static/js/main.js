@@ -86,7 +86,12 @@ $(document).ready(function () {
         $('.header-city-select__list').append('<div class="header-city-select__option">' + thisValue + '</div>');
 			
    });
-
+$(document).mouseup(function (e) {
+    var container = $("YOUR CONTAINER SELECTOR");
+    if (container.has(e.target).length === 0){
+        container.hide();
+    }
+});
 });
 
 $(".header-city-select__input").change(function(){
