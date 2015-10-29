@@ -85,7 +85,7 @@ class OffersController extends Controller{
     {
         $model = $this->loadModel($id);
         $model->tender->contractorSet($model);
-        \Yii::$app->mailer->compose('contactor/notify',['model'=>$model->tender])
+        \Yii::$app->mailer->compose('contractor/notify',['model'=>$model->tender])
             ->setSubject('Вас пригласили для участия в тендере на сайте'.APP_NAME)
             ->setFrom(\Yii::$app->params['email']->from)
             ->setTo($model->user->username)
