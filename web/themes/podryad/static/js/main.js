@@ -24,7 +24,6 @@ $(document).ready(function () {
         fade: false,
         asNavFor: '.slider-small',
         lazyLoad: 'ondemand'
-		centerMode: false,
     });
     $('.slider-small').slick({
         slidesToShow: 6,
