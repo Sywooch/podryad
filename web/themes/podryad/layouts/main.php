@@ -153,7 +153,52 @@ $this->beginPage();
             <?=$content?>
             <footer class="footer">
                 <div class="footer__wrapper">
-                    <p>Название компании © 2015 год</p>
+				<div class="cr">
+                   <div class="footer_logo">
+					 <a href="<?=Url::home()?>" title="" ><img src="<?=$this->theme->getUrl('static/images/content/footer_log.png')?>" /></a>
+					 
+				   </div>
+				   <div class="footer_menu">
+				    <nav class="top-menu footer-menu-container">
+                            <div class="top-menu__item footer_m">
+                                <a href="<?=Url::home()?>" title="" class="top-menu__link">Главная</a>
+                                
+                            </div>
+                            <div class="top-menu__item footer_m">
+                                <a href="<?=Url::to(['/exchange/tender'])?>" title="" class="top-menu__link">Тендеры</a>
+                              
+                            </div>
+                            <div class="top-menu__item footer_m">
+                                <a href="<?= Url::to(['/exchange/contractor','specialization'=>'remont-i-otdelka']) ?>" title="" class="top-menu__link footer_link">Ремонт и
+                                        отделка</a>
+                                
+                            </div>
+							<div class="top-menu__item footer_m">
+<a href="<?= Url::to(['/exchange/contractor', 'specialization' => 'stroitelstvo']) ?>" title="" class="top-menu__link footer_link">Строительство</a>
+                                
+                            </div>
+                            <div class="top-menu__item footer_m">
+                                <a href="<?=Url::to(['/cms/article/list','type'=>\app\modules\cms\models\Article::TYPE_NEWS_ALIAS])?>" title="" class="top-menu__link">Новости</a>
+
+                            </div>
+                            <div class="top-menu__item footer_m">
+                                <a href="#" data-click="modal" data-item="#back_hunter" title="" class="top-menu__link">
+                                    Обратная связь
+                                </a>
+
+                            </div>
+                            <div class="top-menu__item footer_m">
+                                <a href="<?= Url::to(['/cms/default/page', 'path' => 'faq']) ?>" title="" class="top-menu__link">
+                                    FAQ
+                                </a>
+
+                            </div>
+                        </nav>
+				   </div>
+				   <div class="razrabotano">
+					Разработано в <a href="http://astanacreative.kz/" target="_blanck">Astanacreative.kz</a>
+				   </div>
+			    </div>
                 </div>
             </footer>
             <div id="enter" class="modal enter">
@@ -166,7 +211,7 @@ $this->beginPage();
                     <label class="form__label">Пароль:</label>
                     <input type="password" value="" class="form__input" name="LoginForm[password]">
                     <input type="hidden" name="LoginForm[rememberMe]" value="0"/>
-                    <input type="checkbox" name="LoginForm[rememberMe]" id="rememberMe" value="1" checked="checked"/> <label for="rememberMe">запомнить</label>
+                   <div class="zaponit"> <input type="checkbox" name="LoginForm[rememberMe]" id="rememberMe" value="1" checked="checked"/> <label for="rememberMe">запомнить</label></div>
                     <input type="submit" value="Войти" class="form__submit">
 
                     <a href="#" title="" data-click="modal" data-item="#registration">Регистрация</a>

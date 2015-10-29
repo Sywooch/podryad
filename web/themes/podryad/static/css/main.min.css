@@ -46,7 +46,7 @@ abbr[title] {
     border-bottom: 1px dotted;
 }
 
-b,strong {
+b, strong {
     font-weight: 700;
 }
 
@@ -515,8 +515,11 @@ html.active,body.active {
 
 .contractor-block-avatar {
     width: 197px;
+    text-align: center;
 }
-
+.contractor-block-info__contact.contractor-block-info__contact--edit.podryadchik {
+    display: inline-block;
+}
 .contractor-block-avatar__btn {
     padding-left: 0;
     text-align: center;
@@ -571,7 +574,7 @@ html.active,body.active {
 
 .contractor-block-info__contact {
     font-size: .875em;
-    /* margin-bottom: 10px; */
+    margin-bottom: 10px;
     min-width: 30%;
     padding-left: 25px;
     position: relative;
@@ -671,7 +674,7 @@ html.active,body.active {
     margin-right: 5px;
 }
 .contractor-block-info__rating--message {
-    color: #6a6a6a;
+    color: #1B90C6;
     font-size: .875em;
 }
 .contractor-block-images a {
@@ -848,7 +851,7 @@ html.active,body.active {
     color: #6a6a6a;
     font-size: 1em;
     /* line-height: 40px; */
-    margin: 0;
+    margin: 0 0 10px 0;
     padding: 0;
 }
 .btn.registration-contractor-form__btn {
@@ -958,7 +961,10 @@ html.active,body.active {
     overflow: hidden;
     visibility: hidden;
 }
-
+.portfolio-slider-big {
+    height: 428px;
+    width: 583px;
+}
 .portfolio-slider.active {
     height: auto;
     overflow: auto;
@@ -1414,13 +1420,53 @@ html.swipebox-html.swipebox-touch {
 .footer {
     border-top: 1px solid #d2d3d5;
     color: #6a6a6a;
-    font-size: .75em;
+    /* font-size: .75em; */
     margin-top: 10px;
     padding-bottom: 15px;
     padding-top: 15px;
-    text-align: center;
+    overflow: hidden;
+}
+.footer_logo {
+    float: left;
+}
+.footer_logo img {
+    width: 75px;
+}
+.footer_menu .top-menu {
+    margin-top: 0px;
+    padding-top: 47px;
+    margin-left: 115px;
+    overflow: hidden;
+    float: left;
+    width: 63%;
+}
+.razrabotano {
+    /* float: left; */
+    overflow: hidden;
+    padding-top: 43px;
+    text-align: right;
+}
+.razrabotano a {
+    color: #6a6a6a;
+}
+.top-menu__item.footer_m:before {
+    display: none;
+}
+.top-menu.footer-menu-container {
+    justify-content: initial;
+}
+.top-menu__item.footer_m {
+    width: auto;
+    margin-right: 12px;
 }
 
+.razrabotano a:hover {
+      color: #00acff;
+	  text-decoration:none;
+}
+.top-menu__link.footer_link {
+    margin-bottom: 9px;
+}
 .header {
     margin-bottom: 15px;
     padding-top: 38px;
@@ -1725,7 +1771,7 @@ html.swipebox-html.swipebox-touch {
 }
 
 .registration-customer {
-    height: 92%;
+    height: 615px;
     /* position: absolute; */
 }
 
@@ -2532,11 +2578,11 @@ html.swipebox-html.swipebox-touch {
     background-size: 344px,303px;
     content: "";
     display: block;
-    height: 20px;
+    height: 21px;
     left: 0;
     position: absolute;
     top: 0;
-    width: 20px;
+    width: 21px;
 }
 
 .filter-cost {
@@ -2690,15 +2736,17 @@ html.swipebox-html.swipebox-touch {
     cursor: pointer;
 }
 
-.filter__item:before {
+.filter__title:before {
     background-position: -235px -185px;
     content: "";
     display: block;
     left: 0;
     position: absolute;
 }
-
-.filter__item:before,.filter__item.active:before {
+.not_price {
+    overflow: hidden;
+}
+.filter__title:before,.filter__title.active:before {
     background-image: url(../images/png-sprite/96dpi/sprite.png);
     background-repeat: no-repeat;
     background-size: 344px,303px;
@@ -2706,7 +2754,7 @@ html.swipebox-html.swipebox-touch {
     width: 14px;
 }
 
-.filter__item.active:before {
+.filter__item.active .filter__title:before {
     background-position: -275px -168px;
 }
 
@@ -2821,6 +2869,7 @@ html.swipebox-html.swipebox-touch {
     color: #00acff;
     margin-bottom: 10px;
     margin-top: 12px;
+    padding-top: 7px;
 }
 
 .search-contractor-results-list-item .portfolio-album__count span {
@@ -3028,7 +3077,7 @@ html.swipebox-html.swipebox-touch {
 .accaunt_block {
     border: 1px solid #acacac;
     padding: 10px;
-    width: 197px;
+    width: 224px;
 }
 
 .accaunt_block .contractor-block-info__contact {
@@ -3204,13 +3253,15 @@ html.swipebox-html.swipebox-touch {
     background-image: url(../images/content/biudzhet.png);
     content: "";
     display: block;
-    height: 20px;
+    height: 21px;
     left: 0;
-    margin-top: -2px;
+    margin-top: -3px;
     position: absolute;
-    width: 20px;
+    width: 21px;
 }
-
+.zaponit {
+    margin-bottom: 10px;
+}
 .tender_item_des_info_photo {
     color: #6a6a6a;
     float: left;
@@ -3681,7 +3732,9 @@ span.step-icon i {
 }
 
 #rememberMe {
-    margin-bottom: 15px;
+    float: left;
+    margin-top: 4px;
+    margin-right: 5px;
 }
 
 .news-content ul {
@@ -4019,4 +4072,32 @@ a.zakaz__btn:hover {
     background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
     color: #ffd200;
 	text-decoration:none;
+}
+.uslovie_title {
+    color: #6a6a6a;
+    font-family: "ReformaGroteskDemiC";
+    font-size: 1.575em;
+    border-bottom: 1px solid #d2d3d5;
+    margin-top: 15px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+.uslovie_content p {
+    margin: 0 0px 5px 0px;
+    line-height: 17px;
+    font-size: 15px;
+}
+.uslov_title {
+    font-size: 1.1em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+.uslovie_content {
+    width: 863px;
+}
+.slick-track {
+    height: 428px;
 }
