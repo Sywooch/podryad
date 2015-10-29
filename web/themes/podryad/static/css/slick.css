@@ -4,15 +4,13 @@
     display: block;
 }
 
-.slick-list
-{
+.slick-list {
     position: relative;
-
     display: block;
     overflow: hidden;
-
     margin: 0;
     padding: 0;
+    height: 428px;
 }
 .slick-list:focus
 {
