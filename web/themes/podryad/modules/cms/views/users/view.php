@@ -91,7 +91,7 @@ $this->title = 'Личный кабинет:';
             </div>
             <div class="accaunt_tender_item_biudzhet_predlozheni">
                 <div class="accaunt_tender_item_biudzhet">
-                    <?=$tender->price?>
+                    <?=$tender->priceString?>
                 </div>
                 <div class="accaunt_tender_item_predlozheni">
                     Поступило <?=$tender->offersCount?> предложения

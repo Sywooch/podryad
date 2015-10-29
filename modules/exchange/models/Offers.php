@@ -2,6 +2,7 @@
 
 namespace app\modules\exchange\models;
 
+use app\modules\cms\models\User;
 use Yii;
 use yii\helpers\Url;
 
