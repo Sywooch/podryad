@@ -963,6 +963,7 @@ html.active,body.active {
 }
 .portfolio-slider-big {
     height: 428px;
+    width: 583px;
 }
 .portfolio-slider.active {
     height: auto;
