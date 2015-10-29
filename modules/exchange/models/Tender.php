@@ -316,6 +316,13 @@ class   Tender extends \yii\db\ActiveRecord
         }
         return parent::afterSave($insert,$changedAttribute);
     }
+
+    public function isOfferSelected()
+    {
+        if(empty($this->contractorId))
+            return false;
+        return \Yii::$app->user->id == $this->contractorId;
+    }
 }
 
 class TenderQuery extends ActiveQuery

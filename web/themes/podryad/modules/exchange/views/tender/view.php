@@ -60,6 +60,7 @@ $offersCount = sizeof($offers);
                     <?php endif;?>
                 </div>
             </div>
+
 			 <div class="tender_zakazchik">
 				<div class="tender_zakaz_titile">
 					Заказчик
@@ -71,17 +72,21 @@ $offersCount = sizeof($offers);
 					<div class="tender_zakazchik_name">
 						<?=$model->user->title?>
 					</div>
+                    <?php if($model->isOfferSelected()):?>
 					<div class="contractor-block-info__contact contractor-block-info__contact--phone">
 						<a href="#" title="" data-show="<?= $model->user->profile->phone ?>" class="contractor-block-info-show">показать
 							номер
 						</a>
 					</div>
+                    <?php endif?>
+                    <?php if($model->isOfferSelected()):?>
 					<div class="contractor-block-info__contact contractor-block-info__contact--email">
 						<a href="#" title="" data-show="<?= $model->user->username ?>" class="contractor-block-info-show">показать
 							e-mail
 						</a>
 					</div>
-                    <?php if (($adres = $model->user->profile->adres)): ?>
+                    <?php endif?>
+                    <?php if (($adres = $model->user->profile->adres) && $model->isOfferSelected()): ?>
                         <div class="contractor-block-info__contact contractor-block-info__contact--address">
                             <a href="#" title="" data-show="<?= $adres?>"
                                class="contractor-block-info-show">показать
@@ -89,7 +94,7 @@ $offersCount = sizeof($offers);
                             </a>
                         </div>
                     <?php endif ?>
-                    <?php if (($site = $model->user->profile->site)): ?>
+                    <?php if (($site = $model->user->profile->site) && $model->isOfferSelected()): ?>
                         <div class="contractor-block-info__contact contractor-block-info__contact--site">
                             <a href="#" title="" data-show="<?= $site ?>"
                                class="contractor-block-info-show">показать
@@ -99,6 +104,7 @@ $offersCount = sizeof($offers);
                     <?php endif ?>
 				</div>
 			</div>
+
             <div class="tender tender_item_count">
                 Предложений: <?=$offersCount?>
             </div>
