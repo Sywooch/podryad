@@ -36,6 +36,7 @@ use yii\helpers\Url;
  * @property User $user
  * @property $specializationsString string
  * @property Offers[] $offers
+ * @property $offersListId array
  * @usedBy app\modules\cms\components\CmsBehavior
  * @method string imageSrc(string $size = '100x100', string $method = Thumbler::METHOD_NOT_BOXED)
  */
