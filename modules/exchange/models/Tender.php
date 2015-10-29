@@ -319,8 +319,12 @@ class   Tender extends \yii\db\ActiveRecord
 
     public function isOfferSelected()
     {
+        if(\Yii::$app->user->id == $this->userId)
+            return true;
+
         if(empty($this->contractorId))
             return false;
+
         return \Yii::$app->user->id == $this->contractorId;
     }
 }
