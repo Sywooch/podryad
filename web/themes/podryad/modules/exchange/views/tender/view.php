@@ -24,7 +24,7 @@ $offersCount = sizeof($offers);
         <div class="tender_item__cotainer">
             <div class="tender_item_des">
                 <h1 class="tender_item_des_title"><?=$model->title?></h1>
-                <div class="contractor-block-info__service"><?=$model->user->profile->city->title?></div>
+                <div class="contractor-block-info__service">Город: <?=$model->user->profile->city->title?></div>
                 <div class="contractor-block-info__service"><?=$model->specializationsString?></div>
                 <p><?=$model->description?>
                 </p>
