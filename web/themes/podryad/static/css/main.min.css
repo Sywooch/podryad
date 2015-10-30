@@ -519,6 +519,7 @@ html.active,body.active {
 }
 .contractor-block-info__contact.contractor-block-info__contact--edit.podryadchik {
     display: inline-block;
+    margin-top: 10px;
 }
 .contractor-block-avatar__btn {
     padding-left: 0;
@@ -1830,7 +1831,7 @@ html.swipebox-html.swipebox-touch {
 }
 
 .specialization-item {
-    width: 49%;
+    /*width: 49%;*/
 }
 
 .specialization-item__title {
@@ -4086,6 +4087,16 @@ a.zakaz__btn:hover {
     margin: 0 0px 5px 0px;
     line-height: 17px;
     font-size: 15px;
+    color: #6a6a6a;
+}
+input#tender-agree {
+    margin-top: 2px;
+    float: left;
+}
+input#tender-negotiable {
+    float: left;
+    margin-top: 2px;
+    margin-right: 4px;
 }
 .uslov_title {
     font-size: 1.1em;
@@ -4094,6 +4105,7 @@ a.zakaz__btn:hover {
     font-weight: 700;
     padding-bottom: 5px;
     text-transform: uppercase;
+    color: #6a6a6a;
 }
 .uslovie_content {
     width: 863px;
