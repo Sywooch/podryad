@@ -1740,8 +1740,7 @@ html.swipebox-html.swipebox-touch {
 }
 
 .enter {
-    height: 188px;
-    overflow: hidden;
+    height: 270px;
 }
 #enter label {
     color: #444;
@@ -1750,18 +1749,14 @@ html.swipebox-html.swipebox-touch {
 }
 
 .registration {
-    height: 215px;
-}
-.modal.enter.active {
-    display: block;
-     height: 270px; 
+    height: 270px;
 }
 
 .registration__item {
     color: #00acff;
     display: block;
     font-size: 1.3125em;
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 15px;
     text-decoration: none;
 }
