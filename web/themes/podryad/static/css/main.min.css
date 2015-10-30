@@ -641,6 +641,7 @@ html.active,body.active {
 .ocenki_rat {
     margin-bottom: 10px;
     overflow: hidden;
+    width: 100%;
 }
 .contractor-block-info__rating {
     display: -ms-flexbox;
@@ -1739,7 +1740,8 @@ html.swipebox-html.swipebox-touch {
 }
 
 .enter {
-    height: 270px;
+    height: 188px;
+    overflow: hidden;
 }
 #enter label {
     color: #444;
@@ -1748,7 +1750,11 @@ html.swipebox-html.swipebox-touch {
 }
 
 .registration {
-    height: 270px;
+    height: 215px;
+}
+.modal.enter.active {
+    display: block;
+     height: 270px; 
 }
 
 .registration__item {
@@ -3317,8 +3323,8 @@ html.swipebox-html.swipebox-touch {
 
 .tender_item_content .contractor-block-info__contact {
     float: left;
-
     width: auto;
+    margin-top: 10px;
 }
 .contractor-block-info__contact.contractor-block-info__contact--city {
     padding-left: 0px;
