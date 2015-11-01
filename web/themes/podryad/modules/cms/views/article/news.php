@@ -27,8 +27,8 @@ $breadcrumbs = [];
         <?php foreach ($items as $row): ?>
         <li class="news-content-item">
 			  <div class="news-content-img">
-			  <a href="<?= $row->path ?>"> </a>
-            <img src="<?= $row->imageSrc('275x214')?>" alt="<?=$item->title?>">
+			  <a href="<?= $row->path ?>"> 
+            <img src="<?= $row->imageSrc('275x214')?>" alt="<?=$item->title?>"></a>
 			</div>
             <a href="<?=$row->path?>"><?= $row->title?></a>
             <span><?= $row->date?></span>
