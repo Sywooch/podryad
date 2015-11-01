@@ -4113,3 +4113,8 @@ input#tender-negotiable {
 .slick-track {
     height: 428px;
 }
+.news-content-img {
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 7px;
+}
