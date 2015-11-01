@@ -4113,6 +4113,12 @@ input#tender-negotiable {
 .slick-track {
     height: 428px;
 }
+.portfolio-slider-small.slider-small.slick-initialized.slick-slider .slick-track {
+    height: 90px;
+}
+.portfolio-slider-small.slider-small.slick-initialized.slick-slider .slick-list {
+    height: 90px;
+}
 .news-content-img {
     height: 150px;
     overflow: hidden;
