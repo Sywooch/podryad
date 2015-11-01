@@ -35,6 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format'=>'html'
             ],
             'title',
+            'dateCreate',
             ['attribute'=>'type','filter'=>\app\modules\cms\models\Article::typeList(),'value'=>'typeView'],
             'alias',
             // 'visible',

@@ -4,6 +4,8 @@
  * @var $item \app\modules\cms\models\Article
  */
 $this->title = $item->title;
+$this->registerMetaTag(['name'=>'Description','content'=>$item->metaDescription]);
+$this->registerMetaTag(['name'=>'Keywords','content'=>$item->metaKeywords]);
 ?>
 <main class="main">
     <section class="news-full-content">
