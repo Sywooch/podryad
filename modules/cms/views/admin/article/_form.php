@@ -42,6 +42,15 @@ use yii\widgets\ActiveForm;
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-6">
+                <?= $form->field($model, 'metaKeywords')->textarea() ?>
+            </div>
+            <div class="col-md-6">
+                <?= $form->field($model, 'metaDescription')->textarea() ?>
+            </div>
+        </div>
+
 
         <?= $form->field($model, 'description')->widget(\app\assets\Redactor::className()) ?>
 

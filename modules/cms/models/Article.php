@@ -22,6 +22,8 @@ use yii\helpers\Url;
  * @property integer $visible
  * @property string $dateCreate
  * @property Image $image
+ * @property string $metaKeywords
+ * @property string $metaDescription
  * @property string $imageSrc
  * @property string $dopText
  * @property string $date
@@ -53,7 +55,7 @@ class Article extends \yii\db\ActiveRecord
     {
         return [
             [['type', 'dateCreate'], 'required'],
-            [['description'], 'string'],
+            [['description','metaDescription','metaKeywords'], 'string'],
             [['type', 'visible'], 'integer'],
             [['dateCreate'], 'safe'],
             [['title', 'alias','dopText'], 'string', 'max' => 128]
@@ -74,6 +76,8 @@ class Article extends \yii\db\ActiveRecord
             'visible' => Yii::t('app', 'Видимость'),
             'dateCreate' => Yii::t('app', 'Дата и время'),
             'dopText' => Yii::t('app', 'Дополнительный текст'),
+            'metaKeywords' => Yii::t('app', 'Ключевые слова'),
+            'metaDescription' => Yii::t('app', 'Мета - описание'),
         ];
     }
 
