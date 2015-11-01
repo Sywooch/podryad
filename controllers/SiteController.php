@@ -56,24 +56,11 @@ class SiteController extends Controller
     {
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-
-            if (\Yii::$app->user->can(User::ROLE_CONTRACTOR))
+            if(\Yii::$app->user->can(User::ROLE_CONTRACTOR) && !\Yii::$app->user->can('manager'))
             {
                 return $this->redirect(['/exchange/contractor/view','id'=>\Yii::$app->user->id]);
             }
-
-            if(isset(\Yii::$app->request->cookies['customer']))
-            {
-                $cookies = \Yii::$app->response->cookies;
-                $cookies->remove('customer');
-                return $this->redirect(['/exchange/tender/create']);
-            }
-
-
-            if(substr_count(\Yii::$app->request->referrer,'site/login'))
-                return $this->goBack();
-
-            return $this->redirect(\Yii::$app->request->referrer);
+            return $this->goBack();
         } else {
             return $this->render('login', [
                 'model' => $model,
@@ -83,10 +70,13 @@ class SiteController extends Controller
 
     public function actionCookie($name)
     {
-        \Yii::$app->response->cookies->add(new Cookie([
-            'name'=>$name,
-            'value'=>true,
-        ]));
+        if($name == 'customer')
+        {
+            Url::remember(['/exchange/tender/create']);
+        }elseif($name == 'contractor')
+        {
+            Url::remember(\Yii::$app->request->referrer);
+        }
     }
 
     public function actionLogout()
