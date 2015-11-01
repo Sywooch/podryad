@@ -24,7 +24,7 @@ class ArticleController extends Controller{
             throw new HttpException(404,'Категория статей не найдена');
         }
         $item->type = $typeId;
-        $items = Article::find()->type($type)->all();
+        $items = Article::find()->type($type)->orderBy(['dateCreate'=>SORT_DESC])->all();
         return $this->render($type,['items'=>$items,'item'=>$item]);
     }
 

@@ -168,7 +168,7 @@ class Article extends \yii\db\ActiveRecord
 
     public function getDate()
     {
-        return date('d.m.Y H:i');
+        return date('d.m.Y', strtotime($this->dateCreate));
     }
 }
 
