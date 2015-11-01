@@ -345,6 +345,7 @@ class User extends ActiveRecord  implements IdentityInterface
 
     public function getTitle()
     {
-        return $this->profile->company ? $this->profile->company . ', ' . $this->profile->fio : $this->profile->fio;
+        return $this->profile->fio;
+//        return $this->profile->company ? $this->profile->company . ', ' . $this->profile->fio : $this->profile->fio;
     }
 }
