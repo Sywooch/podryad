@@ -17,10 +17,11 @@ $this->registerMetaTag(['description'=>$model->shortext(255,true)]);
 $this->registerMetaTag(['keywords'=>$title.' '.$city]);
 $offers = $model->offers;
 $offersCount = sizeof($offers);
+$previous = Url::previous('tender') ? Url::previous('tender') : Url::to(['/exchange/tender']);
 ?>
 <main class="main">
     <div class="tender_cotainer">
-        <a href="<?=\yii\helpers\Url::to(['/exchange/tender'])?>" title="" class="contractor-back">Вернуться к списку тендеров</a>
+        <a href="<?=$previous?>" title="" class="contractor-back">Вернуться к списку тендеров</a>
         <div class="tender_item__cotainer">
             <div class="tender_item_des">
                 <h1 class="tender_item_des_title"><?=$model->title?></h1>
