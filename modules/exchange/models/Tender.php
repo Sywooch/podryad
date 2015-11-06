@@ -278,7 +278,7 @@ class   Tender extends \yii\db\ActiveRecord
     public function getList()
     {
         $query = self::find()->joinWith(['user']);
-        $query->open()->orderNew();
+        $query->orderNew();
 
         foreach ($this->specializationIds as $specializationId) {
             $subQuery = TenderSpecialization::find()->select('tenderId')->where(['specializationId' => $specializationId]);
