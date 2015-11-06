@@ -49,7 +49,7 @@ $offersCount = sizeof($offers);
                                 УЧАствовать в
                                 ТЕНДЕРе
                             </a>
-                        <?php }elseif(\Yii::$app->user->identity->role == \app\modules\cms\models\User::ROLE_CONTRACTOR && !in_array(\Yii::$app->user->id,$model->offersListId) && $model->active!=\app\modules\exchange\models\Tender::IS_OPEN){?>
+                        <?php }elseif(\Yii::$app->user->identity->role == \app\modules\cms\models\User::ROLE_CONTRACTOR && !in_array(\Yii::$app->user->id,$model->offersListId) && $model->active==\app\modules\exchange\models\Tender::IS_OPEN){?>
                             <a href="#" title="" data-click="modal" data-item="#zakaz_tender" class="zakaz__btn">
                                 УЧАствовать в
                                 ТЕНДЕРе
