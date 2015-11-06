@@ -44,7 +44,7 @@ $offersCount = sizeof($offers);
                     <?php endif?>
 
                     <?php if($model->isMine() == false):?>
-                        <?php if(\Yii::$app->user->isGuest){?>
+                        <?php if(\Yii::$app->user->isGuest && $model->active == \app\modules\exchange\models\Tender::IS_OPEN){?>
                             <a href="<?=\yii\helpers\Url::to(['/cms/users/register','scenario'=>\app\modules\cms\models\User::ROLE_CONTRACTOR])?>" title="" class="zakaz__btn">
                                 УЧАствовать в
                                 ТЕНДЕРе
