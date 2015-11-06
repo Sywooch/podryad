@@ -12,7 +12,7 @@ $this->title = 'Объявить тендер';
     <section class="registration-contractor-content">
         <div class="registration-contractor-content__title">Объявить тендер</div>
         <div class="registration-contractor-content__text">Пожалуйста, укажите свои реальные данные, это облегчит
-            взаимодействие между вами и заказчиками
+            взаимодействие между вами и подрядчиками
         </div>
         <?=Html::errorSummary($model,['class'=>'registration-contractor-content__text'])?>
             <?=Html::beginForm('','post',[
@@ -42,7 +42,7 @@ $this->title = 'Объявить тендер';
                     </div>
                 </div>
             </label>
-            <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Описания работы</span>
+            <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Описание работ</span>
 
                 <div class="registration-contractor-form__row">
                     <?= Html::activeTextarea($model, 'description', ['class' => 'form_textarea_tender']) ?>

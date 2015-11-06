@@ -13,6 +13,7 @@ use app\modules\cms\models\Reference;
 use app\modules\exchange\models\Contactor;
 use app\modules\exchange\models\ContractorPrice;
 use app\modules\exchange\models\Tender;
+use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\HttpException;
 
@@ -27,6 +28,7 @@ class ContractorController extends Controller{
 
         $model = new Contactor();
         $model->load($_GET);
+        Url::remember(\Yii::$app->request->url,'contractor');
         $specializationCategoryList = $model->getCategorySpecializationList();
         $itemPages = $model->getList($specialization);
         $contactorList = $itemPages['items'];

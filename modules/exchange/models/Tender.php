@@ -288,7 +288,9 @@ class   Tender extends \yii\db\ActiveRecord
         if (!empty(\Yii::$app->request->cookies['city'])) {
             $params['cityId'] = \Yii::$app->request->cookies['city'];
             $query->joinWith(['user' => function ($query) use ($params) {
-                return $query->join(['iv_user_profile.cityId' => $params['cityId']]);
+                return $query->joinWith(['profile' => function($subQuery) use ($params){
+                    return $subQuery->where(['{{%user_profile}}.cityId'=>$params['cityId']]);
+                }]);
             }]);
         }
 

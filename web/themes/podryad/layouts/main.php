@@ -95,8 +95,6 @@ $this->beginPage();
                                 </div>-->
                             <?php }else if(\Yii::$app->user->identity->role != \app\modules\cms\models\User::ROLE_CONTRACTOR){?>
                                 <a href="<?=Url::to(['/exchange/tender/create'])?>" title="" class="btn btn--tender">Объявить тендер</a>
-                                <div class="header-tender__text"><span>20 городов</span><span>354 подрядчика</span><span>231 тендер</span>
-                                </div>
                             <?php }?>
                         </div>
 

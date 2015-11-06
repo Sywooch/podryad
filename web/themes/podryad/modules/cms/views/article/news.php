@@ -15,8 +15,9 @@ $breadcrumbs = [];
         <?php if (($row = Article::getOneByCategory(Article::TYPE_STOCK_ALIAS))): ?>
             
 			<li class="news-content-item">
-                <img src="<?= $row->imageSrc('275x214') ?>" alt="<?= $item->title ?>">
-
+				<div class="news-content-img">
+               <a href="<?= $row->path ?>"> <img src="<?= $row->imageSrc('275x214') ?>" alt="<?= $item->title ?>"></a>
+				</div>
                 <a href="<?= $row->path ?>"><?= $row->title ?></a>
                 <span><?= $row->date ?></span>
             </li>
@@ -25,7 +26,10 @@ $breadcrumbs = [];
 
         <?php foreach ($items as $row): ?>
         <li class="news-content-item">
-            <img src="<?= $row->imageSrc('275x214')?>" alt="<?=$item->title?>">
+			  <div class="news-content-img">
+			  <a href="<?= $row->path ?>"> 
+            <img src="<?= $row->imageSrc('275x214')?>" alt="<?=$item->title?>"></a>
+			</div>
             <a href="<?=$row->path?>"><?= $row->title?></a>
             <span><?= $row->date?></span>
         </li>
