@@ -519,6 +519,7 @@ html.active,body.active {
 }
 .contractor-block-info__contact.contractor-block-info__contact--edit.podryadchik {
     display: inline-block;
+    margin-top: 10px;
 }
 .contractor-block-avatar__btn {
     padding-left: 0;
@@ -640,6 +641,7 @@ html.active,body.active {
 .ocenki_rat {
     margin-bottom: 10px;
     overflow: hidden;
+    width: 100%;
 }
 .contractor-block-info__rating {
     display: -ms-flexbox;
@@ -1754,7 +1756,7 @@ html.swipebox-html.swipebox-touch {
     color: #00acff;
     display: block;
     font-size: 1.3125em;
-    margin-top: 15px;
+    margin-top: 28px;
     padding: 15px;
     text-decoration: none;
 }
@@ -1830,7 +1832,7 @@ html.swipebox-html.swipebox-touch {
 }
 
 .specialization-item {
-    width: 49%;
+    /*width: 49%;*/
 }
 
 .specialization-item__title {
@@ -3316,9 +3318,8 @@ html.swipebox-html.swipebox-touch {
 
 .tender_item_content .contractor-block-info__contact {
     float: left;
-    margin-right: 20px;
-    margin-top: 15px;
     width: auto;
+    margin-top: 10px;
 }
 .contractor-block-info__contact.contractor-block-info__contact--city {
     padding-left: 0px;
@@ -4086,6 +4087,16 @@ a.zakaz__btn:hover {
     margin: 0 0px 5px 0px;
     line-height: 17px;
     font-size: 15px;
+    color: #6a6a6a;
+}
+input#tender-agree {
+    margin-top: 2px;
+    float: left;
+}
+input#tender-negotiable {
+    float: left;
+    margin-top: 2px;
+    margin-right: 4px;
 }
 .uslov_title {
     font-size: 1.1em;
@@ -4094,10 +4105,22 @@ a.zakaz__btn:hover {
     font-weight: 700;
     padding-bottom: 5px;
     text-transform: uppercase;
+    color: #6a6a6a;
 }
 .uslovie_content {
     width: 863px;
 }
 .slick-track {
     height: 428px;
+}
+.portfolio-slider-small.slider-small.slick-initialized.slick-slider .slick-track {
+    height: 90px;
+}
+.portfolio-slider-small.slider-small.slick-initialized.slick-slider .slick-list {
+    height: 90px;
+}
+.news-content-img {
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 7px;
 }

@@ -8,7 +8,7 @@
  * @var $model \app\modules\exchange\models\Tender
  */
 use yii\helpers\Html;
-
+use yii\helpers\Url;
 $title = $model->title;
 $city = 'г. '.$model->user->profile->city->title;
 
@@ -24,7 +24,7 @@ $offersCount = sizeof($offers);
         <div class="tender_item__cotainer">
             <div class="tender_item_des">
                 <h1 class="tender_item_des_title"><?=$model->title?></h1>
-                <div class="contractor-block-info__service"><?=$model->user->profile->city->title?></div>
+                <div class="contractor-block-info__service">Город: <?=$model->user->profile->city->title?></div>
                 <div class="contractor-block-info__service"><?=$model->specializationsString?></div>
                 <p><?=$model->description?>
                 </p>
@@ -133,6 +133,14 @@ $offersCount = sizeof($offers);
                         <?=$offer->user->title ?>
                         </a>
                     </div>
+					<?php if (($city = $offer->user->profile->city->title)): ?>
+                        <div class="contractor-block-info__contact contractor-block-info__contact--city">
+                           Город: <?=$city?>
+                        </div>
+                    <?php endif ?>
+                    <div class="tender_item_content_cena">Стоимость работ: <span><?=$offer->price?> тг.</span></div>
+                    <p><?=Html::encode($offer->description)?>
+                    </p>
                     <div class="contractor-block-info__contact contractor-block-info__contact--phone">
                         <a href="#" title="" data-show="<?= $offer->user->profile->phone ?>" class="contractor-block-info-show">показать
                             номер
@@ -161,14 +169,7 @@ $offersCount = sizeof($offers);
                             </a>
                         </div>
                     <?php endif ?>
-					<?php if (($city = $offer->user->profile->city->title)): ?>
-                        <div class="contractor-block-info__contact contractor-block-info__contact--city">
-                           Город: <?=$city?>
-                        </div>
-                    <?php endif ?>
-                    <div class="tender_item_content_cena">Стоимость работ: <span><?=$offer->price?> тг.</span></div>
-                    <p><?=Html::encode($offer->description)?>
-                    </p>
+					
                     <?= \app\modules\cms\widgets\Rate::widget(['model' => $offer, 'primaryKey' => $offer->id]) ?>
                 </div>
             </div>
