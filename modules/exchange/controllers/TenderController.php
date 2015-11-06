@@ -38,6 +38,7 @@ class TenderController extends Controller
 
     public function actionIndex()
     {
+        Url::remember();
         $model = new \app\modules\exchange\models\Tender();
         $model->scenario = 'new';
         if ($model->load($_POST) && $model->validate()) {
