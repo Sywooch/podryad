@@ -3365,6 +3365,12 @@ span.hcc.hc__menu__count {
     padding: 10px;
     width: 354px;
 }
+.form-group.field-feedback-phone.required label:after {
+    content: " ";
+}
+.accaunt_tender_item.title:hover {
+    text-decoration: underline;
+}
 
 .tender_zakaz_titile {
     color: #1883bf;
@@ -3936,7 +3942,7 @@ span.btn.btn-success.fileinput-button:hover {
     line-height: 32px;
 }
 .tender.tender_item_count {
-    /* clear: both; */
+    clear: both;
     margin-bottom: 15px;
     color: #6a6a6a;
     font-size: 1em;

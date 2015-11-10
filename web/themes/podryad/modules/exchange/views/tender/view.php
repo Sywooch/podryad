@@ -22,6 +22,7 @@ $offersCount = sizeof($offers);
     <div class="tender_cotainer">
         <a href="<?=\yii\helpers\Url::previous()?>" title="" class="contractor-back">Вернуться к списку тендеров</a>
         <div class="tender_item__cotainer">
+		<div class="tender_content_vnutr">
             <div class="tender_item_des">
                 <h1 class="tender_item_des_title"><?=$model->title?></h1>
                 <div class="contractor-block-info__service">Город: <?=$model->user->profile->city->title?></div>
@@ -61,49 +62,7 @@ $offersCount = sizeof($offers);
                 </div>
             </div>
 
-			 <div class="tender_zakazchik">
-				<div class="tender_zakaz_titile">
-					Заказчик
-				</div>
-				<div class="zakaz_info">
-					<div class="tender_zakaz-avatar">
-						<img src="<?=$model->user->profile->imageSrc('197x125')?>" alt="">
-					</div>
-					<div class="tender_zakazchik_name">
-						<?=$model->user->title?>
-					</div>
-                    <?php if($model->isOfferSelected()):?>
-					<div class="contractor-block-info__contact contractor-block-info__contact--phone">
-						<a href="#" title="" data-show="<?= $model->user->profile->phone ?>" class="contractor-block-info-show">показать
-							номер
-						</a>
-					</div>
-                    <?php endif?>
-                    <?php if($model->isOfferSelected()):?>
-					<div class="contractor-block-info__contact contractor-block-info__contact--email">
-						<a href="#" title="" data-show="<?= $model->user->username ?>" class="contractor-block-info-show">показать
-							e-mail
-						</a>
-					</div>
-                    <?php endif?>
-                    <?php if (($adres = $model->user->profile->adres) && $model->isOfferSelected()): ?>
-                        <div class="contractor-block-info__contact contractor-block-info__contact--address">
-                            <a href="#" title="" data-show="<?= $adres?>"
-                               class="contractor-block-info-show">показать
-                                адрес
-                            </a>
-                        </div>
-                    <?php endif ?>
-                    <?php if (($site = $model->user->profile->site) && $model->isOfferSelected()): ?>
-                        <div class="contractor-block-info__contact contractor-block-info__contact--site">
-                            <a href="#" title="" data-show="<?= $site ?>"
-                               class="contractor-block-info-show">показать
-                                сайт
-                            </a>
-                        </div>
-                    <?php endif ?>
-				</div>
-			</div>
+			
 
             <div class="tender tender_item_count">
                 Предложений: <?=$offersCount?>
@@ -175,6 +134,49 @@ $offersCount = sizeof($offers);
             </div>
 			<?php endforeach?>
         </div>
-        
+         <div class="tender_zakazchik">
+				<div class="tender_zakaz_titile">
+					Заказчик
+				</div>
+				<div class="zakaz_info">
+					<div class="tender_zakaz-avatar">
+						<img src="<?=$model->user->profile->imageSrc('197x125')?>" alt="">
+					</div>
+					<div class="tender_zakazchik_name">
+						<?=$model->user->title?>
+					</div>
+                    <?php if($model->isOfferSelected()):?>
+					<div class="contractor-block-info__contact contractor-block-info__contact--phone">
+						<a href="#" title="" data-show="<?= $model->user->profile->phone ?>" class="contractor-block-info-show">показать
+							номер
+						</a>
+					</div>
+                    <?php endif?>
+                    <?php if($model->isOfferSelected()):?>
+					<div class="contractor-block-info__contact contractor-block-info__contact--email">
+						<a href="#" title="" data-show="<?= $model->user->username ?>" class="contractor-block-info-show">показать
+							e-mail
+						</a>
+					</div>
+                    <?php endif?>
+                    <?php if (($adres = $model->user->profile->adres) && $model->isOfferSelected()): ?>
+                        <div class="contractor-block-info__contact contractor-block-info__contact--address">
+                            <a href="#" title="" data-show="<?= $adres?>"
+                               class="contractor-block-info-show">показать
+                                адрес
+                            </a>
+                        </div>
+                    <?php endif ?>
+                    <?php if (($site = $model->user->profile->site) && $model->isOfferSelected()): ?>
+                        <div class="contractor-block-info__contact contractor-block-info__contact--site">
+                            <a href="#" title="" data-show="<?= $site ?>"
+                               class="contractor-block-info-show">показать
+                                сайт
+                            </a>
+                        </div>
+                    <?php endif ?>
+				</div>
+			</div>
+			   </div>
        
 </main>
