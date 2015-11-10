@@ -2209,7 +2209,7 @@ html.swipebox-html.swipebox-touch {
     font-size: .875em;
     line-height: .875em;
     padding: 5px 15px;
-    text-align: center;
+    text-align: left;
 }
 
 .seo-text h1 {
@@ -2948,20 +2948,13 @@ html.swipebox-html.swipebox-touch {
     background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
 }
 
-.sidebar-news-block:hover .sidebar-news-block__img img {
-    filter: grayscale(0);
-    webkit-filter: grayscale(0);
-}
+
 
 .sidebar-news-block__img {
     margin-right: 5px;
     margin-top: 4px;
 }
 
-.sidebar-news-block__img img {
-    filter: grayscale(100%);
-    webkit-filter: grayscale(100%);
-}
 
 .sidebar-news-block__link {
     border-bottom: 1px solid #6a6a6a;
@@ -2970,6 +2963,20 @@ html.swipebox-html.swipebox-touch {
     text-decoration: none;
     line-height: 14px;
     margin-bottom: 5px;
+}
+.uslovia_footer {
+    overflow: hidden;
+    clear: both;
+    margin: 0 auto;
+    text-align: center;
+}
+.uslovia_footer a {
+    color: #6a6a6a;
+	text-decoration:underline;
+}
+.uslovia_footer a:hover {
+    color: #00acff;
+    text-decoration: none;
 }
 
 .sidebar-news-block__link:hover {

@@ -196,6 +196,9 @@ $this->beginPage();
 				   <div class="razrabotano">
 					Разработано в <a href="http://astanacreative.kz/" target="_blanck">Astanacreative.kz</a>
 				   </div>
+				    <div class="uslovia_footer">
+				 <a href="/cms/default/page?path=usloviya" target="_blanck">Условия использования сервиса </a>
+				   </div>
 			    </div>
                 </div>
             </footer>

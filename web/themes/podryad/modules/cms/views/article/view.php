@@ -37,9 +37,6 @@ $this->registerMetaTag(['name'=>'Keywords','content'=>$item->metaKeywords]);
                     s.parentNode.insertBefore(hcc, s.nextSibling);
                 })();
             </script>
-            <a href="http://hypercomments.com" class="hc-link" title="comments widget">comments powered by
-                HyperComments
-            </a>
         </div>
     </section>
     <?=$this->render('//layouts/_sidebar')?>
