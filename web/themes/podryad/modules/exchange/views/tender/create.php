@@ -22,7 +22,7 @@ $this->title = 'Объявить тендер';
             <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Название тендера</span>
 
                 <div class="registration-contractor-form__row">
-                    <?=Html::activeTextInput($model,'title',['class'=>'registration-contractor-form__input'])?>
+                    <?=Html::activeTextInput($model,'title',['class'=>'registration-contractor-form__input'],['placeholder'=>'Ремонт кухни'])?>
                     <?=Html::error($model,'title')?>
                 </div>
             </label>

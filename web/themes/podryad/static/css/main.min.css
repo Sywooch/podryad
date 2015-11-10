@@ -644,8 +644,9 @@ html.active,body.active {
     width: 100%;
 }
 .contractor-block-info__rating {
-    display: -ms-flexbox;
     margin-top: 15px;
+    overflow: hidden;
+    float: left;
 }
 .contractor-block-info__rating a {
     border: 1px solid #acacac;
@@ -845,10 +846,7 @@ html.active,body.active {
     margin-bottom: 15px;
 }
 
-.contractor-tabs-reviews-item__img {
-    margin-right: 16px;
-    width: 172px;
-}
+
 .contractor-tabs-description p.not_des {
     color: #6a6a6a;
     font-size: 1em;
@@ -882,8 +880,8 @@ html.active,body.active {
 }
 .contractor-tabs-reviews-item__img {
     margin-right: 16px;
-    width: 172px;
-    height: 172px;
+    width: 125px;
+    height: 125px;
     overflow: hidden;
     float: left;
 }
@@ -2211,7 +2209,9 @@ html.swipebox-html.swipebox-touch {
     padding: 5px 15px;
     text-align: left;
 }
-
+span.hcc.hc__menu__count {
+    display: inline-block;
+}
 .seo-text h1 {
     border-bottom: 1px solid #d2d3d5;
     font-weight: 400;
@@ -3328,8 +3328,8 @@ html.swipebox-html.swipebox-touch {
 
 .tender_item_content .contractor-block-info__contact {
     float: left;
-    width: auto;
-    margin-top: 10px;
+   width: auto;
+    margin-bottom: 4px;
 }
 .contractor-block-info__contact.contractor-block-info__contact--city {
     padding-left: 0px;
@@ -3359,7 +3359,7 @@ html.swipebox-html.swipebox-touch {
 
 .tender_zakazchik {
     border: 1px solid #acacac;
-    float: left;
+    float: right;
     margin-left: 15px;
     overflow: hidden;
     padding: 10px;
@@ -3700,6 +3700,7 @@ span.step-icon i {
     border: none;
     font-size: 1.3em;
     padding: 0;
+    text-align: center;
 }
 
 .form-group.field-contractorprice-title.required.has-error {
@@ -3935,7 +3936,7 @@ span.btn.btn-success.fileinput-button:hover {
     line-height: 32px;
 }
 .tender.tender_item_count {
-    clear: both;
+    /* clear: both; */
     margin-bottom: 15px;
     color: #6a6a6a;
     font-size: 1em;
