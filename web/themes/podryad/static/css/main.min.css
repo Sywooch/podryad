@@ -3975,7 +3975,7 @@ span.btn.btn-success.fileinput-button:hover {
     line-height: 39px;
     width: 141px;
 }
-.contractor-tabs-reviews:hover {
+.contractor-tabs-reviews button:hover {
     background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
     background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
     color: #ffd200;
