@@ -232,6 +232,11 @@ blockquote {
     line-height: 44px;
     position: relative;
 }
+.contractor-block-avatar__btn:hover {
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
+    background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    color: #ffd200;
+}
 
 .contractor-block-avatar__btn,.specialization__btn {
     background: linear-gradient(to bottom,#1c98ca 0%,#1882be 100%);
@@ -3949,6 +3954,31 @@ span.btn.btn-success.fileinput-button:hover {
 }
 .tender_content_vnutr {
     float: left;
+}
+.contractor-tabs-reviews button {
+    background: linear-gradient(to bottom,#1c98ca 0%,#1882be 100%);
+    background: -webkit-linear-gradient(top,#1c98ca 0%,#1882be 100%);
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+    box-sizing: border-box;
+    color: #ffd200;
+    display: block;
+    font-family: "ReformaGroteskDemiC";
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0,0,0,.6);
+    text-transform: uppercase;
+    border: none;
+    text-align: center;
+    width: 100%;
+    font-size: 1.125em;
+    height: 39px;
+    line-height: 39px;
+    width: 141px;
+}
+.contractor-tabs-reviews:hover {
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
+    background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    color: #ffd200;
 }
 .tender_item_des_info_biudzhet span {
     color: #1883BF;
