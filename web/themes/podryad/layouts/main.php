@@ -69,7 +69,7 @@ $this->beginPage();
 			
             <link rel="image_src" href=""/>
 			<link href="<?=$this->theme->getUrl('static/css/slick.css')?>" rel="stylesheet" type="text/css">
-            <link rel="icon" type="image/png" href="<?=$this->theme->getUrl('favicon.ico')?>">
+            <!--<link rel="icon" type="image/png" href="<?php //$this->theme->getUrl('favicon.ico')?>">-->
             <script>(function (H) {
                     H.className = H.className.replace(/\bno-js\b/, 'js')
                 })(document.documentElement)</script>
