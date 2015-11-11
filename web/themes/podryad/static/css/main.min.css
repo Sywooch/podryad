@@ -832,8 +832,12 @@ html.active,body.active {
 .form-group.field-reviews-rate .control-label {
     display: none;
 }
+#reviews-rate {
+    margin: 10px 0;
+}
 #reviews-rate label {
     margin-right: 10px;
+    color: #6a6a6a;
 }
 .contractor-tabs-reviews p {
     margin: 0px;
