@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 ?>
 <div id="zakaz_tender" class="modal zakaz_tender">
     <div class="modal__close">x</div>
-    <div class="modal__title">Участвовать в тендере</div>
+    <div class="modal__title">Принять участие в тендере</div>
         <?php $form = ActiveForm::begin([
             'id'=>'offers-form',
             'options'=>['class'=>'form'],
