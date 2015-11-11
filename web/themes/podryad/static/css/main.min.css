@@ -827,6 +827,13 @@ html.active,body.active {
 
 .contractor-tabs-reviews {
     /* padding-top: 10px; */
+    overflow: hidden;
+}
+.form-group.field-reviews-rate .control-label {
+    display: none;
+}
+#reviews-rate label {
+    margin-right: 10px;
 }
 .contractor-tabs-reviews p {
     margin: 0px;
