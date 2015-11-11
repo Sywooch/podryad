@@ -3947,6 +3947,9 @@ span.btn.btn-success.fileinput-button:hover {
     color: #6a6a6a;
     font-size: 1em;
 }
+.tender_content_vnutr {
+    float: left;
+}
 .tender_item_des_info_biudzhet span {
     color: #1883BF;
 }
