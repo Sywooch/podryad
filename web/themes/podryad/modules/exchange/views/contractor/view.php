@@ -84,7 +84,7 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
         </div>
         <div class="contractor-meta">
             <div class="contractor-meta__baner">
-                <img src="<?=$this->theme->getUrl('static/images/content/contractor-baner.jpg')?>" alt=""></div>
+                <img src="<?=$this->theme->getUrl('static/images/content/bi_group.gif')?>" alt=""></div>
             <div class="contractor-tabs">
                 <div class="contractor-tabs-control">
                     <a href="#" title="" class="contractor-tabs-control__item">Описание</a>
