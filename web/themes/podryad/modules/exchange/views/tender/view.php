@@ -152,10 +152,10 @@ $offersCount = sizeof($offers);
 						</a>
 					</div>
 					<?php else: ?>
-					<div class="contractor-block-info__contact contractor-block-info__contact--phone">
-						<a href="#" title="" data-show="<?= $model->user->profile->phone ?>" class="contractor-block-info-show">
-						ТЕСТ
-						</a>
+					<div class="contractor-block-info__contact contractor-block-info__contact--zamok">
+						<span>
+						Для того чтобы увидеть контакты заказчика он должен выбрать Вас.
+						</span>
 					</div>
                     <?php endif?>
                     <?php if($model->isOfferSelected()):?>
