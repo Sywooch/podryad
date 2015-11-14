@@ -2624,6 +2624,11 @@ span.hcc.hc__menu__count {
     color: #ffd200;
     font-weight: normal;
 }
+.video_container {
+    display: block;
+    margin: 20px auto;
+    width: 500px;
+}
 
 .filter-cost__line {
     margin-bottom: 25px;

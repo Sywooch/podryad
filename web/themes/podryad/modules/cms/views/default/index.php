@@ -113,8 +113,9 @@ $this->title = 'Главная';
             </p>
         </div>
 		<div class="video_site">
-		<div class="service__title">КАК УСТРОЕН СЕРВИС?</div>
-		<iframe src="https://player.vimeo.com/video/145724779" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<div class="service__title video">посмотрите наше видео</div>
+		<div class="video_container"><iframe src="https://player.vimeo.com/video/145724779?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
 		</div>
     </div>
     <?= $this->render('//layouts/_sidebar') ?>
