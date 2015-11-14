@@ -2629,7 +2629,9 @@ span.hcc.hc__menu__count {
     margin: 20px auto;
     width: 500px;
 }
-
+.service__title.video {
+    margin-top: 25px;
+}
 .filter-cost__line {
     margin-bottom: 25px;
 }
