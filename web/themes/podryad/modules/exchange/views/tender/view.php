@@ -151,6 +151,12 @@ $offersCount = sizeof($offers);
 							номер
 						</a>
 					</div>
+					<?php elseif: ?>
+					<div class="contractor-block-info__contact contractor-block-info__contact--phone">
+						<a href="#" title="" data-show="<?= $model->user->profile->phone ?>" class="contractor-block-info-show">
+						ТЕСТ
+						</a>
+					</div>
                     <?php endif?>
                     <?php if($model->isOfferSelected()):?>
 					<div class="contractor-block-info__contact contractor-block-info__contact--email">
