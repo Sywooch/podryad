@@ -152,10 +152,8 @@ $offersCount = sizeof($offers);
 						</a>
 					</div>
 					<?php else: ?>
-					<div class="contractor-block-info__contact contractor-block-info__contact--zamok">
-						<span>
-						Для того чтобы увидеть контакты заказчика он должен выбрать Вас.
-						</span>
+					<div class="contractor-block-info__contact contractor-block-info__contact--zamok ">
+						Для того чтобы увидеть контакты заказчика он должен одобрить Вас.
 					</div>
                     <?php endif?>
                     <?php if($model->isOfferSelected()):?>
