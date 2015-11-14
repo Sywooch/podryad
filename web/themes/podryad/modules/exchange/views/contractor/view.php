@@ -41,7 +41,7 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
                 <div class="contractor-block-info__name">
                     <?= $model->title ?>
                 </div>
-				<?php if($_GET['nur'] == 1) echo var_dump($model->profile) ?>
+				<?php if($_GET['nur'] == 1) {var_dump($model->profile);} ?>
                 <div class="contractor-block-info__service">
                     Предлагаемые услуги
                     <a href="#" title="" data-show="<?=$model->profile->specializationsString?>" class="contractor-block-info-show">показать</a>
