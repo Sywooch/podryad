@@ -2618,6 +2618,10 @@ span.hcc.hc__menu__count {
     font-weight: 700;
     margin-bottom: 10px;
 }
+.accaunt_tender_item_btn.tender_status {
+    font-size: 0.875em;
+    margin-top: 4px;
+}
 
 .filter-cost__line {
     margin-bottom: 25px;
