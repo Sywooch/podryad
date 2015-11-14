@@ -44,12 +44,13 @@ $this->title = 'Тендеры';
 						<img src="<?=$row->imageSrc('199x159')?>" alt="">
 						</a>
                             <div class="tenders__name"><?=$row->user->title?>
-							 <a href="<?=\yii\helpers\Url::to(['/exchange/tender/view','id'=>$row->id])?>" title="" class="accaunt_tender_item_btn">Тендер <?=$row->statusTitle?></a>
+							
 							</div>
                         </div>
                         <div class="contractor-block-info">
                             <div class="contractor-block-info__name">
                                 <a href="<?=$row->url?>"><?=Html::encode($row->title)?></a>
+								 <a href="<?=\yii\helpers\Url::to(['/exchange/tender/view','id'=>$row->id])?>" title="" class="accaunt_tender_item_btn">Тендер <?=$row->statusTitle?></a>
                             </div>
                             <div class="tenders__text">Город: <?=$row->user->profile->city->title?></div>
                             <div class="tenders__text"><?=$row->specializationsString?></div>
