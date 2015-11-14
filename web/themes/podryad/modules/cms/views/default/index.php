@@ -112,6 +112,10 @@ $this->title = 'Главная';
                 Сервис PODRYAD.KZ является абсолютно БЕСПЛАТНЫМ для всех!
             </p>
         </div>
+		<div class="video_site">
+		<div class="service__title">КАК УСТРОЕН СЕРВИС?</div>
+		<iframe src="https://player.vimeo.com/video/145724779" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
     </div>
     <?= $this->render('//layouts/_sidebar') ?>
 </main>

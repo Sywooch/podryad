@@ -2621,6 +2621,8 @@ span.hcc.hc__menu__count {
 .accaunt_tender_item_btn.tender_status {
     font-size: 0.875em;
     margin-top: 4px;
+    color: #ffd200;
+    font-weight: normal;
 }
 
 .filter-cost__line {
