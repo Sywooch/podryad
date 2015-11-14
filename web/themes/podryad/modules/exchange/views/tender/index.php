@@ -44,7 +44,7 @@ $this->title = 'Тендеры';
 						<img src="<?=$row->imageSrc('199x159')?>" alt="">
 						</a>
                             <div class="tenders__name"><?=$row->user->title?>
-							 <a href="<?=\yii\helpers\Url::to(['/exchange/tender/view','id'=>$tender->id])?>" title="" class="accaunt_tender_item_btn">Тендер <?=$tender->statusTitle?></a>
+							 <a href="<?=\yii\helpers\Url::to(['/exchange/tender/view','id'=>$row->id])?>" title="" class="accaunt_tender_item_btn">Тендер <?=$row->statusTitle?></a>
 							</div>
                         </div>
                         <div class="contractor-block-info">
