@@ -2590,7 +2590,9 @@ span.hcc.hc__menu__count {
     font-size: 1.14286em;
     font-weight: 700;
     padding-right: 35px;
+	  color: #1883BF;
 }
+
 
 .tenders-info__budget:before {
     background-image: url(../images/png-sprite/96dpi/sprite.png);
@@ -4191,7 +4193,14 @@ input#tender-negotiable {
     display: block;
     height: 21px;
     left: 0;
-    margin-top: -3px;
+    margin-top: -1px;
     position: absolute;
     width: 21px;
+}
+.contractor-block-info__contact.contractor-block-info__contact--zamok {
+    float: left;
+    color: #6a6a6a;
+    font-size: .875em;
+    width: 50%;
+    /* font-family: "PTSansRegular"; */
 }
