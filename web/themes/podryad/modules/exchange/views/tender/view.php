@@ -151,7 +151,7 @@ $offersCount = sizeof($offers);
 							номер
 						</a>
 					</div>
-					<?php elseif(): ?>
+					<?php else: ?>
 					<div class="contractor-block-info__contact contractor-block-info__contact--phone">
 						<a href="#" title="" data-show="<?= $model->user->profile->phone ?>" class="contractor-block-info-show">
 						ТЕСТ
