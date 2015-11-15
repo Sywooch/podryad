@@ -3640,11 +3640,23 @@ span.step-head {
 }
 
 .steps-part {
-    width: 100%;
+    width: 863px;
+    margin-top: 15px;
 }
 
 .steps-part li.last {
     margin-bottom: 0;
+}
+.step_title {
+    border-bottom: 1px solid #d2d3d5;
+    padding-bottom: 5px;
+    color: #6a6a6a;
+    font-family: "ReformaGroteskDemiC";
+    font-size: 1.875em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: normal;
+    width: 100%;
 }
 
 .steps-part li.active span.step-icon,span.step-icon:hover {
