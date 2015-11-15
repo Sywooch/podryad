@@ -3654,7 +3654,7 @@ span.step-head {
     font-family: "ReformaGroteskDemiC";
     font-size: 1.875em;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: -4px;
     font-weight: normal;
     width: 100%;
 }
