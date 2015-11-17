@@ -3262,17 +3262,26 @@ span.hcc.hc__menu__count {
 .tender_item_des_title {
     color: #1883bf;
     font-size: 1.225em;
-    font-weight: 700;
-    width: 100%;
-    margin: 0px 0px 4px;
+    float: left;
+    margin-bottom: 9px;
 }
-
+.tender_item_des_title h1 {
+    color: #1883bf;
+    font-size: 1.225em;
+    font-weight: 700;
+    margin: 0px ;
+}
 .tender_item_des p {
     color: #6a6a6a;
     font-size: .875em;
     margin: 5px 0px;
+    float: left;
+    clear: both;
 }
-
+.tender_item_des_info {
+    float: left;
+    clear: both;
+}
 .tender_item_des_info_status {
     color: #6a6a6a;
     float: left;
