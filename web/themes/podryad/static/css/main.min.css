@@ -558,8 +558,10 @@ html.active,body.active {
 .contractor-block-info__service {
     color: #6a6a6a;
     font-size: .875em;
-    margin: 8px 0;
+    margin: 2px 0 0px;
     width: 100%;
+    clear: both;
+    float: left;
 }
 
 .contractor-block-info__service span {
@@ -3274,7 +3276,7 @@ span.hcc.hc__menu__count {
 .tender_item_des p {
     color: #6a6a6a;
     font-size: .875em;
-    margin: 5px 0px;
+    margin: 0px;
     float: left;
     clear: both;
 }
