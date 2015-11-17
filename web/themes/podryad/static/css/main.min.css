@@ -3287,7 +3287,7 @@ span.hcc.hc__menu__count {
     color: #6a6a6a;
     float: left;
     font-size: .875em;
-    margin-left: 69px;
+    margin-left: 40px;
     padding-left: 25px;
     position: relative;
 }
@@ -3359,8 +3359,8 @@ span.hcc.hc__menu__count {
 
 .tender_item_content .contractor-block-info__contact {
     float: left;
-   width: auto;
-    margin-bottom: 4px;
+    width: auto;
+    margin-bottom: 6px;
 }
 .contractor-block-info__contact.contractor-block-info__contact--city {
     padding-left: 0px;
