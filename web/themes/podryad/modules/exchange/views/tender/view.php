@@ -24,7 +24,10 @@ $offersCount = sizeof($offers);
         <div class="tender_item__cotainer">
 		<div class="tender_content_vnutr">
             <div class="tender_item_des">
-                <h1 class="tender_item_des_title"><?=$model->title?></h1>
+				<div class="tender_item_des_title">
+					<h1><?=$model->title?></h1>
+				</div>
+				<span  class="accaunt_tender_item_btn tender_status">Тендер <?=$model->statusTitle?></span>
                 <div class="contractor-block-info__service">Город: <?=$model->user->profile->city->title?></div>
                 <div class="contractor-block-info__service"><?=$model->specializationsString?></div>
                 <p><?=$model->description?>
@@ -91,7 +94,7 @@ $offersCount = sizeof($offers);
                         <a href="<?=\yii\helpers\Url::to(['/exchange/contractor/view','id'=>$offer->user->id])?>">
                         <?=$offer->user->title ?>
                         </a>
-						<span  class="accaunt_tender_item_btn tender_status">Тендер <?=$model->statusTitle?></span>
+						
                     </div>
 					<?php if (($city = $offer->user->profile->city->title)): ?>
                         <div class="contractor-block-info__contact contractor-block-info__contact--city">
