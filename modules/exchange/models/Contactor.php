@@ -127,7 +127,12 @@ class Contactor extends User
 
     public function getTitle()
     {
-        return $this->profile->fio;
-//        return $this->profile->company ? $this->profile->company.', '. $this->profile->fio : $this->profile->fio;
+
+	  if(!empty($this->profile->company)){
+		  return $this->profile->company;
+	  }else{
+		  return $this->profile->fio;
+	  }  
+	  //  return $this->profile->fio;
     }
 }
