@@ -91,7 +91,7 @@ $offersCount = sizeof($offers);
                         <a href="<?=\yii\helpers\Url::to(['/exchange/contractor/view','id'=>$offer->user->id])?>">
                         <?=$offer->user->title ?>
                         </a>
-						<span  class="accaunt_tender_item_btn tender_status">Тендер <?=$offer->statusTitle?></span>
+						<span  class="accaunt_tender_item_btn tender_status">Тендер <?=$model->statusTitle?></span>
                     </div>
 					<?php if (($city = $offer->user->profile->city->title)): ?>
                         <div class="contractor-block-info__contact contractor-block-info__contact--city">
