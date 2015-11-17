@@ -3276,13 +3276,14 @@ span.hcc.hc__menu__count {
 .tender_item_des p {
     color: #6a6a6a;
     font-size: .875em;
-    margin: 0px;
+    margin: 2px 0px 0px;
     float: left;
     clear: both;
 }
 .tender_item_des_info {
     float: left;
     clear: both;
+    margin-top: 6px;
 }
 .tender_item_des_info_status {
     color: #6a6a6a;
