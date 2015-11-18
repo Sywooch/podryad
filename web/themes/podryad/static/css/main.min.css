@@ -3398,7 +3398,7 @@ span.hcc.hc__menu__count {
     clear: both;
     color: #6a6a6a;
     font-size: .875em;
-    margin: 5px 0;
+    margin: 5px 0 2px;
 }
 
 .tender_item_content_cena span {
@@ -3409,7 +3409,7 @@ span.hcc.hc__menu__count {
 .tender_item_content p {
     color: #6a6a6a;
     font-size: .875em;
-    margin: 5px 0;
+    margin: 2px 0;
 }
 .tender_item .contractor-block-info__rating {
     width: 80%;
@@ -3532,7 +3532,6 @@ span.hcc.hc__menu__count {
     overflow: hidden;
     position: relative;
 }
-
 .type_file input[type="file"] {
     filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
     khtml-opacity: 0;
@@ -3543,6 +3542,7 @@ span.hcc.hc__menu__count {
     top: 0;
     width: 200px;
     z-index: 2;
+    cursor: pointer;
     height: 28px;
 }
 
@@ -4245,16 +4245,17 @@ input#tender-negotiable {
     background-image: url(../images/content/zamok.png);
     content: "";
     display: block;
-    height: 21px;
+    height: 43px;
     left: 0;
     margin-top: -1px;
     position: absolute;
-    width: 21px;
+    width: 32px;
+    background-size: contain;
 }
 .contractor-block-info__contact.contractor-block-info__contact--zamok {
     float: left;
     color: #6a6a6a;
     font-size: .875em;
-    width: 50%;
-    /* font-family: "PTSansRegular"; */
+    width: 46%;
+    padding-left: 40px;
 }
