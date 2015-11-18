@@ -114,7 +114,7 @@ $this->title = 'Главная';
         </div>
 		<div class="video_site">
 		<div class="service__title video">посмотрите наше видео</div>
-		<div class="video_container"><iframe src="https://player.vimeo.com/video/145724779?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<div class="video_container"><iframe src="https://player.vimeo.com/video/145724779?color=ffffff&title=0&byline=0&portrait=0" width="591" height="332" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</div>
 		</div>
     </div>

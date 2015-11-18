@@ -553,6 +553,7 @@ html.active,body.active {
     font-weight: 700;
     width: 100%;
     margin-top: 0px;
+    margin-bottom: 3px;
 }
 
 .contractor-block-info__service {
@@ -582,7 +583,7 @@ html.active,body.active {
 
 .contractor-block-info__contact {
     font-size: .875em;
-    margin-bottom: 10px;
+    margin: 8px 0 2px;
     min-width: 30%;
     padding-left: 25px;
     position: relative;
