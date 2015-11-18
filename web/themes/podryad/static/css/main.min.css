@@ -3134,8 +3134,8 @@ span.hcc.hc__menu__count {
 .form-control {
     box-sizing: border-box;
     height: 34px;
-    margin-bottom: 15px;
-    margin-top: 5px;
+    margin-bottom: 6px;
+    /* margin-top: 5px; */
     padding-left: 5px;
     width: 100%;
 }
@@ -3220,6 +3220,12 @@ span.hcc.hc__menu__count {
 
 .accaunt_tender_item_des p {
     margin: 0;
+}
+.contractor-block-info__service_colvo {
+    clear: both;
+    color: #6a6a6a;
+    font-size: 1.075em;
+    margin-bottom: 7px;
 }
 
 .accaunt_tender_item_biudzhet {
