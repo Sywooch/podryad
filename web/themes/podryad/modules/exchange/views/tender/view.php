@@ -73,8 +73,8 @@ $offersCount = sizeof($offers);
             <?php foreach($offers as $offer):?>
             <div class="tender_item <?=$model->cssSelected($offer->id)  ?>">
                 <div class="tender_item-avatar">
-                    <img src="<?=$offer->user->profile->imageSrc('197x125')?>" alt="">
-
+                   <a href="<?=\yii\helpers\Url::to(['/exchange/contractor/view','id'=>$offer->user->id])?>"> <img src="<?=$offer->user->profile->imageSrc('197x125')?>" alt="">
+  </a>
                     <div class="status_date">
                         <span>Предложение добавлено:</span>
                         <?=$offer->date?>

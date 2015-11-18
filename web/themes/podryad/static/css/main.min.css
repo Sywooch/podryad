@@ -327,8 +327,9 @@ blockquote {
     padding-left: 3px;
 }
 
-.form__label--license,.registration-contractor-form__label--license {
-    margin-bottom: 10px;
+.form__label--license, .registration-contractor-form__label--license {
+    margin-bottom: 4px;
+    margin-top: -12px;
 }
 
 .form__label--license input,.registration-contractor-form__label--license input {
@@ -997,8 +998,14 @@ html.active,body.active {
 .portfolio-slider-small img {
     height: 60px;
     margin: 0 5px;
+    cursor: pointer;
 }
-
+.accaunt_tender.title {
+    color: #6a6a6a;
+    font-family: "ReformaGroteskDemiC";
+    font-size: 1.675em;
+    text-transform: uppercase;
+}
 .portfolio-slider-small img.slick-center {
     filter: brightness(100%);
     webkit-filter: brightness(100%);
@@ -2227,7 +2234,7 @@ html.swipebox-html.swipebox-touch {
     font-size: .875em;
     line-height: .875em;
     padding: 5px 15px;
-    text-align: left;
+    text-align: center;
 }
 span.hcc.hc__menu__count {
     display: inline-block;
@@ -3384,7 +3391,7 @@ span.hcc.hc__menu__count {
 }
 .contractor-block-info__contact.contractor-block-info__contact--city {
     padding-left: 0px;
-    margin: 10px 0px 5px;
+    margin: 5px 0px 2px;
     color: #6a6a6a;
 }
 .tender_item_content_cena {
@@ -3534,8 +3541,9 @@ span.hcc.hc__menu__count {
     opacity: 0;
     position: absolute;
     top: 0;
-    width: 267px;
+    width: 200px;
     z-index: 2;
+    height: 28px;
 }
 
 .fonTypeFile {
@@ -3715,6 +3723,7 @@ span.step-icon i {
     border-top: none;
     display: none;
     line-height: 21px;
+    color: #5F5F5F;
     margin: 0;
     padding: 8px 10px;
 }

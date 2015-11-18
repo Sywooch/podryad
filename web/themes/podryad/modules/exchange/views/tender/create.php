@@ -22,7 +22,7 @@ $this->title = 'Объявить тендер';
             <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Название тендера</span>
 
                 <div class="registration-contractor-form__row">
-                    <?=Html::activeTextInput($model,'title',['class'=>'registration-contractor-form__input', 'placeholder'=>'Ремонт квартиры 140кв/м'])?>
+                    <?=Html::activeTextInput($model,'title',['class'=>'registration-contractor-form__input', 'placeholder'=>'Монтаж тёплых пол'])?>
                     <?=Html::error($model,'title')?>
                 </div>
             </label>
@@ -45,7 +45,7 @@ $this->title = 'Объявить тендер';
             <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Описание работ</span>
 
                 <div class="registration-contractor-form__row">
-                    <?= Html::activeTextarea($model, 'description', ['class' => 'form_textarea_tender', 'placeholder'=>'Требуется качественные ремонт всей квартиры, 140кв/м, также интересуют 3D полы']) ?>
+                    <?= Html::activeTextarea($model, 'description', ['class' => 'form_textarea_tender', 'placeholder'=>'Требуется осуществить монтаж инфрокрасных тёплых полов по всей квартире, площадью 140 кв.м']) ?>
                     <?= Html::error($model, 'description') ?>
                 </div>
             </label>
