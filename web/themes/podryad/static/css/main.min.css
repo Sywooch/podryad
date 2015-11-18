@@ -1442,7 +1442,6 @@ html.swipebox-html.swipebox-touch {
     font-size: 15px;
     line-height: 43px;
 }
-
 .footer {
     border-top: 1px solid #d2d3d5;
     color: #6a6a6a;
@@ -1451,6 +1450,7 @@ html.swipebox-html.swipebox-touch {
     padding-bottom: 15px;
     padding-top: 15px;
     overflow: hidden;
+    clear: both;
 }
 .footer_logo {
     float: left;
