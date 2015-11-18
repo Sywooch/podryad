@@ -803,7 +803,7 @@ html.active,body.active {
     content: "";
 }
 .form-group.field-registerform-agree.required {
-    height: 40px;
+    height: 33px;
     /* margin-bottom: 10px; */
 }
 .contractor-tabs-license {
@@ -1790,8 +1790,9 @@ html.swipebox-html.swipebox-touch {
 }
 
 .registration-customer {
-    height: 615px;
-    /* position: absolute; */
+    min-height: 522px;
+    bottom: auto;
+    top: 3%;
 }
 
 .specialization {
