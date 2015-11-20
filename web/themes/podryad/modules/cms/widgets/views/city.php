@@ -17,7 +17,7 @@
             <div class="header-city-select__current">Все города</div>
         <?php endif?>
 
-        <div class="header-city-select__list">
+        <div class="header-city-select__list asd">
             <?php if($model):?>
                 <div class="header-city-select__option" data-id="">Все города</div>
             <?php endif?>

@@ -2946,7 +2946,9 @@ span.hcc.hc__menu__count {
 .search-contractor-results-list-item .contractor-block .contractor-block-info__service {
     margin: 2px 0;
 }
-
+.asd{
+	z-index:2;
+}
 .search-contractor-results-list-item .contractor-block .contractor-block-images {
     height: auto;
     margin-top: 10px;
