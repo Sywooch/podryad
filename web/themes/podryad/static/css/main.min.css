@@ -3386,11 +3386,7 @@ span.hcc.hc__menu__count {
     width: 568px;
 }
 
-.tender_item_content .contractor-block-info__contact {
-    float: left;
-    width: auto;
-    margin-bottom: 6px;
-}
+
 .contractor-block-info__contact.contractor-block-info__contact--city {
     padding-left: 0px;
     margin: 5px 0px 2px;
