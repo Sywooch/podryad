@@ -104,6 +104,7 @@ $offersCount = sizeof($offers);
                     <div class="tender_item_content_cena">Стоимость работ: <span><?=$offer->price?> тг.</span></div>
                     <p><?=Html::encode($offer->description)?>
                     </p>
+					<div class="contractor-block-info">
                     <div class="contractor-block-info__contact contractor-block-info__contact--phone">
                         <a href="#" title="" data-show="<?= $offer->user->profile->phone ?>" class="contractor-block-info-show">показать
                             номер
@@ -114,9 +115,6 @@ $offersCount = sizeof($offers);
                             e-mail
                         </a>
                     </div>
-
-                    
-
                     <?php if (($site = $offer->user->profile->site)): ?>
                         <div class="contractor-block-info__contact contractor-block-info__contact--site">
                             <a href="#" title="" data-show="<?= $site ?>" class="contractor-block-info-show">показать
@@ -132,7 +130,7 @@ $offersCount = sizeof($offers);
                             </a>
                         </div>
                     <?php endif ?>
-					
+					</div>
                     <?= \app\modules\cms\widgets\Rate::widget(['model' => $offer, 'primaryKey' => $offer->id]) ?>
                 </div>
             </div>

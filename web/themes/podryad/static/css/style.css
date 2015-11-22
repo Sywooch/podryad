@@ -373,4 +373,7 @@
 .error p a {
     color: #6a6a6a;
 }
+.hcc.hc__message__popup {
+    height: 132px!important;
+}
 /*end*/
