@@ -83,10 +83,10 @@ $this->title = 'Личный кабинет:';
             </div>
             <div class="accaunt_tender_item_city_date">
                 <div class="accaunt_tender_item_city">
-                    <?=$tender->user->profile->city->title?>
+                    Город: <?=$tender->user->profile->city->title?>
                 </div>
                 <div class="accaunt_tender_item_date">
-                    <?=\Yii::$app->formatter->asDatetime(strtotime($tender->dateCreate))?>
+                    Бюджет: <b><?=\Yii::$app->formatter->asDatetime(strtotime($tender->dateCreate))?></b>
                 </div>
             </div>
             <div class="accaunt_tender_item_biudzhet_predlozheni">
