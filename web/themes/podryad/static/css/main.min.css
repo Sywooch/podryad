@@ -3244,7 +3244,9 @@ span.hcc.hc__menu__count {
     float: left;
     font-size: .875em;
 }
-
+.accaunt_tender_item_biudzhet span {
+    color: #1883BF;
+}
 .accaunt_tender_item_predlozheni {
     color: #6a6a6a;
     float: right;
