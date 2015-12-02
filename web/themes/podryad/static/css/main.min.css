@@ -4245,11 +4245,11 @@ input#tender-negotiable {
     background-image: url(../images/content/zamok.png);
     content: "";
     display: block;
-    height: 43px;
+    height: 31px;
     left: 0;
-    margin-top: -1px;
+    margin-top: 3px;
     position: absolute;
-    width: 32px;
+    width: 23px;
     background-size: contain;
 }
 .contractor-block-info__contact.contractor-block-info__contact--zamok {

@@ -67,9 +67,9 @@ $this->title = 'Личный кабинет:';
         <div class="contractor-block-info__service_colvo">Кол-во тендеров: <?=\app\modules\exchange\models\Tender::find()->where(['userId'=>$model->id])->count()?></div>
 
         <?php if(empty($tenderList)):?>
-            <div class="contractor-block-info__service">В данный момент у Вас нет активных объявлений.
+            <div class="contractor-block-info__service">В данный момент у Вас нет активных тендеров.
                 <a href="<?=\yii\helpers\Url::to(['/exchange/tender/create'])?>">Объявите тендер</a>
-                и получайте продложения от подрядчиков.
+                  и получайте продложения от подрядчиков.
             </div>
         <?php endif?>
 

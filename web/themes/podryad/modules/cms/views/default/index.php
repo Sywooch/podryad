@@ -42,22 +42,22 @@ $this->title = 'Главная';
             <div class="service__title">КАК УСТРОЕН СЕРВИС?</div>
             <div class="service-block service-block--n1">
                 <span class="service-block__link">Добавьте тендер</span>
-                <div class="service-block__text">Разместите тендер и получите предложения от заинтересовавшихся подрядчиков. Вы можете сами приглашать понравившихся подрядчиков участвовать в Вашем тендере.
+                <div class="service-block__text">Разместите тендер и получите предложения от заинтересовавшихся подрядчиков. Вы можете сами приглашать понравившихся подрядчиков участвовать в Вашем тендере
                 </div>
             </div>
             <div class="service-block service-block--n2">
                 <span href="#" title="" class="service-block__link">Изучите предложения</span>
-                <div class="service-block__text">Заинтересовавшиеся подрядчики оставят свои предложения. Вы можете оценить подрядчиков по портфолио и отзывам на их страничке.
+                <div class="service-block__text">Заинтересовавшиеся подрядчики оставят свои предложения. Вы можете оценить подрядчиков по портфолио и отзывам на их страничке
                 </div>
             </div>
             <div class="service-block service-block--n3">
                 <span href="#" title="" class="service-block__link">Выберите исполнителя</span>
-                <div class="service-block__text">Выберите наиболее подходящее для Вас предложение и свяжитесь с Подрядчиком.
+                <div class="service-block__text">Выберите подрядчика, оставившего наиболее подходящее для Вас предложение - это откроет ему Ваши контакты
                 </div>
             </div>
             <div class="service-block service-block--n4">
                 <span href="#" title="" class="service-block__link">Оцените работу</span>
-                <div class="service-block__text">После окончания работ оставьте отзыв о подрядчике на его страничке. Ваш отзыв поможет другим заказчикам сделать правильный выбор.
+                <div class="service-block__text">После окончания работ оставьте отзыв о подрядчике на его страничке. Ваш отзыв поможет другим заказчикам сделать правильный выбор
                 </div>
             </div>
             <div class="service__bottom">
