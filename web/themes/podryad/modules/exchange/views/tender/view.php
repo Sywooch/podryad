@@ -131,7 +131,7 @@ $offersCount = sizeof($offers);
                         </div>
                     <?php endif ?>
 					</div>
-                    <?= \app\modules\cms\widgets\Rate::widget(['model' => $offer, 'primaryKey' => $offer->id]) ?>
+                    <?= \app\modules\cms\widgets\Rate::widget(['model' => $offer->user, 'primaryKey' => $offer->user->id]) ?>
                 </div>
             </div>
 			<?php endforeach?>
