@@ -2630,7 +2630,7 @@ span.hcc.hc__menu__count {
     margin-bottom: 10px;
 }
 .accaunt_tender_item_btn.tender_status {
-    font-size: 0.875em;
+    font-size: 1.275em;
     margin-top: 4px;
     color: #ffd200;
     font-weight: normal;
@@ -3294,9 +3294,9 @@ span.hcc.hc__menu__count {
 }
 .tender_item_des_title h1 {
     color: #1883bf;
-    font-size: 1.225em;
+    font-size: 1.2em;
     font-weight: 700;
-    margin: 0px ;
+    margin: 0px;
 }
 .tender_item_des p {
     color: #6a6a6a;
