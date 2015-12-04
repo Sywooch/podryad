@@ -3000,9 +3000,15 @@ span.hcc.hc__menu__count {
 .sidebar-news-block__img {
     margin-right: 5px;
     margin-top: 4px;
+    overflow: hidden;
+    width: 70px;
 }
 
-
+.sidebar-news-block__content {
+    float: right;
+    overflow: hidden;
+    width: 235px;
+}
 .sidebar-news-block__link {
     border-bottom: 1px solid #6a6a6a;
     color: #6a6a6a;
