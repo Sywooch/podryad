@@ -3328,7 +3328,9 @@ span.hcc.hc__menu__count {
     padding-left: 25px;
     position: relative;
 }
-
+.news-full-content a {
+    color: #00acff;
+}
 .tender_item_des_info_biudzhet:before {
     background-image: url(../images/content/biudzhet.png);
     content: "";
