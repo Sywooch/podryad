@@ -585,7 +585,7 @@ html.active,body.active {
 .contractor-block-info__contact {
     font-size: .875em;
     margin: 8px 0 2px;
-    min-width: 30%;
+    min-width: 40%;
     padding-left: 25px;
     position: relative;
 }
@@ -3200,7 +3200,7 @@ span.hcc.hc__menu__count {
     color: #ffd200;
     float: right;
     font-family: "ReformaGroteskDemiC";
-    font-size: 1.275em;
+    font-size: 1.375em;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -3294,7 +3294,7 @@ span.hcc.hc__menu__count {
 }
 .tender_item_des_title h1 {
     color: #1883bf;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 700;
     margin: 0px;
 }
