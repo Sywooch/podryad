@@ -3329,7 +3329,7 @@ span.hcc.hc__menu__count {
     position: relative;
 }
 .news-full-content a {
-    color: #00acff;
+    color: #6a6a6a;
 }
 .tender_item_des_info_biudzhet:before {
     background-image: url(../images/content/biudzhet.png);
@@ -3340,6 +3340,9 @@ span.hcc.hc__menu__count {
     margin-top: -3px;
     position: absolute;
     width: 21px;
+}
+.hcc.hc__message__popup {
+    height: 130px!important;
 }
 .zaponit {
     margin-bottom: 10px;
