@@ -567,6 +567,14 @@ html.active,body.active {
     float: left;
     /* margin-top: 10px; */
 }
+.info_zakaz_client {
+    float: left;
+    width: 208px;
+    overflow: hidden;
+}
+.info_zakaz_client .contractor-block-info__contact {
+    width: 100%;
+}
 .contractor-block-info__name {
     color: #1883bf;
     font-size: 1.2em;
