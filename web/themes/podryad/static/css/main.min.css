@@ -534,11 +534,11 @@ html.active,body.active {
 }
 
 .contractor-block-info {
-    display: flex;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: -webkit-flex;
-    flex-wrap: wrap;
+    /* display: flex; */
+    /*  display: -ms-flexbox;*/
+    /* display: -webkit-box; */
+    /* display: -webkit-flex; */
+    /* flex-wrap: wrap; */
     /* justify-content: flex-start; */
     /* ms-flex-pack: start; */
     /* ms-flex-wrap: wrap; */
@@ -3312,6 +3312,7 @@ span.hcc.hc__menu__count {
     float: left;
     clear: both;
     margin-top: 6px;
+    width: 100%;
 }
 .tender_item_des_info_status {
     color: #6a6a6a;
