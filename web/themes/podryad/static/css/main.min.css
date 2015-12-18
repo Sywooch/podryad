@@ -2936,10 +2936,11 @@ span.hcc.hc__menu__count {
 }
 
 .search-contractor-results-list-item .contractor-block .contractor-block-info__rating {
-    justify-content: flex-start;
-    ms-flex-pack: start;
-    webkit-box-pack: start;
-    webkit-justify-content: flex-start;
+    /* justify-content: flex-start; */
+    /*ms-flex-pack: start;*/
+    /*webkit-box-pack: start;*/
+   /* webkit-justify-content: flex-start;*/
+    margin-bottom: 15px;
 }
 
 .search-contractor-results-list-item .contractor-block .contractor-block-info__rating a {
@@ -2952,11 +2953,7 @@ span.hcc.hc__menu__count {
 .asd{
 	z-index:2;
 }
-.search-contractor-results-list-item .contractor-block .contractor-block-images {
-    height: auto;
-    margin-top: 10px;
-    width: 100%;
-}
+
 
 .sidebar {
     margin-top: 15px;
