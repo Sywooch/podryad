@@ -105,6 +105,7 @@ $offersCount = sizeof($offers);
                     <p><?=Html::encode($offer->description)?>
                     </p>
 					<div class="contractor-block-info">
+					<div class="info_block">
                     <div class="contractor-block-info__contact contractor-block-info__contact--phone">
                         <a href="#" title="" data-show="<?= $offer->user->profile->phone ?>" class="contractor-block-info-show">показать
                             номер
@@ -130,6 +131,7 @@ $offersCount = sizeof($offers);
                             </a>
                         </div>
                     <?php endif ?>
+					</div>
 					</div>
                     <?= \app\modules\cms\widgets\Rate::widget(['model' => $offer->user, 'primaryKey' => $offer->user->id]) ?>
                 </div>
