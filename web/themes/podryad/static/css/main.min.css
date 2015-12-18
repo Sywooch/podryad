@@ -548,6 +548,7 @@ html.active,body.active {
     width: 430px;
     overflow: hidden;
     float: left;
+    margin-top: 10px;
 }
 .contractor-block-info__name {
     color: #1883bf;
@@ -585,7 +586,7 @@ html.active,body.active {
 
 .contractor-block-info__contact {
     font-size: .875em;
-    margin: 8px 0 2px;
+    /* margin: 8px 0 2px; */
     /* min-width: 40%; */
     width: 38%;
     padding-left: 25px;
