@@ -41,6 +41,7 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
                 <div class="contractor-block-info__name">
                     <?= $model->title ?>
                 </div>
+				<div class="info_block">
 				<div class="contractor-block-info__contact contractor-block-info__contact--city">
 				 Город: <?= $model->profile->city->title ?>
 				</div>
@@ -58,7 +59,7 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
                         e-mail
                     </a>
                 </div>
-
+		
                 <?php if (($site = $model->profile->site)): ?>
                     <div class="contractor-block-info__contact contractor-block-info__contact--site">
                         <a href="#" title="" data-show="<?= $site ?>" class="contractor-block-info-show">показать сайт
@@ -74,7 +75,7 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
                     </div>
                 <?php endif ?>
 
-                
+                </div>
                 <?= \app\modules\cms\widgets\Rate::widget(['model' => $model, 'primaryKey' => $model->id]) ?>
             </div>
             <div class="contractor-block-images">
