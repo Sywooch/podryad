@@ -146,6 +146,7 @@ $offersCount = sizeof($offers);
 					<div class="tender_zakaz-avatar">
 						<img src="<?=$model->user->profile->imageSrc('197x125')?>" alt="">
 					</div>
+					<div class="info_zakaz_client">
 					<div class="tender_zakazchik_name">
 						<?=$model->user->title?>
 					</div>
@@ -183,6 +184,7 @@ $offersCount = sizeof($offers);
                             </a>
                         </div>
                     <?php endif ?>
+					</div>
 				</div>
 			</div>
 			   </div>
