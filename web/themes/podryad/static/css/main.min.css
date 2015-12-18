@@ -534,17 +534,17 @@ html.active,body.active {
 }
 
 .contractor-block-info {
-    /* display: flex; */
-    /*display: -ms-flexbox;*/
-    /* display: -webkit-box; */
-    /* display: -webkit-flex; */
-    /* flex-wrap: wrap; */
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    flex-wrap: wrap;
     /* justify-content: flex-start; */
-     /*  ms-flex-pack: start;*/
-     /*  ms-flex-wrap: wrap;*/
-     /*  webkit-box-pack: start;*/
-     /*  webkit-flex-wrap: wrap;*/
-     /*  webkit-justify-content: flex-start;*/
+    /* ms-flex-pack: start; */
+    /* ms-flex-wrap: wrap; */
+    /* webkit-box-pack: start; */
+    /* webkit-flex-wrap: wrap; */
+    /* webkit-justify-content: flex-start; */
     width: 430px;
     overflow: hidden;
     float: left;
