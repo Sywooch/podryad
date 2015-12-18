@@ -575,6 +575,9 @@ html.active,body.active {
 .info_zakaz_client .contractor-block-info__contact {
     width: 100%;
 }
+.add_tender{
+	margin-right:5px;
+}
 .contractor-block-info__name {
     color: #1883bf;
     font-size: 1.2em;
