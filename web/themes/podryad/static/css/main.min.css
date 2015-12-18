@@ -2920,6 +2920,7 @@ span.hcc.hc__menu__count {
     margin-bottom: 10px;
     margin-top: 12px;
     padding-top: 7px;
+    clear: both;
 }
 
 .search-contractor-results-list-item .portfolio-album__count span {
@@ -3343,6 +3344,9 @@ span.hcc.hc__menu__count {
 }
 .hcc.hc__message__popup {
     height: 130px!important;
+}
+.hcc.hc__message__popup.hc__smile {
+    height: 150px!important;
 }
 .zaponit {
     margin-bottom: 10px;
