@@ -586,9 +586,10 @@ html.active,body.active {
 
 .contractor-block-info__contact {
     font-size: .875em;
-    /* margin: 8px 0 2px; */
+    margin: 8px 0 0px;
     /* min-width: 40%; */
     width: 38%;
+    /* margin-bottom: 8px; */
     padding-left: 25px;
     position: relative;
     float: left;
@@ -2611,9 +2612,9 @@ span.hcc.hc__menu__count {
 
 .tenders-info__budget:before {
     background-image: url(../images/png-sprite/96dpi/sprite.png);
-    background-position: -314px -236px;
+    background-position: -300px -227px;
     background-repeat: no-repeat;
-    background-size: 344px,303px;
+    background-size: 330px,294px;
     content: "";
     display: block;
     height: 21px;
