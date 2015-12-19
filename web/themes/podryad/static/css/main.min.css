@@ -535,7 +535,7 @@ html.active,body.active {
 
 .contractor-block-info {
     /* display: flex; */
-    /*  display: -ms-flexbox;*/
+    /* display: -ms-flexbox; */
     /* display: -webkit-box; */
     /* display: -webkit-flex; */
     /* flex-wrap: wrap; */
@@ -548,7 +548,7 @@ html.active,body.active {
     width: 430px;
     overflow: hidden;
     float: left;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 .info_block {
     display: flex;
@@ -615,9 +615,7 @@ html.active,body.active {
 .contractor-block-info__contact {
     font-size: .875em;
     margin: 8px 0 0px;
-    /* min-width: 40%; */
-    width: 38%;
-    /* margin-bottom: 8px; */
+    min-width: 38%;
     padding-left: 25px;
     position: relative;
     float: left;
@@ -712,8 +710,8 @@ html.active,body.active {
 }
 
 .contractor-block-images {
-    height: 172px;
-    width: 501px;
+    /* height: 172px; */
+    width: 100%;
 }
 .contractor-block-images img {
     margin-right: 5px;
@@ -4130,6 +4128,7 @@ span.btn.btn-success.fileinput-button:hover {
 .registration-contractor-content a {
     color: #444;
     font-size: 1em;
+   text-decoration: underline; 
 }
 
 .registration-contractor-content a:hover {
@@ -4302,6 +4301,6 @@ input#tender-negotiable {
     float: left;
     color: #6a6a6a;
     font-size: .875em;
-    width: 46%;
+    width: auto;
     padding-left: 40px;
 }
