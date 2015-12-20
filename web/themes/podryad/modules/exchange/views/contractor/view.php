@@ -49,7 +49,7 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
                     Предлагаемые услуги
                     <a href="#" title="" data-show="<?=$model->profile->specializationsString?>" class="contractor-block-info-show">показать</a>
                 </div>
-				<div class="info_block">
+				<div class="info_block contractor">
                 <div class="contractor-block-info__contact contractor-block-info__contact--phone">
                     <a href="#" title="" data-show="<?=$model->profile->phone?>" class="contractor-block-info-show">показать
                         номер

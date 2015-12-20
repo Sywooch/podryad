@@ -548,6 +548,7 @@ html.active,body.active {
     width: 430px;
     overflow: hidden;
     float: left;
+    margin-left: 33px;
     /* margin-top: 10px; */
 }
 .info_block {
@@ -711,7 +712,7 @@ html.active,body.active {
 
 .contractor-block-images {
     /* height: 172px; */
-    width: 100%;
+    /* width: 100%; */
 }
 .contractor-block-images img {
     margin-right: 5px;
