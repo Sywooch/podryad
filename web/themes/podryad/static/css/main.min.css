@@ -548,7 +548,7 @@ html.active,body.active {
     width: 430px;
     overflow: hidden;
     float: left;
-    margin-left: 33px;
+    margin-left: 30px;
     /* margin-top: 10px; */
 }
 .info_block {
