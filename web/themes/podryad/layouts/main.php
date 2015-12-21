@@ -28,7 +28,7 @@ $this->beginPage();
             <?=Html::csrfMetaTags()?>
 			
             <meta name="robots" content="noodp, noydir">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta name="viewport" content="1060">
             <meta name="HandheldFriendly" content="true">
             <meta content="IE=edge" http-equiv="X-UA-Compatible">
 				<link rel="icon" type="image/png" sizes="16x16" href="<?=$this->theme->getUrl('static/images/favicon/favicon.png')?>">

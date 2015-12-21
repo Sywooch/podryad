@@ -2967,10 +2967,10 @@ span.hcc.hc__menu__count {
 
 .search-contractor-results-list-item .contractor-block .contractor-block-info__rating {
     /* justify-content: flex-start; */
-    /*ms-flex-pack: start;*/
-    /*webkit-box-pack: start;*/
-   /* webkit-justify-content: flex-start;*/
-    margin-bottom: 15px;
+    /* ms-flex-pack: start; */
+    /* webkit-box-pack: start; */
+    /* webkit-justify-content: flex-start; */
+    margin-bottom: 5px;
 }
 
 .search-contractor-results-list-item .contractor-block .contractor-block-info__rating a {
@@ -3360,7 +3360,7 @@ span.hcc.hc__menu__count {
     position: relative;
 }
 .news-full-content a {
-    color: #6a6a6a;
+    color: #0d8c00;
 }
 .tender_item_des_info_biudzhet:before {
     background-image: url(../images/content/biudzhet.png);
@@ -4127,9 +4127,8 @@ span.btn.btn-success.fileinput-button:hover {
 }
 
 .registration-contractor-content a {
-    color: #444;
+    color: #00acff;
     font-size: 1em;
-   text-decoration: underline; 
 }
 
 .registration-contractor-content a:hover {
