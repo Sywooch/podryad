@@ -709,7 +709,7 @@ html.active,body.active {
 
 .contractor-block-images {
     /* height: 172px; */
-    /* width: 500px; */
+    width: 500px;
 }
 .contractor-block-images img {
     margin-right: 5px;
@@ -2961,7 +2961,9 @@ span.hcc.hc__menu__count {
 .search-contractor-results-list-item .contractor-block .contractor-block-info {
     width: 622px;
 }
-
+.contractor-block .contractor-block-info {
+    width: 430px;
+}
 .search-contractor-results-list-item .contractor-block .contractor-block-info__rating {
     /* justify-content: flex-start; */
     /* ms-flex-pack: start; */
