@@ -521,7 +521,6 @@ html.active,body.active {
 .contractor-block-avatar {
     width: 197px;
     text-align: center;
-    height: 197px;
     overflow: hidden;
 }
 .contractor-block-info__contact.contractor-block-info__contact--edit.podryadchik {
