@@ -384,7 +384,6 @@ blockquote {
 html, body {
     font-family: "Calibri";
     height: 100%;
-    min-width: 1300px;
 }
 html.active,body.active {
 }
@@ -516,16 +515,20 @@ html.active,body.active {
     webkit-box-align: start;
     webkit-box-pack: justify;
     webkit-justify-content: space-between;
-    width: 100%;
-}
 
+}
+.search-contractor-results-list-item .contractor-block-images {
+    width: auto;
+}
 .contractor-block-avatar {
     width: 197px;
     text-align: center;
+    overflow: hidden;
 }
 .contractor-block-info__contact.contractor-block-info__contact--edit.podryadchik {
     display: inline-block;
     margin-top: 10px;
+    width: auto;
 }
 .contractor-block-avatar__btn {
     padding-left: 0;
@@ -534,20 +537,48 @@ html.active,body.active {
 }
 
 .contractor-block-info {
-    display: flex;
-    display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
+    display: -ms-flexbox;
+    /* display: flex; */
+    width: 626px;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
-    ms-flex-pack: start;
-    ms-flex-wrap: wrap;
-    webkit-box-pack: start;
-    webkit-flex-wrap: wrap;
-    webkit-justify-content: flex-start;
-    width: 430px;
+    margin-left: 33px;
 }
-
+.info_block {
+    display: flex;
+    display: -ms-flexbox;
+    /* display: -webkit-box; */
+    /* display: -webkit-flex; */
+    flex-wrap: wrap;
+    /* justify-content: flex-start; */
+    /* ms-flex-pack: start; */
+    /* ms-flex-wrap: wrap; */
+    /* webkit-box-pack: start; */
+    /* webkit-flex-wrap: wrap; */
+    /* webkit-justify-content: flex-start; */
+    width: 430px;
+    /* overflow: hidden; */
+    float: left;
+    margin-top: 10px;
+}
+.info_zakaz_client {
+    float: left;
+    width: 208px;
+    overflow: hidden;
+}
+.info_zakaz_client .contractor-block-info__contact {
+    width: 100%;
+}
+.add_tender{
+	margin-right:5px;
+}
 .contractor-block-info__name {
     color: #1883bf;
     font-size: 1.2em;
@@ -583,11 +614,12 @@ html.active,body.active {
 }
 
 .contractor-block-info__contact {
-    font-size: .875em;
-    margin: 8px 0 2px;
-    min-width: 30%;
-    padding-left: 25px;
     position: relative;
+    width: 28%;
+    margin-bottom: 9px;
+    /* margin-top: 5px; */
+    padding-left: 25px;
+    font-size: .875em;
 }
 .contractor-block-info__contact span {
     color: #6a6a6a;
@@ -679,8 +711,8 @@ html.active,body.active {
 }
 
 .contractor-block-images {
-    height: 172px;
-    width: 501px;
+    /* height: 172px; */
+    width: 500px;
 }
 .contractor-block-images img {
     margin-right: 5px;
@@ -2607,9 +2639,9 @@ span.hcc.hc__menu__count {
 
 .tenders-info__budget:before {
     background-image: url(../images/png-sprite/96dpi/sprite.png);
-    background-position: -314px -236px;
+    background-position: -300px -227px;
     background-repeat: no-repeat;
-    background-size: 344px,303px;
+    background-size: 330px,294px;
     content: "";
     display: block;
     height: 21px;
@@ -2630,7 +2662,7 @@ span.hcc.hc__menu__count {
     margin-bottom: 10px;
 }
 .accaunt_tender_item_btn.tender_status {
-    font-size: 0.875em;
+    font-size: 1.275em;
     margin-top: 4px;
     color: #ffd200;
     font-weight: normal;
@@ -2915,10 +2947,11 @@ span.hcc.hc__menu__count {
 .search-contractor-results-list-item .portfolio-album__count {
     color: #00acff;
     margin-bottom: 10px;
-    margin-top: 12px;
-    padding-top: 7px;
+    /* margin-top: 12px; */
+    /* padding-top: 7px; */
+    clear: both;
+    width: 100%;
 }
-
 .search-contractor-results-list-item .portfolio-album__count span {
     color: #6a6a6a;
 }
@@ -2931,12 +2964,15 @@ span.hcc.hc__menu__count {
 .search-contractor-results-list-item .contractor-block .contractor-block-info {
     width: 622px;
 }
-
+.contractor-block .contractor-block-info {
+    width: 430px;
+}
 .search-contractor-results-list-item .contractor-block .contractor-block-info__rating {
-    justify-content: flex-start;
-    ms-flex-pack: start;
-    webkit-box-pack: start;
-    webkit-justify-content: flex-start;
+    /* justify-content: flex-start; */
+    /* ms-flex-pack: start; */
+    /* webkit-box-pack: start; */
+    /* webkit-justify-content: flex-start; */
+    margin-bottom: 5px;
 }
 
 .search-contractor-results-list-item .contractor-block .contractor-block-info__rating a {
@@ -2949,11 +2985,7 @@ span.hcc.hc__menu__count {
 .asd{
 	z-index:2;
 }
-.search-contractor-results-list-item .contractor-block .contractor-block-images {
-    height: auto;
-    margin-top: 10px;
-    width: 100%;
-}
+
 
 .sidebar {
     margin-top: 15px;
@@ -3200,7 +3232,7 @@ span.hcc.hc__menu__count {
     color: #ffd200;
     float: right;
     font-family: "ReformaGroteskDemiC";
-    font-size: 1.275em;
+    font-size: 1.475em;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -3294,9 +3326,9 @@ span.hcc.hc__menu__count {
 }
 .tender_item_des_title h1 {
     color: #1883bf;
-    font-size: 1.225em;
+    font-size: 1em;
     font-weight: 700;
-    margin: 0px ;
+    margin: 0px;
 }
 .tender_item_des p {
     color: #6a6a6a;
@@ -3309,6 +3341,7 @@ span.hcc.hc__menu__count {
     float: left;
     clear: both;
     margin-top: 6px;
+    width: 100%;
 }
 .tender_item_des_info_status {
     color: #6a6a6a;
@@ -3328,7 +3361,9 @@ span.hcc.hc__menu__count {
     padding-left: 25px;
     position: relative;
 }
-
+.news-full-content a {
+    color: #0d8c00;
+}
 .tender_item_des_info_biudzhet:before {
     background-image: url(../images/content/biudzhet.png);
     content: "";
@@ -3338,6 +3373,12 @@ span.hcc.hc__menu__count {
     margin-top: -3px;
     position: absolute;
     width: 21px;
+}
+.hcc.hc__message__popup {
+    height: 130px!important;
+}
+.hcc.hc__message__popup.hc__smile {
+    height: 150px!important;
 }
 .zaponit {
     margin-bottom: 10px;
@@ -3500,7 +3541,7 @@ span.hcc.hc__menu__count {
 }
 
 .contractor-block-avatar img {
-    width: 197px;
+    max-width: 197px;
 }
 
 .form_textarea {
@@ -4088,7 +4129,7 @@ span.btn.btn-success.fileinput-button:hover {
 }
 
 .registration-contractor-content a {
-    color: #444;
+    color: #00acff;
     font-size: 1em;
 }
 
@@ -4262,6 +4303,6 @@ input#tender-negotiable {
     float: left;
     color: #6a6a6a;
     font-size: .875em;
-    width: 46%;
+    width: auto;
     padding-left: 40px;
 }

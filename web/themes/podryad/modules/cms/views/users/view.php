@@ -68,8 +68,7 @@ $this->title = 'Личный кабинет:';
 
         <?php if(empty($tenderList)):?>
             <div class="contractor-block-info__service">В данный момент у Вас нет активных тендеров.
-                <a href="<?=\yii\helpers\Url::to(['/exchange/tender/create'])?>">Объявите тендер</a>
-                  и получайте продложения от подрядчиков.
+                <a class="add_tender"href="<?=\yii\helpers\Url::to(['/exchange/tender/create'])?>">Объявите тендер</a>     и получайте продложения от подрядчиков.
             </div>
         <?php endif?>
 
