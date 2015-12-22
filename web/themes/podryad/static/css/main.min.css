@@ -521,6 +521,8 @@ html.active,body.active {
 .contractor-block-avatar {
     width: 197px;
     text-align: center;
+    height: 197px;
+    overflow: hidden;
 }
 .contractor-block-info__contact.contractor-block-info__contact--edit.podryadchik {
     display: inline-block;
@@ -707,8 +709,8 @@ html.active,body.active {
 }
 
 .contractor-block-images {
-    /* height: 172px; */
-    /* width: 100%; */
+    height: 172px;
+    width: 500px;
 }
 .contractor-block-images img {
     margin-right: 5px;
@@ -3534,7 +3536,7 @@ span.hcc.hc__menu__count {
 }
 
 .contractor-block-avatar img {
-    width: 100%;
+    width: 197px;
 }
 
 .form_textarea {
