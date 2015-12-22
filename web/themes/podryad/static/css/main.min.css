@@ -563,7 +563,7 @@ html.active,body.active {
     /* width: 430px; */
     /* overflow: hidden; */
     float: left;
-    /* margin-top: 10px; */
+    margin-top: 10px;
 }
 .info_zakaz_client {
     float: left;
@@ -614,7 +614,7 @@ html.active,body.active {
     position: relative;
     width: 28%;
     margin-bottom: 9px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     padding-left: 25px;
     font-size: .875em;
 }
