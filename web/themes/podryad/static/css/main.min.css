@@ -552,12 +552,12 @@ html.active,body.active {
     /* margin-top: 10px; */
 }
 .info_block {
-    /* display: flex; */
-    /*display: -ms-flexbox;*/
-    /* display: -webkit-box; */
-    /* display: -webkit-flex; */
-    /* flex-wrap: wrap; */
-    /* justify-content: flex-start; */
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     /* ms-flex-pack: start; */
     /* ms-flex-wrap: wrap; */
     /* webkit-box-pack: start; */
