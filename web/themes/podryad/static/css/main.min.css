@@ -3536,7 +3536,7 @@ span.hcc.hc__menu__count {
 }
 
 .contractor-block-avatar img {
-    width: 197px;
+    max-width: 197px;
 }
 
 .form_textarea {
