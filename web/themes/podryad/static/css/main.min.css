@@ -3538,8 +3538,8 @@ span.hcc.hc__menu__count {
     width: 133px;
 }
 
-.contractor-block-avatar img {
-    width: 197px;
+.contractor-block-avatar img { 
+    /* width: 197px; */
 }
 
 .form_textarea {
