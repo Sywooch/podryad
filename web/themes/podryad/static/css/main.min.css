@@ -610,12 +610,11 @@ html.active,body.active {
 }
 
 .contractor-block-info__contact {
-    font-size: .875em;
-    margin: 8px 0 0px;
-    min-width: 44%;
-    padding-left: 25px;
     position: relative;
-    float: left;
+    width: 28%;
+    margin-bottom: 22px;
+    padding-left: 25px;
+    font-size: .875em;
 }
 .contractor-block-info__contact span {
     color: #6a6a6a;
