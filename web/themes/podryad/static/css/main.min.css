@@ -534,24 +534,19 @@ html.active,body.active {
 }
 
 .contractor-block-info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     /* display: flex; */
-    /* display: -ms-flexbox; */
-    /* display: -webkit-box; */
-    /* display: -webkit-flex; */
-    /* flex-wrap: wrap; */
-    /* justify-content: flex-start; */
-    /* ms-flex-pack: start; */
-    /* ms-flex-wrap: wrap; */
-    /* webkit-box-pack: start; */
-    /* webkit-flex-wrap: wrap; */
-    /* webkit-justify-content: flex-start; */
-    width: 626px;
-    overflow: hidden;
-    float: left;
-    margin-left: 30px;
-    /* margin-top: 10px; */
+    width: 430px;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
 }
-
 .info_block {
     display: flex;
     display: -ms-flexbox;
