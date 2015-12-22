@@ -73,7 +73,8 @@ class   Tender extends \yii\db\ActiveRecord
             [['priceMin','priceMax'],'number'],
             [['title','description'],'required','on'=>'new'],
 
-            [['title','description','phone','specializationIds','agree'],'required','on'=>'create'],
+            [['title','description','phone','agree'],'required','on'=>'create'],
+            ['specializationIds','required','message'=>'«Необходимо выбрать "Специализации»'],
             ['file','file','on'=>'create','skipOnEmpty'=>true],
             ['agree', 'required', 'message' => 'Вы должны принять условия!', 'isEmpty' => function ($value) {
                 return $value == 0;
