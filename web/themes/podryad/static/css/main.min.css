@@ -528,6 +528,7 @@ html.active,body.active {
 .contractor-block-info__contact.contractor-block-info__contact--edit.podryadchik {
     display: inline-block;
     margin-top: 10px;
+    width: auto;
 }
 .contractor-block-avatar__btn {
     padding-left: 0;
