@@ -552,11 +552,11 @@ html.active,body.active {
     /* margin-top: 10px; */
 }
 .info_block {
-    display: flex;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: -webkit-flex;
-    flex-wrap: wrap;
+    /* display: flex; */
+    /*display: -ms-flexbox;*/
+    /* display: -webkit-box; */
+    /* display: -webkit-flex; */
+    /* flex-wrap: wrap; */
     /* justify-content: flex-start; */
     /* ms-flex-pack: start; */
     /* ms-flex-wrap: wrap; */
@@ -2948,10 +2948,9 @@ span.hcc.hc__menu__count {
     color: #00acff;
     margin-bottom: 10px;
     margin-top: 12px;
-    padding-top: 7px;
+    /* padding-top: 7px; */
     clear: both;
 }
-
 .search-contractor-results-list-item .portfolio-album__count span {
     color: #6a6a6a;
 }
