@@ -708,8 +708,8 @@ html.active,body.active {
 }
 
 .contractor-block-images {
-    height: 172px;
-    width: 500px;
+    /* height: 172px; */
+    /* width: 500px; */
 }
 .contractor-block-images img {
     margin-right: 5px;
