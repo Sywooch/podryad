@@ -24,16 +24,22 @@ src="http://podryad.kz/themes/podryad/static/images/logo_ras.jpg" alt="podryad.k
 <tr>
 	<td style=" padding: 20px; ">
 		<p style=" color:#3f3f3f;font-family:Tahoma;font-size:14px; margin-bottom:20px ">
-			Здравствуйте!
+			Здравствуйте, ФИО!
 		</p>
 		<p style=" color:#3f3f3f;font-size:14px; margin:0;font-family:Tahoma; margin-bottom:8px ">
-			Вас приглашают принять участие в тендере:
+			Вас подрядили на выполнение объёма, описанного в тендере:
 		</p>
 		<p style=" color:#3f3f3f;font-size:14px; margin:0;font-family:Tahoma; margin-bottom:8px ">
 			<a href="<?=Url::to(['/exchange/tender/view','id'=>$tender->id],true)?>"><?=$tender->title?></a>
 		</p>
+                <p style=" color:#3f3f3f;font-size:14px; margin:0; font-family:Tahoma; margin-bottom:8px">
+			Пройдите по ссылке на страничку тендера, теперь Вам доступны контакты заказчика.
+		</p>
+                <p style=" color:#3f3f3f;font-size:14px; margin:0; font-family:Tahoma; margin-bottom:8px">
+			Свяжитесь с ним и обсудите ваши дальнейшие совместные действия. 
+		</p>
                 <p style=" color:#3f3f3f;font-size:14px; margin:0; font-family:Tahoma; margin-bottom:20px">
-			Пройдите по ссылке и оставьте своё предложение, если заказ Вам интересен.
+			Удачных проектов!
 		</p>
 		<p style=" color:#3f3f3f;font-size:14px; margin:0; font-family:Tahoma; margin-bottom:10px">
 			С уважением,
