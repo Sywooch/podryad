@@ -31,7 +31,7 @@ src="http://podryad.kz/themes/podryad/static/images/logo_ras.jpg" alt="podryad.k
                 <p style=" color:#3f3f3f;font-size:14px; margin:0; font-family:Tahoma; margin-bottom:8px">
 			<b>Пароль:</b>  <?= $model->password2 ?>
                 <p style=" color:#3f3f3f;font-size:14px; margin:0;font-family:Tahoma; margin-bottom:20px ">
-			Желаем Вам приятного и удачного поиска Вашего подрядчика!
+			Желаем Вам приятного пользования нашим сервисом!
 		
 		</p>
 		<p style=" color:#3f3f3f;font-size:14px; margin:0; font-family:Tahoma; margin-bottom:10px">
