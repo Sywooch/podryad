@@ -23,7 +23,7 @@ $this->beginPage();
     <html class="no-js" lang="ru"><!--<![endif]-->
         <head>
             <meta charset="utf-8">
-            <title><?=$this->title?></title>
+            <title><?=$this->title?> | Podryad.kz</title>
             <?=$this->head()?>
             <?=Html::csrfMetaTags()?>
 			

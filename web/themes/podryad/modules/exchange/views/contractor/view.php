@@ -102,7 +102,7 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
                         <div class="contractor-tabs-description">
                             <?php if($model->isMine()):?>
                                 <?php if(empty($model->profile->memo)):?>
-                                    <p class="not_des"">Добавьте пожалуйста описание про свою компанию или про себя.</p>
+                                    <p class="not_des"">Добавьте, пожалуйста, описание про свою компанию или про себя</p>
                                 <?php endif?>
                             <?=$this->render('_description',['model'=>$model])?>
                             <?php else:?>
@@ -173,7 +173,7 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
 
                                 <?php if ($model->isMine()): ?>
                                     <div class="not_phote">
-                                        <p>Создайте пожалуйста альбом и добавьте туда фотографии Ваших работ</p>
+                                        <p>Создайте, пожалуйста, альбом и добавьте туда фотографии Ваших работ</p>
                                     </div>
                                 <?php else: ?>
                                     <div class="not_phote">
@@ -218,7 +218,7 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
                         <?php else: ?>
                             <?php if($model->isMine()):?>
                                 <div class="not_price">
-                                    <p>Добавьте пожалуйста цены на Ваши услуги</p>
+                                    <p>Добавьте, пожалуйста, цены на Ваши услуги</p>
                                 </div>
                             <?php else:?>
                                 <div class="not_price">

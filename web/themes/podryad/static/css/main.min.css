@@ -4005,6 +4005,7 @@ span.btn.btn-success.fileinput-button:hover {
     text-shadow: 0 1px 0 rgba(0,0,0,.6);
     text-transform: uppercase;
     width: 180px;
+    font-size: 1.125em;
 }
 
 .album-update {
@@ -4037,6 +4038,7 @@ span.btn.btn-success.fileinput-button:hover {
     text-shadow: 0 1px 0 rgba(0,0,0,.6);
     text-transform: uppercase;
     width: 180px;
+    font-size: 1.125em;
 }
 
 .not_phote p {
@@ -4305,4 +4307,7 @@ input#tender-negotiable {
     font-size: .875em;
     width: auto;
     padding-left: 40px;
+}
+.btn.registration-contractor-form__btn {
+    font-size: 1.125em;
 }
