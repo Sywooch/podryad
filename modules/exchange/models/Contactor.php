@@ -125,6 +125,17 @@ class Contactor extends User
             ->send();
     }
 
+    public function toinvite($tender)
+    {
+        $params = \Yii::$app->params;
+        $subject = $params['subjects']['contractor.toinvite'];
+        return \Yii::$app->mailer->compose('contractor/toinvite',['tender'=>$tender,'subject'=>$subject])
+            ->setSubject($subject)
+            ->setFrom($params['email']->from)
+            ->setTo($this->username)
+            ->send();
+    }
+
     public function getTitle()
     {
 
