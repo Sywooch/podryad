@@ -15,7 +15,7 @@ use yii\helpers\Url;
          <ul>
              <?php foreach($modelList as $model):?>
              <li class="tender-list-item">
-                 <a href="<?=Url::to(['/exchange/contractor/notify','contractorId'=>$contractorId,'tenderId'=>$model->id])?>" class="_tender_notify"><?=$model->title?></a>
+                 <a href="<?=Url::to(['/exchange/contractor/toinvite','contractorId'=>$contractorId,'tenderId'=>$model->id])?>" class="_tender_notify"><?=$model->title?></a>
              </li>
             <?php endforeach?>
          </ul>

@@ -101,4 +101,25 @@ class ContractorController extends Controller{
 
         throw new HttpException(403);
     }
+
+    public function actionToinvite($contractorId,$tenderId)
+    {
+        if(\Yii::$app->request->isAjax)
+        {
+            $tender = Tender::findOne($tenderId);
+            if (!$tender) {
+                throw new HttpException(404);
+            }
+            $contractor = Contactor::findOne($contractorId);
+            if (!$tender) {
+                throw new HttpException(404);
+            }
+            if($contractor->toinvite($tender))
+            {
+                return $this->renderPartial('toinvite',['tender'=>$tender,'contractor'=>$contractor]);
+            }
+        }
+
+        throw new HttpException(403);
+    }
 }
