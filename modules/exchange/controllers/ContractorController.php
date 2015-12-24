@@ -116,7 +116,7 @@ class ContractorController extends Controller{
             }
             if($contractor->toinvite($tender))
             {
-                return $this->renderPartial('toinvite',['tender'=>$tender,'contractor'=>$contractor]);
+                return $this->renderPartial('notify',['tender'=>$tender,'contractor'=>$contractor]);
             }
         }
 
