@@ -34,7 +34,7 @@
     </div>
     <?php endforeach?>
     <?php else:?>
-        <p>У Вас еще нет отзывов</p>
+        <p>У подрядчика еще нет отзывов</p>
     <?php endif?>
 
     <?php if(!\Yii::$app->user->isGuest && \Yii::$app->user->identity->role == \app\modules\cms\models\User::ROLE_CUSTOMER):?>
