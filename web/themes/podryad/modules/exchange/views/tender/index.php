@@ -5,8 +5,13 @@
  * @var $list \app\modules\exchange\models\Tender[]
  * @var $pages \yii\data\Pagination
  */
+
 use yii\helpers\Html;
+use app\modules\cms\models\Settings;
+
 $this->title = 'Тендеры';
+$this->registerMetaTag(['name'=>'keywords','content'=>Settings::get('tender','metaKeywords')]);
+$this->registerMetaTag(['name'=>'description','content'=>Settings::get('tender','metaDescription')]);
 ?>
 <main class="main">
     <section class="search-contractor-content">

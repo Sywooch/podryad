@@ -50,7 +50,6 @@ $this->beginPage();
             <meta property="og:image:width" content="500"/>
             <meta property="og:image:height" content="300"/>
             <meta property="twitter:description" content=""/>
-			<meta name="description" content="Ремонт и строительство">
             <link rel="image_src" href=""/>
 			<link href="<?=$this->theme->getUrl('static/css/slick.css')?>" rel="stylesheet" type="text/css">
             <!--<link rel="icon" type="image/png" href="<?php //$this->theme->getUrl('favicon.ico')?>">-->
@@ -228,7 +227,7 @@ $this->beginPage();
             <script src="<?=$this->theme->getUrl('static/js/separate-js/jquery.swipebox.min.js')?>"></script>
             <script src="<?=$this->theme->getUrl('static/js/separate-js/nouislider.min.js')?>"></script>
             <script src="<?=$this->theme->getUrl('static/js/separate-js/jquery.cookie.js')?>"></script>
-            <script src="<?=$this->theme->getUrl('static/js/main.js')?>"></script>
+            <script src="<?=$this->theme->getUrl('static/js/script.js')?>"></script>
             <!-- Yandex.Metrika counter -->
             <script type="text/javascript"> (function (d, w, c) {
                     (w[c] = w[c] || []).push(function () {

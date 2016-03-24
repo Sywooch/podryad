@@ -14,6 +14,8 @@ use Yii;
  * @property integer $parentId
  * @property integer $level
  * @property string $alias
+ * @property string $metaKeywords
+ * @property string $metaDescription
  * @property Reference $parent
  * @see app\modules\cms\components\CategoryBehavior
  */

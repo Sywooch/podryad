@@ -38,6 +38,9 @@ use yii\helpers\Url;
                     <li>
                         <a href="<?= Url::to(['/exchange/admin/tender']) ?>">Тендера</a>
                     </li>
+                    <li>
+                        <a href="<?= Url::to(['/exchange/admin/settings']) ?>">Настройки</a>
+                    </li>
                     <!--<li>
                         <a href="<?/*= Url::to(['/cms/admin/file']) */?>">Библиотека</a>
                     </li>-->

@@ -13,6 +13,11 @@
  */
 $this->title = 'Подрядчики ';
 $this->title .= $specializationModel->parentId > 0 ? ' - ' . $specializationModel->title : '';
+if($specializationModel)
+{
+    $this->registerMetaTag(['name'=>'keywords','description'=>$specializationModel->metaKeywords]);
+    $this->registerMetaTag(['name'=>'description','description'=>$specializationModel->metaDescription]);
+}
 ?>
 <main class="main">
     <section class="search-contractor-content">
