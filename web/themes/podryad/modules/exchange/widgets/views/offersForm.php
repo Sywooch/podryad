@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 ?>
 <div id="zakaz_tender" class="modal zakaz_tender">
     <div class="modal__close">x</div>
-    <div class="modal__title">Участвовать в тендере</div>
+    <div class="modal__title">Добавьте ваше предложение</div>
         <?php $form = ActiveForm::begin([
             'id'=>'offers-form',
             'options'=>['class'=>'form'],
@@ -22,8 +22,8 @@ use yii\widgets\ActiveForm;
             ],
             'enableAjaxValidation'=>true,
         ])?>
-        <?= $form->field($model, 'price')->textInput(['class'=>'form__input']) ?>
-        <?= $form->field($model, 'description')->textarea(['class' => 'form_textarea']) ?>
+        <?= $form->field($model, 'price')->textInput(['class'=>'form__input'])->label('Укажите приблизительную стоимость') ?>
+        <?= $form->field($model, 'description')->textarea(['class' => 'form_textarea'])->label('Добавьте комментарий') ?>
         <input type="submit" value="Участвовать" class="form__submit">
     <?php ActiveForm::end()?>
 </div>

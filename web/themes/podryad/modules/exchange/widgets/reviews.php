@@ -35,7 +35,7 @@ return true;
     </div>
     <?php endforeach?>
     <?php else:?>
-        <p>У подрядчика еще нет отзывов</p>
+        <p>У подрядчика еще нет отзывов, будьте первым</p>
     <?php endif?>
 
     <?php if(!\Yii::$app->user->isGuest && \Yii::$app->user->identity->role == \app\modules\cms\models\User::ROLE_CUSTOMER):?>
@@ -44,7 +44,7 @@ return true;
             'enableAjaxValidation'=>true,
         ])?>
         <?=\yii\helpers\Html::activeHiddenInput($model,'contractorId')?>
-        <?=$form->field($model,'rate')->radioList(['Дислайк','Лайк'])?>
+        <?=$form->field($model,'rate')->radioList([''])->label([''])?>
         <?=$form->field($model,'content')->textarea()?>
         <?=\yii\helpers\Html::submitButton('Добавить')?>
         <?php \yii\widgets\ActiveForm::end()?>

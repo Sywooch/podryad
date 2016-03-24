@@ -232,6 +232,11 @@ blockquote {
     line-height: 44px;
     position: relative;
 }
+.contractor-block-avatar__btn:hover {
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
+    background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    color: #ffd200;
+}
 
 .contractor-block-avatar__btn,.specialization__btn {
     background: linear-gradient(to bottom,#1c98ca 0%,#1882be 100%);
@@ -322,8 +327,9 @@ blockquote {
     padding-left: 3px;
 }
 
-.form__label--license,.registration-contractor-form__label--license {
-    margin-bottom: 10px;
+.form__label--license, .registration-contractor-form__label--license {
+    margin-bottom: 4px;
+    margin-top: -12px;
 }
 
 .form__label--license input,.registration-contractor-form__label--license input {
@@ -375,11 +381,10 @@ blockquote {
     text-decoration: none;
 }
 
-html,body {
+html, body {
     font-family: "Calibri";
     height: 100%;
 }
-
 html.active,body.active {
 }
 
@@ -510,16 +515,20 @@ html.active,body.active {
     webkit-box-align: start;
     webkit-box-pack: justify;
     webkit-justify-content: space-between;
-    width: 100%;
-}
 
+}
+.search-contractor-results-list-item .contractor-block-images {
+    width: auto;
+}
 .contractor-block-avatar {
     width: 197px;
     text-align: center;
+    overflow: hidden;
 }
 .contractor-block-info__contact.contractor-block-info__contact--edit.podryadchik {
     display: inline-block;
     margin-top: 10px;
+    width: auto;
 }
 .contractor-block-avatar__btn {
     padding-left: 0;
@@ -528,33 +537,64 @@ html.active,body.active {
 }
 
 .contractor-block-info {
-    display: flex;
-    display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
+    display: -ms-flexbox;
+    /* display: flex; */
+    width: 626px;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
-    ms-flex-pack: start;
-    ms-flex-wrap: wrap;
-    webkit-box-pack: start;
-    webkit-flex-wrap: wrap;
-    webkit-justify-content: flex-start;
-    width: 430px;
+    margin-left: 33px;
 }
-
+.info_block {
+    display: flex;
+    display: -ms-flexbox;
+    /* display: -webkit-box; */
+    /* display: -webkit-flex; */
+    flex-wrap: wrap;
+    /* justify-content: flex-start; */
+    /* ms-flex-pack: start; */
+    /* ms-flex-wrap: wrap; */
+    /* webkit-box-pack: start; */
+    /* webkit-flex-wrap: wrap; */
+    /* webkit-justify-content: flex-start; */
+    width: 430px;
+    /* overflow: hidden; */
+    float: left;
+    margin-top: 10px;
+}
+.info_zakaz_client {
+    float: left;
+    width: 208px;
+    overflow: hidden;
+}
+.info_zakaz_client .contractor-block-info__contact {
+    width: 100%;
+}
+.add_tender{
+	margin-right:5px;
+}
 .contractor-block-info__name {
     color: #1883bf;
     font-size: 1.2em;
     font-weight: 700;
     width: 100%;
     margin-top: 0px;
+    margin-bottom: 3px;
 }
 
 .contractor-block-info__service {
     color: #6a6a6a;
     font-size: .875em;
-    margin: 8px 0;
+    margin: 2px 0 0px;
     width: 100%;
+    clear: both;
+    float: left;
 }
 
 .contractor-block-info__service span {
@@ -574,11 +614,12 @@ html.active,body.active {
 }
 
 .contractor-block-info__contact {
-    font-size: .875em;
-    margin-bottom: 10px;
-    min-width: 30%;
-    padding-left: 25px;
     position: relative;
+    width: 28%;
+    margin-bottom: 9px;
+    /* margin-top: 5px; */
+    padding-left: 25px;
+    font-size: .875em;
 }
 .contractor-block-info__contact span {
     color: #6a6a6a;
@@ -644,8 +685,9 @@ html.active,body.active {
     width: 100%;
 }
 .contractor-block-info__rating {
-    display: -ms-flexbox;
     margin-top: 15px;
+    overflow: hidden;
+    float: left;
 }
 .contractor-block-info__rating a {
     border: 1px solid #acacac;
@@ -669,8 +711,8 @@ html.active,body.active {
 }
 
 .contractor-block-images {
-    height: 172px;
-    width: 501px;
+    /* height: 172px; */
+    width: 500px;
 }
 .contractor-block-images img {
     margin-right: 5px;
@@ -794,7 +836,7 @@ html.active,body.active {
     content: "";
 }
 .form-group.field-registerform-agree.required {
-    height: 40px;
+    height: 33px;
     /* margin-bottom: 10px; */
 }
 .contractor-tabs-license {
@@ -821,6 +863,17 @@ html.active,body.active {
 
 .contractor-tabs-reviews {
     /* padding-top: 10px; */
+    overflow: hidden;
+}
+.form-group.field-reviews-rate .control-label {
+    display: none;
+}
+#reviews-rate {
+    margin: 10px 0;
+}
+#reviews-rate label {
+    margin-right: 10px;
+    color: #6a6a6a;
 }
 .contractor-tabs-reviews p {
     margin: 0px;
@@ -845,10 +898,7 @@ html.active,body.active {
     margin-bottom: 15px;
 }
 
-.contractor-tabs-reviews-item__img {
-    margin-right: 16px;
-    width: 172px;
-}
+
 .contractor-tabs-description p.not_des {
     color: #6a6a6a;
     font-size: 1em;
@@ -882,8 +932,8 @@ html.active,body.active {
 }
 .contractor-tabs-reviews-item__img {
     margin-right: 16px;
-    width: 172px;
-    height: 172px;
+    width: 125px;
+    height: 125px;
     overflow: hidden;
     float: left;
 }
@@ -980,8 +1030,14 @@ html.active,body.active {
 .portfolio-slider-small img {
     height: 60px;
     margin: 0 5px;
+    cursor: pointer;
 }
-
+.accaunt_tender.title {
+    color: #6a6a6a;
+    font-family: "ReformaGroteskDemiC";
+    font-size: 1.675em;
+    text-transform: uppercase;
+}
 .portfolio-slider-small img.slick-center {
     filter: brightness(100%);
     webkit-filter: brightness(100%);
@@ -1418,7 +1474,6 @@ html.swipebox-html.swipebox-touch {
     font-size: 15px;
     line-height: 43px;
 }
-
 .footer {
     border-top: 1px solid #d2d3d5;
     color: #6a6a6a;
@@ -1426,7 +1481,8 @@ html.swipebox-html.swipebox-touch {
     margin-top: 10px;
     padding-bottom: 15px;
     padding-top: 15px;
-    overflow: hidden;
+    /* overflow: hidden; */
+    clear: both;
 }
 .footer_logo {
     float: left;
@@ -1773,8 +1829,9 @@ html.swipebox-html.swipebox-touch {
 }
 
 .registration-customer {
-    height: 615px;
-    /* position: absolute; */
+    min-height: 522px;
+    bottom: auto;
+    top: 3%;
 }
 
 .specialization {
@@ -2211,11 +2268,16 @@ html.swipebox-html.swipebox-touch {
     padding: 5px 15px;
     text-align: center;
 }
-
+span.hcc.hc__menu__count {
+    display: inline-block;
+}
 .seo-text h1 {
     border-bottom: 1px solid #d2d3d5;
     font-weight: 400;
     padding-bottom: 5px;
+}
+.hcc.hc__footer {
+    display: none!important;
 }
 
 .seo-text p {
@@ -2571,13 +2633,15 @@ html.swipebox-html.swipebox-touch {
     font-size: 1.14286em;
     font-weight: 700;
     padding-right: 35px;
+	  color: #1883BF;
 }
+
 
 .tenders-info__budget:before {
     background-image: url(../images/png-sprite/96dpi/sprite.png);
-    background-position: -314px -236px;
+    background-position: -300px -227px;
     background-repeat: no-repeat;
-    background-size: 344px,303px;
+    background-size: 330px,294px;
     content: "";
     display: block;
     height: 21px;
@@ -2597,7 +2661,20 @@ html.swipebox-html.swipebox-touch {
     font-weight: 700;
     margin-bottom: 10px;
 }
-
+.accaunt_tender_item_btn.tender_status {
+    font-size: 1.275em;
+    margin-top: 4px;
+    color: #ffd200;
+    font-weight: normal;
+}
+.video_container {
+    display: block;
+    margin: 20px auto;
+    width: 500px;
+}
+.service__title.video {
+    margin-top: 25px;
+}
 .filter-cost__line {
     margin-bottom: 25px;
 }
@@ -2870,10 +2947,11 @@ html.swipebox-html.swipebox-touch {
 .search-contractor-results-list-item .portfolio-album__count {
     color: #00acff;
     margin-bottom: 10px;
-    margin-top: 12px;
-    padding-top: 7px;
+    /* margin-top: 12px; */
+    /* padding-top: 7px; */
+    clear: both;
+    width: 100%;
 }
-
 .search-contractor-results-list-item .portfolio-album__count span {
     color: #6a6a6a;
 }
@@ -2886,12 +2964,15 @@ html.swipebox-html.swipebox-touch {
 .search-contractor-results-list-item .contractor-block .contractor-block-info {
     width: 622px;
 }
-
+.contractor-block .contractor-block-info {
+    width: 430px;
+}
 .search-contractor-results-list-item .contractor-block .contractor-block-info__rating {
-    justify-content: flex-start;
-    ms-flex-pack: start;
-    webkit-box-pack: start;
-    webkit-justify-content: flex-start;
+    /* justify-content: flex-start; */
+    /* ms-flex-pack: start; */
+    /* webkit-box-pack: start; */
+    /* webkit-justify-content: flex-start; */
+    margin-bottom: 5px;
 }
 
 .search-contractor-results-list-item .contractor-block .contractor-block-info__rating a {
@@ -2899,14 +2980,12 @@ html.swipebox-html.swipebox-touch {
 }
 
 .search-contractor-results-list-item .contractor-block .contractor-block-info__service {
-    margin: 8px 0;
+    margin: 2px 0;
+}
+.asd{
+	z-index:2;
 }
 
-.search-contractor-results-list-item .contractor-block .contractor-block-images {
-    height: auto;
-    margin-top: 10px;
-    width: 100%;
-}
 
 .sidebar {
     margin-top: 15px;
@@ -2948,21 +3027,20 @@ html.swipebox-html.swipebox-touch {
     background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
 }
 
-.sidebar-news-block:hover .sidebar-news-block__img img {
-    filter: grayscale(0);
-    webkit-filter: grayscale(0);
-}
+
 
 .sidebar-news-block__img {
     margin-right: 5px;
     margin-top: 4px;
+    overflow: hidden;
+    width: 70px;
 }
 
-.sidebar-news-block__img img {
-    filter: grayscale(100%);
-    webkit-filter: grayscale(100%);
+.sidebar-news-block__content {
+    float: right;
+    overflow: hidden;
+    width: 235px;
 }
-
 .sidebar-news-block__link {
     border-bottom: 1px solid #6a6a6a;
     color: #6a6a6a;
@@ -2970,6 +3048,20 @@ html.swipebox-html.swipebox-touch {
     text-decoration: none;
     line-height: 14px;
     margin-bottom: 5px;
+}
+.uslovia_footer {
+    overflow: hidden;
+    clear: both;
+    margin: 0 auto;
+    text-align: center;
+}
+.uslovia_footer a {
+    color: #6a6a6a;
+	text-decoration:underline;
+}
+.uslovia_footer a:hover {
+    color: #00acff;
+    text-decoration: none;
 }
 
 .sidebar-news-block__link:hover {
@@ -3090,8 +3182,8 @@ html.swipebox-html.swipebox-touch {
 .form-control {
     box-sizing: border-box;
     height: 34px;
-    margin-bottom: 15px;
-    margin-top: 5px;
+    margin-bottom: 6px;
+    /* margin-top: 5px; */
     padding-left: 5px;
     width: 100%;
 }
@@ -3140,13 +3232,13 @@ html.swipebox-html.swipebox-touch {
     color: #ffd200;
     float: right;
     font-family: "ReformaGroteskDemiC";
-    font-size: 1.275em;
+    font-size: 1.475em;
     text-decoration: none;
     text-transform: uppercase;
 }
 
 .accaunt_tender_item_city_date {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     overflow: hidden;
 }
 
@@ -3170,12 +3262,18 @@ html.swipebox-html.swipebox-touch {
 }
 
 .accaunt_tender_item_biudzhet_predlozheni {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     overflow: hidden;
 }
 
 .accaunt_tender_item_des p {
     margin: 0;
+}
+.contractor-block-info__service_colvo {
+    clear: both;
+    color: #6a6a6a;
+    font-size: 1.075em;
+    margin-bottom: 7px;
 }
 
 .accaunt_tender_item_biudzhet {
@@ -3184,7 +3282,9 @@ html.swipebox-html.swipebox-touch {
     float: left;
     font-size: .875em;
 }
-
+.accaunt_tender_item_biudzhet span {
+    color: #1883BF;
+}
 .accaunt_tender_item_predlozheni {
     color: #6a6a6a;
     float: right;
@@ -3221,17 +3321,28 @@ html.swipebox-html.swipebox-touch {
 .tender_item_des_title {
     color: #1883bf;
     font-size: 1.225em;
-    font-weight: 700;
-    width: 100%;
-    margin: 0px 0px 4px;
+    float: left;
+    margin-bottom: 9px;
 }
-
+.tender_item_des_title h1 {
+    color: #1883bf;
+    font-size: 1em;
+    font-weight: 700;
+    margin: 0px;
+}
 .tender_item_des p {
     color: #6a6a6a;
     font-size: .875em;
-    margin: 5px 0px;
+    margin: 2px 0px 0px;
+    float: left;
+    clear: both;
 }
-
+.tender_item_des_info {
+    float: left;
+    clear: both;
+    margin-top: 6px;
+    width: 100%;
+}
 .tender_item_des_info_status {
     color: #6a6a6a;
     float: left;
@@ -3246,11 +3357,13 @@ html.swipebox-html.swipebox-touch {
     color: #6a6a6a;
     float: left;
     font-size: .875em;
-    margin-left: 69px;
+    margin-left: 40px;
     padding-left: 25px;
     position: relative;
 }
-
+.news-full-content a {
+    color: #0d8c00;
+}
 .tender_item_des_info_biudzhet:before {
     background-image: url(../images/content/biudzhet.png);
     content: "";
@@ -3260,6 +3373,12 @@ html.swipebox-html.swipebox-touch {
     margin-top: -3px;
     position: absolute;
     width: 21px;
+}
+.hcc.hc__message__popup {
+    height: 130px!important;
+}
+.hcc.hc__message__popup.hc__smile {
+    height: 150px!important;
 }
 .zaponit {
     margin-bottom: 10px;
@@ -3316,21 +3435,17 @@ html.swipebox-html.swipebox-touch {
     width: 568px;
 }
 
-.tender_item_content .contractor-block-info__contact {
-    float: left;
-    width: auto;
-    margin-top: 10px;
-}
+
 .contractor-block-info__contact.contractor-block-info__contact--city {
     padding-left: 0px;
-    margin: 10px 0px 5px;
+    margin: 5px 0px 2px;
     color: #6a6a6a;
 }
 .tender_item_content_cena {
     clear: both;
     color: #6a6a6a;
     font-size: .875em;
-    margin: 5px 0;
+    margin: 5px 0 2px;
 }
 
 .tender_item_content_cena span {
@@ -3341,7 +3456,7 @@ html.swipebox-html.swipebox-touch {
 .tender_item_content p {
     color: #6a6a6a;
     font-size: .875em;
-    margin: 5px 0;
+    margin: 2px 0;
 }
 .tender_item .contractor-block-info__rating {
     width: 80%;
@@ -3349,11 +3464,17 @@ html.swipebox-html.swipebox-touch {
 
 .tender_zakazchik {
     border: 1px solid #acacac;
-    float: left;
+    float: right;
     margin-left: 15px;
     overflow: hidden;
     padding: 10px;
     width: 354px;
+}
+.form-group.field-feedback-phone.required label:after {
+    content: " ";
+}
+.accaunt_tender_item.title:hover {
+    text-decoration: underline;
 }
 
 .tender_zakaz_titile {
@@ -3420,7 +3541,7 @@ html.swipebox-html.swipebox-touch {
 }
 
 .contractor-block-avatar img {
-    width: 197px;
+    max-width: 197px;
 }
 
 .form_textarea {
@@ -3458,7 +3579,6 @@ html.swipebox-html.swipebox-touch {
     overflow: hidden;
     position: relative;
 }
-
 .type_file input[type="file"] {
     filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
     khtml-opacity: 0;
@@ -3467,8 +3587,10 @@ html.swipebox-html.swipebox-touch {
     opacity: 0;
     position: absolute;
     top: 0;
-    width: 267px;
+    width: 200px;
     z-index: 2;
+    cursor: pointer;
+    height: 28px;
 }
 
 .fonTypeFile {
@@ -3593,11 +3715,23 @@ span.step-head {
 }
 
 .steps-part {
-    width: 100%;
+    width: 863px;
+    margin-top: 15px;
 }
 
 .steps-part li.last {
     margin-bottom: 0;
+}
+.step_title {
+    border-bottom: 1px solid #d2d3d5;
+    padding-bottom: 5px;
+    color: #6a6a6a;
+    font-family: "ReformaGroteskDemiC";
+    font-size: 1.875em;
+    text-transform: uppercase;
+    margin-bottom: -4px;
+    font-weight: normal;
+    width: 100%;
 }
 
 .steps-part li.active span.step-icon,span.step-icon:hover {
@@ -3636,6 +3770,7 @@ span.step-icon i {
     border-top: none;
     display: none;
     line-height: 21px;
+    color: #5F5F5F;
     margin: 0;
     padding: 8px 10px;
 }
@@ -3690,6 +3825,7 @@ span.step-icon i {
     border: none;
     font-size: 1.3em;
     padding: 0;
+    text-align: center;
 }
 
 .form-group.field-contractorprice-title.required.has-error {
@@ -3869,6 +4005,7 @@ span.btn.btn-success.fileinput-button:hover {
     text-shadow: 0 1px 0 rgba(0,0,0,.6);
     text-transform: uppercase;
     width: 180px;
+    font-size: 1.125em;
 }
 
 .album-update {
@@ -3901,6 +4038,7 @@ span.btn.btn-success.fileinput-button:hover {
     text-shadow: 0 1px 0 rgba(0,0,0,.6);
     text-transform: uppercase;
     width: 180px;
+    font-size: 1.125em;
 }
 
 .not_phote p {
@@ -3929,6 +4067,34 @@ span.btn.btn-success.fileinput-button:hover {
     margin-bottom: 15px;
     color: #6a6a6a;
     font-size: 1em;
+}
+.tender_content_vnutr {
+    float: left;
+}
+.contractor-tabs-reviews button {
+    background: linear-gradient(to bottom,#1c98ca 0%,#1882be 100%);
+    background: -webkit-linear-gradient(top,#1c98ca 0%,#1882be 100%);
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+    box-sizing: border-box;
+    color: #ffd200;
+    display: block;
+    font-family: "ReformaGroteskDemiC";
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0,0,0,.6);
+    text-transform: uppercase;
+    border: none;
+    text-align: center;
+    width: 100%;
+    font-size: 1.125em;
+    height: 39px;
+    line-height: 39px;
+    width: 141px;
+}
+.contractor-tabs-reviews button:hover {
+    background: linear-gradient(to bottom,#16769D 0%,#116391 100%);
+    background: -webkit-linear-gradient(top,#16769D 0%,#116391 100%);
+    color: #ffd200;
 }
 .tender_item_des_info_biudzhet span {
     color: #1883BF;
@@ -3965,7 +4131,7 @@ span.btn.btn-success.fileinput-button:hover {
 }
 
 .registration-contractor-content a {
-    color: #444;
+    color: #00acff;
     font-size: 1em;
 }
 
@@ -4123,4 +4289,25 @@ input#tender-negotiable {
     height: 150px;
     overflow: hidden;
     margin-bottom: 7px;
+}
+.contractor-block-info__contact.contractor-block-info__contact--zamok:before {
+    background-image: url(../images/content/zamok.png);
+    content: "";
+    display: block;
+    height: 31px;
+    left: 0;
+    margin-top: 3px;
+    position: absolute;
+    width: 23px;
+    background-size: contain;
+}
+.contractor-block-info__contact.contractor-block-info__contact--zamok {
+    float: left;
+    color: #6a6a6a;
+    font-size: .875em;
+    width: auto;
+    padding-left: 40px;
+}
+.btn.registration-contractor-form__btn {
+    font-size: 1.125em;
 }

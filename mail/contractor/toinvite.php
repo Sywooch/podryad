@@ -2,13 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: ivphpan
- * Date: 27.10.15
- * Time: 17:52
- * @var $model \app\modules\exchange\models\Offers
+ * Date: 16.10.15
+ * Time: 15:27
+ * @var $tender \app\modules\exchange\models\Tender
  * @var $subject string
- *
  */
-$link = \yii\helpers\Url::to(['/exchange/tender/view', 'id' => $model->tender->id], true);
+
+use yii\helpers\Url;
 ?>
 <table width="616px" cellpadding="0" cellspacing="0" style="border-collapse:collapse; border:none;margin:0 auto;" 
 
@@ -24,19 +24,16 @@ src="http://podryad.kz/themes/podryad/static/images/logo_ras.jpg" alt="podryad.k
 <tr>
 	<td style=" padding: 20px; ">
 		<p style=" color:#3f3f3f;font-family:Tahoma;font-size:14px; margin-bottom:20px ">
-			Здравствуйте, <?=$model->tender->user->title?>!
+			Здравствуйте!
 		</p>
 		<p style=" color:#3f3f3f;font-size:14px; margin:0;font-family:Tahoma; margin-bottom:8px ">
-			Вам поступило предложение на выполнение объёма работ, описанного  
+			Вас приглашают принять участие в тендере:
 		</p>
 		<p style=" color:#3f3f3f;font-size:14px; margin:0;font-family:Tahoma; margin-bottom:8px ">
-			в Вашем тендере   <a href="<?=$link?>"><?=$model->tender->title?></a>.
-		</p>
-                <p style=" color:#3f3f3f;font-size:14px; margin:0; font-family:Tahoma; margin-bottom:8px">
-			Для подробного просмотра предложения, пожалуйста, пройдите по ссылке 
+			<a href="<?=Url::to(['/exchange/tender/view','id'=>$tender->id],true)?>"><?=$tender->title?></a>
 		</p>
                 <p style=" color:#3f3f3f;font-size:14px; margin:0; font-family:Tahoma; margin-bottom:20px">
-			на страничку тендера. 
+			Пройдите по ссылке и оставьте своё предложение, если заказ Вам интересен.
 		</p>
 		<p style=" color:#3f3f3f;font-size:14px; margin:0; font-family:Tahoma; margin-bottom:10px">
 			С уважением,

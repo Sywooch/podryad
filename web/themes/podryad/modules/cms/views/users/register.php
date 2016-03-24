@@ -69,7 +69,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
                     <?= Html::error($model, 'specialization') ?>
                 </div>
             </label>
-            <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Где вы готовы работать?</span>
+            <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Город</span>
 
                 <div class="registration-contractor-form__row">
                     <?=Html::activeDropDownList($model,'cityId',$cityDropdown,['class'=>'registration-contractor-form__input','prompt'=>'Выберите город'])?>

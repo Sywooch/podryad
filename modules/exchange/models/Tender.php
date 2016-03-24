@@ -74,6 +74,7 @@ class   Tender extends \yii\db\ActiveRecord
             [['title','description'],'required','on'=>'new'],
 
             [['title','description','phone','agree'],'required','on'=>'create'],
+            ['specializationIds','required','message'=>'«Необходимо выбрать "Специализации»'],
             ['file','file','on'=>'create','skipOnEmpty'=>true],
             ['agree', 'required', 'message' => 'Вы должны принять условия!', 'isEmpty' => function ($value) {
                 return $value == 0;
@@ -124,6 +125,7 @@ class   Tender extends \yii\db\ActiveRecord
             'userId' => Yii::t('app', 'Айди пользователя'),
             'negotiable' => Yii::t('app', 'Бюджет договорный'),
             'dateCreate' => Yii::t('app', 'Дата'),
+            'specializationIds' => Yii::t('app', 'Специализации'),
         ];
     }
 

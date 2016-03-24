@@ -125,9 +125,25 @@ class Contactor extends User
             ->send();
     }
 
+    public function toinvite($tender)
+    {
+        $params = \Yii::$app->params;
+        $subject = $params['subjects']['contractor.notify'];
+        return \Yii::$app->mailer->compose('contractor/toinvite',['tender'=>$tender,'subject'=>$subject])
+            ->setSubject($subject)
+            ->setFrom($params['email']->from)
+            ->setTo($this->username)
+            ->send();
+    }
+
     public function getTitle()
     {
-        return $this->profile->fio;
-//        return $this->profile->company ? $this->profile->company.', '. $this->profile->fio : $this->profile->fio;
+
+	  if(!empty($this->profile->company)){
+		  return $this->profile->company;
+	  }else{
+		  return $this->profile->fio;
+	  }  
+	  //  return $this->profile->fio;
     }
 }

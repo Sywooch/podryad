@@ -64,12 +64,11 @@ $this->title = 'Личный кабинет:';
             <?= Html::endForm() ?>
         </div>
 
-        <div class="contractor-block-info__service">Кол-во тендеров: <?=\app\modules\exchange\models\Tender::find()->where(['userId'=>$model->id])->count()?></div>
+        <div class="contractor-block-info__service_colvo">Кол-во тендеров: <?=\app\modules\exchange\models\Tender::find()->where(['userId'=>$model->id])->count()?></div>
 
         <?php if(empty($tenderList)):?>
-            <div class="contractor-block-info__service">В данный момент у Вас нет активных объявлений.
-                <a href="<?=\yii\helpers\Url::to(['/exchange/tender/create'])?>">Объявите тендер</a>
-                и получайте продложения от подрядчиков.
+            <div class="contractor-block-info__service">В данный момент у Вас нет активных тендеров.
+                <a class="add_tender"href="<?=\yii\helpers\Url::to(['/exchange/tender/create'])?>">Объявите тендер</a>     и получайте продложения от подрядчиков.
             </div>
         <?php endif?>
 
@@ -83,15 +82,15 @@ $this->title = 'Личный кабинет:';
             </div>
             <div class="accaunt_tender_item_city_date">
                 <div class="accaunt_tender_item_city">
-                    <?=$tender->user->profile->city->title?>
+                    Город: <?=$tender->user->profile->city->title?>
                 </div>
                 <div class="accaunt_tender_item_date">
-                    <?=\Yii::$app->formatter->asDatetime(strtotime($tender->dateCreate))?>
+                   <?=\Yii::$app->formatter->asDatetime(strtotime($tender->dateCreate))?>
                 </div>
             </div>
             <div class="accaunt_tender_item_biudzhet_predlozheni">
                 <div class="accaunt_tender_item_biudzhet">
-                    <?=$tender->priceString?>
+                   Бюджет: <span> <b> <?=$tender->priceString?></b></span>
                 </div>
                 <div class="accaunt_tender_item_predlozheni">
                     Поступило <?=$tender->offersCount?> предложения

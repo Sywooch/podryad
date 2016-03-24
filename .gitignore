@@ -27,6 +27,7 @@ phpunit.phar
 /phpunit.xml
 
 #ivphpan projects
+/podryad.kz
 /web/assets
 !/web/assets/.gitkeep
 /web/uploads

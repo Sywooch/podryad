@@ -41,10 +41,15 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
                 <div class="contractor-block-info__name">
                     <?= $model->title ?>
                 </div>
+				
+				<div class="contractor-block-info__contact contractor-block-info__contact--city">
+				 Город: <?= $model->profile->city->title ?>
+				</div>
                 <div class="contractor-block-info__service">
                     Предлагаемые услуги
                     <a href="#" title="" data-show="<?=$model->profile->specializationsString?>" class="contractor-block-info-show">показать</a>
                 </div>
+				<div class="info_block contractor">
                 <div class="contractor-block-info__contact contractor-block-info__contact--phone">
                     <a href="#" title="" data-show="<?=$model->profile->phone?>" class="contractor-block-info-show">показать
                         номер
@@ -55,7 +60,7 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
                         e-mail
                     </a>
                 </div>
-
+		
                 <?php if (($site = $model->profile->site)): ?>
                     <div class="contractor-block-info__contact contractor-block-info__contact--site">
                         <a href="#" title="" data-show="<?= $site ?>" class="contractor-block-info-show">показать сайт
@@ -71,7 +76,7 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
                     </div>
                 <?php endif ?>
 
-                
+                </div>
                 <?= \app\modules\cms\widgets\Rate::widget(['model' => $model, 'primaryKey' => $model->id]) ?>
             </div>
             <div class="contractor-block-images">
@@ -84,7 +89,7 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
         </div>
         <div class="contractor-meta">
             <div class="contractor-meta__baner">
-                <img src="<?=$this->theme->getUrl('static/images/content/contractor-baner.jpg')?>" alt=""></div>
+                <img src="<?=$this->theme->getUrl('static/images/content/bi_group.gif')?>" alt=""></div>
             <div class="contractor-tabs">
                 <div class="contractor-tabs-control">
                     <a href="#" title="" class="contractor-tabs-control__item">Описание</a>
@@ -97,7 +102,7 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
                         <div class="contractor-tabs-description">
                             <?php if($model->isMine()):?>
                                 <?php if(empty($model->profile->memo)):?>
-                                    <p class="not_des"">Добавьте пожалуйста описание про свою компанию или про себя.</p>
+                                    <p class="not_des"">Добавьте, пожалуйста, описание про свою компанию или про себя</p>
                                 <?php endif?>
                             <?=$this->render('_description',['model'=>$model])?>
                             <?php else:?>
@@ -168,7 +173,7 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
 
                                 <?php if ($model->isMine()): ?>
                                     <div class="not_phote">
-                                        <p>Создайте пожалуйста альбом и добавьте туда фотографии Ваших работ</p>
+                                        <p>Создайте, пожалуйста, альбом и добавьте туда фотографии Ваших работ</p>
                                     </div>
                                 <?php else: ?>
                                     <div class="not_phote">
@@ -213,7 +218,7 @@ $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(
                         <?php else: ?>
                             <?php if($model->isMine()):?>
                                 <div class="not_price">
-                                    <p>Добавьте пожалуйста цены на Ваши услуги</p>
+                                    <p>Добавьте, пожалуйста, цены на Ваши услуги</p>
                                 </div>
                             <?php else:?>
                                 <div class="not_price">
