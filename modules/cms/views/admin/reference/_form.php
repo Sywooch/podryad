@@ -17,10 +17,11 @@ use yii\widgets\ActiveForm;
     <div class="row">
         <div class="col-md-6">
             <?= $form->field($model, 'title')->textInput(['maxlength' => 128]) ?>
+            <?=$form->field($model,'metaKeywords')->textarea()?>
         </div>
         <div class="col-md-6">
             <?= $form->field($model, 'alias')->textInput(['maxlength' => 128]) ?>
-
+            <?= $form->field($model, 'metaDescription')->textarea() ?>
         </div>
     </div>
 

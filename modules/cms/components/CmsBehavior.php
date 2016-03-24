@@ -43,6 +43,10 @@ class CmsBehavior extends Behavior{
             $src = 'default.jpg';
         }
         if ($src) {
+            if(!is_file($src))
+            {
+                return 'http://placehold.it/'.$size;
+            }
             $file = \Yii::$app->thumbler->resize($src, $width, $height, $method);
             return Url::base() . \Yii::getAlias('@web/' . \Yii::$app->thumbler->thumbsPath) . $file;
         }

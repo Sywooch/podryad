@@ -34,7 +34,7 @@ class Reference extends \yii\db\ActiveRecord
     {
         return [
             [['parentId','level'], 'integer'],
-            [['title', 'alias'], 'string', 'max' => 128],
+            [['title', 'alias','metaDescription','metaKeywords'], 'string', 'max' => 128],
             [['title'],'required'],
             ['alias','unique','targetAttribute'=>['parentId','alias']],
         ];
@@ -51,6 +51,8 @@ class Reference extends \yii\db\ActiveRecord
             'parentId' => Yii::t('app', 'Раздел'),
             'alias' => Yii::t('app', 'Ярлык'),
             'level' => Yii::t('app', 'Уровень'),
+            'metaKeywords' => Yii::t('app', 'Meta слова'),
+            'metaDescription' => Yii::t('app', 'Meta описание'),
         ];
     }
 
