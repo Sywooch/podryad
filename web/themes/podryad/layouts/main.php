@@ -50,7 +50,7 @@ $this->beginPage();
             <meta property="og:image:width" content="500"/>
             <meta property="og:image:height" content="300"/>
             <meta property="twitter:description" content=""/>
-			
+			<meta name="description" content="Ремонт и строительство">
             <link rel="image_src" href=""/>
 			<link href="<?=$this->theme->getUrl('static/css/slick.css')?>" rel="stylesheet" type="text/css">
             <!--<link rel="icon" type="image/png" href="<?php //$this->theme->getUrl('favicon.ico')?>">-->
@@ -178,7 +178,7 @@ $this->beginPage();
                         </nav>
 				   </div>
 				   <div class="razrabotano">
-					Разработано в <a href="http://astanacreative.kz/" target="_blanck">Astanacreative.kz</a>
+					Разработано в <a href="http://astanacreative.kz/" target="_blanck" rel="nofollow">Astanacreative.kz</a>
 				   </div>
 				    <div class="uslovia_footer">
 				 <a href="/cms/default/page?path=usloviya" target="_blanck">Условия использования сервиса </a>
