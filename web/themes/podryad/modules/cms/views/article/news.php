@@ -4,9 +4,15 @@
  * @var $item \app\modules\cms\models\Article
  * @var $items \app\modules\cms\models\Article[]
  */
+
 use app\modules\cms\models\Article;
+use app\modules\cms\models\Settings;
+
 $this->title = $item->typeView;
 $breadcrumbs = [];
+
+$this->registerMetaTag(['name' => 'keywords', 'content' => Settings::get('news', 'metaKeywords')]);
+$this->registerMetaTag(['name' => 'description', 'content' => Settings::get('news', 'metaDescription')]);
 ?>
 <main class="main">
     <section class="news-content">

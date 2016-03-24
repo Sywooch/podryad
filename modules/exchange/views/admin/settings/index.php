@@ -2,7 +2,7 @@
 /** @var $this \yii\web\View */
 /** @var $model \app\modules\exchange\models\forms\TenderSettings */
 
-$this->title = 'Настройки модуля "Биржа"';
+$this->title = 'Общие настройки';
 ?>
 <div class="well">
     <?php $form = \yii\widgets\ActiveForm::begin() ?>
@@ -12,6 +12,14 @@ $this->title = 'Настройки модуля "Биржа"';
         </div>
         <div class="col-md-6">
             <?= $form->field($model, 'metaDescription')->textarea() ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <?= $form->field($model, 'newsMetaKeywords')->textarea() ?>
+        </div>
+        <div class="col-md-6">
+            <?= $form->field($model, 'newsMetaDescription')->textarea() ?>
         </div>
     </div>
     <div class="row">
