@@ -7,7 +7,8 @@
  * @var $this \yii\web\View
  * @var $page \app\modules\cms\models\Page
  */
-$this->title = $page->title;
+
+$this->title = $page->metaTitle ? $page->metaTitle : $page->title;
 $this->registerMetaTag(['description'=>strip_tags($page->shortext(300,true))]);
 $this->registerMetaTag(['keywords'=>$page->title]);
 

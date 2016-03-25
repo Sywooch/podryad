@@ -20,6 +20,7 @@ use yii\helpers\Url;
  * @property string $description
  * @property string $metaKeywords
  * @property string $metaDescription
+ * @property string $metaTitle
  * @property string $dateCreate
  * @property integer $visible
  * @property string $bg
@@ -58,7 +59,7 @@ class Page extends ActiveRecord
             [['dateCreate'], 'safe'],
             [['visible', 'parentId','articleShow','childId','personalId'], 'integer'],
             ['parentId','default','value'=>'0'],
-            [['title', 'alias', 'metaKeywords', 'metaDescription'], 'string', 'max' => 255]
+            [['title', 'alias', 'metaKeywords', 'metaDescription', 'metaTitle'], 'string', 'max' => 255]
         ];
     }
 
@@ -81,6 +82,7 @@ class Page extends ActiveRecord
             'childId' => Yii::t('app', 'Меню подкатегорий'),
             'articleShow' => Yii::t('app', 'Показать список акций'),
             'personalId' => Yii::t('app', 'Выбор сотрудника'),
+            'metaDescription' => Yii::t('app', 'Мета заголовок'),
         ];
     }
 

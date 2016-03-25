@@ -47,6 +47,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6])->widget(\app\assets\Redactor::className()) ?>
 
+    <?= $form->field($model, 'metaTitle')->textInput(['maxlength' => 255]) ?>
+
     <?= $form->field($model, 'metaKeywords')->textInput(['maxlength' => 255]) ?>
 
     <?= $form->field($model, 'metaDescription')->textarea(['rows'=>3]) ?>
