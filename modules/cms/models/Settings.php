@@ -48,37 +48,35 @@ class Settings extends \yii\db\ActiveRecord
     }
 
     static $settings = [];
-    static $instance = [];
+    static $refresh = true;
     public static function get($module,$name)
     {
-        if(!empty(self::$settings[$module]))
+        if(array_key_exists($module,self::$settings))
         {
-            if(isset(self::$settings[$module][$name]))
-            {
-                return self::$settings[$module][$name];
-            }
-            else
+            if(!array_key_exists($name,self::$settings[$module]))
             {
                 $model = new Settings();
                 $model->module = $module;
                 $model->name = $name;
                 $model->save();
+
+                self::$settings[$module][$name] = '';
+                return self::$settings[$module][$name];
+            }else{
+
+                return self::$settings[$module][$name];
             }
-            return;
-        }elseif(isset(self::$instance[$module])){
-            $model = new Settings();
-            $model->module = $module;
-            $model->name = $name;
-            $model->save();
-            self::$instance[$module] = false;
-            return null;
         }
-        $row =  self::find()->where(['module'=>$module])->all();
-        foreach($row as $item)
+
+        $all =  self::find()->where(['module'=>$module])->all();
+        if(sizeof($all)==0)
+        {
+            self::$settings[$module]=[];
+        }
+        foreach($all as $item)
         {
             self::$settings[$item->module][$item->name] = $item->value;
         }
-        self::$instance[$module] = true;
         return self::get($module,$name);
     }
 
