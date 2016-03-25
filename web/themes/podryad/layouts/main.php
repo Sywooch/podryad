@@ -285,7 +285,7 @@ $this->beginPage();
                 ga('send', 'pageview');
 
             </script>
-            <div id="scrollup"><img alt="Прокрутить вверх" src="/img/up.png"></div>
+            <div id="scrollup">Наверх</div>
         </body>
 <?php $this->endPage()?>
     </html>
