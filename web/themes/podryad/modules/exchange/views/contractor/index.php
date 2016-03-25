@@ -11,11 +11,11 @@
  * @var $contactorList \app\modules\exchange\models\Contactor[]
  * @var $pages \yii\data\Pagination
  */
-$this->title = $specializationModel->parentId > 0 ? $specializationModel->title : '';
+$this->title = $specializationModel->title;
 if($specializationModel)
 {
-    $this->registerMetaTag(['name'=>'keywords','description'=>$specializationModel->metaKeywords]);
-    $this->registerMetaTag(['name'=>'description','description'=>$specializationModel->metaDescription]);
+    $this->registerMetaTag(['name'=>'keywords','content'=>$specializationModel->metaKeywords]);
+    $this->registerMetaTag(['name'=>'description','content'=>$specializationModel->metaDescription]);
 }
 $this->params['breadcrumbs'] = [
     'Подрядчики - '.$specializationModel->title,
