@@ -8,6 +8,7 @@
  * @var $model \app\modules\exchange\models\Contactor
  * @var $priceList \app\modules\exchange\models\ContractorPrice[]
  * @var $workTenderList \app\modules\exchange\models\Tender[]
+ * @var $specializationModel \app\modules\cms\models\Reference
  */
 use yii\helpers\Url;
 $this->title = $model->profile->metaTitle ? $model->profile->metaTitle : $model->getTitle();
@@ -17,6 +18,11 @@ $this->registerMetaTag(['name'=>'description','content'=>strip_tags($model->prof
 
 $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
 $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(['/exchange/contractor']);
+
+$this->params['breadcrumbs'] = [
+    ['label'=>'Подрядчики - ' . $specializationModel->title,'url'=>['/exchange/contractor','specilization'=>$specializationModel->alias]],
+    $this->title
+];
 ?>
 <main class="main">
     <section class="contractor-content">

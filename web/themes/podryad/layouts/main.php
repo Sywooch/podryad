@@ -10,6 +10,7 @@
  */
 use yii\helpers\Url;
 use yii\helpers\Html;
+use yii\widgets\Breadcrumbs;
 $this->beginPage();
 \app\assets\AppAsset::register($this);
 ?>
@@ -40,6 +41,7 @@ $this->beginPage();
             <link href="<?=$this->theme->getUrl('static/css/main_ie9.min.css')?>" rel="stylesheet" type="text/css"><![endif]-->
             <!--[if (gt IE 9)|!(IE)]><!-->
             <link href="<?=$this->theme->getUrl('static/css/main.min.css')?>" rel="stylesheet" type="text/css">
+            <link href="<?=$this->theme->getUrl('static/css/style.css')?>" rel="stylesheet" type="text/css">
             <!--<![endif]-->
             <meta property="og:title" content="default title">
             <meta property="og:title" content=""/>
@@ -131,6 +133,12 @@ $this->beginPage();
                     </div>
                 </div>
             </header>
+            <?php
+            if (!empty($this->params['breadcrumbs']))
+                echo '<div class="breadcrumbs-wrapper">'.Breadcrumbs::widget([
+                    'links' => $this->params['breadcrumbs'],
+                ]).'</div>';
+            ?>
             <?=$content?>
             <footer class="footer">
                 <div class="footer__wrapper">

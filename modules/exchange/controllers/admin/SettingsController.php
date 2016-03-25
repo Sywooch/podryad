@@ -13,9 +13,9 @@ class SettingsController extends AdminController
     public function actionIndex()
     {
         $provider = new ActiveDataProvider([
-            'query' => Settings::find(),
+            'query' => Settings::find()->orderBy(['module'=>SORT_ASC]),
             'pagination' => [
-                'pageSize' => 20,
+                'pageSize' => 1000,
             ],
         ]);
         $model = new Settings();

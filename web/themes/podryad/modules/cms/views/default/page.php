@@ -10,6 +10,11 @@
 $this->title = $page->title;
 $this->registerMetaTag(['description'=>strip_tags($page->shortext(300,true))]);
 $this->registerMetaTag(['keywords'=>$page->title]);
+
+$this->params['breadcrumbs'] = [
+    $page->title
+];
+
 ?>
 <main class="main">
     <?=$page->description?>

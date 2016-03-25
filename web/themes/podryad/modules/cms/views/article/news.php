@@ -7,16 +7,21 @@
 
 use app\modules\cms\models\Article;
 use app\modules\cms\models\Settings;
+use yii\widgets\Breadcrumbs;
 
-$this->title = $item->typeView;
-$breadcrumbs = [];
+$title = Settings::get('news','metaTitle');
+
+$this->title =!empty($title) ? $title : $item->typeView;
+$this->params['breadcrumbs'] = [
+    $item->typeView,
+];
 
 $this->registerMetaTag(['name' => 'keywords', 'content' => Settings::get('news', 'metaKeywords')]);
 $this->registerMetaTag(['name' => 'description', 'content' => Settings::get('news', 'metaDescription')]);
 ?>
 <main class="main">
     <section class="news-content">
-        <div class="news-content__title">НОВОСТИ</div>
+        <div class="news-content__title"><?= $item->typeView?></div>
 <ul >
         <?php if (($row = Article::getOneByCategory(Article::TYPE_STOCK_ALIAS))): ?>
             

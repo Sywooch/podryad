@@ -8,8 +8,17 @@
  */
 
 use yii\helpers\Url;
+use app\modules\cms\models\Settings;
 
-$this->title = 'Главная';
+$settings = [
+    'title' => Settings::get('index', 'metaTitle'),
+    'keywords' => Settings::get('index', 'metaKeywords'),
+    'description' => Settings::get('index', 'metaDescription'),
+];
+
+$this->title = !empty($settings['title']) ? $settings['title'] : 'Главная';
+$this->registerMetaTag(['name' => 'keywords', 'content' => $settings['keywords']]);
+$this->registerMetaTag(['name' => 'description', 'content' => $settings['description']]);
 ?>
 <section class="main-img">
     <div class="main-img__content">
