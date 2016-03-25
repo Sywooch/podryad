@@ -20,6 +20,9 @@ use Yii;
  * @property string $site
  * @property string $adres
  * @property string $specializationsString
+ * @property string $metaTitle
+ * @property string $metaDescription
+ * @property string $metaKeywords
  * @property Reference $city
  * @property Reference[] $specializations
  * @property array $specialization
@@ -48,7 +51,7 @@ class Profile extends \yii\db\ActiveRecord
             [['fio','company'], 'string', 'max' => 64],
             [['specialization','memo'],'safe'],
             ['file','file','skipOnEmpty'=>true],
-            [['site','adres'],'safe'],
+            [['site','adres','metaDescription','metaKeywords','metaTitle'],'safe'],
         ];
     }
 

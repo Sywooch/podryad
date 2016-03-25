@@ -73,6 +73,27 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
                     <?= Html::error($model, 'phone') ?>
                 </div>
             </label>
+            <label class="registration-contractor-form__label"> <span>Заголовок страницы</span>
+
+                <div class="registration-contractor-form__row">
+                    <?= Html::activeTextInput($model, 'metaTitle', ['class' => 'registration-contractor-form__input']) ?>
+                    <?= Html::error($model, 'metaTitle') ?>
+                </div>
+            </label>
+            <label class="registration-contractor-form__label"> <span>Ключевые слова</span>
+
+                <div class="registration-contractor-form__row">
+                    <?= Html::activeTextInput($model, 'metaKeywords', ['class' => 'registration-contractor-form__input']) ?>
+                    <?= Html::error($model, 'metaKeywords') ?>
+                </div>
+            </label>
+            <label class="registration-contractor-form__label"> <span>Описание для поисковиков</span>
+
+                <div class="registration-contractor-form__row">
+                    <?= Html::activeTextInput($model, 'metaDescription', ['class' => 'registration-contractor-form__input']) ?>
+                    <?= Html::error($model, 'metaDescription') ?>
+                </div>
+            </label>
             <label class="registration-contractor-form__label"> <span>Прикрепить файлы</span>
 
                 <div class="registration-contractor-form__row">

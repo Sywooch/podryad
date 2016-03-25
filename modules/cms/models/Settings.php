@@ -53,8 +53,14 @@ class Settings extends \yii\db\ActiveRecord
     {
         if(!empty(self::$settings[$module]))
         {
-            return self::$settings[$module][$name];
+            if(isset(self::$settings[$module][$name]))
+                return self::$settings[$module][$name];
+            return;
         }elseif(isset(self::$instance[$module])){
+            $model = new Settings();
+            $model->module = $module;
+            $model->name = $name;
+            $module->save();
             return null;
         }
         $row =  self::find()->where(['module'=>$module])->all();
@@ -76,5 +82,17 @@ class Settings extends \yii\db\ActiveRecord
         $model->name = $name;
         $model->value = $value;
         return $model->save();
+    }
+
+    public function updateSettings()
+    {
+        $data = \Yii::$app->request->post('Settings');
+        foreach($data as $id=>$row)
+        {
+            $model = self::findOne($id);
+            $model->value = $row['value'];
+            $model->save(false,['value']);
+        }
+        return true;
     }
 }

@@ -1,31 +1,36 @@
 <?php
 /** @var $this \yii\web\View */
 /** @var $model \app\modules\exchange\models\forms\TenderSettings */
+/** @var $provider \yii\data\ActiveDataProvider */
+
+use yii\grid\GridView;
+use yii\helpers\Html;
 
 $this->title = 'Общие настройки';
 ?>
 <div class="well">
     <?php $form = \yii\widgets\ActiveForm::begin() ?>
-    <div class="row">
-        <div class="col-md-6">
-            <?=$form->field($model,'metaKeywords')->textarea()?>
-        </div>
-        <div class="col-md-6">
-            <?= $form->field($model, 'metaDescription')->textarea() ?>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <?= $form->field($model, 'newsMetaKeywords')->textarea() ?>
-        </div>
-        <div class="col-md-6">
-            <?= $form->field($model, 'newsMetaDescription')->textarea() ?>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <?= \yii\bootstrap\Html::submitButton('сохранить', ['class' => 'btn btn-default']) ?>
-        </div>
+    <?php
+    echo GridView::widget([
+        'dataProvider'=>$provider,
+        'columns'=>[
+            'id',
+            'module',
+            'name',
+            [
+                'attribute'=>'value',
+                'value'=>function($model, $attributes, $key)
+                {
+                    return Html::textarea('Settings['.$model->id.'][value]',$model->value,['class'=>'form-control']);
+                },
+                'format'=>'raw',
+            ]
+        ]
+    ])
+    ?>
+
+    <div class="form-group">
+        <input type="submit" value="Сохранить" class="btn">
     </div>
     <?php \yii\widgets\ActiveForm::end() ?>
 </div>

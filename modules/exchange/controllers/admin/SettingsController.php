@@ -3,20 +3,28 @@ namespace app\modules\exchange\controllers\admin;
 
 
 use app\modules\cms\controllers\admin\AdminController;
+use app\modules\cms\models\Settings;
 use app\modules\exchange\models\forms\TenderSettings;
+use yii\data\ActiveDataProvider;
 
 class SettingsController extends AdminController
 {
 
     public function actionIndex()
     {
-        $model = new TenderSettings();
-        if(\Yii::$app->request->isPost && $model->load($_POST) && $model->save())
+        $provider = new ActiveDataProvider([
+            'query' => Settings::find(),
+            'pagination' => [
+                'pageSize' => 20,
+            ],
+        ]);
+        $model = new Settings();
+        if(\Yii::$app->request->isPost && $model->updateSettings())
         {
             \Yii::$app->session->setFlash('success','Настройки успешно сохраненны');
             return $this->refresh();
         }
-        return $this->render('index',['model'=>$model]);
+        return $this->render('index',['model'=>$model,'provider'=>$provider]);
     }
 
 }

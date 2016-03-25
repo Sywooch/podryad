@@ -33,6 +33,9 @@ class RegisterForm extends Model{
     public $file;
     public $site;
     public $adres;
+    public $metaTitle;
+    public $metaKeywords;
+    public $metaDescription;
 
     public function rules()
     {
@@ -51,7 +54,7 @@ class RegisterForm extends Model{
             }],
             ['file','file','skipOnEmpty'=>true],
             [['role', 'fio', 'phone', 'cityId'], 'required', 'on' => 'update'],
-            [['password','password2','site','adres', 'specialization'],'safe'],
+            [['password','password2','site','adres', 'specialization','metaTitle','metaDescription','metaKeywords'],'safe'],
         ];
     }
 
@@ -73,6 +76,9 @@ class RegisterForm extends Model{
             'company' => Yii::t('app', 'Компания'),
             'site' => Yii::t('app', 'Сайт'),
             'adres' => Yii::t('app', 'Адрес'),
+            'metaTitle' => Yii::t('app', 'Заголовок страницы'),
+            'metaDescription' => Yii::t('app', 'Описание для поисковика'),
+            'metaKeywords' => Yii::t('app', 'Ключевые слова для поисковика'),
         ];
     }
 
