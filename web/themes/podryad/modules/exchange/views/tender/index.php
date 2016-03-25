@@ -9,9 +9,13 @@
 use yii\helpers\Html;
 use app\modules\cms\models\Settings;
 
-$this->title = 'Тендеры';
+$title = Settings::get('tender','metaTitle');
+$this->title = $title ? $title : 'Тендеры';
 $this->registerMetaTag(['name'=>'keywords','content'=>Settings::get('tender','metaKeywords')]);
 $this->registerMetaTag(['name'=>'description','content'=>Settings::get('tender','metaDescription')]);
+$this->params['breadcrumbs'] = [
+    $this->title
+];
 ?>
 <main class="main">
     <section class="search-contractor-content">
