@@ -11,7 +11,7 @@
  * @var $contactorList \app\modules\exchange\models\Contactor[]
  * @var $pages \yii\data\Pagination
  */
-$this->title = $specializationModel->parentId > 0 ? ' - ' . $specializationModel->title : '';
+$this->title = $specializationModel->parentId > 0 ? $specializationModel->title : '';
 if($specializationModel)
 {
     $this->registerMetaTag(['name'=>'keywords','description'=>$specializationModel->metaKeywords]);
