@@ -78,9 +78,9 @@ $this->params['breadcrumbs'] = [
                     <?php endforeach?>
 
                     <?php
-                    /*echo \yii\widgets\LinkPager::widget([
+                    echo \yii\widgets\LinkPager::widget([
                         'pagination' => $pages,
-                    ]);*/
+                    ]);
                     ?>
                 </div>
             </div>

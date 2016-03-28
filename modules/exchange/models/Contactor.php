@@ -84,8 +84,8 @@ class Contactor extends User
         $pageCount = clone $query;
         $pages = new Pagination(['totalCount'=> $pageCount->count(),'pageSize'=>\Yii::$app->params['pageSize']]);
 
-//        $items = $query->offset($pages->offset)->limit($pages->limit)->orderBy('rand()')->all();
-        $items = $query->orderBy('rand()')->all();
+        $items = $query->offset($pages->offset)->limit($pages->limit)->orderBy('rand()')->all();
+//        $items = $query->orderBy('rand()')->all();
         return ['items'=>$items,'pages'=>$pages];
     }
 
