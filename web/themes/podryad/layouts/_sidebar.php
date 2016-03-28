@@ -35,6 +35,7 @@ use app\modules\cms\models\Article;
         </div>
         <?php endforeach?>
     </div>
+    <?php if(!isset($_GET['developer'])):?>
     <div class="sidebar-vk">
         <script type="text/javascript" src="//vk.com/js/api/openapi.js?117"></script>
 
@@ -51,4 +52,5 @@ use app\modules\cms\models\Article;
             }, 105009611);
         </script>
     </div>
+    <?php endif;?>
 </aside>

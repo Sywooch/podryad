@@ -25,7 +25,7 @@ class RegisterForm extends Model{
     public $phone;
     public $username;
     public $specialization=[];
-    public $cityId;
+    public $cityList=[];
     public $password;
     public $password2;
     public $agree;
@@ -40,21 +40,21 @@ class RegisterForm extends Model{
     public function rules()
     {
         return [
-            [['role','fio','phone','username','specialization','cityId','password','password2'],'required','on'=>User::ROLE_CONTRACTOR],
-            [['role','fio','username','cityId','phone','password','password2'],'required','on'=>User::ROLE_CUSTOMER],
+            [['role','fio','phone','username','specialization','cityList','password','password2'],'required','on'=>User::ROLE_CONTRACTOR],
+            [['role','fio','username','phone','password','password2'],'required','on'=>User::ROLE_CUSTOMER],
             ['username','email'],
             ['company','string'],
             ['username','unique','targetClass'=>User::className(),'targetAttribute'=>'username'],
             ['password2', 'compare', 'compareAttribute' => 'password'],
-            ['cityId','required','message'=>'Вы не указали город!','isEmpty'=>function($value){
-                return $value==0;
-            }],
+            ['cityList','required','message'=>'Вы не указали город!','isEmpty'=>function($value){
+                return sizeof($value)==0;
+            },'on'=>User::ROLE_CONTRACTOR],
             ['agree','required','message'=>'Вы должны принять условия!','on'=>[User::ROLE_CONTRACTOR,User::ROLE_CUSTOMER],'isEmpty'=>function($value){
                 return $value==0;
             }],
             ['file','file','skipOnEmpty'=>true],
-            [['role', 'fio', 'phone', 'cityId'], 'required', 'on' => 'update'],
-            [['password','password2','site','adres', 'specialization','metaTitle','metaDescription','metaKeywords'],'safe'],
+            [['role', 'fio', 'phone', 'cityList'], 'required', 'on' => 'update'],
+            [['password','password2','site','adres','metaTitle','metaDescription','metaKeywords'],'safe'],
         ];
     }
 
@@ -73,6 +73,7 @@ class RegisterForm extends Model{
             'phone' => Yii::t('app', 'Телефон'),
             'fio' => Yii::t('app', 'Ф.И.О'),
             'specialization' => Yii::t('app', 'Специализации'),
+            'cityList' => Yii::t('app', 'Города'),
             'company' => Yii::t('app', 'Компания'),
             'site' => Yii::t('app', 'Сайт'),
             'adres' => Yii::t('app', 'Адрес'),
@@ -97,8 +98,8 @@ class RegisterForm extends Model{
         $profile->userId = $user->id;
         $profileRegister = $profile->save();
 
-        $user->emailSend();
-        $user->emailSend(1);
+//        $user->emailSend();
+//        $user->emailSend(1);
 
         $login = new LoginForm();
         $login->username = $this->username;
@@ -111,6 +112,13 @@ class RegisterForm extends Model{
                 $model = Reference::findOne($specialiationId);
                 $profile->link('specializations', $model);
             }
+        }
+
+        //города
+        \Yii::$app->db->createCommand('DELETE FROM {{%user_city}} WHERE userId='.\Yii::$app->user->id)->execute();
+        foreach ($profile->cityList as $cityId) {
+            $model = Reference::findOne($cityId);
+            $profile->link('cityLists', $model);
         }
 
         $this->id = $user->id;
@@ -148,6 +156,13 @@ class RegisterForm extends Model{
                 $model = Reference::findOne($specialiationId);
                 $profile->link('specializations', $model);
             }
+        }
+
+        //города
+        \Yii::$app->db->createCommand('DELETE FROM {{%user_city}} WHERE userId=' . \Yii::$app->user->id)->execute();
+        foreach ($profile->cityList as $cityId) {
+            $model = Reference::findOne($cityId);
+            $profile->link('cityLists', $model);
         }
 
         return $userRegister && $profileRegister;

@@ -152,14 +152,14 @@ $(document).ready(function () {
         }
     });
 
-    $('.specialization__btn').click(function () {
+    $('.specialiation-button').click(function () {
         var item = $('#specialization').find('a.active');
-        $('.specialization-list-selected').html(' ');
+        $('._specialization-list-selected').html(' ');
         $('.mask, .modal__close, .modal, body').removeClass('active');
         if (item.length != 0) {
-            $('.registration-contractor-form__btn').html('Изменить специализацию');
+            $('.specialization-registration-contractor-form__btn').html('Изменить специализацию');
         } else {
-            $('.registration-contractor-form__btn').html('Выбрать специализацию');
+            $('.specialization-registration-contractor-form__btn').html('Выбрать специализацию');
         }
         var model = $(this).data("model");
         $(model + '-specialization').remove();
@@ -171,15 +171,45 @@ $(document).ready(function () {
         }else if(model == 'Contactor'){
             name = '[specializationIds][]';
         }
-        console.log(name);
         item.each(function (index, element) {
-            $('.specialization-list-selected').append('<div class="specialization-list-selected__item">' + $(element).html() + '</div>');
+            $('._specialization-list-selected').append('<div class="specialization-list-selected__item">' + $(element).html() + '</div>');
             $("<input>", {
                 'type':'hidden',
                 'class':model+'-specialization',
                 'name':model+name,
                 'value':$(element).data('id')
-            }).appendTo(".specialization-list-selected");
+            }).appendTo("._specialization-list-selected");
+        });
+    });
+
+    //города
+    $('.city__btn').click(function () {
+        var item = $('#cityList').find('a.active');
+        $('.city-list-selected').html(' ');
+        $('.mask, .modal__close, .modal, body').removeClass('active');
+        if (item.length != 0) {
+            $('.city-registration-contractor-form__btn').html('Изменить города');
+        } else {
+            $('.city-registration-contractor-form__btn').html('Выбрать города');
+        }
+        var model = $(this).data("model");
+        $(model + '-specialization').remove();
+
+        if (model == 'RegisterForm') {
+            name = '[cityList][]';
+        } else if (model == 'Tender') {
+            name = '[cityList][]';
+        } else if (model == 'Contactor') {
+            name = '[cityList][]';
+        }
+        item.each(function (index, element) {
+            $('.city-list-selected').append('<div class="specialization-list-selected__item">' + $(element).html() + '</div>');
+            $("<input>", {
+                'type': 'hidden',
+                'class': model + '-specialization',
+                'name': model + name,
+                'value': $(element).data('id')
+            }).appendTo(".city-list-selected");
         });
     });
 });

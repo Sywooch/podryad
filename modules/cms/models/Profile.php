@@ -32,6 +32,7 @@ use Yii;
 class Profile extends \yii\db\ActiveRecord
 {
     public $specialization;
+    public $cityList;
     public $file;
     /**
      * @inheritdoc
@@ -44,7 +45,7 @@ class Profile extends \yii\db\ActiveRecord
     public function getCityListString()
     {
         $data = [];
-        foreach($this->cityList as $item)
+        foreach($this->cityLists as $item)
         {
             $data[]=$item->title;
         }
@@ -60,7 +61,7 @@ class Profile extends \yii\db\ActiveRecord
             [['cityId'], 'integer'],
             [['phone'], 'string', 'max' => 255],
             [['fio','company'], 'string', 'max' => 64],
-            [['specialization','memo'],'safe'],
+            [['specialization','memo','cityList'],'safe'],
             ['file','file','skipOnEmpty'=>true],
             [['site','adres','metaDescription','metaKeywords','metaTitle'],'safe'],
         ];
@@ -86,6 +87,12 @@ class Profile extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Reference::className(), ['id' => 'specializationId'])
             ->viaTable('{{%user_specialization}}', ['userId' => 'userId']);
+    }
+
+    public function getCityLists()
+    {
+        return $this->hasMany(Reference::className(), ['id' => 'cityId'])
+            ->viaTable('{{%user_city}}', ['userId' => 'userId']);
     }
 
     public function afterDelete()

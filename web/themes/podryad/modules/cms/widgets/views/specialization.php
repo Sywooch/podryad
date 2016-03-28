@@ -10,9 +10,9 @@
  * @var $checked array
  */
 ?>
-<div id="specialization" class="modal specialization">
+<div id="specialization" class="modal specialization _specialization">
     <div class="modal__close">x</div>
-    <div class="modal__title">Выберите специализацию<span class="specialization__btn" data-model="<?= $modelName?>">Выбрать</span></div>
+    <div class="modal__title">Выберите специализацию<span class="specialization__btn specialiation-button" data-model="<?= $modelName?>">Выбрать</span></div>
     <div class="specialization-list">
         <?php foreach($model->children() as $submodel):?>
         <div class="specialization-column" data-category="<?=$submodel->alias?>">

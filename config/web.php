@@ -20,17 +20,6 @@ $config = [
             'datetimeFormat' => 'php:d.m.Y H:i:s',
             'timeFormat' => 'php:H:i:s',
         ],
-        'assetManager' => [
-            'bundles' => [
-//                'yii\web\JqueryAsset' => [
-////                    'sourcePath' => '@webroot/themes/asil/js',
-//                    'sourcePath'=>null,
-//                    'basePath'=>null,
-//                    'baseUrl'=>'http://code.jquery.com',
-//                    'js' => ['jquery-2.1.4.js'] // тут путь до Вашего экземпляра jquery
-//                ],
-            ],
-        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '$32fklwejrkl23jr@#F#@d',
@@ -89,7 +78,7 @@ $config = [
 
                 'register/<scenario:(contractor|customer)>'=>'/cms/users/register',
 
-                
+
                 'admin/<module>/<controller>/<action>' => '<module>/admin/<controller>/<action>',
                 'admin/<module>/<controller>' => '<module>/admin/<controller>',
                 'admin' => 'cms/admin/default',

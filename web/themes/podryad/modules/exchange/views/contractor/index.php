@@ -57,7 +57,7 @@ $this->params['breadcrumbs'] = [
                                 </a>
                             </div>
 							<div class="contractor-block-info__contact contractor-block-info__contact--city">
-							 Город: <?= $contactor->profile->city->title ?>
+							 Города: <?= $contactor->profile->getCityListString() ?>
 							</div>
                             <div class="contractor-block-info__service">Предлагаемые услуги
                                 <a href="#" title="" data-show="<?= $contactor->profile->specializationsString ?>" class="contractor-block-info-show">

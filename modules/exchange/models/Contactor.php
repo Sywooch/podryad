@@ -76,7 +76,8 @@ class Contactor extends User
         if (!empty(\Yii::$app->request->cookies['city'])) {
             $params['cityId'] = \Yii::$app->request->cookies['city'];
             $query->joinWith(['profile' => function ($query) use ($params) {
-                return $query->where(['iv_user_profile.cityId' => $params['cityId']]);
+                $subQuery = UserCity::find()->select('userId')->where(['cityId'=>$params['cityId']]);
+                return $query->where(['in','{{%user_profile}}.userId',$subQuery]);
             }]);
         }
 

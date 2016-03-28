@@ -7,9 +7,10 @@
  * @var $model \app\modules\cms\models\form\RegisterForm
  */
 use yii\widgets\ActiveForm;
+use yii\helpers\Html;
 
-$cityList = \app\modules\cms\models\Reference::findOne(['alias' => 'cityList'])->children();
-$cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
+//$cityList = \app\modules\cms\models\Reference::findOne(['alias' => 'cityList'])->children();
+//$cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
 ?>
 <div id="registration-customer" class="modal registration-customer">
     <div class="modal__close">x</div>
@@ -26,7 +27,6 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
         <?=$form->field($model,'fio')?>
         <?=$form->field($model,'company')?>
         <?=$form->field($model,'username')?>
-        <?=$form->field($model,'cityId')->dropDownList($cityDropdown)?>
         <?=$form->field($model,'phone')?>
         <?=$form->field($model,'password')->passwordInput()?>
         <?=$form->field($model,'password2')->passwordInput()?>
@@ -34,3 +34,4 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
         <input type="submit" value="Зарегистрироваться" class="form__submit">
     <?php ActiveForm::end()?>
 </div>
+<?= \app\modules\cms\widgets\Specialization::widget(['modelName' => 'RegisterForm', 'alias' => 'cityList', 'template' => 'cityList']) ?>

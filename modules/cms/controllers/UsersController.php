@@ -49,13 +49,13 @@ class UsersController extends Controller
 
     public function actionRegister($scenario)
     {
-        $model = new RegisterForm();
+            $model = new RegisterForm();
         $model->scenario = $scenario;
         $model->role = $scenario;
 
         if ($model->load($_POST) && $model->validate()) {
             if ($model->register()) {
-                return $this->redirect($model->role == User::ROLE_CUSTOMER ? ['view', 'id' => $model->id] : ['/exchange/contractor/view','id'=>$model->id]);
+                return $this->redirect($model->role == User::ROLE_CUSTOMER ? ['view', 'id' => $model->id] : ['/exchange/contractor/view','id'=>$model->id,'specialization'=>'remont-i-otdelka']);
             }
         }
         return $this->render('register', ['model' => $model]);

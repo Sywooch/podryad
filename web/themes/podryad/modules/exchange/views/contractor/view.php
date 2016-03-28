@@ -19,10 +19,13 @@ $this->registerMetaTag(['name'=>'description','content'=>strip_tags($model->prof
 $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
 $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(['/exchange/contractor']);
 
-$this->params['breadcrumbs'] = [
-    ['label'=>'Подрядчики - ' . $specializationModel->title,'url'=>['/exchange/contractor','specilization'=>$specializationModel->alias]],
-    $this->title
-];
+$breadcrumbs = [];
+if($specializationModel)
+{
+    $breadcrumbs[] = ['label' => 'Подрядчики - ' . $specializationModel->title, 'url' => ['/exchange/contractor', 'specilization' => $specializationModel->alias]];
+}
+$breadcrumbs[] = $this->title;
+$this->params['breadcrumbs'] = $breadcrumbs;
 ?>
 <main class="main">
     <section class="contractor-content">
@@ -53,7 +56,7 @@ $this->params['breadcrumbs'] = [
                 </div>
 				
 				<div class="contractor-block-info__contact contractor-block-info__contact--city">
-				 Город: <?= $model->profile->city->title ?>
+				 Города: <?= $model->profile->getCityListString() ?>
 				</div>
                 <div class="contractor-block-info__service">
                     Предлагаемые услуги

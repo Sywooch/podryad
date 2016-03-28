@@ -42,15 +42,19 @@ class ContractorController extends Controller{
         return $this->render('index',['specializationModel'=>$specializationModel,'specialization'=>$specialization,'contactorList'=>$contactorList,'model'=>$model,'pages'=>$pages]);
     }
 
-    public function actionView($id,$specialization)
+    public function actionView($id,$specialization=null)
     {
         $model = $this->loadModel($id);
+        $specializationModel = null;
         if($model->profile->load($_POST) && $model->profile->save(true,['memo']))
         {
             $this->redirect(['view','id'=>$id]);
         }
         $priceList = ContractorPrice::find()->where(['userId'=>$id])->priceOrder()->all();
-        $specializationModel = Reference::findOne(['alias'=>$specialization]);
+
+        if($specialization)
+            $specializationModel = Reference::findOne(['alias'=>$specialization]);
+
         $workTenderList = $model->workTenderList;
         return $this->render('view',['model'=>$model,'specializationModel'=>$specializationModel,'priceList'=>$priceList,'workTenderList'=>$workTenderList]);
     }

@@ -17,19 +17,21 @@ class Specialization extends Widget{
     public $type = '';
     public $modelName = '';
     public $specializationList = [];
+    public $alias = 'specializacii';
+    public $template = 'specialization';
 
     public function run()
     {
-        $model = Reference::findOne(['alias'=>'specializacii']);
+        $model = Reference::findOne(['alias'=>$this->alias]);
         $checked = [];
-        if($this->specializationList)
+        if(($specList = $this->specializationList))
         {
-            foreach($this->specializationList as $specialization)
+            foreach($specList as $specialization)
             {
                 $checked[]=$specialization->id;
             }
         }
-        return $this->render('specialization',['model'=> $model,'type'=>$this->type,'modelName'=>$this->modelName,'checked'=>$checked]);
+        return $this->render($this->template,['template'=>$this->template,'model'=> $model,'type'=>$this->type,'modelName'=>$this->modelName,'checked'=>$checked]);
     }
 
 }

@@ -82,7 +82,7 @@ $this->title = 'Личный кабинет:';
             </div>
             <div class="accaunt_tender_item_city_date">
                 <div class="accaunt_tender_item_city">
-                    Город: <?=$tender->user->profile->city->title?>
+                    Города: <?=$model->profile->getCityList()?>
                 </div>
                 <div class="accaunt_tender_item_date">
                    <?=\Yii::$app->formatter->asDatetime(strtotime($tender->dateCreate))?>

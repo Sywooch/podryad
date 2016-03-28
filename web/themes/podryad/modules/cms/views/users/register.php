@@ -58,21 +58,32 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
 
                 <div class="registration-contractor-form__row">
                     <a href="#" title="" data-click="modal" data-item="#specialization"
-                       class="btn registration-contractor-form__btn">Выбрать специализацию
+                       class="btn specialization-registration-contractor-form__btn registration-contractor-form__btn">Выбрать специализацию
                     </a>
                     <em>Максимум 10 специализаций</em>
-                    <?php foreach($model->specialization as $specialization):?>
-                        <?=Html::activeHiddenInput($model,'specialization[]',['value'=>$specialization])?>
-                    <?php endforeach?>
-                    <div class="specialization-list-selected"></div>
-                    <input type="hidden" value="" class="specialization-input-send">
+
+                    <div class="specialization-list-selected _specialization-list-selected">
+                        <?php foreach ($model->specialization as $specialization): ?>
+                            <?= Html::activeHiddenInput($model, 'specialization[]', ['value' => $specialization]) ?>
+                        <?php endforeach ?>
+                    </div>
                     <?= Html::error($model, 'specialization') ?>
                 </div>
             </label>
-            <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Город</span>
+            <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Города</span>
 
                 <div class="registration-contractor-form__row">
-                    <?=Html::activeDropDownList($model,'cityId',$cityDropdown,['class'=>'registration-contractor-form__input','prompt'=>'Выберите город'])?>
+                    <a href="#" title="" data-click="modal" data-item="#cityList"
+                       class="btn city-registration-contractor-form__btn registration-contractor-form__btn">Выбрать города
+                    </a>
+                    <em>Максимум 10 городов</em>
+
+                    <div class="city-list-selected specialization-list-selected">
+                        <?php foreach ($model->cityList as $specialization): ?>
+                            <?= Html::activeHiddenInput($model, 'cityList[]', ['value' => $specialization]) ?>
+                        <?php endforeach ?>
+                    </div>
+                    <?= Html::error($model, 'cityList') ?>
                 </div>
             </label>
             <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Пароль</span>
@@ -105,3 +116,4 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
     <?=$this->render('//layouts/_sidebar')?>
 </main>
 <?= \app\modules\cms\widgets\Specialization::widget(['modelName'=>'RegisterForm']) ?>
+<?= \app\modules\cms\widgets\Specialization::widget(['modelName'=>'RegisterForm','alias'=>'cityList','template'=>'cityList']) ?>
