@@ -7,7 +7,7 @@ $this->title = $item->title;
 $this->registerMetaTag(['name'=>'Description','content'=>$item->metaDescription]);
 $this->registerMetaTag(['name'=>'Keywords','content'=>$item->metaKeywords]);
 
-$this->title = !empty($title) ? $title : $item->typeView;
+$this->title = !empty($title) ? $title : $item->title;
 $this->params['breadcrumbs'] = [
     ['label'=>'Новости','url'=>['/cms/article/list','type'=>'news']],
     $item->title,
