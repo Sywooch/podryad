@@ -25,6 +25,7 @@ use Yii;
  * @property string $metaKeywords
  * @property Reference $city
  * @property Reference[] $specializations
+ * @property Reference[] $cityList
  * @property array $specialization
  * @method string imageSrc(string $size = '100x100', string $method = Thumbler::METHOD_NOT_BOXED)
  */
@@ -38,6 +39,16 @@ class Profile extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return '{{%user_profile}}';
+    }
+
+    public function getCityListString()
+    {
+        $data = [];
+        foreach($this->cityList as $item)
+        {
+            $data[]=$item->title;
+        }
+        return implode(', ',$data);
     }
 
     /**
