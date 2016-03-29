@@ -99,8 +99,8 @@ class RegisterForm extends Model{
         $profile->userId = $user->id;
         $profileRegister = $profile->save();
 
-//        $user->emailSend();
-//        $user->emailSend(1);
+        $user->emailSend();
+        $user->emailSend(1);
 
         $login = new LoginForm();
         $login->username = $this->username;
