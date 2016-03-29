@@ -391,6 +391,11 @@
     display: block;
 }
 
+ul.breadcrumb a {
+    color: #009CE3;
+    text-decoration: none;
+}
+
 .breadcrumb > li {
     display: inline-block;
 }
