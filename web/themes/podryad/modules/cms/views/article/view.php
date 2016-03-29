@@ -4,6 +4,9 @@
  * @var $item \app\modules\cms\models\Article
  */
 $this->title = $item->title;
+$this->registerMetaTag(['name' => 'og:title', 'content' => $this->title]);
+$this->registerMetaTag(['name' => 'og:description', 'content' => $item->metaDescription]);
+$this->registerMetaTag(['name' => 'twitter:description', 'content' => $item->metaDescription]);
 $this->registerMetaTag(['name'=>'Description','content'=>$item->metaDescription]);
 $this->registerMetaTag(['name'=>'Keywords','content'=>$item->metaKeywords]);
 

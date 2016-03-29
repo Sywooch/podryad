@@ -14,6 +14,9 @@
 $this->title = $specializationModel->title;
 if($specializationModel)
 {
+    $this->registerMetaTag(['name' => 'og:title', 'content' => $this->title]);
+    $this->registerMetaTag(['name' => 'og:description', 'content' => $specializationModel->metaDescription]);
+    $this->registerMetaTag(['name' => 'twitter:description', 'content' => $specializationModel->metaDescription]);
     $this->registerMetaTag(['name'=>'keywords','content'=>$specializationModel->metaKeywords]);
     $this->registerMetaTag(['name'=>'description','content'=>$specializationModel->metaDescription]);
 }

@@ -11,6 +11,10 @@ use app\modules\cms\models\Settings;
 
 $title = Settings::get('tender','metaTitle');
 $this->title = $title ? $title : 'Тендеры';
+
+$this->registerMetaTag(['name' => 'og:title', 'content' => $this->title]);
+$this->registerMetaTag(['name' => 'og:description', 'content' => Settings::get('tender', 'metaDescription')]);
+$this->registerMetaTag(['name' => 'twitter:description', 'content' => Settings::get('tender', 'metaDescription')]);
 $this->registerMetaTag(['name'=>'keywords','content'=>Settings::get('tender','metaKeywords')]);
 $this->registerMetaTag(['name'=>'description','content'=>Settings::get('tender','metaDescription')]);
 $this->params['breadcrumbs'] = [

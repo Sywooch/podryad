@@ -9,9 +9,11 @@
  */
 
 $this->title = $page->metaTitle ? $page->metaTitle : $page->title;
-$this->registerMetaTag(['description'=>strip_tags($page->shortext(300,true))]);
-$this->registerMetaTag(['keywords'=>$page->title]);
-
+$this->registerMetaTag(['description'=> $page->metaDescription]);
+$this->registerMetaTag(['keywords'=>$page->metaKeywords]);
+$this->registerMetaTag(['name' => 'og:title', 'content' => $this->title]);
+$this->registerMetaTag(['name' => 'og:description', 'content' => $page->metaDescription]);
+$this->registerMetaTag(['name' => 'twitter:description', 'content' => $page->metaDescription]);
 $this->params['breadcrumbs'] = [
     $page->title
 ];

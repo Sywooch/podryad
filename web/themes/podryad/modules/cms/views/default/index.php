@@ -17,6 +17,9 @@ $settings = [
 ];
 
 $this->title = !empty($settings['title']) ? $settings['title'] : 'Главная';
+$this->registerMetaTag(['name' => 'og:title', 'content' => $this->title]);
+$this->registerMetaTag(['name' => 'og:description', 'content' => $settings['description']]);
+$this->registerMetaTag(['name' => 'twitter:description', 'content' => $settings['description']]);
 $this->registerMetaTag(['name' => 'keywords', 'content' => $settings['keywords']]);
 $this->registerMetaTag(['name' => 'description', 'content' => $settings['description']]);
 ?>

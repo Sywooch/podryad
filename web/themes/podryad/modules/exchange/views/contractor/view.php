@@ -15,7 +15,9 @@ $this->title = $model->profile->metaTitle ? $model->profile->metaTitle : $model-
 
 $this->registerMetaTag(['name'=>'keywords','content'=>strip_tags($model->profile->metaKeywords)]);
 $this->registerMetaTag(['name'=>'description','content'=>strip_tags($model->profile->metaDescription)]);
-
+$this->registerMetaTag(['name' => 'og:title', 'content' => $this->title]);
+$this->registerMetaTag(['name' => 'og:description', 'content' => strip_tags($model->profile->metaDescription)]);
+$this->registerMetaTag(['name' => 'twitter:description', 'content' => strip_tags($model->profile->metaDescription)]);
 $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
 $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(['/exchange/contractor']);
 

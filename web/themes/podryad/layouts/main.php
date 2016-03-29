@@ -43,15 +43,11 @@ $this->beginPage();
             <link href="<?=$this->theme->getUrl('static/css/main.min.css')?>" rel="stylesheet" type="text/css">
             <link href="<?=$this->theme->getUrl('static/css/style.css')?>" rel="stylesheet" type="text/css">
             <!--<![endif]-->
-            <meta property="og:title" content="default title">
-            <meta property="og:title" content=""/>
-            <meta property="og:url" content=""/>
-            <meta property="og:description" content=""/>
+            <meta property="og:url" content="<?=\Yii::$app->request->url?>"/>
             <meta property="og:image" content=""/>
             <meta property="og:image:type" content="image/jpeg"/>
             <meta property="og:image:width" content="500"/>
             <meta property="og:image:height" content="300"/>
-            <meta property="twitter:description" content=""/>
             <link rel="image_src" href=""/>
 			<link href="<?=$this->theme->getUrl('static/css/slick.css')?>" rel="stylesheet" type="text/css">
             <!--<link rel="icon" type="image/png" href="<?php //$this->theme->getUrl('favicon.ico')?>">-->
@@ -287,5 +283,6 @@ $this->beginPage();
             </script>
             <div id="scrollup">Наверх</div>
         </body>
-<?php $this->endPage()?>
+<?php
+$this->endPage()?>
     </html>

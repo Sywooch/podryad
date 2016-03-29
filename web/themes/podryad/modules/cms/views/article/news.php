@@ -16,6 +16,9 @@ $this->params['breadcrumbs'] = [
     $item->typeView,
 ];
 
+$this->registerMetaTag(['name' => 'og:title', 'content' => $this->title]);
+$this->registerMetaTag(['name' => 'og:description', 'content' => Settings::get('news', 'metaDescription')]);
+$this->registerMetaTag(['name' => 'twitter:description', 'content' => Settings::get('news', 'metaDescription')]);
 $this->registerMetaTag(['name' => 'keywords', 'content' => Settings::get('news', 'metaKeywords')]);
 $this->registerMetaTag(['name' => 'description', 'content' => Settings::get('news', 'metaDescription')]);
 ?>

@@ -82,7 +82,8 @@ class Page extends ActiveRecord
             'childId' => Yii::t('app', 'Меню подкатегорий'),
             'articleShow' => Yii::t('app', 'Показать список акций'),
             'personalId' => Yii::t('app', 'Выбор сотрудника'),
-            'metaDescription' => Yii::t('app', 'Мета заголовок'),
+            'metaDescription' => Yii::t('app', 'Мета описание'),
+            'metaTitle' => Yii::t('app', 'Мета заголовок'),
         ];
     }
 
