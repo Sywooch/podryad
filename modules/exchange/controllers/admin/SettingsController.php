@@ -13,7 +13,7 @@ class SettingsController extends AdminController
     public function actionIndex()
     {
         $provider = new ActiveDataProvider([
-            'query' => Settings::find()->orderBy(['module'=>SORT_ASC]),
+            'query' => Settings::find()->where(['isSystem'=>0])->orderBy(['module'=>SORT_ASC]),
             'pagination' => [
                 'pageSize' => 1000,
             ],

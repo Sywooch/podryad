@@ -5,6 +5,7 @@ namespace app\modules\exchange\models;
 
 use app\modules\cms\models\Image as ContractorImage;
 use app\modules\cms\models\Reference;
+use app\modules\cms\models\Settings;
 use app\modules\cms\models\User;
 use yii\data\Pagination;
 
@@ -84,9 +85,41 @@ class Contactor extends User
         $pageCount = clone $query;
         $pages = new Pagination(['totalCount'=> $pageCount->count(),'pageSize'=>\Yii::$app->params['pageSize']]);
 
-        $items = $query->offset($pages->offset)->limit($pages->limit)->orderBy(['dateCreate'=>SORT_DESC])->all();
+        //сортировка раз в сутки
+        $orderSettingsData = Settings::get('exchange','contractorOrder',true);
+        $contractorSort = [];
+        $currentDate = date('d.m.Y');
+        if($orderSettingsData)
+        {
+           if(substr_count($orderSettingsData,'@'))
+           {
+               list($dateOrder,$allUserIdList) = explode('@',$orderSettingsData);
+               if($dateOrder != $currentDate)
+               {
+                   $allUserIdList = $this->getRandomIds();
+                   Settings::set('exchange', 'contractorOrder', $currentDate . '@' . $allUserIdList, true);
+               }
+           }
+        }
+        else{
+            $allUserIdList = $this->getRandomIds();
+            Settings::set('exchange','contractorOrder',$currentDate.'@'.$allUserIdList,true);
+        }
+        $contractorSort = new \yii\db\Expression('FIND_IN_SET(iv_user.id,:userList)');
+        $query->addParams([':userList' => $allUserIdList]);
+        $items = $query->offset($pages->offset)->limit($pages->limit)->orderBy([$contractorSort])->all();
 //        $items = $query->orderBy('rand()')->all();
         return ['items'=>$items,'pages'=>$pages];
+    }
+
+    private function getRandomIds()
+    {
+        $orderIdsList = [];
+        $allUserIdList = self::find()->select(['id'])->orderBy('rand()')->all();
+        foreach ($allUserIdList as $user) {
+            $orderIdsList[] = $user->id;
+        }
+        return implode(',', $orderIdsList);
     }
 
     public function getAlbums()

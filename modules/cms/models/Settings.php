@@ -8,6 +8,7 @@ use Yii;
  * This is the model class for table "{{%settings}}".
  *
  * @property integer $id
+ * @property integer $isSystem
  * @property string $name
  * @property string $value
  * @property string $module
@@ -49,7 +50,7 @@ class Settings extends \yii\db\ActiveRecord
 
     static $settings = [];
     static $refresh = true;
-    public static function get($module,$name)
+    public static function get($module,$name,$isSystem = false)
     {
         if(array_key_exists($module,self::$settings))
         {
@@ -58,6 +59,7 @@ class Settings extends \yii\db\ActiveRecord
                 $model = new Settings();
                 $model->module = $module;
                 $model->name = $name;
+                $model->isSystem = $isSystem;
                 $model->save();
 
                 self::$settings[$module][$name] = '';
@@ -80,7 +82,7 @@ class Settings extends \yii\db\ActiveRecord
         return self::get($module,$name);
     }
 
-    public static function set($module, $name,$value)
+    public static function set($module, $name,$value,$isSystem=false)
     {
         $row = self::find()->where(['module' => $module, 'name' => $name])->one();
         if($row)
@@ -89,6 +91,7 @@ class Settings extends \yii\db\ActiveRecord
         $model->module = $module;
         $model->name = $name;
         $model->value = $value;
+        $model->isSystem = $isSystem;
         return $model->save();
     }
 
