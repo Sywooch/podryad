@@ -90,6 +90,7 @@ class RegisterForm extends Model{
     {
         $user = new User();
         $user->attributes = $this->attributes;
+        $user->dateCreate = date(DATE_FORMAT_DB);
         $userRegister = $user->save();
 
         $this->password2 = $this->password;
