@@ -27,7 +27,7 @@ $this->params['breadcrumbs'] = [
 ?>
 <main class="main">
     <section class="search-contractor-content">
-        <h1 class="search-contractor-content__title">Подрядчики</h1>
+        <h1 class="search-contractor-content__title"><?=$specializationModel->title?></h1>
             <?= \app\modules\exchange\widgets\SpecializationFilter::widget(['checked'=>$model->specializationIds,'specialization'=>$specialization,'filterModel'=>'Contactor']) ?>
         <div class="search-contractor-results">
             <div class="search-contractor-results-list">
