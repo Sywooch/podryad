@@ -11,7 +11,13 @@
  * @var $pages \yii\data\Pagination
  */
 use yii\helpers\Html;
-$this->title = 'Личный кабинет:';
+
+$this->title = $model->profile->metaTitle ? $model->profile->metaTitle : $model->getTitle();
+$this->registerMetaTag(['name' => 'keywords', 'content' => strip_tags($model->profile->metaKeywords)]);
+$this->registerMetaTag(['name' => 'description', 'content' => strip_tags($model->profile->metaDescription)]);
+$this->registerMetaTag(['name' => 'og:title', 'content' => $this->title]);
+$this->registerMetaTag(['name' => 'og:description', 'content' => strip_tags($model->profile->metaDescription)]);
+$this->registerMetaTag(['name' => 'twitter:description', 'content' => strip_tags($model->profile->metaDescription)]);
 ?>
 <main class="main">
     <div class="accaunt_block">
