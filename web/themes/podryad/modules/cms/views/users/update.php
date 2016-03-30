@@ -144,7 +144,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
                         <div class="city-list-selected specialization-list-selected">
                             <?php foreach ($cityList as $city): ?>
                                 <div class="specialization-list-selected__item"><?= $city->title ?></div>
-                                <?= Html::activeHiddenInput($model, 'specialization[]', ['value' => $city->id]) ?>
+                                <?= Html::activeHiddenInput($model, 'cityList[]', ['value' => $city->id]) ?>
                             <?php endforeach ?>
                         </div>
                         <?= Html::error($model, 'specialization') ?>
