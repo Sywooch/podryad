@@ -107,8 +107,8 @@ class Contactor extends User
         }
         $contractorSort = new \yii\db\Expression('FIND_IN_SET(iv_user.id,:userList)');
         $query->addParams([':userList' => $allUserIdList]);
-        $items = $query->offset($pages->offset)->limit($pages->limit)->orderBy([$contractorSort])->all();
-//        $items = $query->orderBy('rand()')->all();
+//        $items = $query->offset($pages->offset)->limit($pages->limit)->orderBy([$contractorSort])->all();
+        $items = $query->orderBy([$contractorSort])->all();
         return ['items'=>$items,'pages'=>$pages];
     }
 
