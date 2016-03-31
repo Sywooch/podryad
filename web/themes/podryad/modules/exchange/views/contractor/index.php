@@ -11,10 +11,11 @@
  * @var $contactorList \app\modules\exchange\models\Contactor[]
  * @var $pages \yii\data\Pagination
  */
+$title = \app\modules\cms\models\Settings::get('contractor','listTitle');
 $this->title = $specializationModel->title;
 if($specializationModel)
 {
-    $this->registerMetaTag(['name' => 'og:title', 'content' => $this->title]);
+    $this->registerMetaTag(['name' => 'og:title', 'content' => $title]);
     $this->registerMetaTag(['name' => 'og:description', 'content' => $specializationModel->metaDescription]);
     $this->registerMetaTag(['name' => 'twitter:description', 'content' => $specializationModel->metaDescription]);
     $this->registerMetaTag(['name'=>'keywords','content'=>$specializationModel->metaKeywords]);
