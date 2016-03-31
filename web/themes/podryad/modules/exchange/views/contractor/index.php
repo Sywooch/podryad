@@ -12,7 +12,7 @@
  * @var $pages \yii\data\Pagination
  */
 $title = \app\modules\cms\models\Settings::get('contractor','listTitle-'.$specializationModel->alias);
-$this->title = $specializationModel->title;
+$this->title = $title;
 if($specializationModel)
 {
     $this->registerMetaTag(['name' => 'og:title', 'content' => $title]);
