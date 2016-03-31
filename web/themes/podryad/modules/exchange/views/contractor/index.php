@@ -11,7 +11,8 @@
  * @var $contactorList \app\modules\exchange\models\Contactor[]
  * @var $pages \yii\data\Pagination
  */
-$title = \app\modules\cms\models\Settings::get('contractor','listTitle');
+$titles = [];
+$titles[$specializationModel->alias] = \app\modules\cms\models\Settings::get('contractor','listTitle-'.$specializationModel->alias);
 $this->title = $specializationModel->title;
 if($specializationModel)
 {
