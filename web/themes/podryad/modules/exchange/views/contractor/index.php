@@ -52,7 +52,7 @@ $this->params['breadcrumbs'] = $breadcrumbs;
                     <?php foreach($contactorList as $contactor):?>
                     <div class="contractor-block">
                         <div class="contractor-block-avatar">
-                            <a href="<?= \yii\helpers\Url::to(['/exchange/contractor/view', 'id' => $contactor->id,'specialization'=> $specializationModel->alias]) ?>"><img src="<?=$contactor->profile->imageSrc('199x159')?>" alt="">
+                            <a href="<?= \yii\helpers\Url::to(['/exchange/contractor/view', 'id' => $contactor->id]) ?>"><img src="<?=$contactor->profile->imageSrc('199x159')?>" alt="">
                             </a>
                             <?php if (\Yii::$app->user->isGuest) { ?>
                                 <a href="#" title="" class="contractor-block-avatar__btn _contractor" data-click="modal"
@@ -68,7 +68,7 @@ $this->params['breadcrumbs'] = $breadcrumbs;
                         </div>
                         <div class="contractor-block-info">
                             <div class="contractor-block-info__name">
-                                <a href="<?=\yii\helpers\Url::to(['/exchange/contractor/view','id'=>$contactor->id, 'specialization' => $specializationModel->alias])?>"> <?= $contactor->title ?>
+                                <a href="<?=\yii\helpers\Url::to(['/exchange/contractor/view','id'=>$contactor->id])?>"> <?= $contactor->title ?>
                                 </a>
                             </div>
 							<div class="contractor-block-info__contact contractor-block-info__contact--city">
