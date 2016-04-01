@@ -21,4 +21,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 
 #убрать index.php
+RewriteCond %{REQUEST_URI} \.php$
 RewriteRule ^index.php$ / [R=301,L]
