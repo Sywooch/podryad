@@ -3,9 +3,6 @@ IndexIgnore */*
 RewriteEngine on
 
 
-#убрать index.php
-RewriteRule ^index.php$ / [R=301,L]
-
 #убрать slash
 RewriteCond %{REQUEST_URI} !\?
 RewriteCond %{REQUEST_URI} !\&
@@ -22,3 +19,6 @@ RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php
+
+#убрать index.php
+RewriteRule ^index.php$ / [R=301,L]
