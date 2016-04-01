@@ -12,6 +12,7 @@ use app\modules\cms\models\User;
  */
 class UserSearch extends User
 {
+
     /**
      * @inheritdoc
      */
@@ -19,7 +20,7 @@ class UserSearch extends User
     {
         return [
             [['id'], 'integer'],
-            [['username', 'password', 'auth_key', 'password_reset_token'], 'safe'],
+            [['username', 'password', 'auth_key', 'password_reset_token','type'], 'safe'],
         ];
     }
 
@@ -41,7 +42,7 @@ class UserSearch extends User
      */
     public function search($params)
     {
-        $query = User::find();
+        $query = User::find()->joinWith(['profile','assignment']);
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -58,6 +59,13 @@ class UserSearch extends User
         $query->andFilterWhere([
             'id' => $this->id,
         ]);
+
+        if($this->type)
+        {
+            $query->joinWith(['assignment'=>function($query){
+                $query->andFilterWhere(['item_name'=>$this->type]);
+            }]);
+        }
 
         $query->andFilterWhere(['like', 'username', $this->username])
             ->andFilterWhere(['like', 'password', $this->password])

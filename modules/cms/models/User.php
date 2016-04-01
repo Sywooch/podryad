@@ -30,6 +30,7 @@ class User extends ActiveRecord  implements IdentityInterface
     public $password2;
     public $crib;
     public $agree;
+    public $type;
     /**1
      * @inheritdoc
      */
@@ -78,6 +79,7 @@ class User extends ActiveRecord  implements IdentityInterface
             'dateCreate' => 'Дата регистрации',
             'crib' => 'Сумма вывода',
             'agree' => 'Условия пользования сервисом',
+            'type' => 'Тип',
         ];
     }
     /** INCLUDE USER LOGIN VALIDATION FUNCTIONS**/
@@ -347,5 +349,20 @@ class User extends ActiveRecord  implements IdentityInterface
     {
         return $this->profile->fio;
 //        return $this->profile->company ? $this->profile->company . ', ' . $this->profile->fio : $this->profile->fio;
+    }
+
+    static public function typeDropdown()
+    {
+        return [
+            User::ROLE_CONTRACTOR => 'Подрядчик',
+            User::ROLE_CUSTOMER => 'Заказчик',
+        ];
+    }
+
+
+    public function typeTitle()
+    {
+        $list = self::typeDropdown();
+        return !empty($list[$this->assignment->item_name]) ? $list[$this->assignment->item_name] : '';
     }
 }

@@ -26,7 +26,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'username',
-
+            'profile.fio',
+            'profile.company',
+            [
+                'attribute' => 'type',
+                'value' => function($model){
+                    return $model->typeTitle();
+                },
+                'filter' => \app\modules\cms\models\User::typeDropdown()
+            ],
             [
                 'class' => 'yii\grid\ActionColumn',
                 'template'=>'{crib} {update} {delete}',
