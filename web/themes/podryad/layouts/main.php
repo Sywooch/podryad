@@ -104,10 +104,10 @@ $this->beginPage();
                                 <span>Страница подрядчиков </span>
 
                                 <div class="top-menu-inside">
-                                    <a href="<?= Url::to(['/exchange/contractor','specialization'=>'remont-i-otdelka']) ?>" title="" class="top-menu-inside__link">Ремонт и
+                                    <a href="<?= Url::to(['/exchange/contractor/index','specialization'=>'remont-i-otdelka']) ?>" title="" class="top-menu-inside__link">Ремонт и
                                         отделка
                                     </a>
-                                    <a href="<?= Url::to(['/exchange/contractor', 'specialization' => 'stroitelstvo']) ?>" title="" class="top-menu-inside__link">Строительство</a>
+                                    <a href="<?= Url::to(['/exchange/contractor/index', 'specialization' => 'stroitelstvo']) ?>" title="" class="top-menu-inside__link">Строительство</a>
                                 </div>
                             </div>
                             <div class="top-menu__item">

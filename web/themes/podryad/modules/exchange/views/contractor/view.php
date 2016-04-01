@@ -16,10 +16,12 @@ $this->title = $model->profile->metaTitle ? $model->profile->metaTitle : $model-
 $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
 $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(['/exchange/contractor']);
 
-$this->params['breadcrumbs'] = [
-    ['label' => 'Подрядчики', 'url' => ['/exchange/contractor']],
-    $this->title,
-];
+$this->params['breadcrumbs'][] =  ['label' => 'Подрядчики', 'url' => ['/exchange/contractor']];
+if($specializationModel)
+{
+    $this->params['breadcrumbs'][]=['label'=>$specializationModel->title,'url'=>['/exchange/contractor/index','specialization'=>$specializationModel->alias]];
+}
+$this->params['breadcrumbs'][]=$this->title;
 ?>
 <main class="main">
     <section class="contractor-content">

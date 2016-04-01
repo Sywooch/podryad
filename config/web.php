@@ -65,7 +65,8 @@ $config = [
             'showScriptName' => false,
             'rules' => [
 
-                'exchange/<specialization>'=>'/exchange/contractor/index',
+                'exchange/contractor/view/<id:\d+>'=>'/exchange/contractor/view',
+                'exchange/contractor/<specialization>'=>'/exchange/contractor/index',
                 'ochered'=>'/cms/default/pending',
 
                 'biblioteka'=>'/cms/file/index',

@@ -39,6 +39,10 @@ class ContractorController extends Controller{
             $specialization = 'specializacii';
         }
         $specializationModel = Reference::findOne(['alias'=>$specialization]);
+        if($specialization!='specializacii')
+        {
+            \Yii::$app->session->set('contractorSpec', $specializationModel);
+        }
         return $this->render('index',['specializationModel'=>$specializationModel,'specialization'=>$specialization,'contactorList'=>$contactorList,'model'=>$model,'pages'=>$pages]);
     }
 
@@ -50,11 +54,10 @@ class ContractorController extends Controller{
         {
             $this->redirect(['view','id'=>$id]);
         }
+        $specializationModel = \Yii::$app->session->get('contractorSpec');
         $priceList = ContractorPrice::find()->where(['userId'=>$id])->priceOrder()->all();
-
-
         $workTenderList = $model->workTenderList;
-        return $this->render('view',['model'=>$model,'priceList'=>$priceList,'workTenderList'=>$workTenderList]);
+        return $this->render('view',['model'=>$model,'priceList'=>$priceList,'specializationModel'=>$specializationModel,'workTenderList'=>$workTenderList]);
     }
 
     /**
