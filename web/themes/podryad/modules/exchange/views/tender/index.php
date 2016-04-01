@@ -11,7 +11,7 @@ use app\modules\cms\models\Settings;
 
 $title = Settings::get('tender','metaTitle');
 $this->title = $title ? $title : 'Тендеры';
-
+$h1 = Settings::get('tender', 'h1');
 $this->registerMetaTag(['name' => 'og:title', 'content' => $this->title]);
 $this->registerMetaTag(['name' => 'og:description', 'content' => Settings::get('tender', 'metaDescription')]);
 $this->registerMetaTag(['name' => 'twitter:description', 'content' => Settings::get('tender', 'metaDescription')]);
@@ -23,7 +23,7 @@ $this->params['breadcrumbs'] = [
 ?>
 <main class="main">
     <section class="search-contractor-content">
-        <h1 class="search-contractor-content__title"><?=$this->title?></h1>
+        <h1 class="search-contractor-content__title"><?=$h1?></h1>
             <?=\app\modules\exchange\widgets\SpecializationFilter::widget(['checked'=>$model->specializationIds,'priceUse'=>true,'filterModel' => 'Tender'])?>
         <div class="search-contractor-results">
             <?php if( \Yii::$app->user->isGuest || \Yii::$app->user->can(\app\modules\cms\models\User::ROLE_CUSTOMER)):?>

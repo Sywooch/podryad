@@ -41,7 +41,7 @@ class RegisterForm extends Model{
     {
         return [
             [['role','fio','phone','username','specialization','cityList','password','password2'],'required','on'=>User::ROLE_CONTRACTOR],
-            [['role','fio','username','phone','password','password2'],'required','on'=>User::ROLE_CUSTOMER],
+            [['role','fio','username','phone','password','password2', 'cityList'],'required','on'=>User::ROLE_CUSTOMER],
             ['username','email'],
             ['company','string'],
             ['username','unique','targetClass'=>User::className(),'targetAttribute'=>'username'],

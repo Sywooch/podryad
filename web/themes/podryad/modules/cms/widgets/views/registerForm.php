@@ -28,6 +28,23 @@ use yii\helpers\Html;
         <?=$form->field($model,'company')?>
         <?=$form->field($model,'username')?>
         <?=$form->field($model,'phone')?>
+        <label class="registration-contractor-form__label registration-contractor-form__label--required">
+            <span>Города</span>
+
+            <div class="registration-contractor-form__row">
+                <a href="#" title="" data-click="modal" data-item="#cityList"
+                   class="btn city-registration-contractor-form__btn registration-contractor-form__btn">Выбрать города
+                </a>
+                <em>Максимум 10 городов</em>
+
+                <div class="city-list-selected specialization-list-selected">
+                    <?php foreach ($model->cityList as $specialization): ?>
+                        <?= Html::activeHiddenInput($model, 'cityList[]', ['value' => $specialization]) ?>
+                    <?php endforeach ?>
+                </div>
+                <?= Html::error($model, 'cityList') ?>
+            </div>
+        </label>
         <?=$form->field($model,'password')->passwordInput()?>
         <?=$form->field($model,'password2')->passwordInput()?>
         <?=$form->field($model,'agree')->checkbox(['label'=>\yii\helpers\Html::a('Я согласен с условиями пользования сервисом',['/cms/default/page','path'=>'usloviya'],['target'=>'_blank'])])?>

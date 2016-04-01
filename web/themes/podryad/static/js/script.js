@@ -155,7 +155,7 @@ $(document).ready(function () {
     $('.specialiation-button').click(function () {
         var item = $('#specialization').find('a.active');
         $('._specialization-list-selected').html(' ');
-        $('.mask, .modal__close, .modal, body').removeClass('active');
+        //$('.mask, .modal__close, .modal, body').removeClass('active');
         if (item.length != 0) {
             $('.specialization-registration-contractor-form__btn').html('Изменить специализацию');
         } else {
@@ -186,7 +186,7 @@ $(document).ready(function () {
     $('.city__btn').click(function () {
         var item = $('#cityList').find('a.active');
         $('.city-list-selected').html(' ');
-        $('.mask, .modal__close, .modal, body').removeClass('active');
+        //$('.mask, .modal__close, .modal, body').removeClass('active');
         if (item.length != 0) {
             $('.city-registration-contractor-form__btn').html('Изменить города');
         } else {
@@ -305,7 +305,23 @@ $(document).ready(function () {
         var element = $(this),
             parent = element.parents("#main-specialization-form");
 
+        console.log("click city");
+        console.log($(".modal").size());
+        if ($(".modal").size() > 1) {
+            element.parents(".modal").hide();
+            return false;
+        }
         parent.submit();
+    });
+
+    $(".specialization__btn").click(function () {
+        var element = $(this);
+        console.log("click city");
+        console.log($(".modal").size());
+        if ($(".modal").size() > 1) {
+            element.parents(".modal").hide();
+            return false;
+        }
     });
 
     $("._tender").click(function(){
