@@ -1,6 +1,12 @@
 <?php
 date_default_timezone_set('Asia/Almaty');
 
+
+if (substr_count($_SERVER['REQUEST_URI'],'.php')>0) {
+    header("Location: /", TRUE, 301);
+    exit();
+}
+
 $debug = $_SERVER['REMOTE_ADDR'] == '192.168.56.1';
 $env = $debug ? 'dev' : 'prod';
 
