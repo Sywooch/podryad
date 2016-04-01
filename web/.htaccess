@@ -18,7 +18,7 @@ RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
 # Если файл или каталог не существует, идём к /web/index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php
+RewriteRule . /index.php [L]
 
 #убрать index.php
 RewriteRule ^index.php$ / [R=301,L]
