@@ -100,7 +100,7 @@ $this->beginPage();
                                 <a href="<?=Url::to(['/exchange/tender'])?>" title="" class="top-menu__link">Тендеры</a>
                                 <span>Заявки на ремонт и строительство</span></div>
                             <div class="top-menu__item">
-                                <a title="" class="top-menu__link">Подрядчики</a>
+                                <a title="" class="top-menu__link" href="<?=Url::to(['/exchange/contractor'])?>">Подрядчики</a>
                                 <span>Страница подрядчиков </span>
 
                                 <div class="top-menu-inside">

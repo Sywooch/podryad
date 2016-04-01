@@ -21,14 +21,25 @@ if($specializationModel)
     $this->registerMetaTag(['name'=>'keywords','content'=>$specializationModel->metaKeywords]);
     $this->registerMetaTag(['name'=>'description','content'=>$specializationModel->metaDescription]);
 }
-$this->params['breadcrumbs'] = [
-    'Подрядчики - '.$specializationModel->title,
-];
-
+$breadcrumbs = [];
+if($specializationModel->alias != 'specializacii')
+{
+    $breadcrumbs=[
+        ['label' => 'Подрядчики','url'=>['/exchange/contractor']],
+        $specializationModel->title
+    ];
+}else
+{
+    $breadcrumbs = [
+      'Подрядчики'
+    ];
+}
+$h1 = $specializationModel->alias =='specializacii' ? 'Подрядчики' : $specializationModel->title;
+$this->params['breadcrumbs'] = $breadcrumbs;
 ?>
 <main class="main">
     <section class="search-contractor-content">
-        <h1 class="search-contractor-content__title">Подрядчики - <?=$specializationModel->title?></h1>
+        <h1 class="search-contractor-content__title"><?=$h1?></h1>
             <?= \app\modules\exchange\widgets\SpecializationFilter::widget(['checked'=>$model->specializationIds,'specialization'=>$specialization,'filterModel'=>'Contactor']) ?>
         <div class="search-contractor-results">
             <div class="search-contractor-results-list">

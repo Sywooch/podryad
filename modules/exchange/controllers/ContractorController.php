@@ -42,7 +42,7 @@ class ContractorController extends Controller{
         return $this->render('index',['specializationModel'=>$specializationModel,'specialization'=>$specialization,'contactorList'=>$contactorList,'model'=>$model,'pages'=>$pages]);
     }
 
-    public function actionView($id,$specialization=null)
+    public function actionView($id)
     {
         $model = $this->loadModel($id);
         $specializationModel = null;
@@ -52,11 +52,9 @@ class ContractorController extends Controller{
         }
         $priceList = ContractorPrice::find()->where(['userId'=>$id])->priceOrder()->all();
 
-        if($specialization)
-            $specializationModel = Reference::findOne(['alias'=>$specialization]);
 
         $workTenderList = $model->workTenderList;
-        return $this->render('view',['model'=>$model,'specializationModel'=>$specializationModel,'priceList'=>$priceList,'workTenderList'=>$workTenderList]);
+        return $this->render('view',['model'=>$model,'priceList'=>$priceList,'workTenderList'=>$workTenderList]);
     }
 
     /**
