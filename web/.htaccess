@@ -4,7 +4,7 @@ RewriteEngine on
 
 
 #убрать index.php
-RewriteRule ^index.php$ / [QSA,R]
+RewriteRule ^index.php$ / [R=301,L]
 
 #убрать slash
 RewriteCond %{REQUEST_URI} !\?
