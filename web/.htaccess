@@ -3,6 +3,9 @@ IndexIgnore */*
 RewriteEngine on
 
 
+#убрать index.php
+RewriteRule ^index.php$ / [QSA,R]
+
 #убрать slash
 RewriteCond %{REQUEST_URI} !\?
 RewriteCond %{REQUEST_URI} !\&
