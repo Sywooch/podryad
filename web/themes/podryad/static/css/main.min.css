@@ -3087,6 +3087,7 @@ span.hcc.hc__menu__count {
     margin-bottom: 9px;
     line-height: 14px;
     text-decoration: none;
+    height: 50px;
 }
 
 .news-content-item a:hover {
