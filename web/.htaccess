@@ -19,7 +19,3 @@ RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
-
-#убрать index.php
-RewriteCond %{REQUEST_URI} \.php$
-RewriteRule ^index.php$ / [R=301]
