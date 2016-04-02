@@ -22,7 +22,7 @@ $offersCount = sizeof($offers);
 
 $this->params['breadcrumbs'] = [
   ['label'=>'Тендеры','url'=>['/exchange/tender']],
-    $title
+    $model->h1
 ];
 ?>
 <main class="main">

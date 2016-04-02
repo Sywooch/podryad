@@ -88,7 +88,7 @@ class   Tender extends \yii\db\ActiveRecord
             [['priceMin','priceMax','specializationIds'],'safe','on'=>'filter'],
             ['price','number','on'=>'filter'],
             ['negotiable','checkNegotiable'],
-            [['specializationIds','metaTitle','metaDescription','metaKeywords'],'safe'],
+            [['specializationIds','metaTitle','metaDescription','metaKeywords','h1'],'safe'],
         ];
     }
 
@@ -335,6 +335,7 @@ class   Tender extends \yii\db\ActiveRecord
     public function afterValidate()
     {
         $this->metaTitle = $this->metaTitle ? $this->metaTitle : $this->title;
+        $this->h1 = $this->h1 ? $this->h1 : $this->title;
         parent::afterValidate();
     }
 }

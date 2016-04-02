@@ -10,6 +10,7 @@ class m160402_154637_tenderMeta extends Migration
         $this->addColumn('{{%tender}}','metaTitle',Schema::TYPE_STRING);
         $this->addColumn('{{%tender}}','metaKeywords',Schema::TYPE_STRING);
         $this->addColumn('{{%tender}}','metaDescription',Schema::TYPE_TEXT);
+        $this->addColumn('{{%tender}}','h1',Schema::TYPE_TEXT);
     }
 
     public function down()
@@ -17,6 +18,7 @@ class m160402_154637_tenderMeta extends Migration
         $this->dropColumn('{{%tender}}','metaTitle');
         $this->dropColumn('{{%tender}}','metaKeywords');
         $this->dropColumn('{{%tender}}','metaDescription');
+        $this->dropColumn('{{%tender}}','h1');
         return true;
     }
 

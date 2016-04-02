@@ -25,6 +25,7 @@ use yii\widgets\ActiveForm;
 
             <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
+            <?= $form->field($model, 'h1')->textInput() ?>
             <?= $form->field($model, 'metaTitle')->textInput() ?>
             <?= $form->field($model, 'metaKeywords')->textInput() ?>
             <?= $form->field($model, 'metaDescription')->textarea() ?>
