@@ -42,12 +42,29 @@ class Profile extends \yii\db\ActiveRecord
         return '{{%user_profile}}';
     }
 
-    public function getCityListString()
+    public static function cityDropdown()
+    {
+        $cityModel = \app\modules\cms\models\Reference::findOne(['alias' => 'cityList']);
+        $cityList = \yii\helpers\ArrayHelper::map($cityModel->children(), 'id', 'title');
+        return $cityList;
+    }
+
+    public function getCitySelected()
+    {
+        $data = [];
+        foreach($this->cityLists as $city)
+        {
+            $data[$city->id]=$city->id;
+        }
+        return $data;
+    }
+
+    public function getCityListString($key='title')
     {
         $data = [];
         foreach($this->cityLists as $item)
         {
-            $data[]=$item->title;
+            $data[]=$item->$key;
         }
         return implode(', ',$data);
     }
@@ -80,6 +97,7 @@ class Profile extends \yii\db\ActiveRecord
             'company'=> Yii::t('app', 'Компания'),
             'specialization' => Yii::t('app', 'Специализации'),
             'memo'=>Yii::t('app','Заметка'),
+            'cityList'=>Yii::t('app','Города'),
         ];
     }
 
@@ -129,5 +147,19 @@ class Profile extends \yii\db\ActiveRecord
               'class'=>CmsBehavior::className(),
           ],
         ];
+    }
+
+    public function afterSave($insert,$changesAttributes)
+    {
+        if(sizeof($this->cityList)>0)
+        {
+            //города
+            \Yii::$app->db->createCommand('DELETE FROM {{%user_city}} WHERE userId=' . \Yii::$app->user->id)->execute();
+            foreach ($this->cityList as $cityId) {
+                $model = Reference::findOne($cityId);
+                $this->link('cityLists', $model);
+            }
+        }
+        return parent::afterSave($insert,$changesAttributes);
     }
 }

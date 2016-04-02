@@ -115,13 +115,6 @@ class RegisterForm extends Model{
             }
         }
 
-        //города
-        \Yii::$app->db->createCommand('DELETE FROM {{%user_city}} WHERE userId='.\Yii::$app->user->id)->execute();
-        foreach ($profile->cityList as $cityId) {
-            $model = Reference::findOne($cityId);
-            $profile->link('cityLists', $model);
-        }
-
         $this->id = $user->id;
 
         return $userRegister && $profileRegister;
