@@ -30,9 +30,9 @@ $this->title = 'Объявить тендер';
 
                 <div class="registration-contractor-form__row">
                     <a href="#" title="" data-click="modal" data-item="#specialization" data-type="five-spec"
-                       class="btn registration-contractor-form__btn" data-model="Tender">Выбрать специализацию
+                       class="btn registration-contractor-form__btn" data-model="Tender">Выбрать специализации
                     </a>
-                    <em>Максимум 5 специализаций</em>
+                    <em>Максимум 10 специализаций</em>
 
                     <div class="specialization-list-selected">
                         <?php foreach ($model->specializationIds as $specialization): ?>
