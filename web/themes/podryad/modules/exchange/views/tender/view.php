@@ -9,14 +9,21 @@
  */
 use yii\helpers\Html;
 use yii\helpers\Url;
-$title = $model->title;
-$city = 'г. '.$model->user->profile->city->title;
+$title = $model->metaTitle ? $model->metaTitle : $model->title;
 
-$this->title = $title.' - '.$city;
-$this->registerMetaTag(['description'=>$model->shortext(255,true)]);
-$this->registerMetaTag(['keywords'=>$title.' '.$city]);
+$this->title = $title;
+$this->registerMetaTag(['name' => 'og:title', 'content' => $this->title]);
+$this->registerMetaTag(['name' => 'og:description', 'content' => $model->metaDescription]);
+$this->registerMetaTag(['name' => 'twitter:description', 'content' => $model->metaDescription]);
+$this->registerMetaTag(['name' => 'keywords', 'content' => $model->metaKeywords]);
+$this->registerMetaTag(['name' => 'description', 'content' => $model->metaDescription]);
 $offers = $model->offers;
 $offersCount = sizeof($offers);
+
+$this->params['breadcrumbs'] = [
+  ['label'=>'Тендеры','url'=>['/exchange/tender']],
+    $title
+];
 ?>
 <main class="main">
     <div class="tender_cotainer">
@@ -28,7 +35,7 @@ $offersCount = sizeof($offers);
 					<h1><?=$model->title?></h1>
 				</div>
 				<span  class="accaunt_tender_item_btn ">Тендер <?=$model->statusTitle?></span>
-                <div class="contractor-block-info__service">Город: <?=$model->user->profile->city->title?></div>
+                <div class="contractor-block-info__service">Города: <?=$model->user->profile->getCityListString()?></div>
                 <div class="contractor-block-info__service"><?=$model->specializationsString?></div>
                 <p><?=$model->description?>
                 </p>

@@ -18,7 +18,7 @@ $this->registerMetaTag(['name' => 'twitter:description', 'content' => Settings::
 $this->registerMetaTag(['name'=>'keywords','content'=>Settings::get('tender','metaKeywords')]);
 $this->registerMetaTag(['name'=>'description','content'=>Settings::get('tender','metaDescription')]);
 $this->params['breadcrumbs'] = [
-    $this->title
+    $h1
 ];
 ?>
 <main class="main">
@@ -65,7 +65,7 @@ $this->params['breadcrumbs'] = [
                                 <a href="<?=$row->url?>"><?=Html::encode($row->title)?></a>
 								 <a href="<?=\yii\helpers\Url::to(['/exchange/tender/view','id'=>$row->id])?>" title="" class="accaunt_tender_item_btn tender_status">Тендер <?=$row->statusTitle?></a>
                             </div>
-                            <div class="tenders__text">Город: <?=$row->user->profile->city->title?></div>
+                            <div class="tenders__text">Города: <?=$row->user->profile->getCityListString()?></div>
                             <div class="tenders__text"><?=$row->specializationsString?></div>
                             <div class="tenders__text">
                                 Предложений: <?=$row->offersCount?>

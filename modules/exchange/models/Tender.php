@@ -74,7 +74,7 @@ class   Tender extends \yii\db\ActiveRecord
             [['title','description'],'required','on'=>'new'],
 
             [['title','description','phone','agree'],'required','on'=>'create'],
-            ['specializationIds','required','message'=>'«Необходимо выбрать "Специализации»'],
+            ['specializationIds','required','message'=>'«Необходимо выбрать "Специализации»','on'=>'create'],
             ['file','file','on'=>'create','skipOnEmpty'=>true],
             ['agree', 'required', 'message' => 'Вы должны принять условия!', 'isEmpty' => function ($value) {
                 return $value == 0;
@@ -88,7 +88,7 @@ class   Tender extends \yii\db\ActiveRecord
             [['priceMin','priceMax','specializationIds'],'safe','on'=>'filter'],
             ['price','number','on'=>'filter'],
             ['negotiable','checkNegotiable'],
-            ['specializationIds','safe'],
+            [['specializationIds','metaTitle','metaDescription','metaKeywords'],'safe'],
         ];
     }
 
@@ -330,6 +330,12 @@ class   Tender extends \yii\db\ActiveRecord
             return false;
 
         return \Yii::$app->user->id == $this->contractorId;
+    }
+
+    public function afterValidate()
+    {
+        $this->metaTitle = $this->metaTitle ? $this->metaTitle : $this->title;
+        parent::afterValidate();
     }
 }
 

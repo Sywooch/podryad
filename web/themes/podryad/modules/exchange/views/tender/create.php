@@ -34,11 +34,10 @@ $this->title = 'Объявить тендер';
                     </a>
                     <em>Максимум 10 специализаций</em>
 
-                    <div class="specialization-list-selected">
+                    <div class="specialization-list-selected _specialization-list-selected">
                         <?php foreach ($model->specializationIds as $specialization): ?>
                             <?= Html::activeHiddenInput($model, 'specializationIds[]', ['value' => $specialization]) ?>
                         <?php endforeach ?>
-                        <?=Html::activeHiddenInput($model,'specializationId',['class'=>'Tender-specialization'])?>
                     </div>
                 </div>
             </label>

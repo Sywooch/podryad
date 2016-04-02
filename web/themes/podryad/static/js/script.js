@@ -139,7 +139,7 @@ $(document).ready(function () {
         }
         var item = $('#specialization').find('a.active');
         if (countSpec == 'five-spec') {
-            var equallySpec = 5;
+            var equallySpec = 10;
         }
         var countItem = item.length;
         if (countItem == equallySpec) {
@@ -153,7 +153,7 @@ $(document).ready(function () {
     });
 
     $('.specialiation-button').click(function () {
-        var item = $('#specialization').find('a.active');
+        var item = $('#specialization .active');
         $('._specialization-list-selected').html(' ');
         $('.mask, .modal__close, .modal, body').removeClass('active');
         if (item.length != 0) {
@@ -171,6 +171,7 @@ $(document).ready(function () {
         }else if(model == 'Contactor'){
             name = '[specializationIds][]';
         }
+
         item.each(function (index, element) {
             $('._specialization-list-selected').append('<div class="specialization-list-selected__item">' + $(element).html() + '</div>');
             $("<input>", {

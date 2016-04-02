@@ -9,7 +9,7 @@ use yii\widgets\ActiveForm;
 ?>
 
 <div class="tender-form">
-
+    <?=Html::errorSummary($model)?>
     <?php $form = ActiveForm::begin([
         'options'=>[
             'enctype'=>'multipart/form-data',
@@ -24,6 +24,10 @@ use yii\widgets\ActiveForm;
             <?= $form->field($model, 'title')->textInput(['maxlength' => 300]) ?>
 
             <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
+
+            <?= $form->field($model, 'metaTitle')->textInput() ?>
+            <?= $form->field($model, 'metaKeywords')->textInput() ?>
+            <?= $form->field($model, 'metaDescription')->textarea() ?>
             </div>
 
         </div>
@@ -42,6 +46,7 @@ use yii\widgets\ActiveForm;
                 <?= $form->field($model, 'phone')->textInput(['maxlength' => 32, 'readonly' => true]) ?>
 
                 <?= $form->field($model, 'dateCreate')->textInput(['readonly'=>true]) ?>
+
 
             </div>
         </div>
