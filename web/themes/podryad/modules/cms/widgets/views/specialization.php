@@ -9,10 +9,13 @@
  * @var $modelName string
  * @var $checked array
  */
+
+$btn = \Yii::$app->controller->route == 'cms/default/index' ? 'Найти подрядчиков' : 'Выбрать';
+
 ?>
 <div id="specialization" class="modal specialization _specialization">
     <div class="modal__close">x</div>
-    <div class="modal__title">Выберите специализации<span class="specialization__btn specialiation-button" data-model="<?= $modelName?>">Выбрать</span></div>
+    <div class="modal__title">Выберите специализации<span class="specialization__btn specialiation-button" data-model="<?= $modelName?>"><?=$btn?></span></div>
     <div class="specialization-list">
         <?php foreach($model->children() as $submodel):?>
         <div class="specialization-column" data-category="<?=$submodel->alias?>">

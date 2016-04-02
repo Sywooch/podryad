@@ -27,7 +27,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $settings['descrip
     <div class="main-img__content">
         <div class="main-img__title">Найдите своего Подрядчика не выходя из дома!</div>
         <a href="#" title="" data-click="modal" data-item="#specialization" class="btn btn--search">Выбрать
-            специализацию
+            специализации
         </a>
         <?=\yii\helpers\Html::beginForm(['/exchange/contractor' ],'get',['id'=>'main-specialization-form'])?>
         <?=\app\modules\cms\widgets\Specialization::widget(['modelName'=>'Contactor'])?>
