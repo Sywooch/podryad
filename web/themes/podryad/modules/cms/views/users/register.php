@@ -58,7 +58,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
 
                 <div class="registration-contractor-form__row">
                     <a href="#" title="" data-click="modal" data-item="#specialization"
-                       class="btn specialization-registration-contractor-form__btn registration-contractor-form__btn">Выбрать специализацию
+                       class="btn specialization-registration-contractor-form__btn registration-contractor-form__btn">Выбрать специализации
                     </a>
                     <em>Максимум 10 специализаций</em>
 
