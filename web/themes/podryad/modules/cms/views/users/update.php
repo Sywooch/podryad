@@ -73,13 +73,6 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
                     <?= Html::error($model, 'phone') ?>
                 </div>
             </label>
-            <label class="registration-contractor-form__label"> <span>Заголовок страницы</span>
-
-                <div class="registration-contractor-form__row">
-                    <?= Html::activeTextInput($model, 'metaTitle', ['class' => 'registration-contractor-form__input']) ?>
-                    <?= Html::error($model, 'metaTitle') ?>
-                </div>
-            </label>
             <!--<label class="registration-contractor-form__label"> <span>Ключевые слова</span>
 
                 <div class="registration-contractor-form__row">
@@ -118,7 +111,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
 
                 <div class="registration-contractor-form__row">
                     <a href="#" title="" data-click="modal" data-item="#specialization"
-                       class="btn specialization-registration-contractor-form__btn registration-contractor-form__btn">Выбрать специализацию
+                       class="btn specialization-registration-contractor-form__btn registration-contractor-form__btn">Выбрать специализации
                     </a>
                     <em>Максимум 10 специализаций</em>
 
