@@ -363,6 +363,10 @@ class User extends ActiveRecord  implements IdentityInterface
     public function typeTitle()
     {
         $list = self::typeDropdown();
+        if(!$this->assignment)
+        {
+            return null;
+        }
         return !empty($list[$this->assignment->item_name]) ? $list[$this->assignment->item_name] : '';
     }
 }
