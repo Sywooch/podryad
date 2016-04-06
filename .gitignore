@@ -45,3 +45,5 @@ phpunit.phar
 web/log.txt
 .htaccess
 
+web/themes/podryad/static/css/.sass-cache/*
+web/themes/podryad/static/css/*.map
