@@ -179,7 +179,7 @@ $(document).ready(function () {
                 'class':model+'-specialization',
                 'name':model+name,
                 'value':$(element).data('id')
-            }).appendTo("._specialization-list-selected");
+            }).appendTo("._specialization-list-selected,.specialization-list-selected");
         });
     });
 
