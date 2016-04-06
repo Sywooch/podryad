@@ -88,7 +88,7 @@ $this->registerMetaTag(['name' => 'twitter:description', 'content' => strip_tags
             </div>
             <div class="accaunt_tender_item_city_date">
                 <div class="accaunt_tender_item_city">
-                    Города: <?=$model->profile->getCityList()?>
+                    Города: <?=$model->profile->getCityListString()?>
                 </div>
                 <div class="accaunt_tender_item_date">
                    <?=\Yii::$app->formatter->asDatetime(strtotime($tender->dateCreate))?>
