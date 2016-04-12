@@ -154,7 +154,7 @@ class Profile extends \yii\db\ActiveRecord
         if(sizeof($this->cityList)>0)
         {
             //города
-            \Yii::$app->db->createCommand('DELETE FROM {{%user_city}} WHERE userId=' . \Yii::$app->user->id)->execute();
+            \Yii::$app->db->createCommand('DELETE FROM {{%user_city}} WHERE userId=' . $this->userId)->execute();
             foreach ($this->cityList as $cityId) {
                 $model = Reference::findOne($cityId);
                 $this->link('cityLists', $model);
