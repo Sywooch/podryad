@@ -129,7 +129,7 @@ $(document).ready(function () {
         $('.mask, .modal__close, .modal, body').removeClass('active');
     });
 
-    var equallySpec = 10;
+    var equallySpec = 50;
     var specializationItem = $('#specialization').find('a.active'),
         specializationLength = specializationItem.length;
     if(specializationLength==equallySpec)
