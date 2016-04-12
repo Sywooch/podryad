@@ -128,27 +128,38 @@ $(document).ready(function () {
     $('.mask, .modal__close').click(function () {
         $('.mask, .modal__close, .modal, body').removeClass('active');
     });
+
+    var equallySpec = 10;
+    var specializationItem = $('#specialization').find('a.active'),
+        specializationLength = specializationItem.length;
+    if(specializationLength==equallySpec)
+    {
+        $('#specialization .specialization-item a').addClass('foo');
+        if ($('#specialization .specialization-item a').hasClass('active')) {
+            $(specializationItem).removeClass('foo');
+        }
+    } else {
+        $('#specialization .specialization-item a').removeClass('foo');
+    }
+
     $('.specialization-item a').click(function () {
         var countSpec = $(this).data('type');
         void 0;
-        var equallySpec = 10;
+
         if ($(this).hasClass('foo')) {
             void 0;
         } else {
             $(this).toggleClass('active');
         }
         var item = $('#specialization').find('a.active');
-        if (countSpec == 'five-spec') {
-            var equallySpec = 10;
-        }
         var countItem = item.length;
         if (countItem == equallySpec) {
-            $('.specialization-item a').addClass('foo');
-            if ($('.specialization-item a').hasClass('active')) {
+            $('#specialization .specialization-item a').addClass('foo');
+            if ($('#specialization .specialization-item a').hasClass('active')) {
                 $(item).removeClass('foo');
             }
         } else {
-            $('.specialization-item a').removeClass('foo');
+            $('#specialization .specialization-item a').removeClass('foo');
         }
     });
 
