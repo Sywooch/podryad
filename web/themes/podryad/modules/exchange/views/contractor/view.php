@@ -15,6 +15,15 @@ $this->title = $model->profile->metaTitle ? $model->profile->metaTitle : $model-
 
 $albumList = \app\modules\exchange\models\Album::getAllByUser($model->id);
 $previous = Url::previous('contractor') ? Url::previous('contractor') : Url::to(['/exchange/contractor']);
+$metaTitle = $model->profile->metaTitle;
+$metaDescription = $model->profile->metaDescription;
+$metaKeywords = $model->profile->metaKeywords;
+
+$this->registerMetaTag(['name' => 'og:title', 'content' => $metaTitle]);
+$this->registerMetaTag(['name' => 'og:description', 'content' => $metaDescription]);
+$this->registerMetaTag(['name' => 'twitter:description', 'content' => $metaDescription]);
+$this->registerMetaTag(['name' => 'keywords', 'content' => $metaKeywords]);
+$this->registerMetaTag(['name' => 'description', 'content' => $metaKeywords]);
 
 $this->params['breadcrumbs'][] =  ['label' => 'Подрядчики', 'url' => ['/exchange/contractor']];
 if($specializationModel)
