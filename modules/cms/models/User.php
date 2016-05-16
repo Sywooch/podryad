@@ -348,7 +348,7 @@ class User extends ActiveRecord  implements IdentityInterface
 
     public function getCitylist()
     {
-        return $this->hasMany(City::className(),['id'=>'cityId'])
+        return $this->hasMany(Reference::className(),['id'=>'cityId'])
             ->viaTable('{{%user_city}}',['userId'=>'id']);
     }
 
