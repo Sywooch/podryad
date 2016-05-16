@@ -23,7 +23,7 @@ $this->registerMetaTag(['name' => 'og:title', 'content' => $metaTitle]);
 $this->registerMetaTag(['name' => 'og:description', 'content' => $metaDescription]);
 $this->registerMetaTag(['name' => 'twitter:description', 'content' => $metaDescription]);
 $this->registerMetaTag(['name' => 'keywords', 'content' => $metaKeywords]);
-$this->registerMetaTag(['name' => 'description', 'content' => $metaKeywords]);
+$this->registerMetaTag(['name' => 'description', 'content' => $metaDescription]);
 
 $this->params['breadcrumbs'][] =  ['label' => 'Подрядчики', 'url' => ['/exchange/contractor']];
 if($specializationModel)

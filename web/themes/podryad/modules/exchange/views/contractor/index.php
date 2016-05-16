@@ -21,7 +21,7 @@ if($specializationModel)
     $this->registerMetaTag(['name' => 'og:description', 'content' => $metaDescription]);
     $this->registerMetaTag(['name' => 'twitter:description', 'content' => $metaDescription]);
     $this->registerMetaTag(['name'=>'keywords','content'=> $metaKeywords]);
-    $this->registerMetaTag(['name'=>'description','content'=> $metaKeywords]);
+    $this->registerMetaTag(['name'=>'description','content'=> $metaDescription]);
 }
 $breadcrumbs = [];
 if($specializationModel->alias != 'specializacii')
