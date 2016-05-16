@@ -296,7 +296,7 @@ class   Tender extends \yii\db\ActiveRecord
             }]);*/
             $query->joinWith(['user'=>function($query) use ($params){
                 return $query->joinWith(['citylist'=>function($subQuery) use ($params){
-                    return $subQuery->andWhere(['{{%city}}.id'=> $params['cityId']->value]);
+                    return $subQuery->andWhere(['{{%reference}}.id'=> $params['cityId']->value]);
                 }]);
             }]);
         }
