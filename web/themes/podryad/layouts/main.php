@@ -227,7 +227,7 @@ $this->beginPage();
             <div class="mask"></div>
             <?php $this->endBody() ?>
 
-            <script src="http://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
+            <script src="<?= $this->theme->getUrl('static/js/slick.min.js') ?>"></script>
             <script src="<?=$this->theme->getUrl('static/js/separate-js/jquery.swipebox.min.js')?>"></script>
             <script src="<?=$this->theme->getUrl('static/js/separate-js/nouislider.min.js')?>"></script>
             <script src="<?=$this->theme->getUrl('static/js/separate-js/jquery.cookie.js')?>"></script>
