@@ -20,6 +20,7 @@ use yii\web\IdentityInterface;
  * @property integer $agree
  * @property Profile $profile
  * @property AuthAssignment $assignment
+ * @property City $cityList
  */
 class User extends ActiveRecord  implements IdentityInterface
 {
@@ -343,6 +344,12 @@ class User extends ActiveRecord  implements IdentityInterface
     public function getAssignment()
     {
         return $this->hasOne(AuthAssignment::className(),['user_id'=>'id']);
+    }
+
+    public function getCitylist()
+    {
+        return $this->hasMany(City::className(),['id'=>'cityId'])
+            ->viaTable('{{%user_city}}',['userId'=>'id']);
     }
 
     public function getTitle()
