@@ -87,7 +87,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
                     <?/*= Html::error($model, 'metaDescription') */?>
                 </div>
             </label>-->
-            <label class="registration-contractor-form__label"> <span>Прикрепить файлы</span>
+            <label class="registration-contractor-form__label"> <span>Ваш логотип</span>
 
                 <div class="registration-contractor-form__row">
                     <?php if( ($image = $profile->imageSrc()) ):?>
@@ -113,7 +113,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
                     <a href="#" title="" data-click="modal" data-item="#specialization"
                        class="btn specialization-registration-contractor-form__btn registration-contractor-form__btn">Выбрать специализации
                     </a>
-                    <em>Максимум 10 специализаций</em>
+                    <em>Максимум 50 специализаций</em>
 
                     <div class="specialization-list-selected _specialization-list-selected">
                         <?php foreach($specializationList as $specialization):?>

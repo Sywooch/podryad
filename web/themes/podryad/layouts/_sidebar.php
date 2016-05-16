@@ -14,7 +14,7 @@ use app\modules\cms\models\Article;
         <?php if( ($item=Article::getOneByCategory(Article::TYPE_STOCK_ALIAS)) ):?>
         <div class="sidebar-news-block">
             <div class="sidebar-news-block__img">
-             <a href="<?= $item->path ?>">   <img src="<?= $item->imageSrc('86x86') ?>" alt="<?= $item->title ?>"></a>
+             <a href="<?= $item->path ?>" title="<?= $item->title ?>">   <img src="<?= $item->imageSrc('86x86') ?>" alt="<?= $item->title ?>"></a>
             </div>
             <div class="sidebar-news-block__content">
                 <a href="<?= $item->path ?>" title="" class="sidebar-news-block__link"><?= $item->title ?></a>
@@ -26,7 +26,7 @@ use app\modules\cms\models\Article;
         <?php foreach(Article::getAllByCategory(Article::TYPE_NEWS_ALIAS,5) as $item):?>
         <div class="sidebar-news-block">
             <div class="sidebar-news-block__img">
-               <a href="<?= $item->path ?>">  <img src="<?=$item->imageSrc('86x86')?>" alt="<?=$item->title?>"></a>
+               <a href="<?= $item->path ?>"  title="<?= $item->title ?>">  <img src="<?=$item->imageSrc('86x86')?>" alt="<?=$item->title?>"></a>
             </div>
             <div class="sidebar-news-block__content">
                 <a href="<?=$item->path?>" title="" class="sidebar-news-block__link"><?=$item->title?></a>

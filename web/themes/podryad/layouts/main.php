@@ -63,7 +63,7 @@ $this->beginPage();
             <?=\app\modules\cms\widgets\Notice::widget()?>
             <header class="header mainpage">
                 <div class="header__wrapper">
-                    <a href="<?=Url::home()?>" title="" class="header__logo"></a>
+                    <a href="<?=Url::home()?>" title="Строительный портал Podryad.kz" class="header__logo"></a>
                     <div class="header__content">
 
                         <div class="header-tender">
@@ -75,7 +75,7 @@ $this->beginPage();
                                     <span>20 городов</span><span>354 подрядчика</span><span>231 тендер</span>
                                 </div>-->
                             <?php }else if(\Yii::$app->user->identity->role != \app\modules\cms\models\User::ROLE_CONTRACTOR){?>
-                                <a href="<?=Url::to(['/exchange/tender/create'])?>" title="" class="btn btn--tender">Объявить тендер</a>
+                                <a href="<?=Url::to(['/exchange/tender/create'])?>" title="Подайте заявку на ремонт или строительство" class="btn btn--tender">Объявить тендер</a>
                             <?php }?>
                         </div>
 
@@ -100,7 +100,7 @@ $this->beginPage();
                                 <a href="<?=Url::to(['/exchange/tender'])?>" title="" class="top-menu__link">Тендеры</a>
                                 <span>Заявки на ремонт и строительство</span></div>
                             <div class="top-menu__item">
-                                <a title="" class="top-menu__link" href="<?=Url::to(['/exchange/contractor'])?>">Подрядчики</a>
+                              <div class="mm">Подрядчики</div><!--<?=Url::to(['/exchange/contractor'])?>--></a>
                                 <span>Страница подрядчиков </span>
 
                                 <div class="top-menu-inside">
@@ -140,40 +140,40 @@ $this->beginPage();
                 <div class="footer__wrapper">
 				<div class="cr">
                    <div class="footer_logo">
-					 <a href="<?=Url::home()?>" title="" ><img src="<?=$this->theme->getUrl('static/images/content/footer_log.png')?>" /></a>
+					 <a href="<?=Url::home()?>" title="Поиск строительных подрядчиков" ><img src="<?=$this->theme->getUrl('static/images/content/footer_log.png')?>" alt="Строительный сайт Podryad.kz" /></a>
 					 
 				   </div>
 				   <div class="footer_menu">
 				    <nav class="top-menu footer-menu-container">
                             <div class="top-menu__item footer_m">
-                                <a href="<?=Url::home()?>" title="" class="top-menu__link">Главная</a>
+                                <a href="<?=Url::home()?>" title="Главная страница сайта" class="top-menu__link">Главная</a>
                                 
                             </div>
                             <div class="top-menu__item footer_m">
-                                <a href="<?=Url::to(['/exchange/tender'])?>" title="" class="top-menu__link">Тендеры</a>
+                                <a href="<?=Url::to(['/exchange/tender'])?>" title="Заявки на ремонт и строительство" class="top-menu__link">Тендеры</a>
                               
                             </div>
                             <div class="top-menu__item footer_m">
-                                <a href="<?= Url::to(['/exchange/contractor','specialization'=>'remont-i-otdelka']) ?>" title="" class="top-menu__link footer_link">Ремонт и
+                                <a href="<?= Url::to(['/exchange/contractor','specialization'=>'remont-i-otdelka']) ?>" title="Поиск подрядчиков для ремонта и отделки" class="top-menu__link footer_link">Ремонт и
                                         отделка</a>
                                 
                             </div>
 							<div class="top-menu__item footer_m">
-<a href="<?= Url::to(['/exchange/contractor', 'specialization' => 'stroitelstvo']) ?>" title="" class="top-menu__link footer_link">Строительство</a>
+<a href="<?= Url::to(['/exchange/contractor', 'specialization' => 'stroitelstvo']) ?>" title="Поиск подрядчиков для строительства" class="top-menu__link footer_link">Строительство</a>
                                 
                             </div>
                             <div class="top-menu__item footer_m">
-                                <a href="<?=Url::to(['/cms/article/list','type'=>\app\modules\cms\models\Article::TYPE_NEWS_ALIAS])?>" title="" class="top-menu__link">Новости</a>
+                                <a href="<?=Url::to(['/cms/article/list','type'=>\app\modules\cms\models\Article::TYPE_NEWS_ALIAS])?>" title="Статьи о ремонте и строительстве" class="top-menu__link">Новости</a>
 
                             </div>
                             <div class="top-menu__item footer_m">
-                                <a href="#" data-click="modal" data-item="#back_hunter" title="" class="top-menu__link">
+                                <a href="#" data-click="modal" data-item="#back_hunter" title="Напишите нам" class="top-menu__link">
                                     Обратная связь
                                 </a>
 
                             </div>
                             <div class="top-menu__item footer_m">
-                                <a href="<?= Url::to(['/cms/default/page', 'path' => 'faq']) ?>" title="" class="top-menu__link">
+                                <a href="<?= Url::to(['/cms/default/page', 'path' => 'faq']) ?>" title="Часто задаваемые вопросы" class="top-menu__link">
                                     FAQ
                                 </a>
 
@@ -184,7 +184,18 @@ $this->beginPage();
 					Разработано в <a href="http://astanacreative.kz/" target="_blanck" rel="nofollow">Astanacreative.kz</a>
 				   </div>
 				    <div class="uslovia_footer">
-				 <a href="/cms/default/page?path=usloviya" target="_blanck">Условия использования сервиса </a>
+				 <a href="/cms/default/page?path=usloviya" title="Пользовательское соглашение" target="_blanck">Условия использования сервиса </a>
+				 <!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t14.2;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='1' height='1'><\/a>")
+//--></script><!--/LiveInternet-->
 				   </div>
 			    </div>
                 </div>

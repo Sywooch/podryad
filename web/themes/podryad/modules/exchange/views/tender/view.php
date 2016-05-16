@@ -145,6 +145,7 @@ $this->params['breadcrumbs'] = [
             </div>
 			<?php endforeach?>
         </div>
+        </div>
          <div class="tender_zakazchik">
 				<div class="tender_zakaz_titile">
 					Заказчик
@@ -194,6 +195,6 @@ $this->params['breadcrumbs'] = [
 					</div>
 				</div>
 			</div>
-			   </div>
+			   
        
 </main>

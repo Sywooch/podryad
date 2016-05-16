@@ -28,9 +28,9 @@ $this->registerMetaTag(['name' => 'description', 'content' => Settings::get('new
 <ul >
         <?php if (($row = Article::getOneByCategory(Article::TYPE_STOCK_ALIAS))): ?>
             
-			<li class="news-content-item">
+			<li class="news-content-item asd">
 				<div class="news-content-img">
-               <a href="<?= $row->path ?>"> <img src="<?= $row->imageSrc('275x214') ?>" alt="<?= $item->title ?>"></a>
+               <a href="<?= $row->path ?>" title="<?= $row->title ?>"> <img src="<?= $row->imageSrc('275x214') ?>" alt="<?= $item->title ?>"></a>
 				</div>
                 <a href="<?= $row->path ?>"><?= $row->title ?></a>
                 <span><?= $row->date ?></span>
@@ -41,7 +41,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Settings::get('new
         <?php foreach ($items as $row): ?>
         <li class="news-content-item">
 			  <div class="news-content-img">
-			  <a href="<?= $row->path ?>"> 
+			  <a href="<?= $row->path ?>"  title="<?= $row->title ?>"> 
             <img src="<?= $row->imageSrc('275x214')?>" alt="<?=$item->title?>"></a>
 			</div>
             <a href="<?=$row->path?>"><?= $row->title?></a>
