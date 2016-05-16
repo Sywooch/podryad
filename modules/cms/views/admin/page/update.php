@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => 'Картинка',
                 'content' => \app\modules\cms\widgets\ImageUpload::widget(['model'=>$model,'primaryKey'=>$model->id,'maxNumberOfFiles'=>100]),
             ],
-            [
+           /* [
                 'id'=>'price',
                 'label' => 'Услуга',
                 'content' => \app\modules\cms\widgets\admin\Price::widget(['object'=>$model,'objectId'=>$model->id]),
@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label'=>'Персонал',
                 'content'=>$this->render('_personal',['page'=>$model]),
                 'active'=> $tab == 'personal',
-            ],
+            ],*/
         ],
     ]);
     ?>

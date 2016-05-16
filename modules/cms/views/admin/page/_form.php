@@ -18,9 +18,9 @@ use yii\widgets\ActiveForm;
         <!-- div class="col-md-4">
             <?=$form->field($model,'group')->textInput(['placeholder'=>'Группа (необязательно для заполнения)'])?>
         </div -->
-        <div class="col-md-4">
+        <!--div class="col-md-4">
             <?= $form->field($model, 'parentId')->dropDownList($model->dropDown(), ['prompt' => ' --- ']) ?>
-        </div>
+        </div-->
         <div class="col-md-4">
             <?= $form->field($model, 'title')->textInput(['maxlength' => 255]) ?>
         </div>
@@ -32,9 +32,9 @@ use yii\widgets\ActiveForm;
 
     <?php if($model->isNewRecord==false):?>
         <div class="row">
-            <div class="col-md-4">
-                <?= $form->field($model, 'childId')->dropDownList($model->dropdown()) ?>
-            </div>
+           <!-- <div class="col-md-4">
+                <?/*= $form->field($model, 'childId')->dropDownList($model->dropdown()) */?>
+            </div>-->
             <div class="col-md-4">
                 <?= $form->field($model, 'articleShow')->checkbox() ?>
             </div>

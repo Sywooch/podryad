@@ -24,18 +24,18 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            [
+           /* [
                 'attribute'=>'parentId',
                 'value'=>function($model) {
                     if($model->category)
                         return $model->category->title;
                 },
                 'filter'=>$model->dropDown(),
-            ],
+            ],*/
             'title',
             'urlCode',
 //            'description:ntext',
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn','template'=>'{update}{delete}'],
         ],
     ]); ?>
 
