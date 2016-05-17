@@ -10,7 +10,7 @@
  * @var $checked array
  */
 ?>
-<div id="<?=$template?>" class="modal _specialization">
+<div id="<?=$template?>" class="modal _specialization" data-count="10">
     <div class="modal__close">x</div>
     <div class="modal__title">Выберите города<span class="city__btn specialization__btn" data-model="<?= $modelName?>">Выбрать</span></div>
     <div class="specialization-list">

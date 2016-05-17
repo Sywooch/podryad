@@ -129,21 +129,27 @@ $(document).ready(function () {
         $('.mask, .modal__close, .modal, body').removeClass('active');
     });
 
-    var equallySpec = 50;
-    var specializationItem = $('#specialization').find('a.active'),
-        specializationLength = specializationItem.length;
-    if(specializationLength==equallySpec)
-    {
-        $('#specialization .specialization-item a').addClass('foo');
-        if ($('#specialization .specialization-item a').hasClass('active')) {
-            $(specializationItem).removeClass('foo');
+    $("._specialization").each(function () {
+       var parents = $(this),
+           countSpec = parents.data('count'),
+           items = parents.find('a.active'),
+           countItem = items.length;
+
+        if (countSpec == countItem) {
+            $('.specialization-item a',parents).addClass('foo');
+            if ($('.specialization-item a',parents).hasClass('active')) {
+                $(items).removeClass('foo');
+            }
+        } else {
+            $('.specialization-item a',parents).removeClass('foo');
         }
-    } else {
-        $('#specialization .specialization-item a').removeClass('foo');
-    }
+    });
+
 
     $('.specialization-item a').click(function () {
-        var countSpec = $(this).data('type');
+        var elem = $(this),
+            parents = elem.parents('._specialization'),
+            countSpec = parents.data('count');
         void 0;
 
         if ($(this).hasClass('foo')) {
@@ -151,15 +157,15 @@ $(document).ready(function () {
         } else {
             $(this).toggleClass('active');
         }
-        var item = $('#specialization').find('a.active');
+        var item = parents.find('a.active');
         var countItem = item.length;
-        if (countItem == equallySpec) {
-            $('#specialization .specialization-item a').addClass('foo');
-            if ($('#specialization .specialization-item a').hasClass('active')) {
+        if (countItem == countSpec) {
+            $('.specialization-item a',parents).addClass('foo');
+            if ($('.specialization-item a', parents).hasClass('active')) {
                 $(item).removeClass('foo');
             }
         } else {
-            $('#specialization .specialization-item a').removeClass('foo');
+            $('.specialization-item a', parents).removeClass('foo');
         }
     });
 
