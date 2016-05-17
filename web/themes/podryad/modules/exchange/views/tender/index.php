@@ -54,7 +54,7 @@ $this->params['breadcrumbs'] = [
                     <div class="contractor-block tenders">
                         <div class="contractor-block-avatar">
 						<a href="<?=$row->url?>">	
-						<img src="<?=$row->imageSrc('199x159')?>" alt="">
+						<img src="<?=$row->user->profile->imageSrc('197x125')?>" alt="">
 						</a>
                             <div class="tenders__name"><?=$row->user->title?>
 							
