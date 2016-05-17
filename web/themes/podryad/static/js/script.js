@@ -2,11 +2,18 @@ $(document).ready(function () {
     
     $('.contractor-block-info-show').click(function () {
         if ($(this).hasClass('active')) {
-            $(this).removeClass('active').parent().children('span').empty();
+            $(this).removeClass('active').parent().children('span,a.site-link').remove();
             $(this).html($(this).text().replace('скрыть', 'показать'));
         } else {
             var dataShow = $(this).data('show');
-            $(this).addClass('active').parent().append('<span>' + dataShow + '</span>');
+            if(/\.[a-z]{2,3}$/.test(dataShow))
+            {
+                dataShow = /^(http|https)/.test(dataShow) ? dataShow : 'http://'+dataShow;
+                dataShow = '<a href="'+dataShow+'" target="_blank" rel="nofollow" class="site-link">'+dataShow+'</a>';
+            }else {
+                dataShow = '<span>' + dataShow + '</span>';
+            }
+            $(this).addClass('active').parent().append(dataShow);
             $(this).html($(this).text().replace('показать', 'скрыть'));
         }
         return false;

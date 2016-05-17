@@ -81,7 +81,7 @@ $this->params['breadcrumbs'][]=$this->title;
 		
                 <?php if (($site = $model->profile->site)): ?>
                     <div class="contractor-block-info__contact contractor-block-info__contact--site">
-                        <a href="#" title="" data-show="<?= $site ?>" class="contractor-block-info-show">показать сайт
+                        <a href="" title="" data-show="<?= $site ?>" class="contractor-block-info-show">показать сайт
                         </a>
                     </div>
                 <?php endif ?>
