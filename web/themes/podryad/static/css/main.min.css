@@ -7334,4 +7334,76 @@ input#tender-negotiable {
 .btn.registration-contractor-form__btn {
     font-size: 1.3em;
 }
+
+.project-house{
+    padding:0 20px 0 0;
+}
+
+.project-house__title{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.project-house__list {
+    padding:0
+}
+
+.project-house__item {
+    margin-bottom: 20px;
+    overflow: hidden;
+    list-style: none;
+    border: 1px solid #ccc;
+    padding:10px;
+}
+
+.project-house__content{
+    overflow: hidden;
+}
+
+.project-house__item-image {
+    width: 200px;
+    margin-right: 20px;
+    float:left;
+}
+
+.project-house__item-title {
+    font-size: 18px;
+    margin-bottom:10px;
+}
+
+.project-house__item-description {
+    font-size: 14px;
+    min-height: 50px;
+    line-height: 18px;
+}
+
+.project-house__linklist{
+    clear: both;
+    margin: 5px 0 0 0;
+}
+
+.project-house__linklist-title{
+    font-size: 14px;
+}
+
+.project-house__linklist-list{
+    padding: 0;
+    overflow: hidden;
+}
+
+.project-house__linklist-title{
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.project-house__linklist-item{
+    width: 33.3%;
+    list-style: none;
+    float:left;
+}
+
+.project-house__house__linklist-a{
+    text-align: center;
+    display: block;
+}
 /*# sourceMappingURL=main.min.css.map */
