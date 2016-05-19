@@ -95,11 +95,14 @@ class Profile extends \yii\db\ActiveRecord
             'userId' => Yii::t('app', 'User ID'),
             'cityId' => Yii::t('app', 'Город'),
             'phone' => Yii::t('app', 'Телефон'),
+            'phone2' => Yii::t('app', 'Дополнительный телефон'),
+            'phone3' => Yii::t('app', 'Дополнительный телефон'),
             'fio'=> Yii::t('app', 'Ф.И.О'),
             'company'=> Yii::t('app', 'Компания'),
             'specialization' => Yii::t('app', 'Специализации'),
-            'memo'=>Yii::t('app','Заметка'),
+            'memo'=>Yii::t('app','Описание'),
             'cityList'=>Yii::t('app','Города'),
+            'file'=>Yii::t('app','Логотип'),
         ];
     }
 

@@ -9,6 +9,7 @@ use app\modules\cms\models\User;
 use app\modules\cms\models\UserSearch;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * UserController implements the CRUD actions for User model.
@@ -93,6 +94,23 @@ class UserController extends AdminController
         $profile = $model->profile;
         
         if ($model->load(Yii::$app->request->post()) && $model->save() && $model->profile->load($_POST) && $model->profile->save()) {
+
+            //загрузка логотипа
+            $profile->file = UploadedFile::getInstance($profile, 'file');
+            if ($profile->file) {
+
+                if ($profile->image) {
+                    $profile->image->delete();
+                }
+
+                $image = new \app\modules\cms\models\Image();
+                $image->model = $profile::className();
+                $image->primaryKey = $profile->userId;
+                $image->file = $profile->file;
+                $image->create();
+            }
+            //загрузка логотипа
+
             return $this->redirect(['index']);
         } else {
             $model->password = '';
