@@ -80,6 +80,7 @@ class RegisterForm extends Model{
             'metaTitle' => Yii::t('app', 'Заголовок страницы'),
             'metaDescription' => Yii::t('app', 'Описание для поисковика'),
             'metaKeywords' => Yii::t('app', 'Ключевые слова для поисковика'),
+            'file'=>'Ваш логотип',
         ];
     }
 
@@ -98,6 +99,20 @@ class RegisterForm extends Model{
         $profile->attributes = $this->attributes;
         $profile->userId = $user->id;
         $profileRegister = $profile->save();
+
+        $this->file = UploadedFile::getInstance($this, 'file');
+        if ($this->file) {
+
+            if ($profile->image) {
+                $profile->image->delete();
+            }
+
+            $image = new \app\modules\cms\models\Image();
+            $image->model = $profile::className();
+            $image->primaryKey = $profile->userId;
+            $image->file = $this->file;
+            $image->create();
+        }
 
         $user->emailSend();
         $user->emailSend(1);

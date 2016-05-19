@@ -24,7 +24,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
         </div>
         <?=Html::errorSummary([$model],['class'=>'registration-contractor-content__text'])?>
 
-            <?= Html::beginForm()?>
+            <?= Html::beginForm('', 'post', ['enctype' => 'multipart/form-data'])?>
             <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Ф.И.О</span>
 
                 <div class="registration-contractor-form__row">
@@ -45,6 +45,22 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
                 <div class="registration-contractor-form__row">
                     <?= Html::activeTextInput($model, 'phone', ['class' => 'registration-contractor-form__input']) ?>
                     <?= Html::error($model, 'phone') ?>
+                </div>
+            </label>
+            <label class="registration-contractor-form__label"> <span>Ваш логотип</span>
+
+                <div class="registration-contractor-form__row">
+                    <div class="type_file">
+                        <div class="form-group field-reviews-file">
+                            <input type="hidden" value="">
+                            <?= Html::activeFileInput($model, 'file', ['onchange' => 'document.getElementById("fileName").value=this.value']) ?>
+
+                            <div class="help-block"></div>
+                        </div>
+                        <div class="fonTypeFile"></div>
+                        <input type="text" class="inputFileVal" placeholder="выберите файл" readonly="readonly"
+                               id="fileName">
+                    </div>
                 </div>
             </label>
             <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>E-mail</span>

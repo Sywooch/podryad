@@ -20,7 +20,8 @@ use yii\helpers\Html;
             'action'=>['/cms/users/register','scenario'=>\app\modules\cms\models\User::ROLE_CUSTOMER],
             'validationUrl'=>['/cms/users/register-validate','scenario'=>\app\modules\cms\models\User::ROLE_CUSTOMER],
             'options'=>[
-                'class'=>'form'
+                'class'=>'form',
+                'enctype'=>'multipart/form-data'
             ],
             'enableAjaxValidation'=>true,
         ])?>
@@ -28,6 +29,22 @@ use yii\helpers\Html;
         <?=$form->field($model,'company')?>
         <?=$form->field($model,'username')?>
         <?=$form->field($model,'phone')?>
+        <label class="registration-contractor-form__label"> <span>Ваш логотип</span>
+
+            <div class="registration-contractor-form__row">
+                <div class="type_file">
+                    <div class="form-group field-reviews-file">
+                        <input type="hidden" value="">
+                        <?= Html::activeFileInput($model, 'file', ['onchange' => 'document.getElementById("fileName").value=this.value']) ?>
+
+                        <div class="help-block"></div>
+                    </div>
+                    <div class="fonTypeFile"></div>
+                    <input type="text" class="inputFileVal" placeholder="выберите файл" readonly="readonly"
+                           id="fileName">
+                </div>
+            </div>
+        </label>
         <label class="registration-contractor-form__label registration-contractor-form__label--required">
             <span>Города</span>
 
