@@ -73,6 +73,17 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
                     <?= Html::error($model, 'phone') ?>
                 </div>
             </label>
+            <label class="registration-contractor-form__label"> <span>Допллнительные телефоны</span>
+
+                <div class="registration-contractor-form__row">
+                    <?= Html::activeTextInput($model, 'phone2', ['class' => 'registration-contractor-form__input']) ?>
+                    <?= Html::error($model, 'phone2') ?>
+                </div>
+                <div class="registration-contractor-form__row nolabel">
+                    <?= Html::activeTextInput($model, 'phone3', ['class' => 'registration-contractor-form__input']) ?>
+                    <?= Html::error($model, 'phone3') ?>
+                </div>
+            </label>
             <!--<label class="registration-contractor-form__label"> <span>Ключевые слова</span>
 
                 <div class="registration-contractor-form__row">

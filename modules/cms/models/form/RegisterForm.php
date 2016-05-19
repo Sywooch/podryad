@@ -36,6 +36,8 @@ class RegisterForm extends Model{
     public $metaTitle;
     public $metaKeywords;
     public $metaDescription;
+    public $phone2;
+    public $phone3;
 
     public function rules()
     {
@@ -54,7 +56,7 @@ class RegisterForm extends Model{
             }],
             ['file','file','skipOnEmpty'=>true],
             [['role', 'fio', 'phone', 'cityList'], 'required', 'on' => 'update'],
-            [['password','password2','site','adres','metaTitle','metaDescription','metaKeywords'],'safe'],
+            [['password','password2','site','adres','metaTitle','metaDescription','metaKeywords','phone2','phone3'],'safe'],
         ];
     }
 
@@ -71,6 +73,8 @@ class RegisterForm extends Model{
             'agree' => 'Условия пользования сервисом',
             'cityId' => Yii::t('app', 'Город'),
             'phone' => Yii::t('app', 'Телефон'),
+            'phone2' => Yii::t('app', 'Дополнительный телефон'),
+            'phone3' => Yii::t('app', 'Дополнительный телефон'),
             'fio' => Yii::t('app', 'Ф.И.О'),
             'specialization' => Yii::t('app', 'Специализации'),
             'cityList' => Yii::t('app', 'Города'),
@@ -114,8 +118,12 @@ class RegisterForm extends Model{
             $image->create();
         }
 
-        $user->emailSend();
-        $user->emailSend(1);
+        if(!YII_DEBUG)
+        {
+            $user->emailSend();
+            $user->emailSend(1);
+        }
+
 
         $login = new LoginForm();
         $login->username = $this->username;

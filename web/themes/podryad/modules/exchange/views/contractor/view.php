@@ -31,6 +31,12 @@ if($specializationModel)
     $this->params['breadcrumbs'][]=['label'=>$specializationModel->title,'url'=>['/exchange/contractor/index','specialization'=>$specializationModel->alias]];
 }
 $this->params['breadcrumbs'][]=$this->title;
+
+$phones = [$model->profile->phone];
+if($model->profile->phone2)
+    $phones[]= $model->profile->phone2;
+if($model->profile->phone3)
+    $phones[] = $model->profile->phone3;
 ?>
 <main class="main">
     <section class="contractor-content">
@@ -69,8 +75,8 @@ $this->params['breadcrumbs'][]=$this->title;
                 </div>
 				<div class="info_block contractor">
                 <div class="contractor-block-info__contact contractor-block-info__contact--phone">
-                    <a href="#" title="" data-show="<?=$model->profile->phone?>" class="contractor-block-info-show">показать
-                        номер
+                    <a href="#" title="" data-show="<?=implode('<br>',$phones)?>" class="contractor-block-info-show">
+                        показать номер<?php if($model->profile->phone2) echo 'a'?>
                     </a>
                 </div>
                 <div class="contractor-block-info__contact contractor-block-info__contact--email">

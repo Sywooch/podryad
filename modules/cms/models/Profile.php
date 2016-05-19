@@ -23,6 +23,8 @@ use Yii;
  * @property string $metaTitle
  * @property string $metaDescription
  * @property string $metaKeywords
+ * @property string $phone2
+ * @property string $phone3
  * @property Reference $city
  * @property Reference[] $specializations
  * @property Reference[] $cityList
@@ -78,7 +80,7 @@ class Profile extends \yii\db\ActiveRecord
             [['cityId'], 'integer'],
             [['phone'], 'string', 'max' => 255],
             [['fio','company'], 'string', 'max' => 64],
-            [['specialization','memo','cityList'],'safe'],
+            [['specialization','memo','cityList', 'phone2', 'phone3'],'safe'],
             ['file','file','skipOnEmpty'=>true],
             [['site','adres','metaDescription','metaKeywords','metaTitle'],'safe'],
         ];

@@ -5387,6 +5387,11 @@ html.swipebox-html.swipebox-touch {
     vertical-align: top;
     width: 450px;
 }
+
+.registration-contractor-form__row.nolabel{
+    margin-left: 180px;
+}
+
 .registration-contractor-form__row em {
     color: #444;
     display: block;
