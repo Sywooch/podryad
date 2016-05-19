@@ -22,7 +22,13 @@ use yii\widgets\ActiveForm;
 
 <!--                    --><?//= $form->field($model, 'alias')->textInput(['maxlength' => true]) ?>
 
-                    <?= $form->field($model, 'file')->fileInput() ?>
+                    <div class="file-row">
+                        <?php if(($image=$model->image)):?>
+                            <img src="<?=$image->imageSrc('100x100')?>" alt="">
+                        <?php endif?>
+                        <?= $form->field($model, 'file')->fileInput() ?>
+                    </div>
+                    
 
                     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
                 </div>
