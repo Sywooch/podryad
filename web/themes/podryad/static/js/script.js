@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+
     $('.contractor-block-info-show').click(function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active').parent().children('span,a.site-link').remove();

@@ -9,6 +9,11 @@
 use yii\helpers\Html;
 use app\modules\cms\models\Settings;
 
+$this->registerJsFile(
+    $this->theme->getUrl('static/js/scrollSave.js'),
+    ['depends' => \yii\web\JqueryAsset::className()]
+);
+
 $title = Settings::get('tender','metaTitle');
 $this->title = $title ? $title : 'Тендеры';
 $h1 = Settings::get('tender', 'h1');

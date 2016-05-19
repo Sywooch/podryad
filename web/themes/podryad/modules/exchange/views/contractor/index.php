@@ -11,6 +11,12 @@
  * @var $contactorList \app\modules\exchange\models\Contactor[]
  * @var $pages \yii\data\Pagination
  */
+
+$this->registerJsFile(
+    $this->theme->getUrl('static/js/scrollSave.js'),
+    ['depends'=>\yii\web\JqueryAsset::className()]
+);
+
 $title = \app\modules\cms\models\Settings::get('contractor','listTitle-'.$specializationModel->alias);
 $metaDescription = \app\modules\cms\models\Settings::get('contractor','metaDescription-'.$specializationModel->alias);
 $metaKeywords = \app\modules\cms\models\Settings::get('contractor','metaKeywords-'.$specializationModel->alias);
