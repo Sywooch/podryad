@@ -6,10 +6,10 @@ $(document).ready(function () {
             $(this).html($(this).text().replace('скрыть', 'показать'));
         } else {
             var dataShow = $(this).data('show');
-            if(/\.[a-z]{2,3}$/.test(dataShow))
+            if(/\.[a-z]{2,3}$/.test(dataShow) && dataShow.indexOf('@')==-1)
             {
                 dataShow = /^(http|https)/.test(dataShow) ? dataShow : 'http://'+dataShow;
-                dataShow = '<a href="'+dataShow+'" target="_blank" rel="nofollow" class="site-link">'+dataShow+'</a>';
+                dataShow = '<a href="'+dataShow+'" target="_blank" rel="nofollow" class="site-link"><span>'+dataShow+'</span></a>';
             }else {
                 dataShow = '<span>' + dataShow + '</span>';
             }
