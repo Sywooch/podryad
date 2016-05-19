@@ -22,6 +22,11 @@ $this->registerMetaTag(['name'=>'description','content'=>$metaKeywords]);
             <?php foreach($modelList as $key=>$projectHouse):?>
             <li class="project-house__item">
                 <div class="project-house__content">
+
+                    <div class="project-house__item-number">
+                        <?= $projectHouse->id ?>
+                    </div>
+
                     <img src="<?=$projectHouse->image->imageSrc('200x150')?>" alt="<?=$projectHouse->title?> <?=$projectHouse->id?>" class="project-house__item-image">
 
                     <div class="project-house__item-title">
