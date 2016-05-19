@@ -6,7 +6,7 @@ use \app\modules\cms\models\Settings;
 use yii\helpers\Url;
 use yii\helpers\Html;
 
-$this->title = 'Проекты домов';
+$this->title = Settings::get('projectHouse-index','title');
 
 $metaDescription = Settings::get('projectHouse-index','metaDescription');
 $metaKeywords = Settings::get('projectHouse-index','metaKeywords');
@@ -16,7 +16,7 @@ $this->registerMetaTag(['name'=>'description','content'=>$metaKeywords]);
 ?>
 <main class="main">
     <section class="project-house">
-        <div class="project-house__title"><?= $this->title ?></div>
+        <h1 class="project-house__title"><?= $this->title?></h1>
         <?php if($modelList):?>
         <ul class="project-house__list">
             <?php foreach($modelList as $key=>$projectHouse):?>
