@@ -111,7 +111,7 @@ class UserController extends AdminController
             }
             //загрузка логотипа
 
-            return $this->redirect(['index']);
+            return $this->redirect(['update','id'=>$id]);
         } else {
             $model->password = '';
             return $this->render('update', [
