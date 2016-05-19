@@ -39,6 +39,9 @@ use yii\helpers\Url;
                         <a href="<?= Url::to(['/exchange/admin/tender']) ?>">Тендера</a>
                     </li>
                     <li>
+                        <a href="<?= Url::to(['/exchange/admin/projecthouse']) ?>">Проекты домов</a>
+                    </li>
+                    <li>
                         <a href="<?= Url::to(['/exchange/admin/settings']) ?>">Настройки</a>
                     </li>
                     <!--<li>
