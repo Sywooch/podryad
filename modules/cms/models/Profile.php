@@ -106,6 +106,8 @@ class Profile extends \yii\db\ActiveRecord
             'cityList'=>Yii::t('app','Города'),
             'file'=>Yii::t('app','Логотип'),
             'h1'=>Yii::t('app','H1'),
+            'adres'=>Yii::t('app','Адрес'),
+            'site'=>Yii::t('app','Сайт'),
         ];
     }
 
