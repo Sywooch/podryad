@@ -5,6 +5,7 @@ namespace app\modules\cms\models;
 use app\modules\cms\components\CmsBehavior;
 use app\modules\exchange\models\Image as ExchangeImage;
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "{{%user_profile}}".
@@ -30,11 +31,12 @@ use Yii;
  * @property Reference[] $specializations
  * @property Reference[] $cityList
  * @property array $specialization
- * @method string imageSrc(string $size = '100x100', string $method = Thumbler::METHOD_NOT_BOXED)
+ * @method string imageSrc($size = '100x100', $method = Thumbler::METHOD_NOT_BOXED)
  */
 class Profile extends \yii\db\ActiveRecord
 {
     public $specialization;
+    public $specializationList;
     public $cityList;
     public $file;
     /**
@@ -82,7 +84,7 @@ class Profile extends \yii\db\ActiveRecord
             [['phone'], 'string', 'max' => 255],
             [['fio','company'], 'string', 'max' => 64],
             ['h1','string','max'=>128],
-            [['specialization','memo','cityList', 'phone2', 'phone3'],'safe'],
+            [['specialization','memo','cityList', 'phone2', 'phone3','specializationList'],'safe'],
             ['file','file','skipOnEmpty'=>true],
             [['site','adres','metaDescription','metaKeywords','metaTitle'],'safe'],
         ];
@@ -108,6 +110,7 @@ class Profile extends \yii\db\ActiveRecord
             'h1'=>Yii::t('app','H1'),
             'adres'=>Yii::t('app','Адрес'),
             'site'=>Yii::t('app','Сайт'),
+            'specializationList'=>'Специализации',
         ];
     }
 
@@ -179,6 +182,21 @@ class Profile extends \yii\db\ActiveRecord
                 $this->link('cityLists', $model);
             }
         }
+
+        //специализации
+        if ($this->specializationList) {
+            Yii::$app->db->createCommand('DELETE FROM {{%user_specialization}} WHERE userId=' . $this->userId)->execute();
+            foreach ($this->specializationList as $specialiationId) {
+                $model = Reference::findOne($specialiationId);
+                $this->link('specializations', $model);
+            }
+        }
+
         return parent::afterSave($insert,$changesAttributes);
+    }
+
+    public function specializationDropdown()
+    {
+        return ArrayHelper::map($this->specializations,'id','title');
     }
 }

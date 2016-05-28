@@ -39,34 +39,34 @@ class CategoryBehavior extends Behavior{
         return $this->getParents();
     }
 
-    public function dropDown($notId=null)
+    public function dropdown($all = true,$notId = null)
     {
         $data = $this->getParents();
         $results = $tree = [];
-        $results[0]=' --- ';
-        self::makeTree($data,0,$tree);
-        if($this->owner->isNewRecord)
-        {
-            foreach ($tree as $item) {
-                if ($notId == $item->id)
-                    continue;
+//        $results[0] = ' --- ';
+        self::makeTree($data, ($all ? 0 : $this->owner->id), $tree);
+        /* if($this->owner->isNewRecord)
+         {*/
+        foreach ($tree as $item) {
+            if ($notId == $item->id)
+                continue;
 
-                $title = $item->level ? str_repeat('-', $item->level - 1) . ' ' . $item->title : $item->title;
-                $results[$item->id] = $title;
-            }
-        }else
+            $title = $item->level ? str_repeat('-', $item->level - 1) . ' ' . $item->title : $item->title;
+            $results[$item->id] = $title;
+        }
+        /*}else
         {
             if($this->owner->parent)
             {
                 $results[$this->owner->parent->id] = $this->owner->parent->title;
             }
-            if(!empty($data[$this->owner->parentId]))
+            if(!empty($tree[$this->owner->parentId]))
             {
-                foreach ($data[$this->owner->parentId] as $item) {
+                foreach ($tree[$this->owner->parentId] as $item) {
                     $results[$item->id] = str_repeat('-', $item->level - 1) . ' ' .$item->title;
                 }
             }
-        }
+        }*/
 
         return $results;
     }

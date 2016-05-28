@@ -8,6 +8,8 @@ use yii\widgets\ActiveForm;
 /* @var $profile app\modules\cms\models\Profile */
     /* @var $form yii\widgets\ActiveForm */
 
+
+$spicialiationHelper = \app\modules\cms\models\Reference::findOne(['alias'=>'specializacii']);
 ?>
 
 <div class="user-form">
@@ -52,6 +54,8 @@ use yii\widgets\ActiveForm;
                     $profile->cityList = $profile->getCitySelected();
                     echo $form->field($profile, 'cityList')->listBox(\app\modules\cms\models\Profile::cityDropdown(), ['multiple' => true]) ?>
 
+
+
                     <?= $form->field($profile, 'adres')->textInput() ?>
                     <?= $form->field($profile, 'site')->textInput() ?>
                     <?= $form->field($profile, 'h1')->textInput() ?>
@@ -59,6 +63,32 @@ use yii\widgets\ActiveForm;
                     <?= $form->field($profile, 'metaKeywords')->textInput() ?>
 
                     <?= $form->field($profile, 'metaDescription')->textarea() ?>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Персональные данные пользователя
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="">Выбор специализации</label>
+                                <?= Html::dropDownList('specializationSelect', '', $spicialiationHelper->dropdown(false), ['size' => 15, 'class' => 'form-control _specializationSelect', 'multiple' => 'multiple']) ?>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="button" id="left" value="<"/>
+                            <input type="button" id="right" value=">"/>
+                        </div>
+                        <div class="col-md-5">
+                            <label for="">Специализации</label>
+                            <?= Html::dropDownList('Profile[specializationList]', '', $profile->specializationDropdown(), ['size' => 15, 'class' => 'form-control', 'multiple' => 'multiple','id'=>'profile-specializationlist']) ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,3 +104,31 @@ use yii\widgets\ActiveForm;
     </div>
 
 </div>
+
+<?php
+$this->registerJs('
+ $(function () {
+        $("#profile-specializationlist option").attr("selected","selected");
+        function moveItems(origin, dest) {
+            $(origin).find(\':selected\').clone().appendTo(dest);
+        }
+
+        function remoteItem(origin) {
+            $(origin).find(\':selected\').remove();
+        }
+
+        $("#left").click(function(){
+            remoteItem(\'#profile-specializationlist\');
+        });
+
+        $("#right").click(function () {
+            moveItems(\'._specializationSelect\',\'#profile-specializationlist\');
+            $("#profile-specializationlist option").attr("selected","selected");
+        });
+
+        $("#profile-specializationlist").mouseleave(function(){
+            $("#profile-specializationlist option").attr("selected","selected");
+        });
+    });
+');
+?>
