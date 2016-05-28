@@ -87,7 +87,7 @@ $this->params['breadcrumbs'] = $breadcrumbs;
                                     показать
                                 </a>
                             </div>
-                            <?=\app\modules\cms\widgets\Rate::widget(['model'=>$contactor,'primaryKey'=>$contactor->id])?>
+                            <?//=\app\modules\cms\widgets\Rate::widget(['model'=>$contactor,'primaryKey'=>$contactor->id])?>
                             <div class="portfolio-album__count">Фото<span><?=$contactor->photoCount?></span></div>
                             <div class="contractor-block-images">
                                 <?php foreach(\app\modules\exchange\models\Album::getAllImagesByUser($contactor->id,6) as $image):?>

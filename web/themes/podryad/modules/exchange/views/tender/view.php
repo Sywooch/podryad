@@ -140,7 +140,7 @@ $this->params['breadcrumbs'] = [
                     <?php endif ?>
 					</div>
 					
-                    <?= \app\modules\cms\widgets\Rate::widget(['model' => $offer->user, 'primaryKey' => $offer->user->id]) ?>
+                    <?//= \app\modules\cms\widgets\Rate::widget(['model' => $offer->user, 'primaryKey' => $offer->user->id]) ?>
                 </div>
             </div>
 			<?php endforeach?>
