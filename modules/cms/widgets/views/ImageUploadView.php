@@ -8,7 +8,6 @@ use dosamigos\fileupload\FileUploadUI;
     'model' => $model,
     'attribute' => 'file',
     'url' => ['/cms/admin/image/upload','model'=>$inModel::className(),'primaryKey'=>$primaryKey],
-    'gallery' => false,
     'fieldOptions' => [
         'accept' => 'image/*',
     ],
@@ -22,7 +21,7 @@ use dosamigos\fileupload\FileUploadUI;
 if($fileUploadData)
 {
     $this->registerJs('
-        var $el = $("#image-file-form");
+        var $el = $("#image-file-fileupload");
         var e = {
             isDefaultPrevented:function(){return false}
         };
