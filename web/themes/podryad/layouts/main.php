@@ -243,6 +243,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
             <script src="<?=$this->theme->getUrl('static/js/separate-js/nouislider.min.js')?>"></script>
             <script src="<?=$this->theme->getUrl('static/js/separate-js/jquery.cookie.js')?>"></script>
             <script src="<?=$this->theme->getUrl('static/js/script.js')?>"></script>
+            <script src="<?=$this->theme->getUrl('static/js/scroll/reset.js')?>"></script>
             <!-- Yandex.Metrika counter -->
             <script type="text/javascript"> (function (d, w, c) {
                     (w[c] = w[c] || []).push(function () {

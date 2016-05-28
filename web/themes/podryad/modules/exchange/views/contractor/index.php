@@ -13,7 +13,7 @@
  */
 
 $this->registerJsFile(
-    $this->theme->getUrl('static/js/scrollSave.js'),
+    $this->theme->getUrl('static/js/scroll/save.js'),
     ['depends'=>\yii\web\JqueryAsset::className()]
 );
 

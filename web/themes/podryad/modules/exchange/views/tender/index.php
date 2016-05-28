@@ -10,7 +10,7 @@ use yii\helpers\Html;
 use app\modules\cms\models\Settings;
 
 $this->registerJsFile(
-    $this->theme->getUrl('static/js/scrollSave.js'),
+    $this->theme->getUrl('static/js/scroll/save.js'),
     ['depends' => \yii\web\JqueryAsset::className()]
 );
 
@@ -67,7 +67,7 @@ $this->params['breadcrumbs'] = [
                         </div>
                         <div class="contractor-block-info">
                             <div class="contractor-block-info__name">
-                                <a href="<?=$row->url?>"><?=Html::encode($row->title)?></a>
+                                <a href="<?=$row->url?>" class="contractor-block-info__name-link"><?=Html::encode($row->title)?></a>
 								 <a href="<?=\yii\helpers\Url::to(['/exchange/tender/view','id'=>$row->id])?>" title="" class="accaunt_tender_item_btn tender_status">Тендер <?=$row->statusTitle?></a>
                             </div>
                             <div class="tenders__text">Города: <?=$row->user->profile->getCityListString()?></div>
