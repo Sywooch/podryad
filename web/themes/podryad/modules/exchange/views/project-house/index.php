@@ -11,12 +11,17 @@ $this->title = Settings::get('projectHouse-index','title');
 $metaDescription = Settings::get('projectHouse-index','metaDescription');
 $metaKeywords = Settings::get('projectHouse-index','metaKeywords');
 
+$this->params['breadcrumbs']['label'] = $this->title;
+
 $this->registerMetaTag(['name'=>'description','content'=>$metaDescription]);
 $this->registerMetaTag(['name'=>'description','content'=>$metaKeywords]);
 ?>
 <main class="main">
     <section class="project-house">
         <h1 class="project-house__title"><?= $this->title?></h1>
+        <div class="project-house__description">
+            <?=Settings::get('projectHouse-index','seoText')?>
+        </div>
         <?php if($modelList):?>
         <ul class="project-house__list">
             <?php foreach($modelList as $key=>$projectHouse):?>

@@ -113,6 +113,12 @@ $this->beginPage();
                             <div class="top-menu__item">
                                 <a href="<?=Url::to(['/cms/article/list','type'=>\app\modules\cms\models\Article::TYPE_NEWS_ALIAS])?>" title="" class="top-menu__link">Новости</a>
                                 <span>Статьи, новости, акции</span></div>
+
+                            <div class="top-menu__item">
+                                <a href="<?= Url::to(['/exchange/project-house']) ?>"
+                                   title="" class="top-menu__link">Проекты домов
+                                </a>
+                                <span>Бесплатные проекты домов</span></div>
                             <div class="top-menu__item">
                                 <a href="#" data-click="modal" data-item="#back_hunter" title="" class="top-menu__link">
                                     Обратная связь

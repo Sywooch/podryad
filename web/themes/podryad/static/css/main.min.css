@@ -3680,6 +3680,11 @@ input#tender-negotiable {
 .project-house__title{
     font-size: 20px;
     margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.project-house__description{
+    margin-bottom: 30px;
 }
 
 .project-house__list {
