@@ -62,9 +62,9 @@ if($model->profile->phone3)
                 <?php endif ?>
             </div>
             <div class="contractor-block-info">
-                <div class="contractor-block-info__name">
-                    <?= $model->title ?>
-                </div>
+                <h1 class="contractor-block-info__name">
+                    <?= $model->getTitle(true) ?>
+                </h1>
 				
 				<div class="contractor-block-info__contact contractor-block-info__contact--city">
 				 Города: <?= $model->profile->getCityListString() ?>

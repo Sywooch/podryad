@@ -52,6 +52,7 @@ use yii\widgets\ActiveForm;
                 $profile->cityList = $profile->getCitySelected();
                 echo $form->field($profile, 'cityList')->listBox(\app\modules\cms\models\Profile::cityDropdown(),['multiple'=>true]) ?>
 
+                <?= $form->field($profile, 'h1')->textInput() ?>
                 <?= $form->field($profile, 'metaTitle')->textInput() ?>
                 <?= $form->field($profile, 'metaKeywords')->textInput() ?>
 

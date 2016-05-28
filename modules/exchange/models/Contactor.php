@@ -171,8 +171,12 @@ class Contactor extends User
             ->send();
     }
 
-    public function getTitle()
+    public function getTitle($h1=false)
     {
+      if($h1 && !empty($this->profile->h1))
+      {
+          return $this->profile->h1;
+      }
 
 	  if(!empty($this->profile->company)){
 		  return $this->profile->company;
