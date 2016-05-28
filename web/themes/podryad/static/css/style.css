@@ -1,2 +1,409 @@
-.cr{width:1200px;margin:0 auto}.accaunt_name{width:100%;color:#1883bf;font-size:1.2em;font-weight:700;text-align:center;margin-bottom:10px}.accaunt_block{width:197px;padding:10px;border:1px solid #acacac}.accaunt_block .contractor-block-info__contact{width:100%;margin-bottom:10px}.accaunt_tender_container{width:938px;padding:10px;border:1px solid #acacac}.accaunt_tender_item_head{overflow:hidden;margin-bottom:10px}.accaunt_tender_item.title{font-size:1.225em;border:none;width:80%;float:left}.accaunt_tender_item_btn{position:relative;display:block;box-sizing:border-box;width:147px;height:40px;float:right;text-align:center;text-decoration:none;text-transform:uppercase;color:#ffd200;border-radius:3px;background:-webkit-linear-gradient(top, #1c98ca 0%, #1882be 100%);background:linear-gradient(to bottom, #1c98ca 0%, #1882be 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);text-shadow:0 1px 0 rgba(0,0,0,0.6);font-family:"ReformaGroteskDemiC";font-size:0.975em;line-height:41px}.accaunt_tender_item_city_date{overflow:hidden;margin-bottom:10px}.accaunt_tender_item_city{float:left;clear:both;color:#6a6a6a;font-size:.875em}.accaunt_tender_item_date{float:right;color:#6a6a6a;font-size:.875em}.accaunt_tender_item_biudzhet_predlozheni{overflow:hidden;margin-bottom:10px}.accaunt_tender_item_biudzhet{clear:both;float:left;color:#6a6a6a;font-size:.875em}.accaunt_tender_item_predlozheni{float:right;color:#6a6a6a;font-weight:700;font-size:.875em}.accaunt_tender_item_des{overflow:hidden;color:#999;font-size:.875em}.tender_cotainer .contractor-back{float:left}.tender_item__cotainer{margin-top:15px;width:867px;float:left;clear:both;overflow:hidden}.tender_item__cotainer{margin-top:15px;float:left}.tender_item_des{width:843px;padding:10px;border:1px solid #acacac;overflow:hidden}.tender_item_des_title{width:100%;color:#1883bf;font-size:0.95em;font-weight:700}.tender_item_des p{color:#6a6a6a;font-size:.875em}.tender_item_des_info_status{color:#6a6a6a;float:left}.tender_item_des_info_status span{margin-left:5px;font-size:.875em}.tender_item_des_info_biudzhet{position:relative;color:#6a6a6a;padding-left:25px;font-size:.875em;float:left;margin-left:69px}.tender_item_des_info_biudzhet:before{left:0;position:absolute;display:block;content:"";width:20px;height:20px;margin-top:-2px;background-image:url(../images/content/biudzhet.png)}.tender_item_des_info_photo{position:relative;color:#6a6a6a;padding-left:25px;font-size:.875em;float:left;margin-left:70px;text-decoration:underline}.tender_item{width:843px;padding:10px;border:1px solid #acacac;overflow:hidden;margin-top:15px}.tender_item_des_info_photo:before{left:0;position:absolute;display:block;content:"";width:20px;height:20px;margin-top:-2px;background-image:url(../images/content/biudzhet.png)}.tender_item-avatar{width:197px;float:left}.status_date{color:#6a6a6a;text-align:center;font-size:.875em;margin-top:10px}.status_date span{font-weight:700;font-size:1.2em}.tender_item_content{float:left;width:625px;margin-left:20px}.tender_item_content .contractor-block-info__contact{width:auto;margin-right:20px;float:left;margin-top:15px;margin-bottom:15px}.tender_item_content_cena{clear:both;color:#6a6a6a;font-size:.875em}.tender_item_content_cena span{color:#1883bf;font-weight:700}.tender_item_content p{color:#6a6a6a;font-size:.875em}.tender_item .contractor-block-info__rating{width:70%}.tender_zakazchik{width:296px;padding:10px;overflow:hidden;margin-top:15px;border:1px solid #acacac;float:left;margin-left:15px}.tender_zakaz_titile{width:100%;color:#1883bf;font-size:1.2em;text-align:center;font-weight:700;margin-bottom:15px}.tender_zakaz-avatar{width:133px;overflow:hidden;float:left;margin-right:10px}.tender_zakazchik .contractor-block-info__contact{width:100px;float:left;margin-bottom:5px;margin-left:10px}.tender_zakazchik_name{color:#000000;font-size:0.95em;text-align:center;font-weight:700;padding-top:5px;margin-bottom:10px;overflow:hidden}.zakaz__btn{display:block;box-sizing:border-box;width:169px;float:right;height:37px;text-decoration:none;text-align:center;text-transform:uppercase;color:#ffd200;border-radius:3px;background:-webkit-linear-gradient(top, #1c98ca 0%, #1882be 100%);background:linear-gradient(to bottom, #1c98ca 0%, #1882be 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);text-shadow:0 1px 0 rgba(0,0,0,0.6);font-family:"ReformaGroteskDemiC";font-size:1.125em;line-height:38px;text-align:center}.zakaz_info{overflow:hidden}.form_textarea{box-sizing:border-box;width:100%;height:64px;margin-top:5px;margin-bottom:15px;padding-left:5px}#zakaz_tender{height:285px}.form_textarea_tender{box-sizing:border-box;width:100%;height:70px;margin-top:5px;margin-bottom:15px;padding-left:5px}#restore_password{height:270px}#back_hunter{height:500px}.type_file{position:relative;height:36px;overflow:hidden}.type_file input[type="file"]{position:absolute;top:0;left:0;z-index:2;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0;width:267px}.fonTypeFile{width:200px;height:29px;background:url(../images/content/input.png);position:absolute;top:0;left:0;background-size:contain;z-index:1}.inputFileVal{position:absolute;top:0px;left:5px;z-index:2;height:28px;width:122px;background:none;border:none;overflow:hidden}.contractor-block-info__contact--edit:before{top:-2px;left:1px;background-image:url(../images/content/redaktirovat.png);width:15px;height:19px;background-repeat:no-repeat}.text_restore_password p{color:#999;font-size:1.2em}.error{margin:0 auto;text-align:center}.error p{color:#6a6a6a;font-size:1.2em}.error p a{color:#6a6a6a}.hcc.hc__message__popup{height:132px !important}.breadcrumbs-wrapper{margin:auto;width:1200px}.breadcrumb{padding:8px 15px;margin-bottom:20px;list-style:none;background-color:#f5f5f5;border-radius:4px;display:block}ul.breadcrumb a{color:#009CE3;text-decoration:none}.breadcrumb>li{display:inline-block}.breadcrumb a:hover{text-decoration:underline}.breadcrumb>.active{color:#777}.breadcrumb>li+li:before{padding:0 5px;color:#ccc;content:"/\00a0"}#scrollup{position:fixed;opacity:1;padding:15px 15px 15px;background:#aaa;border-radius:5px;-webkit-border-radius:7px;-moz-border-radius:7px;left:10px;bottom:25px;display:none;cursor:pointer}
+.cr {
+    width: 1200px;
+    margin: 0 auto;
+}
+.accaunt_name {
+    width: 100%;
+    color: #1883bf;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.accaunt_block {
+    width: 197px;
+    padding: 10px;
+    border: 1px solid #acacac;
+}
+.accaunt_block .contractor-block-info__contact {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.accaunt_tender_container {
+    width: 938px;
+    padding: 10px;
+    border: 1px solid #acacac;
+}
+.accaunt_tender_item_head {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.accaunt_tender_item.title {
+    font-size: 1.225em;
+    border: none;
+    width: 80%;
+    float: left;
+}
+.accaunt_tender_item_btn {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 147px;
+    height: 40px;
+    float: right;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffd200;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(top, #1c98ca 0%, #1882be 100%);
+    background: linear-gradient(to bottom, #1c98ca 0%, #1882be 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+    font-family: "ReformaGroteskDemiC";
+    font-size: 1.275em;
+    line-height: 41px;
+}
+.accaunt_tender_item_city_date {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.accaunt_tender_item_city {
+    float: left;
+    clear: both;
+    color: #6a6a6a;
+    font-size: .875em;
+}
+.accaunt_tender_item_date {
+    float: right;
+    color: #6a6a6a;
+    font-size: .875em;
+}
+.accaunt_tender_item_biudzhet_predlozheni {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.accaunt_tender_item_biudzhet {
+    clear: both;
+    float: left;
+    color: #6a6a6a;
+    font-size: .875em;
+}
+.accaunt_tender_item_predlozheni {
+    float: right;
+    color: #6a6a6a;
+    font-weight: 700;
+    font-size: .875em;
+}
+.accaunt_tender_item_des {
+    overflow: hidden;
+    color: #999;
+    font-size: .875em;
+}
+.tender_cotainer .contractor-back {
+    float: left;
+}
+.tender_item__cotainer {
+    margin-top: 15px;
+    width: 867px;
+    float: left;
+    clear: both;
+    overflow: hidden;
+}
+.tender_item__cotainer {
+    margin-top: 15px;
+    float: left;
+}
+.tender_item_des {
+    width: 843px;
+    padding: 10px;
+    border: 1px solid #acacac;
+    overflow: hidden;
+}
+.tender_item_des_title {
+    /* width: 100%; */
+    color: #1883bf;
+    font-size: 0.95em;
+    font-weight: 700;
+    float: left;
+    width: 80%;
+}
+.tender_item_des p {
+    color: #6a6a6a;
+    font-size: .875em;
+}
+.tender_item_des_info_status {
+    color: #6a6a6a;
+    float: left;
+}
+.tender_item_des_info_status span {
+    margin-left: 5px;
+    font-size: .875em;
+}
+.tender_item_des_info_biudzhet {
+    position: relative;
+    color: #6a6a6a;
+    padding-left: 25px;
+    font-size: .875em;
+    float: left;
+    margin-left: 69px;
+}
+.tender_item_des_info_biudzhet:before {
+    left: 0;
+    position: absolute;
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    background-image: url(../images/content/biudzhet.png);
+}
+.tender_item_des_info_photo {
+    position: relative;
+    color: #6a6a6a;
+    padding-left: 25px;
+    font-size: .875em;
+    float: left;
+    margin-left: 70px;
+    text-decoration: underline;
+}
+.tender_item {
+    width: 843px;
+    padding: 10px;
+    border: 1px solid #acacac;
+    overflow: hidden;
+    margin-top: 15px;
+}
+.tender_item_des_info_photo:before {
+    left: 0;
+    position: absolute;
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    background-image: url(../images/content/biudzhet.png);
+}
+.tender_item-avatar {
+    width: 197px;
+    float: left;
+}
+.status_date {
+    color: #6a6a6a;
+    text-align: center;
+    font-size: .875em;
+    margin-top: 10px;
+}
+.status_date span {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+.tender_item_content {
+    float: left;
+    width: 625px;
+    margin-left: 20px;
+}
+.tender_item_content .contractor-block-info__contact {
+    width: auto;
+    margin-right: 20px;
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.tender_item_content_cena {
+    clear: both;
+    color: #6a6a6a;
+    font-size: .875em;
+}
+.tender_item_content_cena span {
+    color: #1883bf;
+    font-weight: 700;
+}
+.tender_item_content p {
+    color: #6a6a6a;
+    font-size: .875em;
+}
+.tender_item .contractor-block-info__rating {
+    width: 70%}
+.tender_zakazchik {
+    width: 296px;
+    padding: 10px;
+    overflow: hidden;
+    margin-top: 15px;
+    border: 1px solid #acacac;
+    float: left;
+    margin-left: 15px;
+}
+.tender_zakaz_titile {
+    width: 100%;
+    color: #1883bf;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.tender_zakaz-avatar {
+    width: 133px;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+}
+.tender_zakazchik .contractor-block-info__contact {
+    width: 100px;
+    float: left;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.tender_zakazchik_name {
+    color: #000000;
+    font-size: 0.95em;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.zakaz__btn {
+    display: block;
+    box-sizing: border-box;
+    width: 169px;
+    float: right;
+    height: 37px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffd200;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(top,  #1c98ca 0%,  #1882be 100%);
+    background: linear-gradient(to bottom,  #1c98ca 0%,  #1882be 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+    font-family: "ReformaGroteskDemiC";
+    font-size: 1.125em;
+    line-height: 38px;
+    text-align: center;
+}
+.zakaz_info {
+    overflow: hidden;
+}
+.form_textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 64px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+#zakaz_tender {
+    height: 285px;
+}
+.form_textarea_tender {
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+#restore_password {
+    height: 270px;
+}
+#back_hunter {
+    height: 500px;
+}
+.type_file {
+    position: relative;
+    height: 36px;
+    overflow: hidden;
+}
+.type_file input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+    width: 267px;
+}
+.fonTypeFile {
+    width: 200px;
+    height: 29px;
+    background: url(../images/content/input.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    z-index: 1;
+}
+.inputFileVal {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    z-index: 2;
+    height: 28px;
+    width: 122px;
+    background: none;
+    border: none;
+    overflow: hidden;
+}
+.contractor-block-info__contact--edit:before {
+    top: -2px;
+    left: 1px;
+    background-image: url(../images/content/redaktirovat.png);
+    width: 15px;
+    height: 19px;
+    background-repeat: no-repeat;
+}
+.text_restore_password p {
+    color: #999;
+    font-size: 1.2em;
+}
+.error {
+    margin: 0 auto;
+    text-align: center;
+}
+.error p {
+    color: #6a6a6a;
+    font-size: 1.2em;
+}
+.error p a {
+    color: #6a6a6a;
+}
+.hcc.hc__message__popup {
+    height: 132px !important;
+}
+.breadcrumbs-wrapper {
+    margin: auto;
+    width: 1200px;
+}
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    display: block;
+}
+ul.breadcrumb a {
+    color: #009CE3;
+    text-decoration: none;
+}
+.breadcrumb>li {
+    display: inline-block;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.breadcrumb>.active {
+    color: #777;
+}
+.breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0"}
+#scrollup {
+    position: fixed;
+    opacity: 1;
+    padding: 15px 15px 15px;
+    background: #aaa;
+    border-radius: 5px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    left: 10px;
+    bottom: 25px;
+    display: none;
+    cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */

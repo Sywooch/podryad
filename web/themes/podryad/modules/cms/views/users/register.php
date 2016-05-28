@@ -25,7 +25,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
         <?=Html::errorSummary([$model],['class'=>'registration-contractor-content__text'])?>
 
             <?= Html::beginForm('', 'post', ['enctype' => 'multipart/form-data'])?>
-            <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Ф.И.О</span>
+            <label class="registration-contractor-form__label registration-contractor-form__label--required"> <span>Ф.И.О.</span>
 
                 <div class="registration-contractor-form__row">
                     <?=Html::activeTextInput($model,'fio',['class'=>'registration-contractor-form__input', 'enableAjaxValidation' => true])?>
@@ -33,7 +33,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
                 </div>
             </label>
             <label class="registration-contractor-form__label">
-                <span>Компания:</span>
+                <span>Компания</span>
 
                 <div class="registration-contractor-form__row">
                     <?= Html::activeTextInput($model, 'company', ['class' => 'registration-contractor-form__input', 'enableAjaxValidation' => true]) ?>
@@ -58,7 +58,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
                     <?= Html::error($model, 'phone3') ?>
                 </div>
             </label>
-            <label class="registration-contractor-form__label"> <span>Ваш логотип</span>
+            <label class="registration-contractor-form__label"> <span>Ваш логотип или фото</span>
 
                 <div class="registration-contractor-form__row">
                     <div class="type_file">
