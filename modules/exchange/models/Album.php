@@ -94,7 +94,7 @@ class Album extends \yii\db\ActiveRecord
     /**
      * @return Album[]
      */
-    public static function getAllByUser($userId)
+    public static function  getAllByUser($userId)
     {
         return self::find()
             ->where(['userId'=>$userId])
