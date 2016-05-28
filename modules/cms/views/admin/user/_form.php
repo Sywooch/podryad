@@ -67,6 +67,7 @@ $spicialiationHelper = \app\modules\cms\models\Reference::findOne(['alias'=>'spe
             </div>
         </div>
 
+        <?php if($model->role == \app\modules\cms\models\User::ROLE_CONTRACTOR):?>
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-body">
@@ -89,6 +90,7 @@ $spicialiationHelper = \app\modules\cms\models\Reference::findOne(['alias'=>'spe
                 </div>
             </div>
         </div>
+        <?php endif?>
 
         <div class="form-group">
             <?php if ($model->isNewRecord): ?>
