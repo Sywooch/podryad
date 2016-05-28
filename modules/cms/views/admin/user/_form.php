@@ -47,7 +47,7 @@ $spicialiationHelper = \app\modules\cms\models\Reference::findOne(['alias'=>'spe
                     Персональные данные пользователя
                 </div>
                 <div class="panel-body">
-                    <?= $form->field($profile, 'memo')->textarea() ?>
+                    <?= $form->field($profile, 'memo')->widget(\app\assets\Redactor::className(),['userOptions'=>['enterMode'=>1,'shiftEnterMode'=>2]]) ?>
                     <?= $form->field($profile, 'file')->fileInput() ?>
                     <?php
 
