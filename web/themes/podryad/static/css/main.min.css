@@ -1383,7 +1383,7 @@ html.swipebox-html.swipebox-touch {
 }
 .header-city {
     margin-top: 30px;
-    width: 185px;
+    width: 155px;
 }
 .header-city__title {
     color: #00acff;
@@ -1940,7 +1940,7 @@ span.hcc.hc__menu__count {
     webkit-box-align: start;
     webkit-box-pack: justify;
     webkit-justify-content: space-between;
-    width: 75%}
+    width: 85%}
 .top-menu__item {
     padding-left: 16px;
     position: relative;
