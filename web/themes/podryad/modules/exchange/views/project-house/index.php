@@ -28,10 +28,6 @@ $this->registerMetaTag(['name'=>'description','content'=>$metaKeywords]);
             <li class="project-house__item">
                 <div class="project-house__content">
 
-                    <div class="project-house__item-number">
-                        <?= $projectHouse->id ?>
-                    </div>
-
                     <img src="<?=$projectHouse->image->imageSrc('200x150')?>" alt="<?=$projectHouse->title?> <?=$projectHouse->id?>" class="project-house__item-image">
 
                     <div class="project-house__item-title">
@@ -49,7 +45,7 @@ $this->registerMetaTag(['name'=>'description','content'=>$metaKeywords]);
                         </li>
                         <li class="project-house__linklist-item">
                             <a href="<?=$projectHouse->googleDisk?>" class="project-house__house__linklist-a"
-                               target="_blank" rel="nofollow">Google Disk</a>
+                               target="_blank" rel="nofollow">OneDrive</a>
                         </li>
                         <li class="project-house__linklist-item">
                             <a href="<?=$projectHouse->skyDrive?>" class="project-house__house__linklist-a"

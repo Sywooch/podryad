@@ -28,123 +28,54 @@ $this->params['breadcrumbs'] = [
 <main class="main">
     <div class="tender_cotainer">
         <a href="<?=\yii\helpers\Url::previous()?>" title="" class="contractor-back">Вернуться к списку тендеров</a>
+
         <div class="tender_item__cotainer">
-		<div class="tender_content_vnutr">
-            <div class="tender_item_des">
-				<div class="tender_item_des_title">
-					<h1><?=$model->title?></h1>
-				</div>
-				<span  class="accaunt_tender_item_btn ">Тендер <?=$model->statusTitle?></span>
-                <div class="contractor-block-info__service">Города: <?=$model->user->profile->getCityListString()?></div>
-                <div class="contractor-block-info__service"><?=$model->specializationsString?></div>
-                <p><?=$model->description?>
-                </p>
-                <div class="tender_item_des_info">
-                    <div class="tender_item_des_info_status">
-                        <b>Тендер открыт:</b> <span><?=$model->date?></span>
-                    </div>
-                    <div class="tender_item_des_info_biudzhet">
-                        Бюджет: <span><b><?=$model->priceString?></b></span>
-                    </div>
-                    <?php if($model->image):?>
-                    <a href="<?=$model->imageSrc('800x600')?>" title="<?= $this->title ?>" class="swipebox">
-                        <div class="tender_item_des_info_photo">
-                            Изображение
-                        </div>
+            <div class="contractor-block tenders tender-view">
+                <div class="contractor-block-avatar">
+                    <a href="<?= $model->url ?>">
+                        <img src="<?= $model->user->profile->imageSrc('197x125') ?>" alt="">
                     </a>
-                    <?php endif?>
+                    <div class="tenders__name"><?= $model->user->title ?>
 
-                    <?php if($model->isMine() == false):?>
-                        <?php if(\Yii::$app->user->isGuest && $model->active == \app\modules\exchange\models\Tender::IS_OPEN){?>
-                            <a href="<?=\yii\helpers\Url::to(['/cms/users/register','scenario'=>\app\modules\cms\models\User::ROLE_CONTRACTOR])?>" title="" class="zakaz__btn">
-                                УЧАствовать в
-                                ТЕНДЕРе
-                            </a>
-                        <?php }elseif(Yii::$app->user->isGuest==false && \Yii::$app->user->identity->role == \app\modules\cms\models\User::ROLE_CONTRACTOR && !in_array(\Yii::$app->user->id,$model->offersListId) && $model->active==\app\modules\exchange\models\Tender::IS_OPEN){?>
-                            <a href="#" title="" data-click="modal" data-item="#zakaz_tender" class="zakaz__btn">
-                                УЧАствовать в
-                                ТЕНДЕРе
-                            </a>
-                        <?php }?>
-
-                    <?=\app\modules\exchange\widgets\OffersForm::widget(['tenderId'=>$model->id])?>
-                    <?php endif;?>
-                </div>
-            </div>
-
-			
-
-            <div class="tender tender_item_count">
-                Предложений: <?=$offersCount?>
-            </div>
-            <?php foreach($offers as $offer):?>
-            <div class="tender_item <?=$model->cssSelected($offer->id)  ?>">
-                <div class="tender_item-avatar">
-                   <a href="<?=\yii\helpers\Url::to(['/exchange/contractor/view','id'=>$offer->user->id])?>"> <img src="<?=$offer->user->profile->imageSrc('197x125')?>" alt="">
-  </a>
-                    <div class="status_date">
-                        <span>Предложение добавлено:</span>
-                        <?=$offer->date?>
                     </div>
                 </div>
-                <div class="tender_item_content">
-
-                    <?php if($model->isMine() && $model->isOpen()):?>
-                    <div class="contractor-block-info__panel">
-                        <a class="contractor-block-info-use" href="<?=\yii\helpers\Url::to(['/exchange/offers/contractor-set','id'=>$offer->id])?>">
-                            Принять
-                        </a>
-                    </div>
-                    <?php endif?>
-
+                <div class="contractor-block-info">
                     <div class="contractor-block-info__name">
-                        <a href="<?=\yii\helpers\Url::to(['/exchange/contractor/view','id'=>$offer->user->id])?>">
-                        <?=$offer->user->title ?>
-                        </a>
-						
+                        <a href="<?= $model->url ?>"
+                           class="contractor-block-info__name-link"><?= Html::encode($model->title) ?></a>
+                        <a href="<?= \yii\helpers\Url::to(['/exchange/tender/view', 'id' => $model->id]) ?>" title=""
+                           class="accaunt_tender_item_btn tender_status">Тендер <?= $model->statusTitle ?></a>
                     </div>
-					<?php if (($city = $offer->user->profile->city->title)): ?>
-                        <div class="contractor-block-info__contact contractor-block-info__contact--city">
-                           Город: <?=$city?>
+                    <div class="tenders__text">Города: <?= $model->user->profile->getCityListString() ?></div>
+                    <div class="tenders__text"><?= $model->specializationsString ?></div>
+                    <div class="tenders__text">
+                        Предложений: <?= $model->offersCount ?>
+                    </div>
+                    <div class="tenders__text"><?= Html::encode($model->description) ?>
+                    </div>
+                    <div class="tenders-info">
+                        <div class="tenders-info__time"><span>Тендер открыт:	     </span><?= $model->date ?>
                         </div>
-                    <?php endif ?>
-                    <div class="tender_item_content_cena">Стоимость работ: <span><?=$offer->price?> тг.</span></div>
-                    <p><?=Html::encode($offer->description)?>
-                    </p>
-					
-					<div class="info_block">
-                    <div class="contractor-block-info__contact contractor-block-info__contact--phone">
-                        <a href="#" title="" data-show="<?= $offer->user->profile->phone ?>" class="contractor-block-info-show">показать
-                            номер
-                        </a>
+                        <div class="tenders-info__budget">Бюджет: <span><?= $model->priceString ?></span></div>
                     </div>
-                    <div class="contractor-block-info__contact contractor-block-info__contact--email">
-                        <a href="#" title="" data-show="<?= $offer->user->username ?>" class="contractor-block-info-show">показать
-                            e-mail
-                        </a>
-                    </div>
-                    <?php if (($site = $offer->user->profile->site)): ?>
-                        <div class="contractor-block-info__contact contractor-block-info__contact--site">
-                            <a href="#" title="" data-show="<?= $site ?>" class="contractor-block-info-show">показать
-                                сайт
+                    <?php if ($model->isMine() == false): ?>
+                        <?php if (\Yii::$app->user->isGuest && $model->active == \app\modules\exchange\models\Tender::IS_OPEN) { ?>
+                            <a href="<?= \yii\helpers\Url::to(['/cms/users/register', 'scenario' => \app\modules\cms\models\User::ROLE_CONTRACTOR]) ?>"
+                               title="" class="tender-btn zakaz__btn">
+                                УЧАствовать в
+                                ТЕНДЕРе
                             </a>
-                        </div>
-                    <?php endif ?>
+                        <?php } elseif (Yii::$app->user->isGuest == false && \Yii::$app->user->identity->role == \app\modules\cms\models\User::ROLE_CONTRACTOR && !in_array(\Yii::$app->user->id, $model->offersListId) && $model->active == \app\modules\exchange\models\Tender::IS_OPEN) { ?>
+                            <a href="#" title="" data-click="modal" data-item="#zakaz_tender" class="tender-btn zakaz__btn">
+                                УЧАствовать в
+                                ТЕНДЕРе
+                            </a>
+                        <?php } ?>
 
-                    <?php if (($address = $offer->user->profile->adres)): ?>
-                        <div class="contractor-block-info__contact contractor-block-info__contact--address">
-                            <a href="#" title="" data-show="<?= $address ?>" class="contractor-block-info-show">показать
-                                адрес
-                            </a>
-                        </div>
-                    <?php endif ?>
-					</div>
-					
-                    <?//= \app\modules\cms\widgets\Rate::widget(['model' => $offer->user, 'primaryKey' => $offer->user->id]) ?>
+                        <?= \app\modules\exchange\widgets\OffersForm::widget(['tenderId' => $model->id]) ?>
+                    <?php endif; ?>
                 </div>
             </div>
-			<?php endforeach?>
-        </div>
         </div>
          <div class="tender_zakazchik">
 				<div class="tender_zakaz_titile">
