@@ -158,7 +158,7 @@ if($model->profile->phone3)
 
                                     <div class="portfolio-slider-big slider-big">
                                         <?php foreach($album->images as $image):?>
-                                        <img src="<?=$image->resize('600x428',\alexBond\thumbler\Thumbler::METHOD_BOXED)?>" alt="">
+                                        <img src="<?=$image->resize('600x428',\alexBond\thumbler\Thumbler::METHOD_CROP_CENTER)?>" alt="">
                                         <?php endforeach?>
                                     </div>
                                     <div class="portfolio-slider-small slider-small">
