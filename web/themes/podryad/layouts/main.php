@@ -173,6 +173,13 @@ $this->beginPage();
 
                             </div>
                             <div class="top-menu__item footer_m">
+                                <a href="<?=Url::to(['/exchange/project-house'])?>" title="Готовые проекты домов"
+                                   class="top-menu__link">
+                                    Проекты домов
+                                </a>
+
+                            </div>
+                            <div class="top-menu__item footer_m">
                                 <a href="#" data-click="modal" data-item="#back_hunter" title="Напишите нам" class="top-menu__link">
                                     Обратная связь
                                 </a>

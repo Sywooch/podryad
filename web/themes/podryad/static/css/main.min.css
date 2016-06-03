@@ -490,7 +490,7 @@ html, body {
 .contractor-block-info__service {
     color: #6a6a6a;
     font-size: .875em;
-    margin: 2px 0 0px;
+    margin: 2px 0 10px 0;
     width: 100%;
     clear: both;
     float: left;
@@ -849,8 +849,9 @@ html, body {
 }
 .portfolio-sliders {
     position: relative;
-    width: 600px;
+    width: 570px;
     float: left;
+    margin-right: 20px;
 }
 .portfolio-slider {
     height: 0;
@@ -863,7 +864,7 @@ html, body {
 }
 .portfolio-slider.active {
     height: auto;
-    overflow: auto;
+    overflow: hidden;
     visibility: visible;
 }
 .portfolio-slider-small {
@@ -889,6 +890,7 @@ html, body {
     position: absolute;
     text-indent: -9999px;
     top: 10px;
+    z-index:13;
 }
 .portfolio-slider-small .slick-next:focus, .portfolio-slider-small .slick-prev:focus {
     outline: none;
@@ -1981,7 +1983,7 @@ span.hcc.hc__menu__count {
 .top-menu__link {
     color: #6a6a6a;
     display: block;
-    font-size: .875em;
+    font-size: .850em;
     margin-top: -3px;
 }
 .top-menu__link:hover {
@@ -2494,7 +2496,7 @@ span.hcc.hc__menu__count {
     width: 622px;
 }
 .contractor-block .contractor-block-info {
-    width: 430px;
+    /*width: 430px;*/
 }
 .search-contractor-results-list-item .contractor-block .contractor-block-info__rating {
     margin-bottom: 5px;
@@ -2503,7 +2505,7 @@ span.hcc.hc__menu__count {
     margin-right: 15px;
 }
 .search-contractor-results-list-item .contractor-block .contractor-block-info__service {
-    margin: 2px 0;
+    margin: 0 0 10px;
 }
 .asd {
     z-index: 2;
@@ -2660,6 +2662,11 @@ span.hcc.hc__menu__count {
     padding-bottom: 5px;
     text-transform: uppercase;
 }
+
+.registration-contractor-form__row.nolabel{
+    margin-left: 183px;
+}
+
 .registration-contractor-form__row input {
     margin-bottom: 11px;
     font-weight: normal;
@@ -2903,7 +2910,7 @@ span.hcc.hc__menu__count {
 }
 .contractor-block-info__contact.contractor-block-info__contact--city {
     padding-left: 0px;
-    margin: 6px 0px 6px;
+    margin: 6px 0px 10px;
     color: #6a6a6a;
     width: 290px;
 }
@@ -3218,6 +3225,19 @@ span.step-icon i {
     border: 1px solid #C8C8C8;
     margin-bottom: 10px;
 }
+
+.contractor-block.tenders.tender-view{
+    position: relative;
+    margin-top:0;
+    padding: 10px 10px 60px 0;
+}
+
+.tender-btn.zakaz__btn{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
 .create_album__title {
     border-bottom: 1px solid #d2d3d5;
     color: #6a6a6a;
@@ -3678,13 +3698,19 @@ input#tender-negotiable {
 }
 
 .project-house__title{
-    font-size: 20px;
-    margin-bottom: 20px;
+    color: #6a6a6a;
+    font-family: "ReformaGroteskDemiC";
+    font-size: 1.875em;
     text-transform: uppercase;
 }
 
 .project-house__description{
     margin-bottom: 30px;
+    color: #6a6a6a;
+}
+
+.project-house__description a, .project-house__description a:visited{
+    color: #6a6a6a;
 }
 
 .project-house__list {
@@ -3717,14 +3743,17 @@ input#tender-negotiable {
 }
 
 .project-house__item-title {
-    font-size: 18px;
-    margin-bottom:10px;
+    color: #1883bf;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .project-house__item-description {
     font-size: 14px;
     min-height: 50px;
     line-height: 18px;
+    color: #6a6a6a;
 }
 
 .project-house__linklist{
@@ -3744,6 +3773,7 @@ input#tender-negotiable {
 .project-house__linklist-title{
     font-size: 14px;
     margin: 10px 0;
+    color: #6a6a6a;
 }
 
 .project-house__linklist-item{
@@ -3755,5 +3785,6 @@ input#tender-negotiable {
 .project-house__house__linklist-a{
     text-align: center;
     display: block;
+    color: #1883bf;
 }
 /*# sourceMappingURL=main.min.css.map */
