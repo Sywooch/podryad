@@ -45,11 +45,11 @@ $this->registerMetaTag(['name'=>'description','content'=>$metaKeywords]);
                         </li>
                         <li class="project-house__linklist-item">
                             <a href="<?=$projectHouse->googleDisk?>" class="project-house__house__linklist-a"
-                               target="_blank" rel="nofollow">OneDrive</a>
+                               target="_blank" rel="nofollow">Google disk</a>
                         </li>
                         <li class="project-house__linklist-item">
                             <a href="<?=$projectHouse->skyDrive?>" class="project-house__house__linklist-a"
-                               target="_blank" rel="nofollow">Skydrive</a>
+                               target="_blank" rel="nofollow">OneDrive</a>
                         </li>
                     </ul>
                 </div>

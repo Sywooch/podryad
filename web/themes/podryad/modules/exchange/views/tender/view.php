@@ -41,10 +41,10 @@ $this->params['breadcrumbs'] = [
                 </div>
                 <div class="contractor-block-info">
                     <div class="contractor-block-info__name">
-                        <a href="<?= $model->url ?>"
-                           class="contractor-block-info__name-link"><?= Html::encode($model->title) ?></a>
-                        <a href="<?= \yii\helpers\Url::to(['/exchange/tender/view', 'id' => $model->id]) ?>" title=""
-                           class="accaunt_tender_item_btn tender_status">Тендер <?= $model->statusTitle ?></a>
+                        <span
+                           class="contractor-block-info__name-link"><?= Html::encode($model->title) ?></span>
+                        <span title=""
+                           class="accaunt_tender_item_btn tender_status">Тендер <?= $model->statusTitle ?></span>
                     </div>
                     <div class="tenders__text">Города: <?= $model->user->profile->getCityListString() ?></div>
                     <div class="tenders__text"><?= $model->specializationsString ?></div>
