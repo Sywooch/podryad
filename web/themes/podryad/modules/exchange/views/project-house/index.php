@@ -7,6 +7,7 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 
 $this->title = Settings::get('projectHouse-index','title');
+$h1 = Settings::get('projectHouse-index', 'h1');
 
 $metaDescription = Settings::get('projectHouse-index','metaDescription');
 $metaKeywords = Settings::get('projectHouse-index','metaKeywords');
@@ -18,7 +19,7 @@ $this->registerMetaTag(['name'=>'description','content'=>$metaKeywords]);
 ?>
 <main class="main">
     <section class="project-house">
-        <h1 class="project-house__title"><?= $this->title?></h1>
+        <h1 class="project-house__title"><?= $h1?></h1>
         <div class="project-house__description">
             <?=Settings::get('projectHouse-index','seoText')?>
         </div>
