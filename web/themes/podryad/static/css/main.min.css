@@ -3702,6 +3702,7 @@ input#tender-negotiable {
     font-family: "ReformaGroteskDemiC";
     font-size: 1.875em;
     text-transform: uppercase;
+    margin: 14px 0 25px 0;
 }
 
 .project-house__description{
