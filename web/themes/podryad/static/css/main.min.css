@@ -6,6 +6,11 @@ body {
     font-size: 16px;
     line-height: 17px;
 }
+
+h1 {
+    font-weight: normal;
+}
+
 article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
     display: block;
 }
@@ -3703,6 +3708,8 @@ input#tender-negotiable {
     font-size: 1.875em;
     text-transform: uppercase;
     margin: 14px 0 25px 0;
+    border-bottom: 1px solid #d2d3d5;
+    padding-bottom: 5px;
 }
 
 .project-house__description{
