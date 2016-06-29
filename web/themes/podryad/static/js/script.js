@@ -6,7 +6,7 @@ $(document).ready(function () {
             $(this).html($(this).text().replace('скрыть', 'показать'));
         } else {
             var dataShow = $(this).data('show');
-            if(/[a-z]\.[a-z]{2,3}/.test(dataShow) && dataShow.indexOf('@')==-1)
+            if(/^(?:([a-z]+):(?:([a-z]*):)?\/\/)?(?:([^:@]*)(?::([^:@]*))?@)?((?:[a-z0-9_-]+\.)+[a-z]{2,}|localhost|(?:(?:[01]?\d\d?|2[0-4]\d|25[0-5])\.){3}(?:(?:[01]?\d\d?|2[0-4]\d|25[0-5])))(?::(\d+))?(?:([^:\?\#]+))?(?:\?([^\#]+))?(?:\#([^\s]+))?$/i.test(dataShow) && dataShow.indexOf('@')==-1)
             {
                 dataShow = /^(http|https)/.test(dataShow) ? dataShow : 'http://'+dataShow;
                 dataShow = '<a href="'+dataShow+'" target="_blank" rel="nofollow" class="site-link"><span>'+dataShow+'</span></a>';
