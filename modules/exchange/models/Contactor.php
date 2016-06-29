@@ -118,11 +118,7 @@ class Contactor extends User
 
     private function getRandomIds()
     {
-        $orderIdsList = [];
-        $allUserIdList = self::find()->select(['id'])->orderBy('rand()')->all();
-        foreach ($allUserIdList as $user) {
-            $orderIdsList[] = $user->id;
-        }
+        $orderIdsList = ArrayHelper::map(Contactor::find()->orderBy('rand()'),'id','id');
         return implode(',', $orderIdsList);
     }
 
