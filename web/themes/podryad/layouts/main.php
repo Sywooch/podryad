@@ -94,38 +94,38 @@ $this->beginPage();
                         </div>
                         <nav class="top-menu">
                             <div class="top-menu__item">
-                                <a href="<?=Url::home()?>" title="" class="top-menu__link">Главная</a>
+                                <a href="<?=Url::home()?>" title="Главная страница" class="top-menu__link">Главная</a>
                                 <span>Главная страница сайта</span></div>
                             <div class="top-menu__item">
-                                <a href="<?=Url::to(['/exchange/tender'])?>" title="" class="top-menu__link">Тендеры</a>
+                                <a href="<?=Url::to(['/exchange/tender'])?>" title="Список строительных тендеров" class="top-menu__link">Тендеры</a>
                                 <span>Заявки на ремонт и строительство</span></div>
                             <div class="top-menu__item">
                               <div class="mm">Подрядчики</div><!--<?=Url::to(['/exchange/contractor'])?>--></a>
                                 <span>Страница подрядчиков </span>
 
                                 <div class="top-menu-inside">
-                                    <a href="<?= Url::to(['/exchange/contractor/index','specialization'=>'remont-i-otdelka']) ?>" title="" class="top-menu-inside__link">Ремонт и
+                                    <a href="<?= Url::to(['/exchange/contractor/index','specialization'=>'remont-i-otdelka']) ?>" title="Каталог подрядчиков Казахстана для ремонта" class="top-menu-inside__link">Ремонт и
                                         отделка
                                     </a>
-                                    <a href="<?= Url::to(['/exchange/contractor/index', 'specialization' => 'stroitelstvo']) ?>" title="" class="top-menu-inside__link">Строительство</a>
+                                    <a href="<?= Url::to(['/exchange/contractor/index', 'specialization' => 'stroitelstvo']) ?>" title="Каталог строительных подрядчиков Казахстана" class="top-menu-inside__link">Строительство</a>
                                 </div>
                             </div>
                             <div class="top-menu__item">
-                                <a href="<?=Url::to(['/cms/article/list','type'=>\app\modules\cms\models\Article::TYPE_NEWS_ALIAS])?>" title="" class="top-menu__link">Новости</a>
+                                <a href="<?=Url::to(['/cms/article/list','type'=>\app\modules\cms\models\Article::TYPE_NEWS_ALIAS])?>" title="Статьи и новости" class="top-menu__link">Новости</a>
                                 <span>Статьи, новости, акции</span></div>
 
                             <div class="top-menu__item">
                                 <a href="<?= Url::to(['/exchange/project-house']) ?>"
-                                   title="" class="top-menu__link">Проекты домов
+                                   title="Каталог проектов домов для бесплатного скачивания" class="top-menu__link">Проекты домов
                                 </a>
                                 <span>Бесплатные проекты домов</span></div>
                             <div class="top-menu__item">
-                                <a href="#" data-click="modal" data-item="#back_hunter" title="" class="top-menu__link">
+                                <a href="#" data-click="modal" data-item="#back_hunter" title="Напишите нам" class="top-menu__link">
                                     Обратная связь
                                 </a>
                                 <span>Ваши предложения и отзывы</span></div>
                             <div class="top-menu__item">
-                                <a href="<?= Url::to(['/cms/default/page', 'path' => 'faq']) ?>" title="" class="top-menu__link">
+                                <a href="<?= Url::to(['/cms/default/page', 'path' => 'faq']) ?>" title="ЧаВо" class="top-menu__link">
                                     FAQ
                                 </a>
                                 <span>Вопросы/ответы</span>
@@ -146,7 +146,7 @@ $this->beginPage();
                 <div class="footer__wrapper">
 				<div class="cr">
                    <div class="footer_logo">
-					 <a href="<?=Url::home()?>" title="Поиск строительных подрядчиков" ><img src="<?=$this->theme->getUrl('static/images/content/footer_log.png')?>" alt="Строительный сайт Podryad.kz" /></a>
+					 <a href="<?=Url::home()?>" title="Строительный сайт Podryad.kz" ><img src="<?=$this->theme->getUrl('static/images/content/footer_log.png')?>" alt="Строительный сайт Podryad.kz" /></a>
 					 
 				   </div>
 				   <div class="footer_menu">
@@ -257,6 +257,17 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
             <script src="<?=$this->theme->getUrl('static/js/separate-js/jquery.cookie.js')?>"></script>
             <script src="<?=$this->theme->getUrl('static/js/script.js')?>"></script>
             <script src="<?=$this->theme->getUrl('static/js/scroll/reset.js')?>"></script>
+            <script type="application/ld+json">
+{
+  "@context" : "http://podryad.kz/",
+  "@type" : "Organization",
+  "name" : "Podryad",
+  "url" : "http://podryad.kz/",
+  "sameAs" : [
+    "https://vk.com/podryadkz",
+  ]
+}
+</script>
             <!-- Yandex.Metrika counter -->
             <script type="text/javascript"> (function (d, w, c) {
                     (w[c] = w[c] || []).push(function () {
