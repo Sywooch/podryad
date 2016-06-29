@@ -55,7 +55,9 @@ class Contactor extends User
 
     public function getList($specialization)
     {
-        $query = self::find()->innerJoinWith(['assignment']);
+        $query = self::find()->innerJoinWith(['assignment','profile'=>function($query){
+            $query->with(['specializations','cityLists','city','image']);
+        }]);
         $query->where(['item_name' => User::ROLE_CONTRACTOR]);
 
 

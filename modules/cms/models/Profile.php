@@ -153,6 +153,13 @@ class Profile extends \yii\db\ActiveRecord
             ->andWhere(['model'=>self::className()]);
     }
 
+    public function getImages()
+    {
+        return $this->hasMany(ExchangeImage::className(), ['primaryKey' => 'userId'])
+            ->andWhere(['model' => self::className()]);
+    }
+
+
     public function behaviors()
     {
         return [

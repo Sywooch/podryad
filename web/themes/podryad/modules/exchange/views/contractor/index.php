@@ -88,7 +88,7 @@ $this->params['breadcrumbs'] = $breadcrumbs;
                                 </a>
                             </div>
                             <?//=\app\modules\cms\widgets\Rate::widget(['model'=>$contactor,'primaryKey'=>$contactor->id])?>
-                            <div class="portfolio-album__count">Фото<span><?=$contactor->photoCount?></span></div>
+                            <div class="portfolio-album__count">Фото<span><?=$contactor->profile->getImages()->count()?></span></div>
                             <div class="contractor-block-images">
                                 <?php foreach(\app\modules\exchange\models\Album::getAllImagesByUser($contactor->id,6) as $image):?>
                                 <a href="<?=\yii\helpers\Url::to(['/exchange/contractor/view','id'=>$contactor->id])?>" title="">
