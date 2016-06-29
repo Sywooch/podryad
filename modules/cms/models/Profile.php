@@ -3,6 +3,7 @@
 namespace app\modules\cms\models;
 
 use app\modules\cms\components\CmsBehavior;
+use app\modules\exchange\models\Album;
 use app\modules\exchange\models\Image as ExchangeImage;
 use Yii;
 use yii\helpers\ArrayHelper;
@@ -32,6 +33,9 @@ use yii\helpers\ArrayHelper;
  * @property Reference[] $cityList
  * @property array $specialization
  * @method string imageSrc($size = '100x100', $method = Thumbler::METHOD_NOT_BOXED)
+ *
+ * @property Album $albums
+ * @property Image $albumImages
  */
 class Profile extends \yii\db\ActiveRecord
 {
@@ -206,4 +210,13 @@ class Profile extends \yii\db\ActiveRecord
     {
         return ArrayHelper::map($this->specializations,'id','title');
     }
+
+    public function getAlbums()
+    {
+        return $this->hasMany(Album::className(),['userId'=>'userId']);
+        }
+
+        public function getAlbumImages(){
+            return $this->hasMany(Image::className(), ['primaryKey' => 'albums.id'])->andWhere(['model'=>Album::className()]);
+        }
 }

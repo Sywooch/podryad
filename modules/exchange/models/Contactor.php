@@ -8,6 +8,7 @@ use app\modules\cms\models\Reference;
 use app\modules\cms\models\Settings;
 use app\modules\cms\models\User;
 use yii\data\Pagination;
+use yii\helpers\ArrayHelper;
 
 /**
  * Created by PhpStorm.
@@ -55,8 +56,9 @@ class Contactor extends User
 
     public function getList($specialization)
     {
-        $query = self::find()->innerJoinWith(['assignment','profile'=>function($query){
-            $query->with(['specializations','cityLists','city','image']);
+        $query = self::find()->innerJoinWith(['assignment'])->with(['profile'=>function ($query)
+        {
+            $query->with(['specializations', 'cityLists', 'city', 'image']);
         }]);
         $query->where(['item_name' => User::ROLE_CONTRACTOR]);
 
@@ -95,7 +97,7 @@ class Contactor extends User
         {
            if(substr_count($orderSettingsData,'@'))
            {
-               list($dateOrder,$allUserIdList) = explode('@',$orderSettingsData);
+               list($dateOrder, $allUserIdList) = explode('@',$orderSettingsData);
                if($dateOrder != $currentDate)
                {
                    $allUserIdList = $this->getRandomIds();
@@ -143,10 +145,10 @@ class Contactor extends User
 
     public function getPhotoCount()
     {
-        $albumList = Album::find()->where(['userId' => $this->id])->all();
-        $albumIds = [];
-        foreach ($albumList as $album)
-            $albumIds[] = $album->id;
+        $albumIds = ArrayHelper::map($this->profile->albums,'id','id');
+
+        if(empty($albumIds))
+            return 0;
 
         return ContractorImage::find()->where(['primaryKey' => $albumIds, 'model' => Album::className()])->count();
     }
