@@ -706,11 +706,14 @@ html, body {
     position: relative;
     visibility: visible;
 }
-.contractor-tabs-description p {
+.contractor-tabs-description p,
+.contractor-tabs-description li{
     color: #6a6a6a;
     font-size: 1.1em;
     margin: 5px 0;
 }
+
+
 .form-group.field-registerform-company label:after {
     content: ""}
 .form-group.field-registerform-agree.required {
