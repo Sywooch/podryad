@@ -15,7 +15,7 @@ $metaKeywords = Settings::get('projectHouse-index','metaKeywords');
 $this->params['breadcrumbs']['label'] = $this->title;
 
 $this->registerMetaTag(['name'=>'description','content'=>$metaDescription]);
-$this->registerMetaTag(['name'=>'description','content'=>$metaKeywords]);
+$this->registerMetaTag(['name'=>'keywords','content'=>$metaKeywords]);
 ?>
 <main class="main">
     <section class="project-house">
