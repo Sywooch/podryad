@@ -40,13 +40,13 @@ $this->registerMetaTag(['name' => 'description', 'content' => $settings['descrip
             <div class="search-contractor-block">
                 <div class="search-contractor__title">РЕМОНТ И ОТДЕЛКА</div>
                 <div class="search-contractor__img search-contractor__img--repair"></div>
-                <a href="<?= Url::to(['/exchange/contractor', 'specialization' => 'remont-i-otdelka']) ?>" title="" class="search-contractor__btn">НАЙТИ подрядчика
+                <a href="<?= Url::to(['/exchange/contractor/index', 'specialization' => 'remont-i-otdelka']) ?>" title="" class="search-contractor__btn">НАЙТИ подрядчика
                     для РЕМОНТа<span>от левкаса до дизайнерского ремонта</span></a>
             </div>
             <div class="search-contractor-block">
                 <div class="search-contractor__title">СТРОИТЕЛЬСТВО</div>
                 <div class="search-contractor__img search-contractor__img--build"></div>
-                <a href="<?= Url::to(['/exchange/contractor', 'specialization' => 'stroitelstvo']) ?>" title="" class="search-contractor__btn button_search">НАЙТИ подрядчика для СТРОИТельстВа<span>от забора до жилого дома</span>
+                <a href="<?= Url::to(['/exchange/contractor/index', 'specialization' => 'stroitelstvo']) ?>" title="" class="search-contractor__btn button_search">НАЙТИ подрядчика для СТРОИТельстВа<span>от забора до жилого дома</span>
                 </a>
             </div>
         </div>
