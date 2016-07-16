@@ -34,7 +34,6 @@
         <?php endforeach?>
     <?php endforeach?>
     <?php else:?>
-        <input name="specialization" type="hidden" value="<?= $specialization ?>"/>
         <?php foreach($model->children() as $part1):?>
         <div class="filter__item">
             <div class="filter__title"><?=$part1->title?></div>
