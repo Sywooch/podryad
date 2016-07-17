@@ -63,7 +63,7 @@ $config = [
             'class'=>'app\modules\cms\components\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'enableStrictParsing'=>true,
+//            'enableStrictParsing'=>true,
             'rules' => [
 
                 'exchange/contractor/view/<id:\d+>'=>'/exchange/contractor/view',
