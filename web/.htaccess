@@ -3,6 +3,10 @@ IndexIgnore */*
 RewriteEngine on
 
 
+##redirect
+Redirect 301 /exchange/contractor?specialization=remont-i-otdelka http://podryad.kz/exchange/contractor/remont-i-otdelka
+Redirect 301 /exchange/contractor?specialization=stroitelstvo http://podryad.kz/exchange/contractor/stroitelstvo
+
 #убрать slash
 RewriteCond %{REQUEST_URI} !\?
 RewriteCond %{REQUEST_URI} !\&
