@@ -123,6 +123,10 @@ $config = [
         ],
     ],
     'params' => $params,
+    'on beforeAction'=>function($event)
+    {
+        app\components\Redirect::scan();
+    }
 ];
 
 if (YII_DEBUG) {
