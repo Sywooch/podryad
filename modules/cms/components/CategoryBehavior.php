@@ -123,10 +123,14 @@ class CategoryBehavior extends Behavior{
         return false;
     }
 
-    public function getFullPath()
+    public function getFullPath($excludeParent=false)
     {
         $data = [];
         $parents = $this->parents();
+        if($excludeParent)
+        {
+            array_shift($parents);
+        }
         foreach($parents as $parent)
         {
             $data[] = $parent->alias;
@@ -135,9 +139,13 @@ class CategoryBehavior extends Behavior{
         return implode('/',$data);
     }
 
-    public function getFullTitle($separator = ' - ')
+    public function getFullTitle($exclude = false,$separator = ' - ')
     {
         $parents = $this->parents();
+
+        if($exclude)
+            array_shift($parents);
+
         $data = [];
         foreach($parents as $parent)
         {
@@ -166,22 +174,24 @@ class CategoryBehavior extends Behavior{
 
     public function findByFullPath($path,$separator='/')
     {
-
-
         /* @var $page Page */
+        $fullPathList = explode($separator,$path);
         $pathList = explode($separator,$path);
         $alias = array_pop($pathList);
         $class = $this->owner;
-        $pages = $class::find()->where('alias=:alias',[':alias'=>$alias])->all();
+        $pages = $class::find()->where(['alias'=>$alias])->all();
 
         if(!$pages)
             return null;
 
-        $pathList[]=$alias;
-
-        foreach($pages as $page)
-            if($page->getFullPath() == implode($separator,$pathList))
+        foreach($pages as $page){
+            $fullpath = $page->getFullPath(true);
+            $adres = implode($separator, $fullPathList);
+            if ($fullpath == $adres) {
                 return $page;
+            }
+        }
+
 
         return null;
     }
@@ -191,20 +201,30 @@ class CategoryBehavior extends Behavior{
         /* @var $parents Page[] */
 
         $data = [];
-        $parents = $this->parents();
+        $parents = $fullParents = $this->parents();
+        $exclude = false;
+
+        if(array_key_exists('parentExclude',$params))
+        {
+            array_shift($parents);
+            $exclude = true;
+        }
         foreach($parents as $parent)
         {
             $data[] = [
                 'class'=> !empty($params['itemClass']) ? $params['itemClass'] : '',
                 'label'=>$parent->title,
-                'url'=>Url::to([$this->route,'path'=>$parent->getFullPath()])
+                'url'=>Url::to([$this->route,'path'=>$parent->getFullPath($exclude)])
             ];
         }
-        $data[]=[
-            'label'=>$this->owner->title,
-            'url'=>'#',
-            'class'=>!empty($params['currentClass']) ? $params['currentClass'] : '',
-        ];
+        if(!empty($fullParents))
+        {
+            $data[] = [
+                'label' => $this->owner->title,
+                'class' => !empty($params['currentClass']) ? $params['currentClass'] : '',
+            ];
+        }
+
         return $data;
     }
 

@@ -21,6 +21,9 @@ use yii\helpers\Url;
                 <a href="#"><i class="fa fa-wrench fa-fw"></i> CMS<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
+                        <a href="<?= Url::to(['/cms/admin/custom-seo']) ?>">Конструктор СЕО</a>
+                    </li>
+                    <li>
                         <a href="<?= Url::to(['/cms/admin/page']) ?>">Страницы</a>
                     </li>
                     <li>
