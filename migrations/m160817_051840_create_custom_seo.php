@@ -20,6 +20,7 @@ class m160817_051840_create_custom_seo extends Migration
             'title'=>$this->string(),
             'metaKeywords'=>$this->string(),
             'metaDescription'=>$this->string(300),
+            'seoText'=>$this->text(),
         ]);
 
         $this->createIndex('idx-specializationId','{{%custom_seo}}','specializationId');

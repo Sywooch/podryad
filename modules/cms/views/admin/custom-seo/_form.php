@@ -45,6 +45,8 @@ $specializationList = $specializationParent->dropdown(false);
                     <?= $form->field($model, 'metaKeywords')->textArea(['maxlength' => true]) ?>
 
                     <?= $form->field($model, 'metaDescription')->textArea(['maxlength' => true]) ?>
+
+                    <?= $form->field($model, 'seoText')->textArea(['maxlength' => true]) ?>
                 </div>
             </div>
         </div>

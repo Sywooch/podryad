@@ -14,6 +14,7 @@ use Yii;
  * @property string $title
  * @property string $metaKeywords
  * @property string $metaDescription
+ * @property string $seoText
  *
  * @property Reference $city
  * @property Reference $specialization
@@ -37,7 +38,7 @@ class CustomSeo extends \yii\db\ActiveRecord
             [['specializationId', 'cityId'], 'integer'],
             [['h1', 'title', 'metaKeywords'], 'string', 'max' => 255],
             [['metaDescription'], 'string', 'max' => 300],
-
+            ['seoText','safe'],
             [['specializationId','cityId','h1','title'],'required'],
             [['specializationId','cityId'],'unique','targetAttribute'=>['specializationId','cityId'],'message'=>'Данная связка уже есть'],
         ];
@@ -56,6 +57,7 @@ class CustomSeo extends \yii\db\ActiveRecord
             'title' => 'Title',
             'metaKeywords' => 'Meta Keywords',
             'metaDescription' => 'Meta Description',
+            'seoText' => 'СЕО текст',
         ];
     }
 
