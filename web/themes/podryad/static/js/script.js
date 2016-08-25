@@ -411,4 +411,9 @@ $(document).ready(function () {
             jQuery('#scrollup').fadeOut('normal');
         }
     });
+
+    $(".filter__item .before, .filter__item .before").click(function () {
+        $(this).next().next().toggleClass("active");
+        $(this).parent().toggleClass("active");
+    });
 });

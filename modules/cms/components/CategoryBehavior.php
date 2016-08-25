@@ -214,7 +214,7 @@ class CategoryBehavior extends Behavior{
             $data[] = [
                 'class'=> !empty($params['itemClass']) ? $params['itemClass'] : '',
                 'label'=>$parent->title,
-                'url'=>Url::to([$this->route,'path'=>$parent->getFullPath($exclude)])
+                'url'=>$parent->url
             ];
         }
         if(!empty($fullParents))

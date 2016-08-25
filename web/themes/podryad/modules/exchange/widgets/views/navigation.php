@@ -8,7 +8,9 @@
     <?= \app\modules\cms\widgets\City::widget() ?>
     <?php foreach($root->children() as $item):?>
     <div class="filter__item <?=$item->id == $model->parent->id ? 'active' : ''?>">
-        <a class="filter__title" href="<?=$item->url?>"><?=$item->title?></a>
+        <span class="before"></span> <a class="filter__title" href="<?=$item->url?>">
+            <?=$item->title?>
+        </a>
         <?php if (($childrens = $item->children())): ?>
         <div class="filter__list <?= $item->id == $model->parent->id ? 'active' : '' ?>">
             <?php foreach($childrens as $children):?>

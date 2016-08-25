@@ -2405,16 +2405,23 @@ span.hcc.hc__menu__count {
 .not_price {
     overflow: hidden;
 }
-.filter__title:before, .filter__title.active:before {
+.filter__item .before, .filter__item.active .before {
     background-image: url(../images/png-sprite/96dpi/sprite.png);
     background-repeat: no-repeat;
     background-size: 344px, 303px;
     height: 14px;
     width: 14px;
+    background-position: -235px -185px;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
 }
-.filter__item.active .filter__title:before {
+
+.filter__item.active .before {
     background-position: -275px -168px;
 }
+
 .filter__select-all {
     display: none;
     font-size: .85714em;
