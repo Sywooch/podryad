@@ -12,7 +12,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 
 $this->title = 'Регистрация подрядчика';
-$cityList = \app\modules\cms\models\Reference::findOne(['alias' => 'cityList'])->children();
+$cityList = \app\modules\cms\models\Reference::getCityList();
 $cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
 ?>
 
@@ -142,5 +142,5 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList,'id','title');
     </section>
     <?=$this->render('//layouts/_sidebar')?>
 </main>
-<?= \app\modules\cms\widgets\Specialization::widget(['modelName'=>'RegisterForm']) ?>
+<?= \app\modules\cms\widgets\Specialization::widget(['modelName'=>'RegisterForm','template'=>'specializationRegister']) ?>
 <?= \app\modules\cms\widgets\Specialization::widget(['modelName'=>'RegisterForm','alias'=>'cityList','template'=>'cityList']) ?>

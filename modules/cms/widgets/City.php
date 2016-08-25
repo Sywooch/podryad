@@ -37,7 +37,7 @@ class City extends Widget{
             \Yii::$app->response->cookies->remove('city');
             \Yii::$app->controller->refresh();
         }
-        $modelList = Reference::findOne(['alias'=>'cityList'])->children();
+        $modelList = Reference::getCityList();
         if(!empty(\Yii::$app->request->cookies['city']))
         {
             $cityId = \Yii::$app->request->cookies['city'];

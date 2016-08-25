@@ -92,6 +92,20 @@ class Reference extends \yii\db\ActiveRecord
         return Url::to(['/exchange/contractor/index','path'=>$url]);
     }
 
+    public static function getCityList()
+    {
+        $result = [];
+        $modelList = Reference::findOne(['alias' => 'cityList'])->children();
+        foreach($modelList as $model)
+        {
+            if($model->alias == 'ves-kazahstan')
+                continue;
+
+            $result[]=$model;
+        }
+        return $result;
+    }
+
     public static function url($url)
     {
         if (!empty(\Yii::$app->request->cookies['city'])) {

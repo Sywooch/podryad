@@ -9,6 +9,8 @@
  * @var $modelName string
  * @var $checked array
  */
+
+$items = \app\modules\cms\models\Reference::getCityList();
 ?>
 <div id="<?=$template?>" class="modal _specialization" data-count="10">
     <div class="modal__close">x</div>
@@ -18,7 +20,7 @@
             <div class="specialization-column__title"></div>
             <div class="specialization-item">
                 <div class="specialization-item__title"></div>
-                <?php if (($items = $model->children())): ?>
+                <?php if ($items): ?>
                     <?php foreach ($items as $item): ?>
                         <a href="#" data-id="<?=$item->id?>" data-type="<?=$type?>" <?=in_array($item->id,$checked) ? 'class="active" ' : ''?>><?=$item->title?></a>
                     <?php endforeach ?>
