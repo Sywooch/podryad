@@ -174,5 +174,5 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
         </section>
         <?= $this->render('//layouts/_sidebar') ?>
     </main>
-<?= \app\modules\cms\widgets\Specialization::widget(['modelName' => 'RegisterForm','specializationList'=>$specializationList]) ?>
+<?= \app\modules\cms\widgets\Specialization::widget(['modelName' => 'RegisterForm','specializationList'=>$specializationList,'template'=>'specializationRegister']) ?>
 <?= \app\modules\cms\widgets\Specialization::widget(['modelName' => 'RegisterForm', 'alias' => 'cityList', 'template' => 'cityList','specializationList'=>$cityList]) ?>
