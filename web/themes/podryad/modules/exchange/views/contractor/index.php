@@ -43,20 +43,11 @@ $this->params['breadcrumbs'] = $breadcrumbs;
         <h1 class="search-contractor-content__title"><?= $h1?></h1>
         <?=app\modules\exchange\widgets\Navigation::widget(['model'=> $specializationModel])?>
         <div class="search-contractor-results">
+            <?php if($seoModel->seoText):?>
             <div class="seo-block">
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut excepturi quidem soluta tempora
-                    voluptatem! At dolorum, exercitationem maiores minus quis repellat reprehenderit sapiente. A atque
-                    cumque dolore eos officia perferendis!
-                </div>
-                <div>Ad animi aperiam cupiditate dicta dolor earum explicabo hic, id ipsam laborum nesciunt numquam
-                    provident ratione sed sequi soluta voluptate? Consectetur dignissimos enim iste iure sequi!
-                    Exercitationem modi perspiciatis provident!
-                </div>
-                <div>Architecto expedita fuga illum incidunt non. Ad architecto assumenda beatae distinctio, doloribus
-                    ea esse, est eum expedita impedit inventore maiores minima natus officia perferendis possimus quae
-                    quo reiciendis sapiente vero.
-                </div>
+                <?=$seoModel->seoText?>
             </div>
+            <?php endif?>
             <div class="search-contractor-results-list">
                 <div class="search-contractor-results-list-item">
                     <?=ListView::widget([
