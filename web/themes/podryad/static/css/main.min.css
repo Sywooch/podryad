@@ -2389,6 +2389,12 @@ span.hcc.hc__menu__count {
 .filter__item:hover {
     cursor: pointer;
 }
+
+.filter__title{
+    color: #6a6a6a;
+    text-decoration: none;
+}
+
 .filter__title:before {
     background-position: -235px -185px;
     content: "";
