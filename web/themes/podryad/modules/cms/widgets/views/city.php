@@ -21,7 +21,9 @@
             <?php if($model):?>
                 <div class="header-city-select__option" data-id="">Все города</div>
             <?php endif?>
-            <?php foreach($modelList as $item):?>
+            <?php foreach($modelList as $item):
+                if($item->alias == 'ves-kazahstan') continue;
+                ?>
             <div class="header-city-select__option" data-id="<?=$item->id?>"><?=$item->title?></div>
             <?php endforeach?>
         </div>

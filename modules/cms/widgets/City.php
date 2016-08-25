@@ -30,7 +30,7 @@ class City extends Widget{
                         'value'=>$_POST['city']]
                     )
                 );
-                \Yii::$app->controller->refresh();
+                \Yii::$app->controller->redirect('/');
             }
         }elseif(isset($_POST['city']))
         {

@@ -50,5 +50,4 @@ $this->registerMetaTag(['name' => 'description', 'content' => Settings::get('new
         <?php endforeach ?>
 		</ul>
     </section>
-    <?=$this->render('//layouts/_sidebar')?>
 </main>

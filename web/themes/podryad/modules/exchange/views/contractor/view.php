@@ -101,7 +101,7 @@ if($model->profile->phone3)
                 <?php endif ?>
 
                 </div>
-                <?//= \app\modules\cms\widgets\Rate::widget(['model' => $model, 'primaryKey' => $model->id]) ?>
+                <?php //= \app\modules\cms\widgets\Rate::widget(['model' => $model, 'primaryKey' => $model->id]) ?>
             </div>
             <div class="contractor-block-images">
                 <?php foreach(\app\modules\exchange\models\Album::getAllImagesByUser($model->id,8) as $image):?>

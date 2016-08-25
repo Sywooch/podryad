@@ -5,6 +5,7 @@ namespace app\modules\cms\models;
 use app\modules\cms\components\CategoryBehavior;
 use app\modules\cms\components\TranslitBehavior;
 use Yii;
+use yii\helpers\Url;
 
 /**
  * This is the model class for table "{{%reference}}".
@@ -73,5 +74,32 @@ class Reference extends \yii\db\ActiveRecord
     public function getParent()
     {
         return $this->hasOne(Reference::className(),['id'=>'parentId']);
+    }
+
+    public function getUrl()
+    {
+        $url = $this->getFullPath(true);
+
+        if (!empty(\Yii::$app->request->cookies['city'])) {
+            $cityId = \Yii::$app->request->cookies['city'];
+            $model = Reference::findOne($cityId);
+
+            if ($model && $model->alias != 'ves-kazahstan') {
+                $url = $url . '/' . $model->alias;
+            }
+        }
+
+        return Url::to(['/exchange/contractor/index','path'=>$url]);
+    }
+
+    public static function url($url)
+    {
+        if (!empty(\Yii::$app->request->cookies['city'])) {
+            $cityId = \Yii::$app->request->cookies['city'];
+            $model = Reference::findOne($cityId);
+            if($model && $model->alias != 'ves-kazahstan')
+                $url = $url . '/' . $model->alias;
+        }
+        return Url::to(['/exchange/contractor/index', 'path' => $url]);
     }
 }

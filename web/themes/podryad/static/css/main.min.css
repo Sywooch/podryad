@@ -1392,26 +1392,31 @@ html.swipebox-html.swipebox-touch {
     text-decoration: none;
 }
 .header-city {
-    margin-top: 30px;
-    width: 155px;
+    width: 280px;
+    min-height: 50px;
 }
 .header-city__title {
     color: #00acff;
     font-size: .875em;
     text-transform: uppercase;
+    float: left;
+    width: 110px;
+    margin: 10px 20px 10px 0;
+    vertical-align: middle;
 }
 .header-city-select {
     border: 1px solid #cacaca;
     border-radius: 3px;
-    box-shadow: 0 0 0 5px #f0f1f0;
     box-sizing: border-box;
     color: #6a6a6a;
     font-size: .875em;
     height: 35px;
     line-height: 35px;
-    margin-top: 6px;
     position: relative;
-    width: 178px;
+    width: 150px;
+    display: inline-block;
+    float: left;
+    vertical-align: middle;
 }
 .header-city-select:after {
     background-image: url(../images/png-sprite/96dpi/sprite.png);
@@ -1452,6 +1457,11 @@ html.swipebox-html.swipebox-touch {
 .main-content, .news-content, .news-full-content, .registration-contractor-content {
     width: 863px;
 }
+
+.news-content{
+    width: 1260px;
+}
+
 .main-img {
     background: url(../images/general/main-img.jpg) no-repeat center center;
     height: 342px;
@@ -1657,7 +1667,7 @@ html.swipebox-html.swipebox-touch {
     padding: 0;
     width: 275px;
 }
-.news-content-item:nth-child(3n) {
+.news-content-item:nth-child(4n) {
     margin-right: 0;
 }
 .news-content-item img {
@@ -3797,5 +3807,15 @@ input#tender-negotiable {
     text-align: center;
     display: block;
     color: #1883bf;
+}
+
+.seo-block {
+    width: 100%;
+    min-height: 40px;
+}
+.seo-block p,
+.seo-block div {
+    margin: 0 0 20px 0;
+    color: #777;
 }
 /*# sourceMappingURL=main.min.css.map */

@@ -15,7 +15,8 @@ $btn = \Yii::$app->controller->route == 'cms/default/index' ? 'Найти под
 ?>
 <div id="specialization" class="modal specialization _specialization" data-count="50">
     <div class="modal__close">x</div>
-    <div class="modal__title">Выберите специализации<span class="specialization__btn specialiation-button" data-model="<?= $modelName?>"><?=$btn?></span></div>
+    <?php /*?>
+    <div class="modal__title">Выберите специализации<span class="specialization__btn specialiation-button" data-model="<?= $modelName?>"><?=$btn?></span></div><?php */?>
     <div class="specialization-list">
         <?php foreach($model->children() as $submodel):?>
         <div class="specialization-column" data-category="<?=$submodel->alias?>">
@@ -26,7 +27,7 @@ $btn = \Yii::$app->controller->route == 'cms/default/index' ? 'Найти под
                     <div class="specialization-item__title"><?=$category->title?></div>
                     <?php if (($items = $category->children())): ?>
                         <?php foreach ($items as $item): ?>
-                            <a href="#" data-id="<?=$item->id?>" data-type="<?=$type?>" <?=in_array($item->id,$checked) ? 'class="active" ' : ''?>><?=$item->title?></a>
+                            <a href="<?= $item->url?>" data-id="<?=$item->id?>" data-type="<?=$type?>" <?=in_array($item->id,$checked) ? 'class="active" ' : ''?>><?=$item->title?></a>
                         <?php endforeach ?>
                     <?php endif ?>
                 <?php endforeach?>

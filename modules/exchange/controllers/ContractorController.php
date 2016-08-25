@@ -9,9 +9,12 @@
 namespace app\modules\exchange\controllers;
 
 
+use app\modules\cms\models\CustomSeo;
 use app\modules\cms\models\Reference;
+use app\modules\exchange\models\City;
 use app\modules\exchange\models\Contactor;
 use app\modules\exchange\models\ContractorPrice;
+use app\modules\exchange\models\ContractorSearch;
 use app\modules\exchange\models\Tender;
 use yii\helpers\Url;
 use yii\web\Controller;
@@ -19,7 +22,7 @@ use yii\web\HttpException;
 
 class ContractorController extends Controller{
 
-    public function actionIndex($specialization='')
+    /*public function actionIndex($specialization='')
     {
         if(!$specialization)
         {
@@ -44,6 +47,62 @@ class ContractorController extends Controller{
             \Yii::$app->session->set('contractorSpec', $specializationModel);
         }
         return $this->render('index',['specializationModel'=>$specializationModel,'specialization'=>$specialization,'contactorList'=>$contactorList,'model'=>$model,'pages'=>$pages]);
+    }*/
+
+    public function actionIndex($path=null)
+    {
+        $model = new ContractorSearch();
+
+        if(!$path)
+        {
+            throw new HttpException(404);
+        }
+
+        $referenceModel = new Reference();
+
+        $pathArray = explode('/',$path);
+        $city = array_pop($pathArray);
+
+        $cityModel = City::find()->andWhere(['alias'=>$city])->one();
+        if(!$cityModel){
+            $cityModel = City::find()->andWhere(['alias' => 'ves-kazahstan'])->one();
+            $city = null;
+        }else{
+            $path = implode('/',$pathArray);
+        }
+
+        $specializationModel = $referenceModel->findByFullPath($path);
+
+        if (!$specializationModel) {
+            throw new HttpException(404);
+        }
+
+        $seoModel = null;
+        if($cityModel && $specializationModel)
+        {
+            $seoModel= CustomSeo::findOne(['cityId'=>$cityModel->id,'specializationId'=>$specializationModel->id]);
+            if(!$seoModel)
+                $seoModel = new CustomSeo();
+        }else
+            $seoModel = new CustomSeo();
+
+
+        $params = [
+            'specialization'    => $specializationModel,
+            'city'              => $city,
+        ];
+
+        Url::remember(\Yii::$app->request->url,'contractor');
+
+        $dataProvider = $model->search($params);
+        return $this->render('index',[
+            'model'=>$model,
+            'specializationModel'=>$specializationModel,
+            'dataProvider'=>$dataProvider,
+            'specialization'=> $path,
+            'cityModel'=>$cityModel,
+            'seoModel'=>$seoModel,
+        ]);
     }
 
     public function actionView($id)

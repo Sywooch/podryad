@@ -90,8 +90,8 @@ class Contactor extends User
         $pages = new Pagination(['totalCount'=> $pageCount->count(),'pageSize'=>\Yii::$app->params['pageSize']]);
 
         //сортировка раз в сутки
-        $orderSettingsData = Settings::get('exchange','contractorOrder',true);
         $contractorSort = [];
+        $orderSettingsData = Settings::get('exchange','contractorOrder',true);
         $currentDate = date('d.m.Y');
         if($orderSettingsData)
         {
@@ -111,8 +111,8 @@ class Contactor extends User
         }
         $contractorSort = new \yii\db\Expression('FIND_IN_SET(iv_user.id,:userList)');
         $query->addParams([':userList' => $allUserIdList]);
-//        $items = $query->offset($pages->offset)->limit($pages->limit)->orderBy([$contractorSort])->all();
         $items = $query->orderBy([$contractorSort])->all();
+//        $items = $query->offset($pages->offset)->limit($pages->limit)->orderBy([$contractorSort])->all();
         return ['items'=>$items,'pages'=>$pages];
     }
 

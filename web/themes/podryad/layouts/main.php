@@ -11,6 +11,7 @@
 use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
+use app\modules\cms\models\Reference;
 $this->beginPage();
 \app\assets\AppAsset::register($this);
 ?>
@@ -104,10 +105,10 @@ $this->beginPage();
                                 <span>Страница подрядчиков </span>
 
                                 <div class="top-menu-inside">
-                                    <a href="<?= Url::to(['/exchange/contractor/index','specialization'=>'remont-i-otdelka']) ?>" title="Каталог подрядчиков Казахстана для ремонта" class="top-menu-inside__link">Ремонт и
+                                    <a href="<?=Reference::url('remont-i-otdelka')?>" title="Каталог подрядчиков Казахстана для ремонта" class="top-menu-inside__link">Ремонт и
                                         отделка
                                     </a>
-                                    <a href="<?= Url::to(['/exchange/contractor/index', 'specialization' => 'stroitelstvo']) ?>" title="Каталог строительных подрядчиков Казахстана" class="top-menu-inside__link">Строительство</a>
+                                    <a href="<?= Reference::url('stroitelstvo') ?>" title="Каталог строительных подрядчиков Казахстана" class="top-menu-inside__link">Строительство</a>
                                 </div>
                             </div>
                             <div class="top-menu__item">
@@ -131,7 +132,6 @@ $this->beginPage();
                                 <span>Вопросы/ответы</span>
                             </div>
                         </nav>
-                        <?=\app\modules\cms\widgets\City::widget()?>
                     </div>
                 </div>
             </header>

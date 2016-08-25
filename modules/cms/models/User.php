@@ -3,6 +3,7 @@
 namespace app\modules\cms\models;
 
 use app\models\LoginForm;
+use app\modules\cms\widgets\Specialization;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\db\ActiveRecord;
@@ -21,6 +22,7 @@ use yii\web\IdentityInterface;
  * @property Profile $profile
  * @property AuthAssignment $assignment
  * @property City $cityList
+ * @property Specialization[] $specializations
  */
 class User extends ActiveRecord  implements IdentityInterface
 {
@@ -375,5 +377,11 @@ class User extends ActiveRecord  implements IdentityInterface
             return null;
         }
         return !empty($list[$this->assignment->item_name]) ? $list[$this->assignment->item_name] : '';
+    }
+
+    public function getSpecializations()
+    {
+        return $this->hasMany(Specialization::className(),['id'=>'specializationId'])
+            ->viaTable('{{%user_specialization}}',['userId'=>'id']);
     }
 }

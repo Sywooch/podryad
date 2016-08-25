@@ -67,7 +67,7 @@ $config = [
             'rules' => [
 
                 'exchange/contractor/view/<id:\d+>'=>'/exchange/contractor/view',
-                'exchange/contractor/<specialization>'=>'/exchange/contractor/index',
+                'exchange/contractor/<path:(.*)>'=>'/exchange/contractor/index',
                 'exchange/contractor'=>'/exchange/contractor/index',
                 'ochered'=>'/cms/default/pending',
 
