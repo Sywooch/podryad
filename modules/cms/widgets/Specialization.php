@@ -19,6 +19,7 @@ class Specialization extends Widget{
     public $specializationList = [];
     public $alias = 'specializacii';
     public $template = 'specialization';
+    public $count = 50;
 
     public function run()
     {
@@ -31,7 +32,7 @@ class Specialization extends Widget{
                 $checked[]=$specialization->id;
             }
         }
-        return $this->render($this->template,['template'=>$this->template,'model'=> $model,'type'=>$this->type,'modelName'=>$this->modelName,'checked'=>$checked]);
+        return $this->render($this->template,['count'=>$this->count,'template'=>$this->template,'model'=> $model,'type'=>$this->type,'modelName'=>$this->modelName,'checked'=>$checked]);
     }
 
 }

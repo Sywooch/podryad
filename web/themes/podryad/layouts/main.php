@@ -160,12 +160,12 @@ $this->beginPage();
                               
                             </div>
                             <div class="top-menu__item footer_m">
-                                <a href="<?= Url::to(['/exchange/contractor','specialization'=>'remont-i-otdelka']) ?>" title="Поиск подрядчиков для ремонта и отделки" class="top-menu__link footer_link">Ремонт и
+                                <a href="<?= Reference::url('remont-i-otdelka') ?>" title="Поиск подрядчиков для ремонта и отделки" class="top-menu__link footer_link">Ремонт и
                                         отделка</a>
                                 
                             </div>
 							<div class="top-menu__item footer_m">
-<a href="<?= Url::to(['/exchange/contractor', 'specialization' => 'stroitelstvo']) ?>" title="Поиск подрядчиков для строительства" class="top-menu__link footer_link">Строительство</a>
+<a href="<?= Reference::url('stroitelstvo') ?>" title="Поиск подрядчиков для строительства" class="top-menu__link footer_link">Строительство</a>
                                 
                             </div>
                             <div class="top-menu__item footer_m">

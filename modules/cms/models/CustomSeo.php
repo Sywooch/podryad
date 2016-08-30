@@ -39,7 +39,7 @@ class CustomSeo extends \yii\db\ActiveRecord
             [['h1', 'title', 'metaKeywords'], 'string', 'max' => 255],
             [['metaDescription'], 'string', 'max' => 300],
             ['seoText','safe'],
-            [['specializationId','cityId','h1','title'],'required'],
+            [['specializationId','cityId','title'],'required'],
             [['specializationId','cityId'],'unique','targetAttribute'=>['specializationId','cityId'],'message'=>'Данная связка уже есть'],
         ];
     }

@@ -9,6 +9,7 @@
 
 use yii\helpers\Url;
 use app\modules\cms\models\Settings;
+use app\modules\cms\models\Reference;
 
 $settings = [
     'title' => Settings::get('index', 'metaTitle'),
@@ -27,7 +28,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $settings['descrip
     <div class="main-img__content">
         <div class="main-img__title">Найдите своего Подрядчика не выходя из дома!</div>
         <a href="#" title="" data-click="modal" data-item="#specialization" class="btn btn--search">Выбрать
-            специализации
+            специализацию
         </a>
         <?=\yii\helpers\Html::beginForm(['/exchange/contractor' ],'get',['id'=>'main-specialization-form'])?>
         <?=\app\modules\cms\widgets\Specialization::widget(['modelName'=>'Contactor'])?>
@@ -40,13 +41,13 @@ $this->registerMetaTag(['name' => 'description', 'content' => $settings['descrip
             <div class="search-contractor-block">
                 <div class="search-contractor__title">РЕМОНТ И ОТДЕЛКА</div>
                 <div class="search-contractor__img search-contractor__img--repair"></div>
-                <a href="<?= Url::to(['/exchange/contractor/index', 'specialization' => 'remont-i-otdelka']) ?>" title="" class="search-contractor__btn">НАЙТИ подрядчика
+                <a href="<?= Reference::url('remont-i-otdelka') ?>" title="" class="search-contractor__btn">НАЙТИ подрядчика
                     для РЕМОНТа<span>от левкаса до дизайнерского ремонта</span></a>
             </div>
             <div class="search-contractor-block">
                 <div class="search-contractor__title">СТРОИТЕЛЬСТВО</div>
                 <div class="search-contractor__img search-contractor__img--build"></div>
-                <a href="<?= Url::to(['/exchange/contractor/index', 'specialization' => 'stroitelstvo']) ?>" title="" class="search-contractor__btn button_search">НАЙТИ подрядчика для СТРОИТельстВа<span>от забора до жилого дома</span>
+                <a href="<?= Reference::url('stroitelstvo') ?>" title="" class="search-contractor__btn button_search">НАЙТИ подрядчика для СТРОИТельстВа<span>от забора до жилого дома</span>
                 </a>
             </div>
         </div>

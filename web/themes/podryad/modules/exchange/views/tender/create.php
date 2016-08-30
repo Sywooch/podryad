@@ -30,9 +30,9 @@ $this->title = 'Объявить тендер';
 
                 <div class="registration-contractor-form__row">
                     <a href="#" title="" data-click="modal" data-item="#specialization" data-type="five-spec"
-                       class="btn registration-contractor-form__btn" data-model="Tender">Выбрать специализации
+                       class="btn registration-contractor-form__btn" data-model="Tender">Выбрать специализацию
                     </a>
-                    <em>Максимум 10 специализаций</em>
+                    <em>Максимум 1 специализация</em>
 
                     <div class="specialization-list-selected _specialization-list-selected">
                         <?php foreach ($model->specializationIds as $specialization): ?>
@@ -95,4 +95,8 @@ $this->title = 'Объявить тендер';
     </section>
     <?=$this->render('//layouts/_sidebar')?>
 </main>
-<?= \app\modules\cms\widgets\Specialization::widget(['type'=>'five-spec','modelName'=>'Tender']) ?>
+<?= \app\modules\cms\widgets\Specialization::widget([
+    'modelName' => 'Tender',
+    'template'  => 'specializationRegister',
+    'count'=>1,
+]) ?>
