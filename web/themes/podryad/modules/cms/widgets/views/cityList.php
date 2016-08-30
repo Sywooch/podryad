@@ -12,7 +12,7 @@
 
 $items = \app\modules\cms\models\Reference::getCityList();
 ?>
-<div id="<?=$template?>" class="modal _specialization" data-count="10">
+<div id="<?=$template?>" class="modal _specialization" data-count="<?=$count?>">
     <div class="modal__close">x</div>
     <div class="modal__title">Выберите города<span class="city__btn specialization__btn" data-model="<?= $modelName?>">Выбрать</span></div>
     <div class="specialization-list">

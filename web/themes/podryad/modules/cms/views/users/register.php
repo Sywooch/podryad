@@ -110,7 +110,6 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
                 <a href="#" title="" data-click="modal" data-item="#cityList"
                    class="btn city-registration-contractor-form__btn registration-contractor-form__btn">Выбрать города
                 </a>
-                <em>Максимум 10 городов</em>
 
                 <div class="city-list-selected specialization-list-selected">
                     <?php foreach ($model->cityList as $specialization): ?>
@@ -160,4 +159,5 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
     'modelName' => 'RegisterForm',
     'alias'     => 'cityList',
     'template'  => 'cityList',
+    'count'=>1000
 ]) ?>
