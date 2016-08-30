@@ -16,6 +16,7 @@
 ?>
 
 <form method="get" action="" class="filter">
+    <?= \app\modules\cms\widgets\City::widget() ?>
     <?php if($specialization == 'specializacii'):?>
     <?php foreach($model->children() as $part1):?>
     <div class="filter_container_title"><?= $part1->title?></div>

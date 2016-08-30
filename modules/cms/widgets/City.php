@@ -30,7 +30,20 @@ class City extends Widget{
                         'value'=>$_POST['city']]
                     )
                 );
-                \Yii::$app->controller->redirect('/');
+                if(\Yii::$app->controller->route == 'exchange/tender/index')
+                {
+                    \Yii::$app->controller->refresh();
+                }else{
+                    $refererer = \Yii::$app->request->referrer;
+                    $refererArray = explode('/', $refererer);
+                    $city = end($refererArray);
+                    if (Reference::findOne(['alias' => $city])) {
+                        array_pop($refererArray);
+                    }
+                    array_push($refererArray, $model->alias);
+                    $url = implode('/', $refererArray);
+                    \Yii::$app->controller->redirect($url);
+                }
             }
         }elseif(isset($_POST['city']))
         {
