@@ -30,6 +30,16 @@ use yii\widgets\ActiveForm;
                         ]
                     ]
                 ) ?>
+
+                <?= $form->field($model, 'datePublish')->widget(
+                    \yii\jui\DatePicker::className(),
+                    [
+                        'dateFormat' => 'yyyy-MM-dd',
+                        'options'    => [
+                            'class' => 'form-control'
+                        ]
+                    ]
+                ) ?>
             </div>
         </div>
 

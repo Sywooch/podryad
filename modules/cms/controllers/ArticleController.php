@@ -10,6 +10,7 @@ namespace app\modules\cms\controllers;
 
 
 use app\modules\cms\models\Article;
+use yii\db\Expression;
 use yii\web\Controller;
 use yii\web\HttpException;
 
@@ -24,7 +25,9 @@ class ArticleController extends Controller{
             throw new HttpException(404,'Категория статей не найдена');
         }
         $item->type = $typeId;
-        $items = Article::find()->type($type)->orderBy(['dateCreate'=>SORT_DESC])->all();
+        $items = Article::find()->type($type)
+            ->andWhere(['<=','datePublish',new Expression('now()')])
+            ->orderBy(['dateCreate'=>SORT_DESC])->all();
         return $this->render($type,['items'=>$items,'item'=>$item]);
     }
 

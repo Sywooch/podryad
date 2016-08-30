@@ -9,6 +9,7 @@ use app\modules\cms\components\Shortext;
 use Yii;
 use app\modules\cms\components\TranslitBehavior;
 use yii\db\ActiveQuery;
+use yii\db\Expression;
 use yii\helpers\Url;
 
 /**
@@ -27,6 +28,7 @@ use yii\helpers\Url;
  * @property string $imageSrc
  * @property string $dopText
  * @property string $date
+ * @property string $datePublish
  */
 class Article extends \yii\db\ActiveRecord
 {
@@ -57,8 +59,9 @@ class Article extends \yii\db\ActiveRecord
             [['type', 'dateCreate'], 'required'],
             [['description','metaDescription','metaKeywords'], 'string'],
             [['type', 'visible'], 'integer'],
-            [['dateCreate'], 'safe'],
-            [['title', 'alias','dopText'], 'string', 'max' => 128]
+            [['dateCreate','datePublish'], 'safe'],
+            [['title', 'alias','dopText'], 'string', 'max' => 128],
+            ['datePublish','required'],
         ];
     }
 
@@ -78,6 +81,7 @@ class Article extends \yii\db\ActiveRecord
             'dopText' => Yii::t('app', 'Дополнительный текст'),
             'metaKeywords' => Yii::t('app', 'Ключевые слова'),
             'metaDescription' => Yii::t('app', 'Мета - описание'),
+            'datePublish' => Yii::t('app', 'Дата публикации'),
         ];
     }
 
@@ -150,7 +154,9 @@ class Article extends \yii\db\ActiveRecord
      */
     public static function getAllByCategory($type,$limit=null)
     {
-        $query = self::find()->type($type)->orderBy(['dateCreate'=>SORT_DESC]);
+        $query = self::find()->type($type)
+            ->andWhere(['<=', 'datePublish', new Expression('now()')])
+            ->orderBy(['dateCreate'=>SORT_DESC]);
         if($limit)
             $query->limit($limit);
         return $query->all();
@@ -158,7 +164,9 @@ class Article extends \yii\db\ActiveRecord
 
     public static function getOneByCategory($type)
     {
-        return self::find()->type($type)->orderBy(['dateCreate' => SORT_DESC])->one();
+        return self::find()->type($type)
+            ->andWhere(['<=','datePublish',new Expression('now()')])
+            ->orderBy(['dateCreate' => SORT_DESC])->one();
     }
 
     /**
