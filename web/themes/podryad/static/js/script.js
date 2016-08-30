@@ -415,5 +415,8 @@ $(document).ready(function () {
     $(".filter__item .before, .filter__item .before").click(function () {
         $(this).next().next().toggleClass("active");
         $(this).parent().toggleClass("active");
+
+        $(this).next().next().next().toggleClass("active");
+        $(this).parent().toggleClass("active");
     });
 });

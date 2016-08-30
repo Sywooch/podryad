@@ -21,6 +21,7 @@
     <div class="filter_container_title"><?= $part1->title?></div>
         <?php foreach($part1->children() as $part2):?>
             <div class="filter__item">
+                <span class="before"></span>
                 <div class="filter__title"><?=$part2->title?></div>
                 <div class="filter__select-all">Выбрать все</div>
                 <div class="filter__list">
