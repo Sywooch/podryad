@@ -128,7 +128,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
                        class="btn specialization-registration-contractor-form__btn registration-contractor-form__btn">
                         Выбрать специализации
                     </a>
-                    <em>Максимум 100 специализаций</em>
+                    <em>Максимум 150 специализаций</em>
 
                     <div class="specialization-list-selected _specialization-list-selected">
                         <?php foreach ($specializationList as $specialization): ?>
@@ -184,7 +184,7 @@ $cityDropdown = \yii\helpers\ArrayHelper::map($cityList, 'id', 'title');
     'modelName'          => 'RegisterForm',
     'specializationList' => $specializationList,
     'template'           => 'specializationRegister',
-    'count'=>100,
+    'count'=>150,
 ]) ?>
 <?= \app\modules\cms\widgets\Specialization::widget([
     'modelName'          => 'RegisterForm',
