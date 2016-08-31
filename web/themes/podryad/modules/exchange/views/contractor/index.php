@@ -32,7 +32,9 @@ $h1 = $seoModel->h1 ? $seoModel->h1 : $specializationModel->title;
 $breadcrumbs = $specializationModel->breadcrumbs(['parentExclude' => true]);
 if($cityModel)
 {
-    $this->title .= ' - ' . $cityModel->title;
+    if(empty($seoModel->title))
+        $this->title .= ' - ' . $cityModel->title;
+    
     $breadcrumbs[sizeof($breadcrumbs)-1]['label'] .= ' - '.$cityModel->title;
     $h1 .= ' - '.$cityModel->title;
 }
