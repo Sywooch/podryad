@@ -34,7 +34,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
                 'format'=>'html'
             ],
-            'title',
+            ['attribute'=>'title','value'=>function(\app\modules\cms\models\Article $model){
+                return Html::a($model->title,'/news/'.$model->alias,['target'=>'_blank']);
+            },'format'=>'raw'],
             'dateCreate',
             ['attribute'=>'type','filter'=>\app\modules\cms\models\Article::typeList(),'value'=>'typeView'],
             'alias',
