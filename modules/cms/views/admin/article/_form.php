@@ -14,6 +14,14 @@ use yii\widgets\ActiveForm;
 
 
         <div class="row">
+
+            <?php if(!$model->isNewRecord):?>
+                <div class="col-md-12">
+                    <?= Html::a('Предпросмотр статьи: ' . $model->title, '/news/' . $model->alias,
+                        ['target' => '_blank']) ?><br><br>
+                </div>
+            <?php endif?>
+
             <div class="col-md-1">
                 <?= $form->field($model, 'visible')->checkbox(['label' => 'Активен']) ?>
             </div>
@@ -66,7 +74,7 @@ use yii\widgets\ActiveForm;
 
 
         <div class="form-group">
-            <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Добавить') : Yii::t('app', 'Редактировать'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+            <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Добавить') : Yii::t('app', 'Сохранить'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
         </div>
 
         <?php ActiveForm::end(); ?>
