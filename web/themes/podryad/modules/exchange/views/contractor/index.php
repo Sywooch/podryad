@@ -46,7 +46,10 @@ $this->params['breadcrumbs'] = $breadcrumbs;
         <div class="search-contractor-results">
             <?php if($seoModel->seoText):?>
             <div class="seo-block">
-                <?=$seoModel->seoText?>
+                <div class="text">
+                    <?= $seoModel->seoText ?>
+                </div>
+                <a href="#" class="seo-block-btn">читать далее...</a>
             </div>
             <?php endif?>
             <div class="search-contractor-results-list">

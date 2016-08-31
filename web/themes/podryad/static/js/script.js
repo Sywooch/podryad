@@ -419,4 +419,17 @@ $(document).ready(function () {
         $(this).next().next().next().toggleClass("active");
         $(this).parent().toggleClass("active");
     });
+
+    $(".seo-block-btn").click(function () {
+       var elem = $(this),
+           block = $(".seo-block .text");
+        if (elem.text()!="скрыть"){
+            elem.text('скрыть');
+            block.addClass("active");
+        }else{
+            elem.text('читать полностью ...');
+            block.removeClass("active");
+        }
+        return false;
+    });
 });
