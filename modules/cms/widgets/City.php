@@ -34,10 +34,10 @@ class City extends Widget{
                 {
                     \Yii::$app->controller->refresh();
                 }else{
-                    $refererer = \Yii::$app->request->referrer;
+                    $refererer = \Yii::$app->request->url;
                     $refererArray = explode('/', $refererer);
                     $city = end($refererArray);
-                    if (Reference::findOne(['alias' => $city])) {
+                    if (Reference::findOne(['alias' => $city,'parentId'=>1])) {
                         array_pop($refererArray);
                     }
                     array_push($refererArray, $model->alias);
