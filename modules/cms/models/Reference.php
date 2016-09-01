@@ -116,4 +116,21 @@ class Reference extends \yii\db\ActiveRecord
         }
         return Url::to(['/exchange/contractor/index', 'path' => $url]);
     }
+
+    public function breadcrumbs()
+    {
+        $parents = $this->parents();
+        if(sizeof($parents)==1)
+        {
+            return [
+                ['label' => $this->title]
+            ];
+        }else{
+            $root = $parents[1];
+            return [
+                ['label' => $root->title, 'url' => ['/exchange/contractor/index', 'path' => $root->getFullPath(true)]],
+                ['label' => $this->title]
+            ];
+        }
+    }
 }
