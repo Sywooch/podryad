@@ -51,7 +51,7 @@ $this->params['breadcrumbs'] = $breadcrumbs;
                 <div class="text">
                     <?= $seoModel->seoText ?>
                 </div>
-                <a href="#" class="seo-block-btn">читать далее...</a>
+                <a href="#" class="seo-block-btn">читать далее</a>
             </div>
             <?php endif?>
             <div class="search-contractor-results-list">

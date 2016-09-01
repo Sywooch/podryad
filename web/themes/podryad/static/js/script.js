@@ -421,7 +421,7 @@ $(document).ready(function () {
             elem.text('скрыть');
             block.addClass("active");
         }else{
-            elem.text('читать полностью ...');
+            elem.text('читать далее');
             block.removeClass("active");
         }
         return false;
