@@ -92,7 +92,7 @@ class Settings extends \yii\db\ActiveRecord
         $model->name = $name;
         $model->value = $value;
         $model->isSystem = $isSystem;
-        return $model->save();
+        return $model->save(false);
     }
 
     public function updateSettings()
