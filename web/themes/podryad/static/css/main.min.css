@@ -3831,6 +3831,7 @@ input#tender-negotiable {
 .seo-block .text{
     height: 30px;
     overflow: hidden;
+    margin-bottom: 5px;
 }
 
 .seo-block .text.active{

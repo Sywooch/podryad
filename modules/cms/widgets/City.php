@@ -48,7 +48,14 @@ class City extends Widget{
         }elseif(isset($_POST['city']))
         {
             \Yii::$app->response->cookies->remove('city');
-            \Yii::$app->controller->refresh();
+            $refererer = \Yii::$app->request->url;
+            $refererArray = explode('/', $refererer);
+            $city = end($refererArray);
+            if (Reference::findOne(['alias' => $city, 'parentId' => 1])) {
+                array_pop($refererArray);
+            }
+            $url = implode('/', $refererArray);
+            \Yii::$app->controller->redirect($url);
         }
         $modelList = Reference::getCityList();
         if(!empty(\Yii::$app->request->cookies['city']))
