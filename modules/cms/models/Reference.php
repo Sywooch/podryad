@@ -128,7 +128,7 @@ class Reference extends \yii\db\ActiveRecord
         }else{
             $root = $parents[1];
             return [
-                ['label' => $root->title, 'url' => ['/exchange/contractor/index', 'path' => $root->getFullPath(true)]],
+                ['label' => $root->title, 'url' => ['/'.$root->url]],
                 ['label' => $this->title]
             ];
         }
